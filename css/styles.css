@@ -5,6 +5,17 @@ html, body {
     margin: 0 auto;
 }
 
+.wrapper {
+    margin-right: auto;
+    margin-left: auto;
+    max-width:1160px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    background-color: pink;
+  }
+
 .navbar {
     background-color: #2c2c2c;
 }
