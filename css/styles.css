@@ -266,8 +266,6 @@ div.socials {
     padding: 20px;
 }
 
-
-
 .cardContainer {
     position: relative;
     right: 140px;
@@ -446,6 +444,23 @@ div.socials {
     .fa-bars {
         font-size: 2rem;
         position: relative;
+    }
+
+    #cover{
+        background: url(/images/leaves.JPG) center center no-repeat;
+        filter: hue-rotate(300deg);
+        box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
+        padding-bottom: 0px;
+        background-size: cover;
+        color:white ;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        margin:0;
+        align-items: center;
+        vertical-align: top;
+        white-space: nowrap;
     }
   
   /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */ 
