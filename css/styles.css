@@ -392,10 +392,6 @@ div.socials {
 /* Desktop to Tablet */
 
   @media only screen and (max-width: 1200px) {
-    body {
-        overflow-x: hidden;
-    }
-
 
     h1 {
         font-size: 2.75rem;
@@ -492,11 +488,7 @@ div.socials {
 /* Responsive Design - Tablet to Mobile */
 
 @media only screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
-
+  
     h1 {
         font-size: 2.75rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
