@@ -402,6 +402,17 @@ div.socials {
 
   @media only screen and (max-width: 1200px) {
 
+    .wrapper {
+        margin-right: auto;
+        margin-left: auto;
+        max-width:1160px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        background-color: pink;
+      }
+
     h1 {
         font-size: 2.75rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -515,6 +526,17 @@ div.socials {
 
 @media only screen and (max-width: 768px) {
   
+    .wrapper {
+        margin-right: auto;
+        margin-left: auto;
+        max-width:1160px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        background-color: pink;
+      }
+
     h1 {
         font-size: 2.75rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
