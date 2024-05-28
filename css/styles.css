@@ -448,9 +448,8 @@ background-color: rgba(0, 94, 160, 1);
         max-width: 30%;
         height: auto;
         z-index: 2;
-        float: right;
         position: relative;
-        top: -140px
+        
     }
     
     section.skills {
@@ -600,8 +599,9 @@ background-color: rgba(0, 94, 160, 1);
     #algonquin {
       max-width: 30%;
       position: relative;
-      top: -110px;
+      top: -150px;
       left: 40px;
+      float: right;
     }
 
     .adobe {
