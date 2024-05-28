@@ -10,6 +10,9 @@ html, body {
     background-color: #2c2c2c;
 }
 
+ul li a {
+    margin: 0 auto;
+}
 
 /* Add a black background color to the top navigation */
 .topnav {
@@ -559,6 +562,15 @@ background-color: rgba(0, 94, 160, 1);
     .topnav a.icon {
       float: right;
       display: none;
+    }
+
+    .navbar {
+      justify-content: center;
+    }
+
+    .navbar a {
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     .fa-bars {
