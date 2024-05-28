@@ -315,7 +315,7 @@ a:hover {
       transition: all 600ms ease;
       opacity: 0;
       transform: translateX(20%);
-      top: -10px;
+      top:-20px;
     }
 
       .cardA:hover{
@@ -328,6 +328,8 @@ a:hover {
     padding: 0em 1em;
   }
 
+
+  
 #contact-me {
     text-align: center;
 }
