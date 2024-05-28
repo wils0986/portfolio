@@ -85,6 +85,18 @@ a:hover {
     text-decoration: none;
 }
 
+    .wrapper {
+        background: url(/images/leaves.JPG) center center no-repeat;
+        height: 100%;
+    }
+
+    #wrapper2 {
+        background: url(/images/leaves.JPG) top center no-repeat;
+        height: 50%;
+        position: relative;
+        top: -61%;
+    }
+
     #cover{
         background: url(/images/leaves.JPG) center center no-repeat;
         filter: hue-rotate(300deg);
@@ -384,10 +396,22 @@ footer {
 background-color: rgba(0, 94, 160, 1);
 }
 
+.atlas {
+    position: relative;
+    top: 240px;
+    padding: 20px;
+    z-index: 2;
+}
+
 .atlas h1 {
     text-align: center;
     font-size: 1.75rem;
     padding: 20px;
+}
+
+.atlas h2 {
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .atlasP {
@@ -538,6 +562,8 @@ background-color: rgba(0, 94, 160, 1);
         position: relative;
     }
 
+   
+
 }
 
 /* Tablet to Desktop */
@@ -568,7 +594,23 @@ background-color: rgba(0, 94, 160, 1);
         font-weight: lighter;
         font-size: 1.25rem;
     }
+
+    .atlas h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .atlas h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
     
+    .atlasP {
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: 1.25rem;
+    }
+
     .container p {
         font-size: 1.60rem;
     }
@@ -668,6 +710,23 @@ background-color: rgba(0, 94, 160, 1);
         top: 100px;
         height: 400px;
     }
+    
+    .atlas {
+        position: relative;
+        top: 360px;
+        padding: 20px;
+    }
 
+    .wrapper {
+        background: url(/images/leaves.JPG) center center no-repeat;
+        height: 100%;
+    }
+
+    #wrapper2 {
+        background: url(/images/leaves.JPG) top center no-repeat;
+        height: 100%;
+        position: relative;
+        top: -80%;
+    }
 
 }
