@@ -174,7 +174,7 @@ a:hover {
 .box-el {
   flex-direction: column;
   position: relative;
-  width: 400px;
+ 
 }
 
 #projects {
@@ -187,7 +187,6 @@ a:hover {
 	align-items: center;
     height: 2100px;
 }
-
 
 .row {
     display: block;
@@ -212,14 +211,11 @@ a:hover {
 
  div.box1, div.box2, div.box3 {
     align-items: center;
-
 }
 
   .box1, .box2, .box3{
     height: 600px;
     background: rgba(31, 32, 32, 0.63);
-    width: 480px;
-    margin: 0em .75em;
     background-position: center;
     background-size: cover;
     position: relative;
