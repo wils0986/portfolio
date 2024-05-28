@@ -571,6 +571,10 @@ background-color: rgba(0, 94, 160, 1);
         width: 100%;
     }
 
+    p#lead {
+        width: 70%;
+    }
+
     #algonquin {
       max-width: 30%;
       position: relative;
