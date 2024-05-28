@@ -123,11 +123,11 @@ a:hover {
       text-align: left;
     }
 
-    #lead {
+    .lead {
         width: 100%;
     }
 
-    p#lead {
+    p.lead {
         width: 97%;
     }
 
@@ -420,7 +420,7 @@ background-color: rgba(0, 94, 160, 1);
         padding-top: 40px;
     }
     
-    #lead {
+    .lead {
         text-align: left;
         width: 60%;
         font-size: 1.25rem;
@@ -567,11 +567,11 @@ background-color: rgba(0, 94, 160, 1);
       text-align: left;
     }
 
-    #lead {
+    .lead {
         width: 100%;
     }
 
-    p#lead {
+    p.lead {
         width: 70%;
     }
 
