@@ -196,11 +196,6 @@ a:hover {
    flex-wrap: wrap;
 }
 
-.cardContainer {
-    position: relative;
-    right: 140px;
-}
-
 .title{
     color: white;
     text-align: center;
@@ -221,6 +216,7 @@ a:hover {
     position: relative;
     margin-bottom: 140px;
     margin-top: 80px;
+    width: 300px;
   }
 
   .box1 {
