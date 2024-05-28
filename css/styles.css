@@ -94,7 +94,7 @@ a:hover {
         background: url(/images/leaves.JPG) top center no-repeat;
         height: 50%;
         position: relative;
-        top: -61%;
+        top: -53%;
     }
 
     #cover{
@@ -419,7 +419,7 @@ background-color: rgba(0, 94, 160, 1);
     margin-right: auto;
     padding: 20px;
     text-align: center;
-    width: 60%;
+    width: 70%;
     font-size: 1rem;
 }
 
