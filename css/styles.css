@@ -174,7 +174,6 @@ a:hover {
 .box-el {
   flex-direction: column;
   position: relative;
-  left: 115px;
   width: 400px;
 }
 
