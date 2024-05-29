@@ -86,11 +86,13 @@ a:hover {
 
     .wrapper {
         background: url(/images/leaves.JPG) center center no-repeat;
+        box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.404);
         height: 100%;
     }
 
     #wrapper2 {
         background: url(/images/leaves.JPG) top center no-repeat;
+        box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.404);
         height: 50%;
         position: relative;
         top: -40%;
