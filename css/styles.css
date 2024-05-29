@@ -427,6 +427,7 @@ background-color: rgba(0, 94, 160, 1);
     margin-left: auto;
     margin-right: auto;
     width: 90%;
+    box-shadow: 4px 4px 4px #2c2c2c1e;
 }
 
 /* Mobile to Tablet */
