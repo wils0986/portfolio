@@ -94,7 +94,7 @@ a:hover {
         background: url(/images/leaves.JPG) top center no-repeat;
         height: 50%;
         position: relative;
-        top: -60%;
+        top: -50.35%;
     }
 
     #cover{
@@ -442,7 +442,7 @@ background-color: rgba(0, 94, 160, 1);
     margin-right: auto;
     padding: 20px;
     text-align: center;
-    width: 97%;
+    width: 90%;
     font-size: 1rem;
 }
 
@@ -743,7 +743,7 @@ background-color: rgba(0, 94, 160, 1);
         background: url(/images/leaves.JPG) top center no-repeat;
         height: 100%;
         position: relative;
-        top: -80%;
+        top: -73.96%;
     }
 
     .progress {
@@ -821,6 +821,24 @@ background-color: rgba(0, 94, 160, 1);
         top: 45px;
         text-align: right;
     }
+
+    .atlas img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 70%;
+        box-shadow: 4px 4px 4px #2c2c2c1e;
+    }
+
+    .atlasP {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+        text-align: center;
+        width: 70%;
+        font-size: 1rem;
+    }
+    
 
     }
 
