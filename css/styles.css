@@ -517,14 +517,14 @@ background-color: rgba(0, 94, 160, 1);
     .email {
         font-size: 1.25rem;
         position: relative;
-        top: 35px;
+        top: 0px;
         text-align: left;
     }
 
     .cvLink {
         font-size: 1.25rem;
         position: relative;
-        top: 35px;
+        top: 0px;
         text-align: right;
     }
     
@@ -806,5 +806,21 @@ background-color: rgba(0, 94, 160, 1);
         background-size: 500px;
         height: 500px;
       }
-}
+
+      
+    .email {
+        font-size: 1.25rem;
+        position: relative;
+        top: 45px;
+        text-align: left;
+    }
+
+    .cvLink {
+        font-size: 1.25rem;
+        position: relative;
+        top: 45px;
+        text-align: right;
+    }
+
+    }
 
