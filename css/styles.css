@@ -378,10 +378,13 @@ div.socials {
     font-size: 1.75rem;
 }
 
+.contact {
+    font-size: 1.75rem;
+}
+
 .footer {
     text-align: center;
     padding-top: 10px;
-    
 }
 
 #heart {
@@ -464,6 +467,7 @@ background-color: rgba(0, 94, 160, 1);
         font-size: 2.75rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         font-weight: lighter;
+        text-align: center;
     }
     
     h3 {
@@ -490,6 +494,10 @@ background-color: rgba(0, 94, 160, 1);
         font-weight: lighter;
     }
     
+    .jw {
+        width: 7%;
+    }
+
     .row2 {
         display: flex;
         flex-wrap: nowrap;
@@ -510,8 +518,20 @@ background-color: rgba(0, 94, 160, 1);
         font-size: 1.25rem;
         position: relative;
         top: 35px;
+        text-align: left;
+    }
+
+    .cvLink {
+        font-size: 1.25rem;
+        position: relative;
+        top: 35px;
+        text-align: right;
     }
     
+    .cv {
+        text-align: right;
+    }
+
     .container2 {
         margin: 0 auto;
         width: 70%;
@@ -542,9 +562,14 @@ background-color: rgba(0, 94, 160, 1);
     .row-well {
         height: 300px;
     }
+
     
     #contact-me{
         background-color:#e6e6e6;
+    }
+
+    .contact {
+        text-align: left;
     }
     
     .well {
@@ -560,6 +585,11 @@ background-color: rgba(0, 94, 160, 1);
     .box1, .box2, .box3 {
         position: relative;
     }
+    
+.footer {
+    text-align: center;
+    padding-top: 10px;
+}
 
  }
 
@@ -576,6 +606,7 @@ background-color: rgba(0, 94, 160, 1);
         font-size: 2.5rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         font-weight: lighter;
+        text-align: left;
     }
     
     h3 {
@@ -731,7 +762,7 @@ background-color: rgba(0, 94, 160, 1);
 
     #frameworkright{
         padding-left: 20px;
-        width: 400px
+        width: 400px;
     }
 
     .col-xs-6 {
@@ -747,6 +778,12 @@ background-color: rgba(0, 94, 160, 1);
     }
     
     .cv {
+        font-size: 1.75rem;
+        position: relative;
+        top: 20px;
+    }
+
+    .contact {
         font-size: 1.75rem;
         position: relative;
         top: 20px;
