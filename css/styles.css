@@ -376,8 +376,9 @@ div.socials {
     font-size: 1.75rem;
 }
 
-footer {
+.footer {
     text-align: center;
+    padding-top: 10px;
 }
 
 #heart {
