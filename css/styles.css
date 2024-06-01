@@ -164,7 +164,7 @@ a:hover {
     }
 
     #algonquin {
-      max-width: 35%;
+      display: none;
     }
 
 #skills {
@@ -498,10 +498,7 @@ background-color: rgba(0, 94, 160, 1);
     }
     
     #algonquin {
-        max-width: 30%;
-        height: auto;
-        z-index: 2;
-        position: relative;
+        display: none;
     }
 
     .row {
@@ -637,21 +634,22 @@ background-color: rgba(0, 94, 160, 1);
     }
 
     #algonquin {
-      max-width: 30%;
+      display: flex;
+      max-width: 25%;
       position: relative;
-      top: -150px;
-      left: 40px;
+      top: -120px;
+      left: 30px;
       float: right;
     }
 
     .adobe {
         display: flex;
-        width: 200px;
+        width: 170px;
         height: auto;
         float: right;
         position: relative;
-        left: 420px;
-        top: -190px;
+        left: 360px;
+        top: -170px;
     }
  
     .box-el {
@@ -698,14 +696,19 @@ background-color: rgba(0, 94, 160, 1);
         height: 20px;
     }
   
+    #skills {
+       width: 90%;
+     
+    }
+
     #skillsleft{
         padding-right: 20px;
-     
+        width: 400px;
     }
 
     #frameworkright{
         padding-left: 20px;
-  
+        width: 400px
     }
 
     .col-xs-6 {
@@ -725,4 +728,5 @@ background-color: rgba(0, 94, 160, 1);
         position: relative;
         top: 20px;
     }
+
 }
