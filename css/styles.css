@@ -183,6 +183,7 @@ a:hover {
 }
 
 .uxProcess {
+    display: flex;
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -499,10 +500,10 @@ background-color: rgba(0, 94, 160, 1);
     }
 
     .uxProcess {
-        display: block;
+        display: flex;
         margin-left: auto;
         margin-right: auto;
-        width: 60%;
+        width: 97%;
         padding: 0px;
     }
 
@@ -700,5 +701,12 @@ background-color: rgba(0, 94, 160, 1);
         height: 300px;
     }
 
+    .uxProcess {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        width: 65%;
+        padding: 0px;
+    }
     
 }
