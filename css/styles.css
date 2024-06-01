@@ -499,6 +499,11 @@ background-color: rgba(0, 94, 160, 1);
         flex-wrap: nowrap;
     }
 
+    .adobe {
+        display: none;
+        visibility: none;
+    }
+ 
     .uxProcess {
         display: flex;
         margin-left: auto;
@@ -631,7 +636,7 @@ background-color: rgba(0, 94, 160, 1);
 
     .adobe {
         display: flex;
-        width: 50%;
+        width: 200px;
         height: auto;
         float: right;
         position: relative;
