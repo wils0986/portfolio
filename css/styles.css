@@ -728,4 +728,21 @@ background-color: rgba(0, 94, 160, 1);
         top: 20px;
     }
 
+    .box1 {
+        background: url(/images/atlas_Home.jpg) center top no-repeat;
+        background-size: 500px;
+        height: 500px;
+      }
+    
+      .box2 {
+        background: url(/images/geo.ca_Home.jpg) center top no-repeat;
+        background-size: 500px;
+        height: 500px;
+      }
+    
+      .box3 {
+        background: url(/images//geoAI_Banner.jpg) center top no-repeat;
+        background-size: 500px;
+        height: 500px;
+      }
 }
