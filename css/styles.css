@@ -163,33 +163,29 @@ a:hover {
       max-width: 35%;
     }
 
-.skills {
+#skills {
     padding-top: 40px;
-    margin: 0 auto;
+    width: 100%;
+    padding-left: 20px;
+    height: auto;
 }
 
 #skillsleft {
-    padding-left: 10px;
-    width: 350px;
-    margin: 0 auto;
+    width: 97%;
 }
 
 #frameworkright {
-    padding-left: 10px;
-    width: 350px;
-    padding-right: 10px;
-    margin: 0 auto;
+    width: 97%;
 }
 
 .adobe {
-    width: 35%;
-    height: auto;
-    position: relative;
-    padding-top: 20px;
+   display: none;
 }
 
 .uxProcess {
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .box-el {
@@ -496,44 +492,18 @@ background-color: rgba(0, 94, 160, 1);
         z-index: 2;
         position: relative;
     }
-    
-    section.skills {
-        max-height: 350px;
-    }
-    
+
     .row {
         display: flex;
         flex-wrap: nowrap;
     }
-    
-    .adobe {
-        width: 65%;
-        height: auto;
-        float: right;
-        position: relative;
-        left: 550px;
-        top: -170px;
-    }
-    
+
     .uxProcess {
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 65%;
-        padding-left: 20px;
-    }
-    
-    .skills {
-        padding-top: 40px;
-    }
-    
-    #skillsleft {
-        padding-left: 10px;
-    }
-    
-    #frameworkright {
-        padding-left: 90px;
-        max-width: 350px;
+        width: 60%;
+        padding: 0px;
     }
 
     .row-well {
@@ -546,12 +516,8 @@ background-color: rgba(0, 94, 160, 1);
     
     .well {
        background-color:black; 
-        opacity: 0.7;
+       opacity: 0.7;
        filter: alpha(opacity=50);
-    }
-    
-    .col-md-4 {
-        padding: 20px;
     }
     
     div.box1, div.box2, div.box3 {
@@ -562,9 +528,7 @@ background-color: rgba(0, 94, 160, 1);
         position: relative;
     }
 
-   
-
-}
+ }
 
 /* Tablet to Desktop */
 @media only screen and (min-width: 1200px) {
@@ -665,24 +629,13 @@ background-color: rgba(0, 94, 160, 1);
     }
 
     .adobe {
-        width: 60%;
+        display: flex;
+        width: 50%;
         height: auto;
         float: right;
         position: relative;
-        left: 410px;
-        top: -180px;
-    }
-
-    .skills {
-        padding-top: 40px;
-    }
-    
-    #skillsleft {
-        padding-left: 10px;
-    }
-    
-    #frameworkright {
-        padding-left: 90px;
+        left: 420px;
+        top: -190px;
     }
  
     .box-el {
@@ -729,4 +682,23 @@ background-color: rgba(0, 94, 160, 1);
         top: -80%;
     }
 
+    .progress {
+        height: 20px;
+    }
+  
+    #skillsleft{
+        padding-right: 20px;
+     
+    }
+
+    #frameworkright{
+        padding-left: 20px;
+  
+    }
+
+    .col-xs-6 {
+        height: 300px;
+    }
+
+    
 }
