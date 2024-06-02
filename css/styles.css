@@ -249,6 +249,7 @@ a:hover {
     text-align: center;
     padding: 1em 0em;
     position: relative;
+    top: -10px;
  }
 
  div.box1, div.box2, div.box3 {
