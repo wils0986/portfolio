@@ -11,38 +11,33 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <nav class="navbar">
-            <div class="topnav" id="myTopnav">
-              <a href="index.html">Home</a>
-              <a href="index.html#about-me">About Me</a>
-              <a href="index.html#skills">My Skills</a>
-              <a href="index.html#projects">My Projects</a>
-              <a href="index.html#contact-me">Contact Me</a>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>
-            <img class="jw" src="images/jw-designs-logo.png">
-            </nav>
-            </header>
-<div class="wrapper">
+    <header class="header__navbar">
+        <div class="navbar">
+          <ul class="navbar__links">
+             <li><a href="index.html#"><img id="navbar__logo" src="images/jw-designs-logo.png"></a></li>
+              <li><a href="index.html#about-me">About Me</a></li>
+              <li><a href="index.html#skills">My Skills</a></li>
+              <li><a href="index.html#projects">My Projects</a></li>
+              <li><a href="index.html#contact-me">Contact Me</a></li>
+          </ul>
+          </div>
+      </header> 
+  <div class="wrapper">
     <div class="atlas">
         <h1>The Atlas of Canada - Website Redesign</h1>
-        <h2>The old</h2>
+        <h2 class="lighth2">The old</h2>
         <p class="atlasP">
           The current home page of the Atlas of Canada has room for improvement in terms of user experience design. The Federal Identity Program and the Canada Style Guide create an authoritative, professional, and trusted look and feel across all Canada.ca websites. This ensures a cohesive Canada.ca web presence and WCAG compliance.</p>
           <p class="atlasP2">After conducting the necessary research and planning, reorganizing the site's information architecture became possible. Next, design improvements to guide users through their journey intuitively were achieved through icons and imagery. A web banner displaying the Atlas of Canada's graphic identifier, as well as two map products combined to represent the innovation and historical significance across the Atlas was also designed.</p>
-        <img src="images/atlasOld.jpg"></img> 
+        <img src="images/atlasOld.jpg" alt="screenshot of old Atlas of Canada home page"></img> 
     </div>
     <br>
     <div class="atlas">
         <h2 id="newAtlas">Creating the New</h2>
-         <img src="images/atlas_Home.jpg"></img> 
+         <img src="images/atlas_Home.jpg" alt="screenshot of redesigned Atlas of Canada home page"></img> 
     </div>
     <section id="wrapper2"></section>
-</div>
+  </div>
     <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");
