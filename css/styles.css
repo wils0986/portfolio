@@ -52,6 +52,8 @@ a:hover {
 
 #navbar__logo {
     width: 45px;
+    position: relative;
+    top: -2.5px;
 }
 
 #navbar__logo:hover {
