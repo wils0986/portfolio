@@ -68,6 +68,8 @@ a:hover {
   position: sticky;
   top: 0px;
   z-index: 12;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .navbar {
