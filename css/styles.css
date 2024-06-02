@@ -196,6 +196,7 @@ a:hover {
 
 #frameworkright {
     width: 97%;
+    padding-top: 10px;
 }
 
 .adobe {
@@ -568,11 +569,19 @@ background-color: rgba(0, 94, 160, 1);
         padding: 0px;
     }
 
+    #frameworkright{
+        padding-top: 0px;
+        padding-left: 20px;
+    }
+
+    .progress {
+        height: 20px;
+    }
+
     .row-well {
         height: 300px;
     }
 
-    
     #contact-me{
         background-color:#e6e6e6;
     }
@@ -774,6 +783,7 @@ background-color: rgba(0, 94, 160, 1);
     #frameworkright{
         padding-left: 20px;
         width: 400px;
+        padding-top: 0px;
     }
 
     .col-xs-6 {
