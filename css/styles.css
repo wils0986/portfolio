@@ -100,7 +100,6 @@ a:hover {
         box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
     }
 
-
     #cover{
         background: url(/images/leaves.JPG) center center no-repeat;
         filter: hue-rotate(300deg);
@@ -176,6 +175,10 @@ a:hover {
 
     p.lead {
         width: 97%;
+    }
+
+    .abouth2 {
+        color: #2c2c2c;
     }
 
     #about-me {
