@@ -188,6 +188,7 @@ p {
     p.lead {
         width: 97%;
         font-weight: lighter;
+        font-size: 1rem;
     }
 
     .darkh2 {
@@ -758,6 +759,7 @@ h2.contact, h2.cv {
 
     p.lead {
         width: 70%;
+        font-size: 1.25rem;
     }
 
     #about-me {
