@@ -682,6 +682,10 @@ h2.contact, h2.cv {
 /* Tablet to Desktop */
 @media only screen and (min-width: 1200px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     h1 {
         font-size: 3.5rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -892,8 +896,7 @@ h2.contact, h2.cv {
         height: 500px;
       }
 
-      
-    .email {
+        .email {
         font-size: 1.25rem;
         position: relative;
         top: 65px;
