@@ -645,6 +645,22 @@ background-color: rgba(0, 94, 160, 1);
     padding-bottom: 10px;
 }
 
+.atlasP {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: lighter;
+    font-size: 1.25rem;
+}
+
+.atlasP2 {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-align: left;
+    width: 90%;
+    font-size: 1.25rem;
+    color: white;
+}
+
  }
 
 /* Tablet to Desktop */
@@ -690,13 +706,19 @@ background-color: rgba(0, 94, 160, 1);
     }
     
     #newAtlas {
-        color: 2c2c2c;
+        color: #2c2c2c;
     }
 
     .atlasP {
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         font-weight: lighter;
-        font-size: 1.5rem;
+        font-size: 1.35rem;
+    }
+
+    .atlasP2 {
+        text-align: left;
+        font-size: 1.35rem;
+        color: white;
     }
 
     .topnav a {
@@ -742,6 +764,7 @@ background-color: rgba(0, 94, 160, 1);
 
     p.lead {
         width: 70%;
+        font-size: 1.35rem;
     }
 
     #algonquin {
@@ -889,15 +912,7 @@ background-color: rgba(0, 94, 160, 1);
         box-shadow: 4px 4px 4px #2c2c2c1e;
     }
 
-    .atlasP {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 20px;
-        text-align: left;
-        width: 70%;
-        font-size: 1.5rem;
-    }
-    
+   
     .container p {
         font-size: 1.6rem;
         padding-top: 40px;
