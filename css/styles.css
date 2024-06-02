@@ -293,7 +293,7 @@ a:hover {
           transition: all 400ms ease;
           transform: translateY(0%);
           transition-delay: 600ms;
-          font-size: 1.25rem;
+          font-size: 1.15rem;
           color: white;
         }
         .cardA{
