@@ -31,6 +31,7 @@ ul.navbar__links {
 
 div.navbar {
     padding: 0px;
+   
 }
 
 .navbar a {
@@ -88,6 +89,7 @@ h2 {
     font-weight: lighter;
     text-align: center;
 }
+
 
 .lighth2 {
     color: white;
@@ -172,17 +174,6 @@ p {
         position: relative;
     }
   
-  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */ 
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-
     .lead {
         width: 100%;
     }
@@ -358,7 +349,7 @@ p {
     transform: translateY(40%);
     font-weight: lighter;
     padding-bottom: 30px;
-    padding-top: 25px;
+    padding-top: 30px;
     text-align: left;
 }
 
