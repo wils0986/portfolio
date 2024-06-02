@@ -94,7 +94,7 @@ a:hover {
         background: url(/images/leaves.JPG) top center no-repeat;
         height: 50%;
         position: relative;
-        top: -50.35%;
+        top: -58%;
     }
 
     #cover{
@@ -317,8 +317,8 @@ a:hover {
 
 .the-content-box:hover {
     background:rgba(31, 32, 32, 0.952);
-    top: 100px;
-    height: 300px;
+    top: 50px;
+    height: 400px;
 }
 
 .cardP{
@@ -327,8 +327,9 @@ a:hover {
     transform: translateY(40%);
     font-weight: lighter;
     padding-bottom: 30px;
-    padding-top: 30px;
-    }
+    padding-top: 25px;
+    text-align: left;
+}
 
 .cardA{
       display: inline-block;
@@ -441,7 +442,7 @@ background-color: rgba(0, 94, 160, 1);
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     width: 90%;
     font-size: 1rem;
 }
@@ -508,6 +509,13 @@ background-color: rgba(0, 94, 160, 1);
         padding-top: 40px;
     }
     
+    
+.the-content-box:hover {
+    background:rgba(31, 32, 32, 0.952);
+    top: 50px;
+    height: 330px;
+}
+
     .lead {
         text-align: left;
         width: 60%;
@@ -743,7 +751,7 @@ background-color: rgba(0, 94, 160, 1);
         background: url(/images/leaves.JPG) top center no-repeat;
         height: 100%;
         position: relative;
-        top: -73.96%;
+        top: -86.4%;
     }
 
     .progress {
@@ -834,9 +842,9 @@ background-color: rgba(0, 94, 160, 1);
         margin-left: auto;
         margin-right: auto;
         padding: 20px;
-        text-align: center;
+        text-align: left;
         width: 70%;
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     
 
