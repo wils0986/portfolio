@@ -382,11 +382,13 @@ div.socials {
 
 .cv {
     font-size: 1.75rem;
+    color: #2c2c2c;
 }
 
 .contact {
     font-size: 1.75rem;
     padding-top: 5px;
+    color: #2c2c2c;
 }
 
 .footer {
@@ -592,9 +594,16 @@ background-color: rgba(0, 94, 160, 1);
         background-color:#e6e6e6;
     }
 
+    .cv {
+        font-size: 1.75rem;
+        position: relative;
+        top: 10px;
+    }
+
     .contact {
-        text-align: left;
-        padding-top: 0px;
+        font-size: 1.75rem;
+        position: relative;
+        top: 0px;
     }
     
     .well {
@@ -821,7 +830,7 @@ background-color: rgba(0, 94, 160, 1);
     .contact {
         font-size: 1.75rem;
         position: relative;
-        top: 20px;
+        top: 10px;
     }
 
     .box1 {
