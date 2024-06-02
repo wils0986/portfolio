@@ -188,6 +188,7 @@ p {
 
     p.lead {
         width: 97%;
+        font-weight: lighter;
     }
 
     .darkh2 {
