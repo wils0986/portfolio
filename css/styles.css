@@ -417,7 +417,7 @@ div.socials {
 }
 
 .contact {
-    padding-top: 5px;
+    padding-top: 10px;
     color: #2c2c2c;
 }
 
@@ -625,22 +625,6 @@ h2.contact, h2.cv {
         height: 300px;
     }
 
-    #contact-me{
-        background-color:#e6e6e6;
-    }
-
-    .cv {
-        font-size: 1.75rem;
-        position: relative;
-        top: 10px;
-    }
-
-    .contact {
-        font-size: 1.75rem;
-        position: relative;
-        top: 0px;
-    }
-    
     .well {
        background-color:black; 
        opacity: 0.7;
@@ -654,12 +638,6 @@ h2.contact, h2.cv {
     .box1, .box2, .box3 {
         position: relative;
     }
-    
-.footer {
-    text-align: center;
-    padding-top: 0px;
-    padding-bottom: 10px;
-}
 
 .atlasP {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -678,6 +656,28 @@ h2.contact, h2.cv {
     color: white;
     padding-top: 0 px;
  }
+
+ .contact {
+    font-size: 1.75rem;
+  }
+
+    .email {
+    font-size: 1.25rem;
+    position: relative;
+    left: -35px;
+}
+
+.cv {
+    position: relative;
+    right: -15px;
+    top: 10px;
+}
+
+.cvLink {
+    position: relative;
+    top: 10px;
+}
+ 
 }
 
 /* Tablet to Desktop */
@@ -869,19 +869,6 @@ h2.contact, h2.cv {
         top: -60px;
     }
     
-    .cv {
-        font-size: 1.75rem;
-        position: relative;
-        top: 20px;
-    }
-
-    .contact {
-        font-size: 1.75rem;
-        position: relative;
-        top: 20px;
-        padding-top: 0px;
-    }
-
     .box1 {
         background: url(/images/atlas_Home.jpg) center top no-repeat;
         background-size: 500px;
@@ -900,21 +887,25 @@ h2.contact, h2.cv {
         height: 500px;
       }
 
+      .contact {
+        font-size: 1.75rem;
+      }
+
         .email {
         font-size: 1.25rem;
         position: relative;
-        top: 65px;
+        left: -35px;
     }
 
-    h2.cv, h2.contact {
-        text-align: center;
-        top: 40px;
+    .cv {
+        position: relative;
+        right: -15px;
+        top: 10px;
     }
 
     .cvLink {
-        font-size: 1.25rem;
         position: relative;
-        top: 65px;
+        top: 10px;
     }
 
     .atlas img {
