@@ -484,6 +484,10 @@ background-color: rgba(0, 94, 160, 1);
     box-shadow: 4px 4px 4px #2c2c2c1e;
 }
 
+#newAtlas {
+    color: #2c2c2c;
+}
+
 /* Mobile to Tablet */
 @media only screen and (min-width: 768px) {
 
