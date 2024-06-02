@@ -705,6 +705,11 @@ h2.contact, h2.cv {
         font-size: 1.25rem;
     }
 
+    .header__navbar {
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+
     .atlas h1 {
         font-size: 3rem;
         text-align: center;
