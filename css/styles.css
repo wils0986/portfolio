@@ -118,6 +118,7 @@ p {
     .wrapper {
         background: url(/images/leaves.JPG) center center no-repeat;
         height: 100%;
+        width: 97%;
         box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
     }
 
@@ -682,10 +683,6 @@ h2.contact, h2.cv {
 /* Tablet to Desktop */
 @media only screen and (min-width: 1200px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
     h1 {
         font-size: 3.5rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -773,7 +770,6 @@ h2.contact, h2.cv {
         height: 1000px;
         display: flex;
         scroll-margin-top: 65px;
-
     }
 
     #algonquin {
@@ -820,6 +816,7 @@ h2.contact, h2.cv {
     .wrapper {
         background: url(/images/leaves.JPG) center center no-repeat;
         height: 100%;
+        width: 97%;
         box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
     }
 
