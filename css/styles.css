@@ -50,7 +50,7 @@ ul li a {
 }
 
     h1 {
-        font-size: 1.75rem;
+        font-size: 1.85rem;
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         font-weight: lighter;
         color: white;
@@ -121,7 +121,7 @@ a:hover {
     }
 
     .container p {
-        font-size: .80rem;
+        font-size: .85rem;
     }
 
     .topnav a {
