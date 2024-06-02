@@ -115,7 +115,6 @@ p {
     font-weight: lighter;
 }
 
-
     .wrapper {
         background: url(/images/leaves.JPG) center center no-repeat;
         height: 100%;
@@ -574,7 +573,6 @@ h2.contact, h2.cv {
         padding-top: 40px;
     }
     
-
 .the-content-box:hover {
     background:rgba(31, 32, 32, 0.952);
     top: 50px;
@@ -678,7 +676,7 @@ h2.contact, h2.cv {
     width: 80%;
     font-size: 1.25rem;
     color: white;
-}
+ }
 }
 
 /* Tablet to Desktop */
@@ -906,7 +904,6 @@ h2.contact, h2.cv {
         top: 40px;
     }
 
-
     .cvLink {
         font-size: 1.25rem;
         position: relative;
@@ -925,6 +922,5 @@ h2.contact, h2.cv {
         font-size: 1.6rem;
         padding-top: 40px;
     }
-
 }
 
