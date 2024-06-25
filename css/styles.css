@@ -121,6 +121,7 @@ h3 {
 h4 {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: lighter;
+    font-size: 1rem;
 }
 
 p {
@@ -200,6 +201,7 @@ p {
 
     .darkh2 {
         color: #2c2c2c;
+        font-size: 1.75rem;
     }
 
     #about-me {
