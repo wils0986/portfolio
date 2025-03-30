@@ -148,7 +148,6 @@ p {
 
     #cover{
         background: url(/images/leaves-min.JPG) center center no-repeat;
-        filter: hue-rotate(300deg);
         box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
         padding-bottom: 0px;
         background-size: cover;
@@ -254,7 +253,6 @@ p {
     box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
 	background-size: cover;
 	color: white;
-
 	text-align: center;
 	align-items: center;
     height: 1350px;
@@ -793,7 +791,7 @@ h2.contact, h2.cv {
     }
 
     #projects {
-        height: 1000px;
+        height: 600px;
         display: flex;
         scroll-margin-top: 65px;
     }
