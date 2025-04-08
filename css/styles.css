@@ -76,6 +76,11 @@
     color:white;
     font-weight: normal;
   }
+
+  #geodisco {
+    width: 60%;
+    height: auto;
+  }
   
   /*******************LIGHTBOX*******************/
   
@@ -988,8 +993,13 @@ h2.contact {
 .email {
     top: 5px;
 }
- 
+
+#geodisco {
+    width: 40%;
+    height: auto;
+  }
 }
+ 
 
 
 /* In between */
@@ -1275,5 +1285,9 @@ h2.contact {
         top: 70px;
         }
         
+        #geodisco {
+            width: 30%;
+            height: auto;
+          }
 }
 
