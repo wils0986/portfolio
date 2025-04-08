@@ -77,7 +77,6 @@
     font-weight: normal;
   }
   
-
   /*******************LIGHTBOX*******************/
   
   
@@ -145,7 +144,7 @@
   border: solid #e7759b;
   text-decoration: none;
   position: fixed;
-  top: 70px;
+  top: 80px;
   right: 0;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
@@ -715,7 +714,6 @@ div.socials {
     position: relative;
     top: 240px;
     padding: 20px;
-    z-index: 2;
 }
 
 .atlas h1 {
