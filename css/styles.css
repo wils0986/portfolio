@@ -51,7 +51,7 @@
      }
   
   #gallery li a img:hover {
-     border: dashed white;
+     border: solid #e7759b;
   }
   
   .caption{
@@ -133,6 +133,7 @@
   box-sizing: border-box;
   background: white;
   color: black;
+  border: solid #e7759b;
   text-decoration: none;
   position: fixed;
   top: 70px;
@@ -152,8 +153,8 @@
   width: 1px;
   background: black;
   position: absolute;
-  left: 26px;
-  top: 10px;
+  left: 22px;
+  top: 7px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -169,14 +170,15 @@
   width: 1px;
   background: black;
   position: absolute;
-  left: 26px;
-  top:10px;
+  left: 22px;
+  top: 7px;
   -webkit-transform:rotate(-45deg);
   -moz-transform:rotate(-45deg);
   -o-transform:rotate(-45deg);
   transform:rotate(-45deg);
   }
   
+
   /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
   
   .lightbox-target:target {
@@ -199,7 +201,6 @@
     width:100%;
     background-color:white;
     top: 0px;
-    
   }
 
 
