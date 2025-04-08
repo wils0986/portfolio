@@ -616,9 +616,11 @@ padding: 0em 1em;
     padding-top: 20px;
 }
 
-/* div.socials {
+div.socials {
     text-align: center;
-} */
+    position: relative;
+    top: -15px;
+}
 
 .cv {
     font-size: 1.75rem;
