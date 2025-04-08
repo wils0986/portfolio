@@ -1270,5 +1270,10 @@ h2.contact {
          width: 90%;
          margin: 0 auto;
      }
+
+     a.lightbox-close {
+        top: 70px;
+        }
+        
 }
 
