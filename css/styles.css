@@ -419,6 +419,10 @@ p {
       display: none;
     }
 
+    #nrcan {
+        display: none;
+    }
+
 #skills {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -840,6 +844,10 @@ h2.contact, h2.cv {
         display: none;
     }
 
+    #nrcan {
+        display: none;
+    }
+
     .row {
         display: flex;
         flex-wrap: nowrap;
@@ -1007,6 +1015,7 @@ h2.contact, h2.cv {
     p.lead {
         width: 70%;
         font-size: 1.25rem;
+        padding-right: 80px;
     }
 
     #about-me {
@@ -1031,21 +1040,39 @@ h2.contact, h2.cv {
 
     #algonquin {
       display: flex;
-      max-width: 25%;
+      max-width: 55%;
       position: relative;
-      top: -120px;
+      top: -180px;
       left: 30px;
       float: right;
     }
 
+    #nrcan {
+        display: flex;
+        max-width: 75%;
+        position: relative;
+        top: -140px;
+        left: 130px;
+        float: right;
+    }
+
+    .logos {
+        position: relative;
+        max-width: 550px;
+        float: right;
+        padding-left: 20px;
+        top: -10px;
+        left: -40px;
+        padding-right: 0px;
+    }
+
     .adobe {
         display: flex;
-        width: 170px;
-        height: auto;
-        float: right;
+        max-width: 50%;
         position: relative;
-        left: 360px;
-        top: -170px;
+        top: -160px;
+        left: 440px;
+        float: right;
     }
  
     .box-el {
