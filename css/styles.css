@@ -1130,7 +1130,7 @@ h2.contact {
       display: flex;
       max-width: 55%;
       position: relative;
-      top: -180px;
+      top: -190px;
       left: 30px;
       float: right;
     }
@@ -1139,7 +1139,7 @@ h2.contact {
         display: flex;
         max-width: 75%;
         position: relative;
-        top: -140px;
+        top: -150px;
         left: 130px;
         float: right;
     }
