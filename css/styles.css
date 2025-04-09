@@ -1421,10 +1421,15 @@ h2.contact {
 
         #issf_PDF {
             max-width: 50%;
-            height: 600px;
+            height: 850px;
             position: absolute;
-            top: 200px;
+            top: 100px;
             left: 450px;
+        }
+
+        #issfCaption {
+            position: relative;
+            top: -60px;
         }
 }
 
