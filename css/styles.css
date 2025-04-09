@@ -77,6 +77,8 @@
     font-weight: normal;
     position: relative;
     top: 60px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: lighter;
   }
 
   #geodisco {
@@ -1379,6 +1381,8 @@ h2.contact {
 
         .caption p {
             font-size: 1.75rem;
+            font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+            font-weight: lighter;
         }
 
         .header__navbar {
