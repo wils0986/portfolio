@@ -1377,6 +1377,10 @@ h2.contact {
             top: 40px;
         }
 
+        .caption p {
+            font-size: 1.75rem;
+        }
+
         .header__navbar {
             position: relative;
             z-index: 13;
