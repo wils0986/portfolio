@@ -67,7 +67,7 @@
      text-align: center;
      position: relative;
       color: #000;
-      top: 120px;
+      top: 70px;
       width: 90%;
       margin: 0 auto;
   }
@@ -82,6 +82,11 @@
   #geodisco {
     width: 85%;
     height: auto;
+  }
+
+  #atlasrollup {
+    position: relative;
+    top: 150px;
   }
   
   /*******************LIGHTBOX*******************/
@@ -816,6 +821,14 @@ h2.contact {
     #projects {
         height: 900px;
     }
+
+    #atlasrollup {
+        height: 80%;
+        width: auto;
+        position: relative;
+        top: 120px;
+      }
+
 }
 
 /* Mobile to Tablet */
@@ -1012,6 +1025,13 @@ h2.contact {
     width: 40%;
     height: auto;
   }
+
+  #atlasrollup {
+    height: 80%;
+    width: auto;
+    position: relative;
+    top: 120px;
+  }
 }
  
 
@@ -1026,6 +1046,17 @@ h2.contact {
         position: relative;
         left: 17px;
     }
+
+    #atlasrollup {
+        height: 80%;
+        width: auto;
+        position: relative;
+        top: 120px;
+      }
+
+      .caption {
+        top: 40px;
+      }
 }
 
 /* In between */
@@ -1033,7 +1064,19 @@ h2.contact {
     #projects {
         height: 550px;
     }
+
+    #atlasrollup {
+        height: 80%;
+        width: auto;
+        position: relative;
+        top: 120px;
+      }
+
+      .caption {
+        top: 40px;
+      }
 }
+
 
 /* Tablet to Desktop */
 @media only screen and (min-width: 1200px) {
@@ -1283,14 +1326,14 @@ h2.contact {
 
     .container p {
         font-size: 1.6rem;
-        padding-top: 40px;
+        padding-top: 0px;
     }
     
     .caption{
         text-align: center;
         position: relative;
          color: #000;
-         top: 10px;
+         top: 0px;
          width: 90%;
          margin: 0 auto;
      }
@@ -1307,5 +1350,16 @@ h2.contact {
           .fa-linkedin {
             font-size: 2.25rem;
           }
+
+          #atlasrollup {
+            height: 80%;
+            width: auto;
+          
+          }
+
+        .caption {
+            top: 70px;
+        }
+
 }
 
