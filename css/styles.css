@@ -1140,19 +1140,19 @@ h2.contact {
 
     #algonquin {
       display: flex;
-      max-width: 55%;
+      max-width: 50%;
       position: relative;
-      top: -190px;
+      top: -150px;
       left: 25px;
       float: right;
     }
 
     #nrcan {
         display: flex;
-        max-width: 75%;
+        max-width: 60%;
         position: relative;
-        top: -150px;
-        left: 130px;
+        top: -120px;
+        left: 80px;
         float: right;
     }
 
@@ -1171,7 +1171,7 @@ h2.contact {
         max-width: 50%;
         position: relative;
         top: -200px;
-        left: 430px;
+        left: 360px;
         float: right;
     }
  
