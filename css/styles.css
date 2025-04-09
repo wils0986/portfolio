@@ -721,6 +721,10 @@ div.socials {
     background-color: #2b7ae2;
 }
 
+.progress-bar-funny {
+    background-color: #FDC000;
+}
+
 .atlas {
     position: relative;
     top: 240px;
@@ -803,6 +807,10 @@ h2.contact {
     top: 0px;
     left: 0px;
 }
+
+.fa-linkedin {
+    font-size: 2.25rem;
+  }
 
 /* In between */
 @media only screen and (min-width: 465px) {
@@ -1107,7 +1115,7 @@ h2.contact {
 
     p.lead {
         width: 70%;
-        font-size: 1.25rem;
+        font-size: 1.25renquim;
         padding-right: 80px;
     }
 
@@ -1163,8 +1171,8 @@ h2.contact {
         display: flex;
         max-width: 50%;
         position: relative;
-        top: -160px;
-        left: 440px;
+        top: -200px;
+        left: 430px;
         float: right;
     }
  
@@ -1295,6 +1303,10 @@ h2.contact {
         #geodisco {
             width: 30%;
             height: auto;
+          }
+
+          .fa-linkedin {
+            font-size: 2.25rem;
           }
 }
 
