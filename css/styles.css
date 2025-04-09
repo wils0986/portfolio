@@ -1168,10 +1168,10 @@ h2.contact {
 
     .adobe {
         display: flex;
-        max-width: 50%;
+        max-width: 40%;
         position: relative;
         top: -200px;
-        left: 360px;
+        left: 320px;
         float: right;
     }
  
