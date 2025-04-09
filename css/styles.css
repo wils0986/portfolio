@@ -226,8 +226,13 @@
     top: 0px;
   }
 
-
-
+  #issf_PDF {
+    width: 90%;
+    height: 500px;
+    position: absolute;
+    top: 300px;
+    left: 20px;
+}
 
 
 
@@ -1302,6 +1307,7 @@ h2.contact {
     margin: 5px;
     }
 
+
     h2.contact {
         position: relative;
         top: 10px;
@@ -1378,6 +1384,14 @@ h2.contact {
 
         .navbar__links {
             font-size: 1.1rem;
+        }
+
+        #issf_PDF {
+            max-width: 50%;
+            height: 600px;
+            position: absolute;
+            top: 200px;
+            left: 450px;
         }
 }
 
