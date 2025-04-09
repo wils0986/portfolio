@@ -67,7 +67,7 @@
      text-align: center;
      position: relative;
       color: #000;
-      top: 150px;
+      top: 120px;
       width: 90%;
       margin: 0 auto;
   }
@@ -640,7 +640,7 @@ padding: 0em 1em;
 #contact-me {
     text-align: center;
     position: relative;
-    /* z-index: -1; */
+    z-index: -1;
 }
 
 .social-links{
