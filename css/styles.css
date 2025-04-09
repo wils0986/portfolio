@@ -392,7 +392,7 @@ p {
         white-space: nowrap;
         padding-top: 40px;
     }
-    
+
     .container2 {
         max-width: 97%;
         height: auto;
@@ -636,6 +636,8 @@ padding: 0em 1em;
 
 #contact-me {
     text-align: center;
+    position: relative;
+    z-index: -1;
 }
 
 .social-links{
