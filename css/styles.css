@@ -120,7 +120,8 @@
   -o-transition: opacity .5s ease-in-out;
   transition: opacity .5s ease-in-out;
   overflow: hidden;
-  margin-bottom:0px
+  margin-bottom:0px;
+  z-index: 12; /* fixes contact-me overlap issue*/
   }
   
   /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
@@ -142,8 +143,9 @@
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   border-radius:0px;
-  }
   
+  }
+
   
   /* Styles the close link, adds the slide down transition */
   
@@ -519,6 +521,7 @@ p {
 
 .row2 {
    flex-wrap: wrap;
+   clear: both;
 }
 
 .title {
@@ -647,8 +650,8 @@ padding: 0em 1em;
 #contact-me {
     text-align: center;
     position: relative;
-    /* z-index: -1; */
 }
+
 
 .social-links{
 	color: #2c2c2c;
@@ -1356,7 +1359,6 @@ h2.contact {
           #atlasrollup {
             max-height: 80%;
             width: auto;
-          
           }
 
         .caption {
