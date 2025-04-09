@@ -1431,5 +1431,11 @@ h2.contact {
             position: relative;
             top: -60px;
         }
-}
+
+        #gcdataCaption {
+            position: relative;
+            top: -10px;
+        }
+
+    }
 
