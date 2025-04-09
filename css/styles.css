@@ -647,7 +647,7 @@ padding: 0em 1em;
 #contact-me {
     text-align: center;
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .social-links{
