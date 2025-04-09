@@ -88,7 +88,7 @@
 
   #atlasrollup {
     position: relative;
-    top: 150px;
+    top: 250px;
     max-height: 70%;
     width: auto;
   }
@@ -364,7 +364,6 @@ h4 {
 
 p {
     font-size: 1.25rem;
-    text-align: left;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: lighter;
 }
@@ -834,6 +833,11 @@ h2.contact {
     font-size: 2.25rem;
   }
 
+  #atlasCaption {
+    top: -600px;
+    text-align: center;
+  }
+
 /* In between */
 @media only screen and (min-width: 465px) {
     #projects {
@@ -845,6 +849,11 @@ h2.contact {
         width: auto;
         position: relative;
         top: 120px;
+      }
+
+      #atlasCaption {
+        top: -680px;
+        text-align: center;
       }
 
 }
@@ -1050,6 +1059,8 @@ h2.contact {
     position: relative;
     top: 120px;
   }
+
+ 
 }
  
 
@@ -1075,6 +1086,11 @@ h2.contact {
       .caption {
         top: 40px;
       }
+
+      #atlasCaption {
+        top: -720px;
+        text-align: center;
+      }
 }
 
 /* In between */
@@ -1092,6 +1108,10 @@ h2.contact {
 
       .caption {
         top: 40px;
+      }
+
+      #atlasCaption {
+        top: -720px;
       }
 }
 
@@ -1373,6 +1393,11 @@ h2.contact {
           #atlasrollup {
             max-height: 80%;
             width: auto;
+          }
+
+          #atlasCaption {
+            top: -850px;
+            text-align: center;
           }
 
         .caption {
