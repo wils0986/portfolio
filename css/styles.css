@@ -1371,5 +1371,13 @@ h2.contact {
             top: 40px;
         }
 
+        .header__navbar {
+            position: relative;
+            z-index: 13;
+        }
+
+        .navbar__links {
+            font-size: 1.1rem;
+        }
 }
 
