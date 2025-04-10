@@ -963,11 +963,8 @@ h2.contact {
     height: auto;
   }
 
-
- 
 }
  
-
 
 /* In between */
 @media only screen and (min-width: 765px) {
@@ -980,8 +977,6 @@ h2.contact {
         left: 17px;
     }
 
-
-
 }
 
 /* In between */
@@ -989,7 +984,6 @@ h2.contact {
     #projects {
         height: 550px;
     }
-
      
 }
 
@@ -1073,7 +1067,7 @@ h2.contact {
       display: flex;
       max-width: 50%;
       position: relative;
-      top: -190px;
+      top: -210px;
       left: 40px;
       float: right;
     }
@@ -1082,7 +1076,7 @@ h2.contact {
         display: flex;
         max-width: 65%;
         position: relative;
-        top: -150px;
+        top: -140px;
         left: 120px;
         float: right;
     }
@@ -1227,10 +1221,6 @@ h2.contact {
             font-size: 2.25rem;
           }
 
-       
-
-        
-
         .header__navbar {
             position: relative;
             z-index: 13;
@@ -1261,6 +1251,5 @@ h2.contact {
             width: auto;
           }
           
-
     }
 
