@@ -1067,7 +1067,7 @@ h2.contact {
       display: flex;
       max-width: 50%;
       position: relative;
-      top: -210px;
+      top: -190px;
       left: 40px;
       float: right;
     }
@@ -1076,7 +1076,7 @@ h2.contact {
         display: flex;
         max-width: 65%;
         position: relative;
-        top: -140px;
+        top: -130px;
         left: 120px;
         float: right;
     }
