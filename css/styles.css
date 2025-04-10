@@ -199,7 +199,7 @@
   
  /* Inside lightbox - caption text */
 .lightbox-target .caption-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #fff;
     text-align: center;
     margin-top: 1em;
@@ -782,9 +782,9 @@ h2.contact {
 @media only screen and (min-width: 768px) {
 
     .lightbox-target .caption-text {
-      font-size: 1rem;
+      font-size: 1.1rem;
       position: relative;
-      top: 100px;
+      top: 0px;
     }
   
 
