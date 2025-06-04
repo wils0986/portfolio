@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Jenny Wilson Designs</title>
+  <script src="script.js" defer></script>
   <meta name="description" content="Jenny Wilson is a Multimedia Designer specializing in graphic design, web design, UX design, and digital communications. Explore her portfolio showcasing recent design work for Natural Resources Canada and HTML/CSS skills.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/images/jw-designs-logo.png">
@@ -262,43 +263,5 @@
   <p>© 2025 Jenny Wilson Designs <span id="heart" aria-hidden="true">❤</span></p>
 </footer>
 </div>
-
-<!-- JS Closes lightbox with escape key and button click -->
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  // Open lightbox
-  document.querySelectorAll('.lightbox').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const targetId = link.getAttribute('data-target');
-      if (!targetId) return;
-      const target = document.getElementById(targetId);
-      if (target) target.classList.add('active');
-    });
-  });
-
-  // Close lightbox on close button click
-  document.querySelectorAll('.lightbox-close').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      const lightbox = btn.closest('.lightbox-target');
-      if (lightbox) lightbox.classList.remove('active');
-    });
-  });
-
-  // Close lightbox on Escape key
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.lightbox-target.active').forEach(activeBox => {
-        activeBox.classList.remove('active');
-      });
-    }
-  });
-});
-
-
-</script>
-
 </body>
 </html>
