@@ -1,6 +1,5 @@
 // JS Closes lightbox with escape key and button click
 
-
 document.addEventListener('DOMContentLoaded', () => {
   // Open lightbox
   document.querySelectorAll('.lightbox').forEach(link => {
@@ -30,10 +29,4 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
-});
-
-// Safe to access DOM elements here
-const button = document.getElementById("myButton");
-button.addEventListener("click", () => {
-  alert("Button clicked!");
 });
