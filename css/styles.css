@@ -14,74 +14,58 @@ html, body {
 
 /* Navigation */
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  padding: 20px;
-  text-align: center;
-}
-
-ul.navbar__links {
-    align-items: center;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-div.navbar {
-    padding: 0px;
-   
-}
-
-.navbar a {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-a {
-	text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-
-a:hover {
-	text-decoration: none;
+.topnav {
+    background-color: #2c2c2c;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #2c2c2c;
     color: #e7759b;
-}
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
 
-#navbar__logo {
-    width: 45px;
-    position: relative;
-    top: -2.5px;
-}
+  .topnav .icon {
+    display: none;
+  }
 
-#navbar__logo:hover {
-    opacity: 30%;
-}
+/* When the screen is less than 600 pixels wide, hide all links. */
 
-.header__navbar {
-  padding: 0 0;
-  bordeR: 1px solid #2c2c2c;
-  background-color: #2c2c2c;
-  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
-  position: sticky;
-  top: 0px;
-  z-index: 12;
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
+@media screen and (max-width: 764px) {
+    .topnav a {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
-.navbar {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 0 3rem;
-}
+  @media screen and (max-width: 764px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
 
 /* Skips to main content with Tab key */
 
@@ -103,6 +87,21 @@ a:hover {
     top: 10px;
     visibility: visible;
   }
+
+/* Link styles */
+
+  a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #e7759b;
+}
+
+.webLink {
+    color: #2c2c2c;
+}
 
 /* Text styles */
 
@@ -242,10 +241,6 @@ p {
         padding: 30px;
         margin: 0 auto;
         scroll-margin-top: 60px;
-    }
-
-    .webLink {
-        color: #2c2c2c;
     }
 
 /* Skills */
@@ -574,6 +569,9 @@ div.socials {
 
 /* In between */
 @media only screen and (min-width: 465px) {
+
+   
+
     #projects {
         height: 900px;
     }
@@ -591,14 +589,23 @@ div.socials {
 /* Mobile to Tablet */
 @media only screen and (min-width: 768px) {
 
-    #navbar__logo {
-        width: 50px;
-    }
-    
-    .navbar a {
+    .topnav {
+        background-color: #2c2c2c;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
         padding-left: 40px;
         padding-right: 40px;
-    }
+        text-decoration: none;
+        font-size: 17px;
+      }
 
     h1 {
         font-size: 3rem;
@@ -735,6 +742,25 @@ div.socials {
  
 /* In between */
 @media only screen and (min-width: 765px) {
+    
+    .topnav {
+        background-color: #2c2c2c;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
     #projects {
         height: 700px;
     }
@@ -750,30 +776,46 @@ div.socials {
     #projects {
         height: 550px;
     }
+
+    .topnav {
+        background-color: #2c2c2c;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding-left: 80px;
+        padding-right: 80px;
+        text-decoration: none;
+        font-size: 17px;
+      }
 }
 
 /* Tablet to Desktop */
 @media only screen and (min-width: 1200px) {
 
-    .header__navbar {
-        position: relative;
-        z-index: 13;
-        padding-top: 0px;
-        padding-bottom: 0px;
-    }
-
-    .navbar__links {
-        font-size: 1.1rem;
-    }
-
-    .navbar {
-      justify-content: center;
-    }
-
-    .navbar a {
+    .topnav {
+        background-color: #2c2c2c;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
         padding-left: 80px;
         padding-right: 80px;
-    }
+        text-decoration: none;
+        font-size: 17px;
+      }
 
     h1 {
         font-size: 3.5rem;
@@ -789,8 +831,7 @@ div.socials {
     }
 
     .lighth2 {
-        top: -20px;
-        padding-bottom: 10px;
+        padding-bottom: 50px;
     }
     
     h3 {
