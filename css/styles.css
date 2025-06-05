@@ -333,11 +333,14 @@ h4 {
     font-weight: bold;
     border-radius: 4px;
     transition: top 0.3s ease;
+    visibility: hidden;
   }
   
   .skip-link:focus {
     top: 10px;
+    visibility: visible;
   }
+
 p {
     font-size: 1.25rem;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
