@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Jenny Wilson Designs</title>
   <script src="script.js" defer></script>
-  <meta name="description" content="Jenny Wilson is a Multimedia Designer specializing in graphic design, web design, UX design, and digital communications. Explore her portfolio showcasing recent design work for Natural Resources Canada and HTML/CSS skills.">
+  <meta name="description" content="Jenny Wilson is a Multimedia Designer specializing in graphic design, web design, UX design, and communications. Explore her portfolio showcasing recent design work for Natural Resources Canada and HTML/CSS skills.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="/images/jw-designs-logo.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,10 +13,12 @@
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+
+<!-- Skip link to main content -->
 <a href="#main" class="skip-link">Skip to main content</a>
 <div>
 
-  <!-- Navigation -->
+<!-- Navigation -->
   <header class="header__navbar">
     <nav aria-label="Main navigation" class="navbar">
       <ul class="navbar__links">
@@ -28,7 +30,6 @@
       </ul>
     </nav>
   </header> 
-<main id="main">
 
 <!-- Home -->
 <section id="cover">
@@ -38,6 +39,7 @@
     </div>
   </div>
 </section>
+<main id="main"></main>
 
 <!-- About -->
 <section id="about-me">
@@ -45,7 +47,7 @@
     <div class="container2">
       <div class="col-xs-8">
         <h2 class="darkh2">About Me</h2>
-        <p class="lead">Hi there! I'm Jenny, a Multimedia Designer with a background in graphic design, web content creation, and digital communications. I recently completed my contract as a Project Officer at Natural Resources Canada (NRCan) in Ottawa, ON, where I contributed to major website redesigns and created a wide range of visual content. I specialize in graphic design, web design, user experience design, and communications. This page showcases a selection of my design work and demonstrates my HTML/CSS skills.</p>
+        <p class="lead">Hi there! I'm Jenny, a Multimedia Designer with a background in graphic design, web design, user experience design, and communications. I recently completed my contract as a Project Officer at Natural Resources Canada, where I coordinated and created a wide range of communications materials and contributed to the redesigns of<a href="https://geo.ca/" class="webLink">GEO.ca</a>and<a href="https://atlas.gc.ca/" class="webLink">atlas.gc.ca.</a>This page gives an overview of my skills and showcases a selection of my recent design work, while demonstrating my knowledge of web development.</p>
         <div class="logos">
           <img id="algonquin" src="images/Algonquin_College_logo.png" alt="Green Algonquin College logo">
           <img id="nrcan" src="images/Natural_Resources_Canada.png" alt="Red Natural Resources Canada logo">
@@ -81,7 +83,7 @@
           <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" aria-label="Adobe InDesign 50%">
           </div>
         </div>
-        <h3>Photography</h3>
+        <h3>Project Management</h3>
         <div class="progress">
           <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;" aria-label="Photography 65%">
           </div>
@@ -89,7 +91,7 @@
       </div>
 
       <div id="frameworkright" class="col-xs-6">
-        <h3>HTML/CSS</h3>
+        <h3>HTML/CSS/JS</h3>
         <div class="progress">
           <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" aria-label="HTML/CSS 70%">
           </div>
@@ -122,10 +124,10 @@
   </div>
 </section>
 
- <!-- Portfolio -->
+<!-- Portfolio -->
 <section id="projects">
   <div class="container">
-    <h2 class="title">Design Projects</h2>
+    <h2 class="lighth2">Design Projects</h2>
     <ul id="gallery" class="portfolio">
 
       <li>
@@ -198,7 +200,7 @@
           <img src="/images/atlas_thumbnail_HSIN_legend.jpg" alt="Thumbnail for HSIN map legend">
         </a>
         <div class="lightbox-target" id="image6">
-          <img src="/images/atlas_HSIN_legend.jpg" id="geodisco" alt="Custom legend for High Speed Internet Network map">
+          <img src="/images/atlas_HSIN_legend.jpg" id="legend" alt="Custom legend for High Speed Internet Network map">
           <p class="caption-text">Legend for the Atlas of Canada's High Speed Internet Network map (print)</p>
           <a class="lightbox-close" href="#projects" aria-label="Close image 6"></a>
         </div>
@@ -234,27 +236,31 @@
   <div class="container">
     <div class="row2">
       <div class="col-md-4">
-        <h2 class="contact">Contact Me</h2>
-        <h3><a class="email" href="mailto:jennywilsondesigns@gmail.com">jennywilsondesigns@gmail.com</a></h3>
+        <h2 class="contacth2">Contact Me</h2>
+        <h3><a class="emailLink" href="mailto:jennywilsondesigns@gmail.com">jennywilsondesigns@gmail.com</a></h3>
       </div>
       <div class="col-md-4">
-        <h2 class="social">Social Media</h2>
+        <h2 class="socialh2">Social Media</h2>
         <a class="social-links" href="https://www.linkedin.com/in/jenny-wilson-sewell/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
           <i class="fa fa-linkedin" aria-hidden="true"></i>
         </a>
       </div>
       <div class="col-md-4">
-        <h2 class="cv">Résumé</h2>
+        <h2 class="cvh2">Résumé</h2>
         <h3><a class="cvLink" href="/images/JennyWS_resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></h3>
       </div>
     </div>
   </div>
 </section>
 </main>
+
+<!-- Footer -->
 <footer class="footer">
   <p>© 2025 Jenny Wilson Designs <span id="heart" aria-hidden="true">❤</span></p>
 </footer>
 </div>
+
+<!-- Link to JS file -->
 <script src="script.js"></script>
 </body>
 </html>

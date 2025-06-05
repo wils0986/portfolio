@@ -1,201 +1,6 @@
 * {
 	box-sizing: border-box;
 }
-
-#yosh {
-    max-width: 50%;
-    padding: 40px;
-}
-
-#lok {
-    max-width: 49.5%;
-    padding: 40px;
-}
-
-#strawberry, #blueberry, #grape, #raspberry, #orange, #az, #maple, #yoshkeys {
-    max-width: 50%;
-    padding: 40px;
-}
-
-
-/**************GALLERY LIGHTBOX******************/
-
-/*Eliminates padding, centers the thumbnail */
-
-
-  
-  #work-title{
-    font-family: helvetica;
-    color: #FFFFFF;
-    font-size: 40px;
-    padding-left: 40px;
-    padding-top: 20px;
-  }
-  
-  h2 {
-    color: white;
-    font-family: helvetica;
-    font-weight: normal;
-    font-size: 24px;
-  }
-  
-  .portfolio {
-     height: 500px;
-     margin: 0 auto;
-      }
-      
-#gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-  #gallery li {
-     display: inline-block;
-     margin: 5px;
-     clear: both;
-     }
-  
-  #gallery li a img:hover {
-     border: solid #e7759b;
-  }
-  
-
-  #geodisco {
-    width: 85%;
-    height: auto;
-  }
-
-  #atlasrollup {
-    position: relative;
-    top: 40px;
-    height: 900px;
-}
-  
-  #issf_PDF {
-    width: 50%;
-    height: 50%;
-    position: relative;
-    top: 100px;
-}
-  
-  /*******************LIGHTBOX*******************/
-  
-  
-  /* Styles the thumbnail */
-  
-  a.lightbox img {
-  height: 150px;
-  width: 150px;
-  border: 3px solid white;
-  border-radius: 0px;
-  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
-  margin: 5px;
-  }
-  
-  /* Styles the lightbox, removes it from sight and adds the fade-in transition */
-  
-  .lightbox-target {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-    overflow: hidden;
-    margin-bottom: 0;
-    pointer-events: none;
-    z-index: 12;
-  } /* fixes contact-me overlap issue */
-  
-  .lightbox-target.active {
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
-  
-  .lightbox-target img, .lightbox-target iframe  {
-    margin: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    max-height: 0%;
-    max-width: 0%;
-    border: 3px solid white;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box;
-    transition: 0.5s ease-in-out;
-    border-radius: 0;
-  }  
-  
-  .lightbox-target.active img,
-  .lightbox-target.active iframe {
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  /* Styles the close link, adds the slide down transition */
-  
-  a.lightbox-close {
-    display: block;
-    width: 50px;
-    height: 50px;
-    box-sizing: border-box;
-    background: white;
-    color: black;
-    border: solid #e7759b;
-    text-decoration: none;
-    position: fixed;
-    top: 80px;
-    right: 0;
-    transition: 0.5s ease-in-out;
-  }  
-  
-  /* Provides the "X" to eliminate an image from the close link */
-  
-  a.lightbox-close:before,
-  a.lightbox-close:after {
-    content: "";
-    display: block;
-    height: 30px;
-    width: 1px;
-    background: black;
-    position: absolute;
-    left: 22px;
-    top: 7px;
-  }
-  
-  a.lightbox-close:before {
-    transform: rotate(45deg);
-  }
-  
-  a.lightbox-close:after {
-    transform: rotate(-45deg);
-  }
-  
-  /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
-  
-
- /* Inside lightbox - caption text */
-.lightbox-target .caption-text {
-    font-size: 1rem;
-    color: #fff;
-    text-align: center;
-    margin-top: 1em;
-    padding: 0.5em 1em;
-    background: rgba(0, 0, 0, 0.425);
-    border-radius: 6px;
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-  }
-
   
 html, body {
 	min-height: 100%;
@@ -206,6 +11,8 @@ html, body {
     position: relative;
     overflow-x: hidden;
 }
+
+/* Navigation */
 
 ul {
   margin: 0;
@@ -276,6 +83,29 @@ a:hover {
   padding: 0 3rem;
 }
 
+/* Skips to main content with Tab key */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #2c2c2c;
+    color: white;
+    padding: 8px 16px;
+    z-index: 100;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: top 0.3s ease;
+  }
+  
+  .skip-link:focus {
+    top: 10px;
+    visibility: visible;
+  }
+
+/* Text styles */
+
 h1 {
     font-size: 2.2rem;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -290,9 +120,43 @@ h2 {
     text-align: center;
 }
 
+.darkh2 {
+    color: #2c2c2c;
+    font-size: 1.75rem;
+}
 
 .lighth2 {
     color: white;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 0px;
+    position: relative;
+    top: 0px;
+    font-size: 2rem;
+ }
+
+ .contacth2 {
+    padding-top: 20px;
+    color: #2c2c2c;
+    font-size: 24px;
+    margin: 0px;
+}
+
+ .socialh2 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-size: 24px;
+    color: #2c2c2c;
+    top: 20px;
+}
+
+.cvh2 {
+    font-size: 24px;
+    color: #2c2c2c;
+    position: relative;
+    top: 10px;
+    margin: 0px;
 }
 
 h3 {
@@ -301,10 +165,6 @@ h3 {
     font-weight: lighter;
     position: relative;
     top: 20px;
-}
-
-.abouth3 {
-    top: 0px;
 }
 
 .skills h3 {
@@ -322,44 +182,13 @@ h4 {
     margin-bottom: 2px;
 }
 
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background-color: #2c2c2c;
-    color: white;
-    padding: 8px 16px;
-    z-index: 100;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
-    transition: top 0.3s ease;
-    visibility: hidden;
-  }
-  
-  .skip-link:focus {
-    top: 10px;
-    visibility: visible;
-  }
-
 p {
     font-size: 1.25rem;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-weight: lighter;
 }
 
-    .wrapper {
-        height: 100%;
-        margin: 0 auto;
-        box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
-    }
-
-    #wrapper2 {
-        height: 50%;
-        position: relative;
-        top: -28%;
-        box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
-    }
+/* Home */
 
     #cover{
         background: url(/images/leaves-min.JPG) center center no-repeat;
@@ -376,19 +205,9 @@ p {
         white-space: nowrap;
     }
 
-    #cover2 {
-        background-color: #e6e6e6;
-        padding-bottom: 0px;
-        background-size: cover;
-        color:white ;
-        height: auto;
-        text-align: center;
-        display: flex;
-        margin: 0;
-        align-items: center;
-        vertical-align: top;
-        white-space: nowrap;
-        padding-top: 40px;
+    #cover-caption {
+        width: 100%;
+        height: 950px;
     }
 
     .containerTitle {
@@ -396,52 +215,26 @@ p {
         top: 420px;
     }
 
-    #cover-caption {
-        width: 100%;
-        height: 950px;
-    }
-
-    .container2 {
-        max-width: 97%;
-        height: auto;
-    }
-
     .containerTitle p {
         font-size: 1rem;
         text-align: center;
     }
 
-    .topnav a {
-        display: none;
-    }
+/* About */
 
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-
-    .fa-bars {
-        font-size: 2rem;
-        position: relative;
+    .container2 {
+        max-width: 97%;
+        height: auto;
     }
   
     .lead {
         width: 100%;
     }
 
-    .email {
-        font-size: 1.25rem;
-    }
-
     p.lead {
         width: 97%;
         font-weight: lighter;
         font-size: 1rem;
-    }
-
-    .darkh2 {
-        color: #2c2c2c;
-        font-size: 1.75rem;
     }
 
     #about-me {
@@ -451,13 +244,11 @@ p {
         scroll-margin-top: 60px;
     }
 
-    #algonquin {
-      display: none;
+    .webLink {
+        color: #2c2c2c;
     }
 
-    #nrcan {
-        display: none;
-    }
+/* Skills */
 
 #skills {
     padding-top: 40px;
@@ -465,37 +256,6 @@ p {
     width: 100%;
     padding-left: 20px;
     height: auto;
-    scroll-margin-top: 60px;
-}
-
-#skillsleft {
-    width: 97%;
-}
-
-#frameworkright {
-    width: 97%;
-    padding-top: 10px;
-}
-
-.adobe {
-   display: none;
-}
-
-.uxProcess {
-    display: flex;
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-#projects {
-	background: url(/images/IMG_1826-min.jpg) top center no-repeat;
-    box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
-	background-size: cover;
-	color: white;
-	text-align: center;
-	align-items: center;
-    height: 1550px;
     scroll-margin-top: 60px;
 }
 
@@ -509,21 +269,256 @@ p {
    clear: both;
 }
 
-.title {
-    color: white;
+#skillsleft {
+    width: 97%;
+}
+
+#frameworkright {
+    width: 97%;
+    padding-top: 10px;
+}
+
+.progress {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    width: 97%;
+    margin: 0 auto;
+}
+
+/* Overrides Bootstrap bg colour */
+
+.bg-info {
+    background-color: rgba(231, 117, 155, 1) !important;
+}
+
+.bg-success {
+    background-color: rgba(81, 90, 169, 1) !important;
+}
+
+.bg-danger {
+    background-color: #44c442 !important;
+}
+
+.bg-warning {
+    background-color: #2b7ae2 !important;
+}
+
+.bg-secondary {
+    background-color: #FDC000 !important;
+}
+
+/* Removes logos on Mobile */
+
+#algonquin {
+    display: none;
+  }
+
+  #nrcan {
+      display: none;
+  }
+
+.adobe {
+   display: none;
+}
+
+/* Portfolio */
+
+#projects {
+	background: url(/images/IMG_1826-min.jpg) top center no-repeat;
+    box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
+	background-size: cover;
+	color: white;
+	text-align: center;
+	align-items: center;
+    height: 1550px;
+    scroll-margin-top: 60px;
+}
+
+/* Gallery Lightbox */
+  
+.portfolio {
+    height: 500px;
+    margin: 0 auto;
+}
+      
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#gallery li {
+    display: inline-block;
+    margin: 5px;
+    clear: both;
+}
+  
+#gallery li a img:hover {
+    border: solid #e7759b;
+}
+
+/* Lightbox */
+  
+/* Styles the thumbnail */
+  
+a.lightbox img {
+  height: 150px;
+  width: 150px;
+  border: 3px solid white;
+  border-radius: 0px;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+  margin: 5px;
+}
+  
+/* Styles the lightbox, removes it from sight and adds the fade-in transition */
+  
+.lightbox-target {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+    margin-bottom: 0;
+    pointer-events: none;
+    z-index: 12; /* fixes contact-me overlap issue */
+} 
+  
+  .lightbox-target.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+  
+  /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive */
+  
+  .lightbox-target img, .lightbox-target iframe  {
+    margin: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 0%;
+    max-width: 0%;
+    border: 3px solid white;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+    border-radius: 0;
+  }  
+  
+  .lightbox-target.active img,
+  .lightbox-target.active iframe {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* Styles the close link, adds the slide down transition */
+  
+  a.lightbox-close {
+    display: block;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background: white;
+    color: black;
+    border: solid #e7759b;
+    text-decoration: none;
+    position: fixed;
+    top: 80px;
+    right: 0;
+    transition: 0.5s ease-in-out;
+  }  
+  
+  /* Provides the "X" to eliminate an image from the close link */
+  
+  a.lightbox-close:before,
+  a.lightbox-close:after {
+    content: "";
+    display: block;
+    height: 30px;
+    width: 1px;
+    background: black;
+    position: absolute;
+    left: 22px;
+    top: 7px;
+  }
+  
+  a.lightbox-close:before {
+    transform: rotate(45deg);
+  }
+  
+  a.lightbox-close:after {
+    transform: rotate(-45deg);
+  }
+  
+  /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+  
+ /* Inside lightbox - caption text */
+ 
+.lightbox-target .caption-text {
+    font-size: 1rem;
+    color: #fff;
     text-align: center;
-    padding-top: 40px;
-    margin-bottom: 0px;
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    background: rgba(0, 0, 0, 0.425);
+    border-radius: 6px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
-    top: 0px;
-    font-size: 2rem;
- }
+}
+
+/* Images */
+
+#atlasrollup {
+    position: relative;
+    top: 40px;
+    height: 900px;
+}
+  
+#issf_PDF {
+    width: 80%;
+    height: 500px;
+    position: absolute;
+}
+
+/* Contact */
 
 #contact-me {
     text-align: center;
     position: relative;
 }
 
+div.socials {
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+
+.emailLink {
+    font-size: 1.25rem;
+    position: relative;
+    left: 0px;
+    top: -10px;  
+    color: #2c2c2c;  
+}
+
+.cvLink {
+    font-size: 1.25rem;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    color: #2c2c2c;  
+}
+
+.emailLink:hover, .cvLink:hover {
+    color: #e7759b;
+}
 
 .social-links{
 	color: #2c2c2c;
@@ -538,40 +533,7 @@ p {
     top: 15px;
 }
 
-div.socials {
-    text-align: center;
-    position: relative;
-    top: -15px;
-}
-
-.cv {
-    font-size: 1.75rem;
-    color: #2c2c2c;
-    
-}
-
-.cvLink, .email {
-    font-size: 1.25rem;
-    color: #2c2c2c;
-}
-
-.cvLink:hover, .email:hover {
-    color: #e7759b;
-}
-
-.contact {
-    padding-top: 10px;
-    color: #2c2c2c;
-}
-
-.social {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    font-size: 24px;
-    color: #2c2c2c;
-    top: 20px;
-}
+/* Footer */
 
 .footer, footer p {
     text-align: center;
@@ -584,77 +546,6 @@ div.socials {
     color: #e7759b;
   }
 
-.text-right {
-    text-align: center !important;
-}
-
-.progress {
-    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-    width: 97%;
-    margin: 0 auto;
-}
-
-/* Override Bootstrap bg */
-
-.bg-info {
-    background-color: rgba(231, 117, 155, 1) !important;
-}
-
-
-.bg-success {
-    background-color: rgba(81, 90, 169, 1) !important;
-}
-
-
-.bg-danger {
-    background-color: #44c442 !important;
-}
-
-
-.bg-warning {
-    background-color: #2b7ae2 !important;
-}
-
-
-.bg-secondary {
-    background-color: #FDC000 !important;
-}
-
-
-
-h2.contact, h2.cv {
-   margin-bottom: 0px;
-   padding: 0px;
-   font-size: 1.5rem;
-}
-
-h2.contact {
-    padding-top: 20px;
-}
-
-.contact {
-    font-size: 1.75rem;
-}
-
-  .email {
-    font-size: 1.25rem;
-    position: relative;
-    left: 0px;
-    top: -10px;    
-}
-
-.cv {
-    position: relative;
-    right: 0px;
-    top: 10px;
-}
-
-.cvLink {
-    position: relative;
-    top: 0px;
-    left: 0px;
-}
 
 .fa-linkedin {
     font-size: 2.25rem;
@@ -662,12 +553,24 @@ h2.contact {
     top: -10px;
   }
 
-  #issf_PDF {
-    width: 80%;
-    height: 500px;
-    position: absolute;
+/* Fun.HTML */
+
+#yosh {
+    max-width: 50%;
+    padding: 40px;
 }
 
+#lok {
+    max-width: 49.5%;
+    padding: 40px;
+}
+
+#strawberry, #blueberry, #grape, #raspberry, #orange, #az, #maple, #yoshkeys {
+    max-width: 50%;
+    padding: 40px;
+}
+
+/* Responsive design */
 
 /* In between */
 @media only screen and (min-width: 465px) {
@@ -683,17 +586,10 @@ h2.contact {
         color: #2c2c2c;
         top: 20px;
     }
-
 }
 
 /* Mobile to Tablet */
 @media only screen and (min-width: 768px) {
-
-    .lightbox-target .caption-text {
-      font-size: 1.1rem;
-      position: relative;
-    }
-  
 
     #navbar__logo {
         width: 50px;
@@ -727,10 +623,6 @@ h2.contact {
         font-weight: lighter;
         position: relative;
         top: 20px;
-    }
-    
-    .abouth3 {
-        top: 0px;
     }
     
     h4 {
@@ -794,16 +686,6 @@ h2.contact {
         height: 20px;
     }
 
-    .row-well {
-        height: 300px;
-    }
-
-    .well {
-       background-color:black; 
-       opacity: 0.7;
-       filter: alpha(opacity=50);
-    }
-
     #projects {
         box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
         background-size: cover;
@@ -814,49 +696,43 @@ h2.contact {
         scroll-margin-top: 60px;
     }
 
+    .lightbox-target .caption-text {
+        font-size: 1.1rem;
+        position: relative;
+      }
+    
+
  .contact {
     font-size: 1.75rem;
   }
 
-  .social {
-    display: flex;
+  .socialh2 {
     position: relative;
-    justify-content: center;
     font-size: 24px;
     color: #2c2c2c;
-    top: 10px;
-}
+    padding-top: 20px;
+    margin: 0px;
+    top: 0px;
+  }
 
-    .email {
-    font-size: 1.25rem;
+    .emailLink {
     position: relative;
-    left: -35px;
-}
+    left: -35px; 
+  }
 
-.cv {
+.cvh2 {
     position: relative;
-    right: 0px;
-    top: 10px;
-}
+    right: -20px;
+    padding-top: 20px;
+    top: 0px;
+  }
 
 .cvLink {
     position: relative;
-    top: 10px;
     left: 20px;
-}
-
-.email {
-    top: 5px;
-}
-
-#geodisco {
-    width: 40%;
-    height: auto;
   }
-
 }
  
-
 /* In between */
 @media only screen and (min-width: 765px) {
     #projects {
@@ -867,7 +743,6 @@ h2.contact {
         position: relative;
         left: 17px;
     }
-
 }
 
 /* In between */
@@ -875,12 +750,30 @@ h2.contact {
     #projects {
         height: 550px;
     }
-     
 }
-
 
 /* Tablet to Desktop */
 @media only screen and (min-width: 1200px) {
+
+    .header__navbar {
+        position: relative;
+        z-index: 13;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .navbar__links {
+        font-size: 1.1rem;
+    }
+
+    .navbar {
+      justify-content: center;
+    }
+
+    .navbar a {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
 
     h1 {
         font-size: 3.5rem;
@@ -894,6 +787,11 @@ h2.contact {
         font-weight: lighter;
         text-align: left;
     }
+
+    .lighth2 {
+        top: -20px;
+        padding-bottom: 10px;
+    }
     
     h3 {
         font-size: 1.75rem;
@@ -902,33 +800,11 @@ h2.contact {
         position: relative;
         top: 20px;
     }
-    
-    .skills h3 {
-        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-        font-weight: lighter;
-        font-size: 1.25rem;
-        top: 0px;
-    }
 
     h4 {
         font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
         font-weight: lighter;
         font-size: 1.25rem;
-    }
-
-    .header__navbar {
-        padding-top: 0px;
-        padding-bottom: 0px;
-      }
-
-
-    .navbar {
-      justify-content: center;
-    }
-
-    .navbar a {
-        padding-left: 80px;
-        padding-right: 80px;
     }
 
     .lead {
@@ -954,11 +830,23 @@ h2.contact {
         width: 90%;
     }
 
-    #projects {
-        height: 600px;
-        display: flex;
-        scroll-margin-top: 65px;
-        padding-top: 20px;
+    .progress {
+        height: 20px;
+    }
+  
+    #skillsleft{
+        padding-right: 20px;
+        width: 400px;
+    }
+
+    #frameworkright{
+        padding-left: 20px;
+        width: 400px;
+        padding-top: 0px;
+    }
+
+    .col-xs-6 {
+        height: 300px;
     }
 
     #algonquin {
@@ -979,6 +867,15 @@ h2.contact {
         float: right;
     }
 
+    .adobe {
+        display: flex;
+        max-width: 40%;
+        position: relative;
+        top: -200px;
+        left: 405px;
+        float: right;
+    }
+
     .logos {
         position: relative;
         max-width: 550px;
@@ -989,56 +886,21 @@ h2.contact {
         padding-right: 0px;
     }
 
-    .adobe {
-        display: flex;
-        max-width: 40%;
-        position: relative;
-        top: -200px;
-        left: 405px;
-        float: right;
-    }
-
-    .wrapper {
-        background: url(/images/leaves-min.JPG) center center no-repeat;
-        height: 100%;
-        margin: 0 auto;
-        box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
-    }
-
-
-    .progress {
-        height: 20px;
-    }
-  
-
-    #skillsleft{
-        padding-right: 20px;
-        width: 400px;
-    }
-
-    #frameworkright{
-        padding-left: 20px;
-        width: 400px;
-        padding-top: 0px;
-    }
-
-    .col-xs-6 {
-        height: 300px;
-    }
-
-    .title {
-        padding-bottom: 20px;
-       
-    }
-
     .portfolio {
         position: relative;
-         height: 550px;
-         margin: 0 auto;
-         top: -40px;
-          }
+        height: 550px;
+        margin: 0 auto;
+        top: -40px;
+    }
 
-     /* Styles the thumbnail */
+    #projects {
+        height: 600px;
+        display: flex;
+        scroll-margin-top: 65px;
+        padding-top: 40px;
+    }
+
+/* Lightbox - Styles the thumbnail */
   
   a.lightbox img {
     height: 220px;
@@ -1049,85 +911,20 @@ h2.contact {
     margin: 5px;
     }
 
+/* Positions X to close lightbox */
 
-    h2.contact {
-        position: relative;
-        top: 10px;
-        padding-top: 0px;
-    }
-
-      .contact {
-        font-size: 1.75rem;
-      }
-
-      .social {
-        position: relative;
-        justify-content: center;
-        font-size: 24px;
-        color: #2c2c2c;
-        top: 10px;
-    }
-
-        .email {
-        font-size: 1.25rem;
-        position: relative;
-        left: -35px;
-        top: 2px;
-    }
-
-    h2.cv {
-        position: relative;
-        left: 227px;
-    }
-
-    .cv {
-        position: relative;
-        top: 10px;
-    }
-
-    .cvLink {
-        position: relative;
-        top: 0px;
-        left: 80px;
-    }
-
-    .containerTitle p {
-        font-size: 1.6rem;
-        padding-top: 0px;
-    }
-    
-
-     a.lightbox-close {
+    a.lightbox-close {
         top: 70px;
-        }
-        
-        #geodisco {
-            width: 30%;
-            height: auto;
-        }
-
-          .fa-linkedin {
-            font-size: 2.25rem;
-            top: -10px;
-        }
-
-        .header__navbar {
-            position: relative;
-            z-index: 13;
-        }
-
-        .navbar__links {
-            font-size: 1.1rem;
         }
 
         .lightbox-target .caption-text  {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             position: relative;
         }
 
         #atlasrollup {
             position: relative;
-            top: 40px;
+            top: 20px;
             height: 900px;
         }
           
@@ -1137,5 +934,42 @@ h2.contact {
             position: relative;
             top: 40px;
         }
+
+    .contacth2 {
+        position: relative;
+        top: 0px;
+        padding-top: 20px;
     }
 
+      .socialh2 {
+        position: relative;
+        justify-content: center;
+        font-size: 24px;
+        color: #2c2c2c;
+        top: 0px;
+    }
+
+    .cvh2 {
+        position: relative;
+        top: 0px;
+        left: 227px;
+    }
+
+        .emailLink {
+        font-size: 1.25rem;
+        position: relative;
+        left: -35px;
+        top: 2px;
+    }
+
+    .fa-linkedin {
+        font-size: 2.25rem;
+        top: -10px;
+    }
+
+    .cvLink {
+        position: relative;
+        top: 0px;
+        left: 80px;
+    }
+}
