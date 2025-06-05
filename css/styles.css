@@ -340,6 +340,7 @@ p {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-left: 0px;
 }
 
 #gallery li {
