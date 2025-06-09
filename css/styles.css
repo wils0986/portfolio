@@ -102,7 +102,7 @@ a:hover {
 .webLink {
     color: #2c2c2c;
 }
-
+  
 /* Text styles */
 
 h1 {
@@ -895,7 +895,7 @@ div.socials {
       display: flex;
       max-width: 50%;
       position: relative;
-      top: -220px;
+      top: -190px;
       left: 40px;
       float: right;
     }
@@ -904,7 +904,7 @@ div.socials {
         display: flex;
         max-width: 65%;
         position: relative;
-        top: -150px;
+        top: -130px;
         left: 120px;
         float: right;
     }
