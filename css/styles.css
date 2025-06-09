@@ -191,6 +191,7 @@ p {
 
     #cover{
         background: url(/images/leaves-min.JPG) center center no-repeat;
+        filter: hue-rotate(340deg);
         box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
         padding-bottom: 0px;
         background-size: cover;
