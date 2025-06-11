@@ -101,6 +101,11 @@ a:hover {
 
 .webLink {
     color: #2c2c2c;
+    text-decoration: underline 1px;
+}
+
+.webLink:hover {
+    text-decoration: underline 1px;
 }
   
 /* Text styles */
