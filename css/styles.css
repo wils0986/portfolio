@@ -318,7 +318,7 @@ p {
       display: none;
   }
 
-.adobe {
+.cat {
    display: none;
 }
 
@@ -473,6 +473,7 @@ a.lightbox img {
     margin-left: auto;
     margin-right: auto;
     position: relative;
+    top: 50px;
 }
 
 /* Images */
@@ -686,7 +687,7 @@ div.socials {
         flex-wrap: nowrap;
     }
 
-    .adobe {
+    .cat {
         display: none;
     }
  
@@ -860,9 +861,8 @@ div.socials {
     }
 
     p.lead {
-        width: 70%;
+        width: 100%;
         font-size: 1.25rem;
-        padding-right: 80px;
     }
 
     #about-me {
@@ -916,12 +916,12 @@ div.socials {
         float: right;
     }
 
-    .adobe {
+    .cat {
         display: flex;
-        max-width: 40%;
+        max-width: 100%;
         position: relative;
-        top: -200px;
-        left: 405px;
+        top: -250px;
+        left: 620px;
         float: right;
     }
 
@@ -971,19 +971,6 @@ div.socials {
             position: relative;
         }
 
-        #atlasrollup {
-            position: relative;
-            top: 20px;
-            height: 900px;
-        }
-          
-          #issf_PDF {
-            width: 50%;
-            height: 850px;
-            position: relative;
-            top: 40px;
-        }
-
     .contacth2 {
         position: relative;
         top: 0px;
@@ -1020,5 +1007,28 @@ div.socials {
         position: relative;
         top: 0px;
         left: 80px;
+    }
+
+    #atlasrollup {
+        position: relative;
+        top: 70px;
+        height: 900px;
+    }
+      
+      #issf_PDF {
+        width: 50%;
+        height: 850px;
+        position: relative;
+        top: 120px;
+    }
+
+    #atlas {
+        position: relative;
+        top: -920px;
+    }
+
+    #issf {
+        position: relative;
+        top: -830px;
     }
 }
