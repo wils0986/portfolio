@@ -1051,12 +1051,12 @@ div.socials {
         top: -830px;
     }
 
-    .tagline {
+    #tagline {
         letter-spacing: 5px;
        
     }
 
-    .blur {
+    #blur {
         filter: blur(1px)
     }
 }
