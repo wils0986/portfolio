@@ -1035,25 +1035,15 @@ div.socials {
 
     #atlasrollup {
         position: relative;
-        top: 70px;
-        height: 900px;
+        height: 800px;
+        margin-top: 50px;
     }
       
       #issf_PDF {
         width: 50%;
-        height: 850px;
-        position: relative;
-        top: 120px;
-    }
-
-    #atlas {
-        position: relative;
-        top: -920px;
-    }
-
-    #issf {
-        position: relative;
-        top: -830px;
+        height: 800px;
+        margin-top: 100px;
+        
     }
 
     #tagline {
