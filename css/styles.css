@@ -1046,6 +1046,14 @@ div.socials {
         
     }
 
+    .banner {
+        width: 70%;
+    }
+
+    .placemat {
+        width: 50%;
+    }
+
     #tagline {
         letter-spacing: 5px;
        
