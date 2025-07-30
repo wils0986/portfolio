@@ -490,6 +490,25 @@ a.lightbox img {
     position: absolute;
 }
 
+#atlas {
+    position: relative;
+    top: -920px;
+}
+
+#issf {
+    position: relative;
+    top: 20px;
+}
+
+.tagline {
+    letter-spacing: 3px;
+   
+}
+
+.blur {
+    filter: blur(1px)
+}
+
 /* Contact */
 
 #contact-me {
@@ -918,10 +937,10 @@ div.socials {
 
     .cat {
         display: flex;
-        max-width: 100%;
+        width: 90%;
         position: relative;
         top: -250px;
-        left: 620px;
+        left: 540px;
         float: right;
     }
 
@@ -1030,5 +1049,14 @@ div.socials {
     #issf {
         position: relative;
         top: -830px;
+    }
+
+    .tagline {
+        letter-spacing: 5px;
+       
+    }
+
+    .blur {
+        filter: blur(1px)
     }
 }
