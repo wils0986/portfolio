@@ -388,6 +388,7 @@ body {
   .contact-form {
     padding: 0px 15px 0px 15px;
     justify-content: center;
+    
   }
   
   .form-control {
@@ -719,4 +720,7 @@ body {
       flex-direction: column;
  }
 
+ .form-control {
+  width: 80%;
+}
 }
