@@ -387,7 +387,7 @@ body {
 
   .contact-form {
     padding: 0px 15px 0px 15px;
-    margin-right: 35px;
+    margin-right: 45px;
   }
   
   .form-control {
@@ -490,7 +490,7 @@ body {
       max-width: 300px;
     }
   
-    .aboutme h2 {
+    .aboutme h2, h2 {
       font-size: 28px;
     }
 
@@ -502,6 +502,7 @@ body {
     p {
         max-width: 200px;
         margin: 0 auto;
+        font-size: 1.2rem;
     }
 
     #holder span {
@@ -551,17 +552,6 @@ body {
   .spinner .rect5 {
     -webkit-animation-delay: -0.8s;
     animation-delay: -0.8s;
-  }
-  
-  @-webkit-keyframes sk-stretchdelay {
-    0%,
-    40%,
-    100% {
-      -webkit-transform: scaleY(0.4);
-    }
-    20% {
-      -webkit-transform: scaleY(1);
-    }
   }
   
   @keyframes sk-stretchdelay {
