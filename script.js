@@ -49,7 +49,7 @@ $(document).ready(function () {
     new fullpage("#fullpage", {
       licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
       scrollBar: true,
-      responsiveWidth: 400,
+      responsiveWidth: 768,
       navigation: true,
       navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
       anchors: ["home", "about", "portfolio", "contact", "connect"],
@@ -150,3 +150,4 @@ $(document).ready(function () {
     plane.classList.add("fly");
   });
   
+ 

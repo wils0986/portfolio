@@ -17,6 +17,9 @@ body {
     color: #FFFFFF;
     font-size: 3.75em;
     white-space: nowrap;
+    margin-bottom: 0px;
+    position: relative;
+    top: 15px;
   }
 
   h2 {
@@ -492,6 +495,7 @@ body {
 
     h1 {
         font-size: 2em;
+        padding-bottom: 15px;
     }
 
     p {
