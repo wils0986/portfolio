@@ -723,4 +723,14 @@ body {
  .form-control {
   width: 80%;
 }
+
+.fp-controlArrow.fp-prev {
+  border-width: 25px 25px 25px 0; /* Adjust size */
+}
+
+.fp-controlArrow.fp-next {
+  border-width: 25px 0 25px 25px; /* Keep size proportional */
+}
+
+
 }
