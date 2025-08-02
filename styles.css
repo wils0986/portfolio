@@ -422,7 +422,6 @@ body {
     max-width: 100%;
     margin-bottom: 5px;
     font-size: 18px;
-    font-weight: 500;
     font-family: 'Segoe UI', sans-serif;
   }
   
@@ -437,7 +436,7 @@ body {
     background-color: white;
     text-decoration: none;
     font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
+    font-weight: lighter;
   }
   
   #submit:hover {
@@ -732,7 +731,5 @@ body {
 .fp-controlArrow.fp-next {
   border-width: 25px 0 25px 25px; /* Keep size proportional */
   right: 10px !important;
-}
-
-
+ }
 }
