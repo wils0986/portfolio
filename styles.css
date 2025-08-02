@@ -387,7 +387,7 @@ body {
 
   .contact-form {
     padding: 0px 15px 0px 15px;
-    margin-right: 45px;
+    justify-content: center;
   }
   
   .form-control {
@@ -428,7 +428,6 @@ body {
   #submit {
     outline: none;
     padding: 12px;
-    min-width: 200px;
     border-radius: 4px;
     border: 2px solid #E7759B;
     text-align: center;
@@ -491,7 +490,7 @@ body {
     }
   
     .aboutme h2, h2 {
-      font-size: 28px;
+      font-size: 24px;
     }
 
     h1 {
@@ -502,7 +501,7 @@ body {
     p {
         max-width: 200px;
         margin: 0 auto;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     #holder span {
