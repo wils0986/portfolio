@@ -1,264 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Jenny Wilson Designs</title>
-  <script src="script.js" defer></script>
-  <meta name="description" content="Jenny Wilson is a Multimedia Designer specializing in graphic design, web design, UX design, and communications. Explore her portfolio showcasing recent design work for Natural Resources Canada and HTML/CSS skills.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="/images/jw-designs-logo.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://kit.fontawesome.com/15d9678050.js" crossorigin="anonymous"></script>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body>
-
-<!-- Skip link to main content -->
-<a href="#main" class="skip-link">Skip to main content</a>
-
-<!-- Navigation -->
-<div class="topnav" id="myTopnav">
-  <a href="#">Home</a>
-  <a href="#about-me">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact-me">Contact</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa-solid fa-bars-staggered fa-lg"></i>
-  </a>
-</div>
-
-<!-- Home -->
-<section id="cover">
-  <div id="cover-caption">
-    <div class="containerTitle">
-      <h1>Jenny Wilson Designs</h1>
-      <h4 id="tagline"><span id="blur">Blurring</span> the lines between art and function.</h4>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Animate.css and styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <!-- FullPage.js v4 CDN -->
+        <link rel="stylesheet" href="fullpage.css"/>
+        <script type="text/javascript" src="fullpage.js"></script>
+        <!-- Custom styles -->
+        <link rel="stylesheet" href="styles.css" />
+        <title>Jenny Wilson Designs</title>
+      </head>
       
+<body>
+    <!-- Header Navigation -->
+<div class="nav-header">
+    <div class="nav-brand">
+        <img src="images/JW.png" id="logo">
+    </div>
+    <i class="fa-solid fa-bars fa-2xl"></i>
+    <div class="header-links">
+        <ul id="myMenu">
+            <li data-menuanchor="home"><a href="#aboutme">Home</a></li>
+            <li data-menuanchor="about"><a href="#skills">About</a></li>
+            <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+            <li data-menuanchor="connect"><a href="#connect">Connect</a></li>
+          </ul>          
     </div>
   </div>
-</section>
-<main id="main"></main>
-
-<!-- About -->
-<section id="about-me">
-  <div id="about-me-caption">
-    <div class="container2">
-      <div class="col-xs-8">
-        <h2 class="darkh2">About Me</h2>
-        <p class="lead">Hi, I'm Jenny, a Multimedia Communications Specialist with a professional background in graphic design, video editing, web/UX design, and strategic communications. I recently completed a contract as a Project Officer at Natural Resources Canada, where I coordinated and created a variety of communications materials, while supporting the maintenance and redesigns of <a href="https://atlas.gc.ca/" class="webLink">The Atlas of Canada</a> and <a href="https://geo.ca/" class="webLink">GEO.ca </a>. Prior to this role, I earned an Honours Diploma in Interactive Media Design at Algonquin College, where I discovered my love for digital media and user-centered design. This page highlights my core skills, showcases some recent projects, and demonstrates my ability to build responsive digital interfaces.</p>
-       
-      </div>  
-    </div>
-  </div>
-</section>
-
-<!-- Skills -->
-<section class="skills" id="skills">
-  <div class="container">
-    <h2 class="darkh2">Core Software Skills</h2>
-    <div class="row">
-      <div id="skillsleft" class="col-xs-6">
-        <h3>Adobe Illustrator</h3>
-        <div class="progress">
-          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" aria-label="Adobe Illustrator 85%">
-          </div>
-        </div>
-        <h3>Adobe Photoshop</h3>
-        <div class="progress">
-          <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 65%;" aria-label="Adobe Photoshop 65%">
-          </div>
-        </div>
-        <h3>Adobe Premiere Pro</h3>
-        <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" aria-label="Adobe Premiere Pro 75%">
-          </div>
-        </div>
-        <h3>Adobe InDesign</h3>
-        <div class="progress">
-          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 60%;" aria-label="Adobe InDesign 60%">
-          </div>
-        </div>
-        <h3>Canva</h3>
-        <div class="progress">
-          <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 85%;" aria-label="Canva 85%">
-          </div>
-        </div>
-      </div>
-
-      <div id="frameworkright" class="col-xs-6">
-        <h3>Figma</h3>
-        <div class="progress">
-          <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 50%;" aria-label="Figma 50%">
-          </div>
-        </div>
-        <h3>HTML/CSS</h3>
-        <div class="progress">
-          <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 70%;" aria-label="HTML/CSS 70%">
-          </div>
-        </div>
-        <h3>WordPress</h3>
-        <div class="progress">
-          <div class="progress-bar bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;" aria-label="WordPress 75%">
-          </div>
-        </div>
-        <h3>Microsoft Office/M365</h3>
-        <div class="progress">
-          <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 80%;" aria-label="Microsoft Office/M365 80%">
-          </div>
-        </div>
-        <h3>Google Analytics/Hootsuite</h3>
-        <div class="progress">
-          <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%;" aria-label="Google Analytics/Hootsuite 65%">
-          </div>
-        </div>
-
-        <div class="logos">
-          <img class="cat" src="/images/designer_cat.png" alt="A vector graphic of a cat working on a laptop">
-        </div>
+  
+  <!-- Sidebar Navigation -->
+  <div class="nav-screen">
+    <i class="fa fa-times fa-3x"></i>
+    <div class="nav-container">
+      <div class="nav-links">
+        <ul id="myMenu">
+            <li data-menuanchor="home"><a href="#aboutme">Home</a></li>
+            <li data-menuanchor="about"><a href="#skills">About</a></li>
+            <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+            <li data-menuanchor="connect"><a href="#connect">Connect</a></li>
+          </ul>
       </div>
     </div>
   </div>
-</section>
-
-<!-- Portfolio -->
-<section id="projects">
-  <div class="container">
-    <h2 class="lighth2">Creative Projects</h2>
-    <ul id="gallery" class="portfolio">
-
-      <li>
-        <a class="lightbox" href="#" data-target="image1">
-          <img src="/images/thumbnail_geoAI_sherbrooke_banner_EN.jpg" alt="Web banner showing AI technology on a map of Sherbrooke, QC">
-        </a>
-        <div class="lightbox-target" id="image1">
-          <a href="https://geo.ca/initiatives/geobase/geoai">
-            <img src="/images/geoAI_sherbrooke_banner_EN.jpg" alt="Full-size version of GeoAI banner"  class="banner">
-          </a>
-          <!-- <p class="caption-text">A web banner for GeoAI page on GEO.ca. Click the image to view live!</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 1"></a>
+  
+    <!-- end navbar slider -->
+  
+    <!-- begin fullpage -->
+  
+    <div id="fullpage">
+  
+      <!-- begin section -->
+  
+      <div class="section aboutme" data-anchor="aboutme">
+        <div class="opaque-bg animated fadeInDown">
+          <h1>Jenny Wilson<span class="pink">/</span>Designs</h1>
+          <p><span id="holder"></span></p>
         </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image2">
-          <img src="/images/thumbnail_atlas_banner_JWS_desktop.png" alt="Thumbnail of Atlas of Canada banner">
-        </a>
-        <div class="lightbox-target" id="image2">
-          <a href="https://natural-resources.canada.ca/maps-tools-publications/maps/atlas-canada">
-            <img src="/images/atlas_banner_JWS_desktop.png" alt="Full-size Atlas of Canada web banner">
-          </a>
-          <!-- <p class="caption-text">A web banner for The Atlas of Canada homepage. Click the image to view it live!</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 2"></a>
-        </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image3">
-          <img src="/images/thumbnail_lets_talk_NRCan.png" alt="Thumbnail of Let's Talk NRCan banner">
-        </a>
-        <div class="lightbox-target" id="image3">
-          <a href="https://www.letstalknaturalresources.ca/geospatial-data-strategy?tool=survey_tool">
-            <img src="/images/lets_talk_NRCan.png" class="banner" alt="Full-size banner for the Geospatial Data Strategy">
-          </a>
-          <!-- <p class="caption-text">A web banner for Canada's Collaborative Geospatial Data Strategy. Click the image to view it live!</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 3"></a>
-        </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image4">
-          <img src="/images/thumbnail_geo.caVideo.png" alt="Thumbnail for Geo.ca promo video">
-        </a>
-        <div class="lightbox-target" id="image4">
-          <a href="https://www.youtube.com/watch?v=_0ljwmafuZc&ab_channel=GeoCA">
-            <img src="/images/geo.caVideo.png" alt="Geo.ca promotional video preview">
-          </a>
-          <!-- <p class="caption-text">A demo video of GEO.ca for events. Click the image to view it live!</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 4"></a>
-        </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image5">
-          <img src="/images/thumbnail_ccmeoPlacemat.png" alt="Thumbnail for GC Data Conference kiosk design">
-        </a>
-        <div class="lightbox-target" id="image5">
-            <img src="/images/ccmeoPlacemat.png" class="placemat" alt="Infographic outlining CCMEO's purpose and divisional structure">
-          </a>
-          <!-- <p class="caption-text">A printed infographic placemat for the CCMEO branch.</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 5"></a>
-        </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image6">
-          <img src="/images/atlas_thumbnail_HSIN_legend.jpg" alt="Thumbnail for High Speed Internet Network map legend">
-        </a>
-        <div class="lightbox-target" id="image6">
-          <img src="/images/atlas_HSIN_legend.jpg" id="legend" alt="Custom legend for High Speed Internet Network map">
-          <!-- <p class="caption-text">A legend for the Atlas of Canada's High Speed Internet Network printed map.</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 6"></a>
-        </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image7">
-          <img src="/images/thumbnail_atlas_rollup_EN.jpg" alt="Thumbnail for Atlas event roll-up">
-        </a>
-        <div class="lightbox-target" id="image7">
-          <img src="/images/atlas_rollup_EN.jpg" id="atlasrollup" alt="Roll-up for Atlas of Canada events">
-          <!-- <p class="caption-text" id="atlas">A printed roll-up poster for The Atlas of Canada events.</p> -->
-          <a class="lightbox-close" href="#projects" aria-label="Close image 7"></a>
-        </div>
-      </li>
-
-      <li>
-        <a class="lightbox" href="#" data-target="image8">
-          <img src="/images/thumbnail_issf_booklet_page-0001.jpg" alt="Thumbnail of ISSF booklet">
-        </a>
-        <div class="lightbox-target" id="image8">
-          <iframe src="/images/issf_booklet.pdf#page=1&zoom=75" id="issf_PDF" title="ISSF Booklet PDF preview"></iframe>
-          <!-- <p class="caption-text" id="issf">A printed booklet for Inuvik Satellite Station Facility.</p> -->
-          <a class="lightbox-close" href="#" aria-label="Close image 8" data-close></a>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- Contact -->
-<section id="contact-me">
-  <div class="container">
-    <div class="row2">
-      <div class="col-md-4">
-        <h2 class="contacth2">Contact Me</h2>
-        <h3><a class="emailLink" href="mailto:jennywilsondesigns@gmail.com">jennywilsondesigns@gmail.com</a></h3>
+        <i id="moveDown" class="fa fa-chevron-down fa-3x bounce"></i>
       </div>
-      <div class="col-md-4">
-        <h2 class="socialh2">Social Media</h2>
-        <a class="social-links" href="https://www.linkedin.com/in/jenny-wilson-sewell/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-          <i class="fa fa-linkedin" aria-hidden="true"></i>
-        </a>
+      <!-- end section -->
+  
+      <!-- begin section -->
+  
+      <div class="section" data-anchor="skills">
+        <div class="content">
+          <h2 class="wow fadeInDown" data-wow-delay="0.2s">About Me</h2>
+          <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Jenny Wilson! I'm a Multimedia Designer and Digital Communications Specialist based in Ottawa, ON, focused on creating compelling visuals and user-centric digital interfaces.</p>
+          <img src="images/designer_cat.png" class="cat">
+  
+          <div class=" wow fadeInUp container-skillbar" data-wow-delay="0s">
+            <div class="skillbar clearfix " data-percent="85%">
+              <div class="skillbar-title" style="background: #E7759B;"><span>Adobe Illustrator</span></div>
+              <div class="skillbar-bar" style="background: #E7759B;"></div>
+              <div class="skill-bar-percent">85%</div>
+            </div> <!-- End Skill Bar -->
+
+            <div class="skillbar clearfix " data-percent="82%">
+                <div class="skillbar-title" style="background: #44C442;"><span>Canva</span></div>
+                <div class="skillbar-bar" style="background: #44C442;"></div>
+                <div class="skill-bar-percent">82%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="78%">
+                <div class="skillbar-title" style="background: #515AA9;"><span>Adobe Premiere Pro</span></div>
+                <div class="skillbar-bar" style="background: #515AA9;"></div>
+                <div class="skill-bar-percent">78%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="75%">
+                <div class="skillbar-title" style="background: #2B7AE2;"><span>WordPress</span></div>
+                <div class="skillbar-bar" style="background: #2B7AE2;"></div>
+                <div class="skill-bar-percent">75%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="70%">
+                <div class="skillbar-title" style="background: #EBA561;"><span>HTML/CSS/JS</span></div>
+                <div class="skillbar-bar" style="background: #EBA561;"></div>
+                <div class="skill-bar-percent">70%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="67%">
+                <div class="skillbar-title" style="background: #E7759B;"><span>Microsoft Office</span></div>
+                <div class="skillbar-bar" style="background: #E7759B;"></div>
+                <div class="skill-bar-percent">67%</div>
+              </div> <!-- End Skill Bar -->
+  
+            <div class="skillbar clearfix " data-percent="65%">
+              <div class="skillbar-title" style="background: #44C442;"><span>Adobe Photoshop</span></div>
+              <div class="skillbar-bar" style="background: #44C442;"></div>
+              <div class="skill-bar-percent">65%</div>
+            </div> <!-- End Skill Bar -->
+  
+              <div class="skillbar clearfix " data-percent="60%">
+                <div class="skillbar-title" style="background: #515AA9;"><span>GA4/Hootsuite</span></div>
+                <div class="skillbar-bar" style="background: #515AA9;"></div>
+                <div class="skill-bar-percent">60%</div>
+              </div> <!-- End Skill Bar -->
+    
+              <div class="skillbar clearfix " data-percent="50%">
+                <div class="skillbar-title" style="background: #2B7AE2;"><span>Adobe InDesign</span></div>
+                <div class="skillbar-bar" style="background: #2B7AE2;"></div>
+                <div class="skill-bar-percent">50%</div>
+              </div> <!-- End Skill Bar -->
+
+              <div class="skillbar clearfix " data-percent="40%">
+                <div class="skillbar-title" style="background: #EBA561;"><span>Figma</span></div>
+                <div class="skillbar-bar" style="background: #EBA561;"></div>
+                <div class="skill-bar-percent">40%</div>
+              </div> <!-- End Skill Bar -->
+
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <h2 class="cvh2">Résumé</h2>
-        <h3><a class="cvLink" href="/images/JennyWS_resume.pdf" target="_blank" rel="noopener noreferrer">View Résumé</a></h3>
+      <!-- end section -->
+  
+      <!-- begin section -->
+  
+      <div class="section" data-anchor="projects">
+        <div class="content-slide">
+            <div class="slide">
+                <h2 class="wow fadeInDown" data-wow-delay="0.2s">The Atlas of Canada Website Redesign</h2>
+                <p class="wow fadeInDown" data-wow-delay="0.2s">The Atlas of Canada website was redesigned to improve information architecture and user experience, informed by user research, competitive analysis, stakeholder feedback, and design and content reviews. A custom banner showcasing the Atlas's evolution from 1906 to today supported the launch as part of a strategic communications plan that included social media, newsletter features, webpage updates, cross-linking on Government of Canada sites, and a roll-up poster for events.</p>
+                <a href="https://natural-resources.canada.ca/maps-tools-publications/maps/atlas-canada/" target="_blank">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/atlas_banner_mockups.png" alt="The Atlas of Canada Homepage Mockups">
+              </a>
+            </div>
+            <div class="slide">
+                <h2 class="wow fadeInDown" data-wow-delay="0.2s">GEO.ca Website Redesign</h2>
+                <p class="wow fadeInDown" data-wow-delay="0.2s">Geo.ca was redesigned with a focus on enhancing user experience through improved information architecture, accessibility, and mobile-first design. A major enhancement was the overhaul of the search function, replacing basic keyword search with a more intuitive semantic search to improve content discoverability. The redesign process included conducting user research, stakeholder engagement, and the development of interactive prototypes for A/B testing.</p>
+                <a href="https://geo.ca/home/" target="_blank">
+                <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo.ca_redesign_mockups.png" alt="GEO.ca Homepage Mockups">
+              </a>
+            </div>
+            <div class="slide">
+                  <h2 class="wow fadeInDown" data-wow-delay="0.2s">GEO.ca Permafrost Community</h2>
+                  <p class="wow fadeInDown" data-wow-delay="0.2s">Geo.ca's first dedicated Community Space is a central hub for permafrost information in Canada, providing data, tools, and resources from provinces and territories to support research and decision-making. Content curation included in-depth research of each region's permafrost conditions and monitoring methods, consultation with provincial and territorial stakeholders such as the Canadian Council on Geomatics Task Team, and obtaining photos from each region along with permission to use and attribute them.</p>
+                  <a href="https://geo.ca/communities/permafrost/" target="_blank">
+                  <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo.ca_permafrost_mockups.png" alt="GEO.ca Permafrost Mockups">
+                </a>
+              </div>
+          <div class="slide">
+            <h2 class="wow fadeInDown" data-wow-delay="0.2s">GEO.ca GeoAI Banner</h2>
+            <p class="wow fadeInDown" data-wow-delay="0.2s">A custom banner showcasing GeoAI's Deep Learning extraction of buildings, hydrography, forests, and roads from aerial or satellite imagery was developed as part of a strategic communications plan. This plan also included social media posts, a feature in the quarterly branch newsletter, a spotlight at the 2025 GC Data Conference, and ongoing content updates to the GeoAI webpage.</p>
+            <a href="https://geo.ca/initiatives/geobase/geoai/" target="_blank">
+            <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo.ca_geoai_mockups.png" alt="GEO.ca GeoAI Mockups">
+          </a>
+        </div>
+        <div class="slide">
+            <h2 class="wow fadeInDown" data-wow-delay="0.2s">Canada's Collaborative Geospatial Data Strategy Banner</h2>
+            <p class="wow fadeInDown" data-wow-delay="0.2s">A custom banner was created as part of a strategic communications plan to support the Collaborative Geospatial Data Strategy for Canada callout, which sought input from Canadians on the future of accessing, using, and sharing location data. The plan also included a UX review of the webpage, social media posts, a feature in a feature in the GC Data Community Newsletter, and a spotlight at the 2025 GC Data Conference.</p>
+            <a href="https://www.letstalknaturalresources.ca/geospatial-data-strategy?tool=survey_tool/" target="_blank">
+            <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geospatial_data_strategy_mockups.png" alt="Let's Talk - Collaborative Geospatial Data Strategy for Canada Mockups">
+          </a>
+        </div>
+        </div>
       </div>
+      <!-- end section -->
+  
+      <!-- begin section -->
+  
+      <div class="section" data-anchor="contact">
+        <div class="content wow fadeInDown" data-wow-delay="0.2s">
+          <h2 class="contactH2">Contact Me</h2>
+          <p>Want to work together or just say hi? I'd love to hear from you! Shoot me a message and I'll get back to you soon.</p>
+          <br>
+          <div class="contact-form">
+            <div id="form-messages"></div>
+            <form id="ajax-contact" method="post" role="form" action="https://formspree.io/f/mjkoebay" data-toggle="validator">
+              <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="name" data-error="Field can't be blank!" required>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+            
+              <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="email" data-error="Field can't be blank!" required>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+            
+              <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+                <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="Message" data-error="Minimum of 10 characters" required></textarea>
+                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                <div class="help-block with-errors"></div>
+              </div>
+            
+              <div class="hidden">
+                <input type="text" class="form-control" id="human" name="human" placeholder="">
+              </div>
+              <div class="wow fadeInUp" data-wow-delay="1s">
+            <div class="plane-wrapper">
+                <button type="submit" id="submit" name="submit" class="btn btn-lg">Send Message</button>
+                <i class="fa-solid fa-paper-plane" id="paper-plane"></i></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end section -->
+  
+      <!-- begin section -->
+  
+      <div class="section fp-auto-height">
+        <div class="footer">
+          <div class="social-links">
+            <span><a href="https://www.linkedin.com/in/jenny-wilson-sewell" target="_blank"><i class="fa-brands fa-linkedin-in fa-lg"></i></a></span>
+            <p>© 2025 Jenny Wilson Designs <span class="pink">❤</span></p>
+          </div>
+        </div>
+      </div>
+      <!-- end section -->
     </div>
-  </div>
-</section>
-</main>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>© 2025 Jenny Wilson Designs <span id="heart" aria-hidden="true">❤</span></p>
-</footer>
-</div>
-
-<!-- Link to JS file -->
-<script src="script.js"></script>
-</body>
+     <!-- FullPage.js v4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
+    <script src="script.js"></script>
+    
+  </body>
 </html>
