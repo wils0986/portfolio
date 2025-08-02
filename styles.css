@@ -384,9 +384,10 @@ body {
   }
   
   /* input field styles */
-  
+
   .contact-form {
     padding: 0px 15px 0px 15px;
+    margin-right: 35px;
   }
   
   .form-control {
