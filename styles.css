@@ -491,11 +491,13 @@ body {
   
     .aboutme h2, h2 {
       font-size: 24px;
+      font-weight: 350;
     }
 
     h1 {
         font-size: 2em;
         padding-bottom: 15px;
+        font-weight: 350;
     }
 
     p {
