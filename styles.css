@@ -755,4 +755,8 @@ body {
 .fa-chevron-down {
  display: none;
  }
+
+ .cat {
+  width: 60%;
+ }
 }
