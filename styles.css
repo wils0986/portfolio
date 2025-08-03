@@ -723,7 +723,7 @@ body {
         z-index: 500;
       }
 
-  #aboutme {
+  .section.aboutme {
     position: relative;
     z-index: 400;
   }
