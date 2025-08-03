@@ -725,11 +725,7 @@ p.holder {
     transform: translateX(0);
   }
   
-
- 
-
-
-
+/* /////////////////////////////////////////// */
   /* Mobile nav styles - responsive design */
 @media (max-width: 768px) {
 
@@ -738,7 +734,7 @@ p.holder {
   }
 
   h1 {
-    font-size: 2em;
+    font-size: 1.75em;
     padding-bottom: 30px;
     font-weight: 350;
 }
