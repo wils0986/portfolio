@@ -673,7 +673,7 @@ body {
 
   h1 {
       font-size: 2em;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
       font-weight: 350;
   }
 
@@ -685,7 +685,7 @@ body {
 
   #holder span {
       white-space: wrap;
-      font-size: .90em;
+      font-size: 1em;
   }
   .fa-bars {
     display: block !important;
