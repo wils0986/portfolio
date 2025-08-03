@@ -363,7 +363,7 @@ body {
   }
   
   .content-slide img {
-    width: 70%;
+    width: 90%;
   }
   
   .fp-controlArrow.fp-next {
@@ -750,4 +750,8 @@ body {
   border-width: 25px 0 25px 25px; /* Keep size proportional */
   right: 10px !important;
  }
+
+ .content-slide img {
+  width: 80%;
+}
 }
