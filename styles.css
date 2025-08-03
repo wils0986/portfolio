@@ -3,8 +3,8 @@
   position: absolute;
   top: -40px;       /* hide above viewport */
   left: 0;
-  background: #000;
-  color: #fff;
+  background: #2c2c2c;
+  color: #FFFFFF;
   padding: 8px 16px;
   z-index: 1000;
   text-decoration: none;
