@@ -784,7 +784,6 @@ p.holder {
         width: 25%;
         position: relative;
         top: 400px;
-        left: 15px;
       }
 
       #logo {
@@ -814,7 +813,10 @@ p.holder {
     .nav-links {
       display: flex;
       flex-direction: column;
-      
+ }
+
+ ul.myMenu {
+  padding: 25px 25px 0px 25px;
  }
 
  .form-control {
