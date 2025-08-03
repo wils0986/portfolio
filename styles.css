@@ -773,11 +773,22 @@ p.holder {
     }
 
     .nav-header {
-        position: fixed;
+        position: absolute;
         top: 0;
         width: 100%;
         background-color: #FFFFFF;
         z-index: 500;
+      }
+
+      #mobileLogo {
+        width: 25%;
+        position: relative;
+        top: 400px;
+        left: 15px;
+      }
+
+      #logo {
+        display: none;
       }
 
   .section.aboutme {
@@ -789,7 +800,7 @@ p.holder {
       display: none;
     }
 
-/* Side nav     */
+/* Side nav */
     .nav-screen {
       display: block;
       position: fixed;
@@ -803,6 +814,7 @@ p.holder {
     .nav-links {
       display: flex;
       flex-direction: column;
+      
  }
 
  .form-control {
