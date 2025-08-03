@@ -1,4 +1,4 @@
-/* general styles */
+/* General styles */
 
 body {
     font-family: "Segoe UI", sans-serif !important;
@@ -56,7 +56,7 @@ body {
     display: block;
   }
   
-  /* flash alert styles */
+  /* Flash alert styles */
   
   .flash-container {
     width: 100%;
@@ -82,7 +82,7 @@ body {
     position: fixed;
     background-color: #2c2c2c;
     opacity: 1;
-    right: -285px; /* start off behind the scenes */
+    right: -285px; /* Start off behind the scenes */
     -webkit-font-smoothing: antialiased;
     position: fixed;
     width: 285px;
@@ -92,7 +92,7 @@ body {
     display: block;
   }
   
-  /* nav header links */
+  /* Nav header links */
   
   .nav-brand {
     position: fixed;
@@ -141,7 +141,7 @@ body {
     width: 100%;
     z-index: 500;
     display: flex;
-    justify-content: flex-end; /* aligns items to the right */
+    justify-content: flex-end;
   }
   
   .header-links ul {
@@ -165,7 +165,7 @@ body {
     transition: all 0.2s ease-in-out;
   }
   
-  /* slide out nav menu styles */
+  /* Slide out nav menu styles */
   
   .nav-container {
     padding-top: 10%;
@@ -223,7 +223,7 @@ body {
     width: 100%;
   }
   
-  /* main header section */
+  /* Main header section */
   
   .opaque-bg {
     margin-left: auto;
@@ -244,7 +244,7 @@ body {
     font-size: 17.4px;
   }
   
-  /* bouncing arrow */
+  /* Bouncing arrow */
   
   .fa-chevron-down {
     color: #E7759B !important;
@@ -281,7 +281,7 @@ body {
     animation: bounce 2s infinite;
   }
   
-  /* about section */
+  /* About section */
   
   /* Skill bars */
   
@@ -348,7 +348,7 @@ body {
     color: rgba(0, 0, 0, 0.5);
   }
   
-  /* portfolio section */
+  /* Portfolio section */
   
   .content {
     margin-left: auto;
@@ -383,7 +383,7 @@ body {
     background: rgba(0, 0, 0, 0.62) !important;
   }
   
-  /* input field styles */
+  /* Input field styles */
 
   .contact-form {
     padding: 0px 15px 0px 15px;
@@ -445,7 +445,7 @@ body {
     transition: all 0.3s ease-out;
   }
   
-  /* footer styles */
+  /* Footer styles */
   
   .footer {
     background-color: #484848;
@@ -470,51 +470,7 @@ body {
     transition: all 0.2s ease-in-out;
   }
   
-  /* smaller resolution styles */
-  
-  @media (min-width: 100px) and (max-width: 500px) {
-    .fa-bars {
-      display: block !important;
-    }
-  
-    .header-links {
-      display: none;
-    }
-  }
-  
-  /* mobile styles - responsive design */
-  
-  @media (max-width: 768px) {
-    .content {
-      max-width: 300px;
-    }
-  
-    .aboutme h2, h2 {
-      font-size: 24px;
-      font-weight: 350;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-        padding-bottom: 15px;
-        font-weight: 350;
-    }
-
-    p {
-        max-width: 200px;
-        margin: 0 auto;
-        font-size: 1rem;
-    }
-
-    #holder span {
-        white-space: wrap;
-        font-size: .90em;
-    }
-  }
-  
-  /* loading screen animation */
+  /* Loading screen animation */
   
   .spinner {
     position: fixed;
@@ -629,8 +585,8 @@ body {
   #plane-wrapper {
     position: relative;
     overflow: hidden;
-    width: 100%; /* or your specific width */
-    height: 100px; /* adjust to fit your design */
+    width: 100%; 
+    height: 100px; 
   }
 
  /* Base styles */
@@ -654,7 +610,7 @@ body {
     opacity: 1;
   }
   100% {
-    transform: translate(300%, -50%); /* Adjust depending on how far you want it to fly */
+    transform: translate(300%, -50%);
     opacity: 0;
   }
 }
@@ -700,8 +656,45 @@ body {
     transform: translateX(0);
   }
   
-  /* Mobile nav styles (up to 768px) */
+
+  /* Mobile nav styles - responsive design */
 @media (max-width: 768px) {
+
+  .content {
+    max-width: 300px;
+  }
+
+  .aboutme h2, h2 {
+    font-size: 24px;
+    font-weight: 350;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h1 {
+      font-size: 2em;
+      padding-bottom: 15px;
+      font-weight: 350;
+  }
+
+  p {
+      max-width: 200px;
+      margin: 0 auto;
+      font-size: 1rem;
+  }
+
+  #holder span {
+      white-space: wrap;
+      font-size: .90em;
+  }
+  .fa-bars {
+    display: block !important;
+  }
+
+  .header-links {
+    display: none;
+  }
+
     .fa-bars {
       display: block !important;
       cursor: pointer;
@@ -746,7 +739,7 @@ body {
 }
 
 .fp-controlArrow.fp-prev {
-  border-width: 25px 25px 25px 0; /* Adjust size */
+  border-width: 25px 25px 25px 0; 
   left: 10px !important;
 }
 
