@@ -2,7 +2,7 @@
 
 .skip-link {
   position: absolute;
-  top: -40px;       /* hide above viewport */
+  top: -40px; /* Hide above viewport */
   left: 0;
   background: #2c2c2c;
   color: #FFFFFF;
@@ -36,16 +36,65 @@ body {
     text-decoration: none !important;
   }
   
+  .opaque-bg {
+    padding-top: 15px;
+  }
+  
+
   h1 {
+    display: inline-flex;
+    justify-content: center;
+    white-space: nowrap;
     font-weight: lighter;
     color: #FFFFFF;
     font-size: 3.75em;
-    white-space: nowrap;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     position: relative;
     top: 15px;
   }
-
+  
+  /* Fade in Jenny Wilson */
+  .main-text {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-delay: 0.5s; /* start delay */
+  }
+  
+  /* Slide in slash + Designs */
+  .slide-part {
+    display: inline-flex;
+    opacity: 0;
+    transform: translateX(20px);
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    animation-name: slideInPushLeft;
+    animation-duration: 1s;
+    animation-delay: 1.5s; /* starts after main-text fades in */
+  }
+  
+  /* Pink slash styling */
+  .pink {
+    color: pink;
+    margin: 0 0.1em;
+  }
+  
+  /* Keyframes */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInPushLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
   h2 {
     font-weight: lighter;
     color: #E7759B;
@@ -252,6 +301,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1px 1px 5px 5px;
+    text-align: center;
   }
   
   .aboutme {
@@ -543,6 +593,13 @@ body {
     font-size: 1.23em;
 }
 
+p.holder {
+  /* Reserve enough height and keep it invisible initially */
+  min-height: 2em;
+  visibility: hidden;
+}
+
+
 /* Blinking cursor effect */
 .cursor {
     display: inline-block;
@@ -668,6 +725,10 @@ body {
     transform: translateX(0);
   }
   
+
+ 
+
+
 
   /* Mobile nav styles - responsive design */
 @media (max-width: 768px) {
