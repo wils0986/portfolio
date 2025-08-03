@@ -27,7 +27,7 @@ $(document).ready(function () {
     // Initialize typing
     $("#holder").writeText("Multimedia Designer and Digital Communications Specialist", 150);
   
-    // initialize WOW.js
+    // Initialize WOW.js
     new WOW().init();
   
     // Toggle nav
@@ -77,7 +77,7 @@ $(document).ready(function () {
               .find(".skillbar-bar")
               .animate({ width: percent }, 1000);
           });
-          skillbarsAnimated = true; // prevent re-animation
+          skillbarsAnimated = true; // Prevent re-animation
   
           // Slide in cat image
           $(".cat").addClass("slide-in");
@@ -145,8 +145,8 @@ $(document).ready(function () {
   // Plane animation
   document.querySelector("#submit").addEventListener("click", () => {
     const plane = document.querySelector("#paper-plane");
-    plane.classList.remove("fly"); // reset
-    void plane.offsetWidth;        // force reflow
+    plane.classList.remove("fly"); // Reset
+    void plane.offsetWidth;        // Force reflow
     plane.classList.add("fly");
   });
   
