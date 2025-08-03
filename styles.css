@@ -650,6 +650,12 @@ p.holder {
     position: relative;
     top: -5px;
   }
+
+  #mobileLogo {
+    max-width: 25%;
+    position: relative;
+    top: 200px;
+  }
   
   #plane-wrapper {
     position: relative;
