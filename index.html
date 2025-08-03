@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="images/JW.png" type="image/x-icon" />
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/JW.png" type="image/x-icon">
         <!-- Animate.css and styles -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <!-- FullPage.js v4 CDN -->
-        <link rel="stylesheet" href="fullpage.css"/>
-        <script type="text/javascript" src="fullpage.js"></script>
+        <link rel="stylesheet" href="fullpage.css">
+        <script src="fullpage.js"></script>
         <!-- Custom styles -->
-        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="styles.css">
         <title>Jenny Wilson Designs</title>
       </head>
 <body>
-    <!-- Header Navigation -->
-<div class="nav-header">
-    <div class="nav-brand">
-        <img src="images/JW.png" id="logo">
-    </div>
-    <i class="fa-solid fa-bars fa-2xl"></i>
-    <div class="header-links">
-        <ul id="myMenu">
-            <li data-menuanchor="home"><a href="#aboutme">Home</a></li>
-            <li data-menuanchor="about"><a href="#skills">About</a></li>
-            <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
-            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-            <li data-menuanchor="connect"><a href="#connect">Connect</a></li>
-          </ul>          
-    </div>
-  </div>
+  <body>
+    <!-- Skip Link -->
+    <a href="#skills" class="skip-link">Skip to main content</a>
   
-  <!-- Sidebar Navigation -->
-  <div class="nav-screen">
-    <i class="fa fa-times fa-2x"></i>
-    <div class="nav-container">
-      <div class="nav-links">
-        <ul id="myMenu">
+    <!-- Header Navigation -->
+    <div class="nav-header" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img src="images/JW.png" id="logo" alt="The letters 'J' and 'W' coloured with pink">
+      </div>
+      <i class="fa-solid fa-bars fa-2xl" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
+      <div class="header-links">
+        <ul class="myMenu">
+          <li data-menuanchor="home"><a href="#aboutme">Home</a></li>
+          <li data-menuanchor="about"><a href="#skills">About</a></li>
+          <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+          <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+          <li data-menuanchor="connect"><a href="#connect">Connect</a></li>
+        </ul>
+      </div>
+    </div>
+  
+    <!-- Sidebar Navigation -->
+    <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
+      <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
+      <div class="nav-container">
+        <div class="nav-links">
+          <ul class="myMenu">
             <li data-menuanchor="home"><a href="#aboutme">Home</a></li>
             <li data-menuanchor="about"><a href="#skills">About</a></li>
             <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
             <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
             <li data-menuanchor="connect"><a href="#connect">Connect</a></li>
           </ul>
+        </div>
       </div>
     </div>
-  </div>
+  
     <!-- End navbar slider -->
   
     <!-- Begin fullpage -->
@@ -71,7 +76,7 @@
         <div class="content">
           <h2 class="wow fadeInDown" data-wow-delay="0.2s">About Me</h2>
           <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Jenny Wilson! I'm a Multimedia Designer and Digital Communications Specialist based in Ottawa, ON, focused on creating compelling visuals and user-centric digital interfaces.</p>
-          <img src="images/designer_cat.png" class="cat">
+          <img src="images/designer_cat.png" class="cat" alt="Illustration of a cat at a computer desk, representing a designer">
   
           <div class=" wow fadeInUp container-skillbar" data-wow-delay="0s">
             <div class="skillbar clearfix " data-percent="85%">
@@ -190,8 +195,8 @@
           <p>Want to work together or just say hi? I'd love to hear from you! Shoot me a message and I'll get back to you soon.</p>
           <br>
           <div class="contact-form">
-            <div id="form-messages"></div>
-            <form id="ajax-contact" method="post" role="form" action="https://formspree.io/f/mjkoebay" data-toggle="validator">
+            <div id="form-messages" aria-live="polite"></div>
+            <form id="ajax-contact" method="post" action="https://formspree.io/f/mjkoebay" data-toggle="validator">
               <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
                 <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="name" data-error="Field can't be blank!" required>
                 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
