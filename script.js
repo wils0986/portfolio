@@ -57,7 +57,7 @@ setTimeout(() => {
   new fullpage("#fullpage", {
     licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
     scrollBar: true,
-    responsiveWidth: 768,
+    responsiveWidth: 1366,
     navigation: true,
     navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
     anchors: ["home", "about", "portfolio", "contact", "connect"],
