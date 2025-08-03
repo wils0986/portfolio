@@ -754,4 +754,8 @@ body {
  .content-slide img {
   width: 80%;
 }
+
+.fa-chevron-down {
+ display: none;
+ }
 }
