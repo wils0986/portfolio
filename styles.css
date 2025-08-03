@@ -690,7 +690,7 @@ body {
   }
 
   p {
-      max-width: 240px;
+      max-width: 65%;
       margin: 0 auto;
       font-size: 1rem;
   }
