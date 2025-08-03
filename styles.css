@@ -676,17 +676,17 @@ body {
     max-width: 300px;
   }
 
-  .aboutme h2, h2 {
+  h1 {
+    font-size: 2em;
+    padding-bottom: 30px;
+    font-weight: 350;
+}
+
+  h2 {
     font-size: 24px;
     font-weight: 350;
     padding-left: 20px;
     padding-right: 20px;
-  }
-
-  h1 {
-      font-size: 2em;
-      padding-bottom: 30px;
-      font-weight: 350;
   }
 
   p {
@@ -699,6 +699,7 @@ body {
       white-space: wrap;
       font-size: 1em;
   }
+
   .fa-bars {
     display: block !important;
   }
@@ -718,19 +719,20 @@ body {
         position: fixed;
         top: 0;
         width: 100%;
-        background-color: white;
-        z-index: 1200;
+        background-color: #FFFFFF;
+        z-index: 500;
       }
-    
-      body {
-        padding-top: 70px;
-      }
-      
 
+  #aboutme {
+    position: relative;
+    z-index: 400;
+  }
+    
     .header-links ul{
       display: none;
     }
-  
+
+/* Side nav     */
     .nav-screen {
       display: block;
       position: fixed;
@@ -771,4 +773,12 @@ body {
  .cat {
   width: 60%;
  }
+
+.section {
+  position: relative;
+  z-index: 6000;
+ }
+
 }
+
+
