@@ -622,9 +622,16 @@ body {
     top: -5px;
   }
   
+  #plane-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* or your specific width */
+    height: 100px; /* adjust to fit your design */
+  }
+
  /* Base styles */
  #paper-plane {
-    font-size: 40px;
+    font-size: 30px;
     color: #2c2c2c;
     position: absolute;
     top: 80%;
@@ -636,11 +643,22 @@ body {
     z-index: 100;
   }
   
-  /* Triggered when active */
-  #paper-plane.fly {
-    animation: flyAway 2.5s ease-in-out forwards;
+ /* Keyframe animation flying within the wrapper */
+@keyframes flyAway {
+  0% {
+    transform: translate(0%, -50%);
     opacity: 1;
   }
+  100% {
+    transform: translate(300%, -50%); /* Adjust depending on how far you want it to fly */
+    opacity: 0;
+  }
+}
+
+#paper-plane.fly {
+  animation: flyAway 2.5s ease-in-out forwards;
+  opacity: 1;
+}
   
   @keyframes flyAway {
     0% {
@@ -659,7 +677,7 @@ body {
       transform: translate(40%, -120%) rotate(20deg);
     }
     100% {
-      transform: translate(100vw, -100vh) rotate(45deg);
+      transform: translate(35vw, -100vh) rotate(45deg);
       opacity: 0;
     }
   }
