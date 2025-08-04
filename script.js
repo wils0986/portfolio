@@ -1,3 +1,6 @@
+/* jshint esversion: 11 */
+/* global $, jQuery, WOW, fullpage, fullpage_api */
+
 $(document).ready(function () {
   // Flag to prevent re-animating skillbars multiple times
   let skillbarsAnimated = false;
