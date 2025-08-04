@@ -1,4 +1,4 @@
-# Jenny's Design Portfolio - 2025 #
+# Jenny's Portfolio - 2025 #
 
 This portfolio website was built to be fully responsive across mobile, tablet, and desktop devices. It’s developed with **HTML**, **CSS**, and **JavaScript**, utilizing **fullPage.js (v4)** providing smooth, scroll-based transitions on desktop screens.
 
