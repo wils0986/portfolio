@@ -58,18 +58,18 @@ $(document).ready(function () {
   const bgImg = new Image();
   bgImg.src = "images/leaves-min.JPG";
 
-  bgImg.onload = function () {
-    // Set the background image styles
-    aboutSection.style.backgroundImage = `url(${bgImg.src})`;
-    aboutSection.style.backgroundSize = "cover";
-    aboutSection.style.backgroundPosition = "center";
-    aboutSection.style.backgroundRepeat = "no-repeat";
-  
-    // Apply dark overlay with box-shadow
-    aboutSection.style.boxShadow = "inset 0 0 0 2000px rgba(31, 32, 32, 0.63)";
-  
-    // Optional: add a class for transitions like fade-in
-    aboutSection.classList.add("loaded");
+bgImg.onload = function () {
+  // Set the background image styles
+  aboutSection.style.backgroundImage = `url(${bgImg.src})`;
+  aboutSection.style.backgroundSize = "cover";
+  aboutSection.style.backgroundPosition = "center";
+  aboutSection.style.backgroundRepeat = "no-repeat";
+
+  // Apply dark overlay with box-shadow
+  aboutSection.style.boxShadow = "inset 0 0 0 2000px rgba(31, 32, 32, 0.63)";
+
+  // Optional: add a class for transitions like fade-in
+  aboutSection.classList.add("loaded");
 
     // Now initialize fullPage AFTER background image is loaded
     initFullPage();
@@ -174,6 +174,20 @@ $(document).ready(function () {
       plane.classList.add("fly");
     }
   });
+});
+
+// Heart pulse on .submit click
+document.querySelector(".btn-lg").addEventListener("click", () => {
+  const heart = document.querySelector(".pink.heart");
+
+  // Remove the animation class to allow retriggering
+  heart.classList.remove("animate-heart");
+
+  // Trigger reflow to restart animation
+  void heart.offsetWidth;
+
+  // Add the animation class
+  heart.classList.add("animate-heart");
 });
 
 const menuIcon = document.querySelector('.fa-bars');

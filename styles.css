@@ -49,16 +49,18 @@ body {
   }
   
   /* Fade in Jenny Wilson */
+
   .main-text {
     opacity: 0;
     animation-name: fadeIn;
     animation-duration: 1.2s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
-    animation-delay: 0.5s; /* start delay */
+    animation-delay: 0.5s;
   }
   
   /* Slide in slash + Designs */
+
   .slide-part {
     display: inline-flex;
     opacity: 0;
@@ -71,12 +73,14 @@ body {
   }
   
   /* Pink slash styling */
+
   .pink {
     color: #E7759B;
     margin: 0 0.1em;
   }
   
   /* Keyframes */
+
   @keyframes fadeIn {
     to {
       opacity: 1;
@@ -90,6 +94,35 @@ body {
     }
   }
   
+/* Typewriter styling */
+
+  #holder {
+    white-space: nowrap;
+    font-size: 1.27em;
+}
+
+p.holder {
+  /* Reserve enough height and keep it invisible initially */
+  min-height: 2em;
+  visibility: hidden;
+  color: #FFFFFF;
+  font-weight: 100;
+  font-size: 17.4px;
+}
+
+/* Blinking cursor effect */
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: #FFFFFF;
+    animation: blink 1s step-start infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
   h2 {
     font-weight: lighter;
     color: #E7759B;
@@ -304,7 +337,6 @@ body {
   overflow: visible !important;
 }
 
-  
   /* Bouncing arrow */
   
   .fa-chevron-down {
@@ -445,7 +477,6 @@ body {
   .contact-form {
     padding: 0px 15px 0px 15px;
     justify-content: center;
-    
   }
   
   .form-control {
@@ -581,33 +612,6 @@ body {
       transform: scaleY(1);
     }
   }
-  
-#holder {
-    white-space: nowrap;
-    font-size: 1.27em;
-}
-
-p.holder {
-  /* Reserve enough height and keep it invisible initially */
-  min-height: 2em;
-  visibility: hidden;
-  color: #FFFFFF;
-  font-weight: 100;
-  font-size: 17.4px;
-}
-
-/* Blinking cursor effect */
-.cursor {
-    display: inline-block;
-    margin-left: 2px;
-    color: #FFFFFF;
-    animation: blink 1s step-start infinite;
-  }
-  
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
 
   .success {
     padding: 1em;
@@ -653,15 +657,37 @@ p.holder {
     position: relative;
     top: 200px;
   }
-  
-  #plane-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%; 
-    height: 100px; 
-  }
 
- /* Base styles */
+  /* Footer heart pulses on .submit click */
+
+  .pink.heart {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes heartBeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+  
+  .animate-heart {
+    animation: heartBeat 0.8s ease 3; /* 3 repeats */
+  }
+  
+
+/* Plane flies on .submit click */
+
+ #plane-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%; 
+  height: 100px; 
+}
+
  #paper-plane {
     font-size: 30px;
     color: #2c2c2c;
@@ -676,6 +702,7 @@ p.holder {
   }
   
  /* Keyframe animation flying within the wrapper */
+
 @keyframes flyAway {
   0% {
     transform: translate(0%, -50%);
@@ -715,6 +742,7 @@ p.holder {
   }
 
   /* Initially position the cat image off-screen left and invisible */
+
   .cat {
     opacity: 0;
     width: 40%;
@@ -723,6 +751,7 @@ p.holder {
   }
 
   /* When active, bring it to original position and fully visible */
+
   .cat.slide-in {
     opacity: 1;
     transform: translateX(0);
@@ -736,6 +765,7 @@ p.holder {
   
 /* /////////////////////////////////////////// */
   /* Mobile nav styles - responsive design */
+
 @media (max-width: 768px) {
 
   .content {
@@ -805,6 +835,7 @@ p.holder {
     }
 
 /* Side nav */
+
     .nav-screen {
       display: block;
       position: fixed;
@@ -881,5 +912,3 @@ p.holder {
  }
 
 }
-
-
