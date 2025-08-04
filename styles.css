@@ -17,7 +17,7 @@
 
 .skip-link:focus {
   top: 10px;
-  outline: 2px solid #fff;
+  outline: 2px solid #FFFFFF;
   outline-offset: 2px;
   box-shadow: 0 0 8px rgba(255,255,255,0.7);
 }
@@ -72,7 +72,7 @@ body {
   
   /* Pink slash styling */
   .pink {
-    color: pink;
+    color: #E7759B;
     margin: 0 0.1em;
   }
   
@@ -401,7 +401,6 @@ body {
   .skillbar-bar {
     height: 30px;
     width: 0px;
-    background-color: #DD1E2F; 
     transition: width 2.5s ease;
     border-radius: 4px;
   }
@@ -413,7 +412,7 @@ body {
     font-size: 11px;
     height: 30px;
     line-height: 30px;
-    color: #ffffff;
+    color: #FFFFFF;
     color: rgba(0, 0, 0, 0.5);
   }
   
@@ -502,7 +501,7 @@ body {
     text-align: center;
     font-size: 1em;
     color: #E7759B;
-    background-color: white;
+    background-color: #FFFFFF;
     text-decoration: none;
     font-family: 'Segoe UI', sans-serif;
     font-weight: bold;
@@ -510,14 +509,14 @@ body {
   
   #submit:hover {
     background-color: #E7759B;
-    color: white;
+    color: #FFFFFF;
     transition: all 0.3s ease-out;
   }
   
   /* Footer styles */
   
   .footer {
-    background-color: #484848;
+    background-color: #2c2c2c;
     height: 100px;
     padding-top: 10px;
   }
@@ -546,7 +545,7 @@ body {
     width: 100%;
     height: 100%;
     padding: 25%;
-    background-color: #2f2f2f;
+    background-color: #2c2c2c;
     text-align: center;
     font-size: 10px;
     z-index: 1000;
