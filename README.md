@@ -7,9 +7,9 @@ My development process begins with a strong foundation: I structured the content
 Accessibility was a key focus throughout the build. I implemented semantic **HTML** elements, ARIA attributes, and skip links to make the site navigable and inclusive for all users.
 
 ## Resources: ##
--https://alvarotrigo.com/fullPage/docs/
--https://stackoverflow.com/questions
--https://www.w3schools.com/
--https://fontawesome.com/search
--https://codepen.io/SquishyAndroid/pen/XjRPVV
--https://chatgpt.com/
+- https://alvarotrigo.com/fullPage/docs/
+- https://stackoverflow.com/questions
+- https://www.w3schools.com/
+- https://fontawesome.com/search
+- https://codepen.io/SquishyAndroid/pen/XjRPVV
+- https://chatgpt.com/
