@@ -105,6 +105,7 @@ body {
     font-size: 20px;
     font-weight: lighter;
     color: #2c2c2c;
+    line-height: 1.5em;
   }
   
   .section {
@@ -495,6 +496,12 @@ body {
     background-color: #2c2c2c;
     height: 100px;
     padding-top: 10px;
+    margin-top: 20px;
+  }
+
+  .fp-section:last-child {
+    min-height: auto !important;
+    height: auto !important;
   }
   
   .footer p {
@@ -502,6 +509,7 @@ body {
     font-weight: lighter;
     font-size: 16px;
     padding-top: 10px;
+    
   }
   
   .social-links a {

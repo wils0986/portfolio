@@ -62,7 +62,7 @@ setTimeout(() => {
     responsiveWidth: 1366,
     adjustOnNavChange: false,
     navigation: true,
-    anchors: ["home", "about", "portfolio", "contact", "connect"],
+    anchors: ["home", "about", "portfolio", "contact"],
     menu: "#myMenu",
     autoScrolling: !isMobile,
     fitToSection: !isMobile,
