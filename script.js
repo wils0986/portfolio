@@ -54,38 +54,38 @@ setTimeout(() => {
   main(); // Run nav toggle setup
 
   // FullPage.js v4 initialization
-  new fullpage("#fullpage", {
-    licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
-    scrollBar: true,
-    responsiveWidth: 1366,
-    navigation: true,
-    navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
-    anchors: ["home", "about", "portfolio", "contact", "connect"],
-    menu: "#myMenu",
-    fitToSection: false,
+  const isMobile = window.innerWidth <= 768;
 
-    afterLoad: function (origin, destination, direction) {
-      const index = destination.index;
+new fullpage("#fullpage", {
+  licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
+  scrollBar: true,
+  responsiveWidth: 1366,
+  navigation: true,
+  navigationTooltips: ["home", "about", "portfolio", "contact", "connect"],
+  anchors: ["home", "about", "portfolio", "contact", "connect"],
+  menu: "#myMenu",
 
-      // Always show down arrow on section load
-      $(".fa-chevron-down").css("opacity", "1");
+  // Disable autoScrolling on mobile
+  autoScrolling: !isMobile,
+  fitToSection: !isMobile,
 
-      // Animate skillbars & slide-in cat image only once
-      if (index === 1 && !skillbarsAnimated) {
-        $(".skillbar").each(function () {
-          const percent = $(this).attr("data-percent");
-          $(this)
-            .find(".skillbar-bar")
-            .animate({ width: percent }, 1000);
-        });
-        skillbarsAnimated = true;
+  afterLoad: function (origin, destination, direction) {
+    const index = destination.index;
 
-        // Slide in cat image
-        $(".cat").addClass("slide-in");
-        catAnimated = true;
-      }
+    $(".fa-chevron-down").css("opacity", "1");
+
+    if (index === 1 && !skillbarsAnimated) {
+      $(".skillbar").each(function () {
+        const percent = $(this).attr("data-percent");
+        $(this).find(".skillbar-bar").animate({ width: percent }, 1000);
+      });
+      skillbarsAnimated = true;
+
+      $(".cat").addClass("slide-in");
+      catAnimated = true;
     }
-  });
+  }
+});
 
   // Scroll down button
   $(document).on("click", "#moveDown", function () {
