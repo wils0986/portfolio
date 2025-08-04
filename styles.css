@@ -736,6 +736,11 @@ p.holder {
   /* Mobile nav styles - responsive design */
 @media (max-width: 768px) {
 
+  html, body {
+    overflow-x: hidden;
+    touch-action: pan-y;
+  }
+
   .content {
     max-width: 300px;
   }
