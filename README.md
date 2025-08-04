@@ -1,7 +1,7 @@
 # Jenny's Design Portfolio - 2025
 
-I built this portfolio website to be fully responsive across all device types—mobile, tablet, and desktop. It’s developed using **HTML**, **CSS**, and a touch of **JavaScript**, including **fullPage.js (v4)** for smooth, scroll-based transitions.
+This portfolio website was built to be fully responsive across mobile, tablet, and desktop devices. It’s developed using **HTML**, **CSS**, and **JavaScript**, with **fullPage.js (v4)** providing smooth, scroll-based transitions on desktop screens.
 
-My workflow begins with laying a solid foundation: I started by structuring the content with semantic, valid **HTML**, followed by styling with **CSS**. I find this bottom-up approach more effective than jumping straight to the visual "wallpaper." Once the layout and styling were in place, I added interactive elements and subtle animations using **JavaScript**, the best part! 
+My development process begins with a strong foundation: I structured the content using semantic, standards-compliant **HTML**, then layered in **CSS** for layout and styling. I prefer this bottom-up approach to ensure the content and structure are sound before refining the visual design. Once the base was in place, I introduced **JavaScript** to add interactivity and subtle motion effects, the best part!
 
-Accessibility was a priority throughout the build. I incorporated semantic tags, ARIA labels, and skip links to ensure the site is navigable and usable for all users.
+Accessibility was a key focus throughout the build. I implemented semantic **HTML** elements, ARIA attributes, and skip links to make the site navigable and inclusive for all users.
