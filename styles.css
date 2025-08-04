@@ -843,6 +843,7 @@ p.holder {
   position: relative;
   z-index: 6000;
   overflow-x: hidden;
+  overflow-y: hidden;
  }
 
  .success {
