@@ -282,16 +282,28 @@ body {
     text-align: center;
   }
   
-  .aboutme {
-    background: url(images/leaves-min.JPG) no-repeat;
-    filter: hue-rotate(340deg);
-    box-shadow: inset 0 0 0 2000px rgba(31, 32, 32, 0.63);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-  }
+  /* Fix about section height and background behavior */
+.aboutme {
+  filter: hue-rotate(340deg);
+  
+  min-height: 100vh !important;         /* full viewport height */
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  transition: none !important;           /* disable background transitions */
+  will-change: transform;                /* improve rendering performance */
+}
+
+/* Optional: prevent fullPage transforms on about section (test this) */
+.aboutme.fp-section {
+  transform: none !important;
+}
+
+/* Prevent overflow issues */
+#fullpage {
+  overflow: visible !important;
+}
+
   
   /* Bouncing arrow */
   

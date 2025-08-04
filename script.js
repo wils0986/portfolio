@@ -26,14 +26,14 @@ $(document).ready(function () {
     }
   })(jQuery);
 
-// Wait 1.2 seconds before starting typing
-setTimeout(() => {
-  // Make holder visible
-  $("p.holder").css("visibility", "visible");
+  // Wait 1.2 seconds before starting typing
+  setTimeout(() => {
+    // Make holder visible
+    $("p.holder").css("visibility", "visible");
 
-  // Start typewriter effect
-  $("#holder").writeText("Multimedia Designer and Digital Communications Specialist", 150);
-}, 2800);
+    // Start typewriter effect
+    $("#holder").writeText("Multimedia Designer and Digital Communications Specialist", 150);
+  }, 2800);
 
   // Initialize WOW.js
   new WOW().init();
@@ -53,40 +53,62 @@ setTimeout(() => {
 
   main(); // Run nav toggle setup
 
-  // FullPage.js v4 initialization
-  const isMobile = window.innerWidth <= 768;
+  // PRELOAD background image for .aboutme BEFORE initializing fullPage
+  const aboutSection = document.querySelector(".aboutme");
+  const bgImg = new Image();
+  bgImg.src = "images/leaves-min.JPG";
 
-  new fullpage("#fullpage", {
-    licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
-    scrollBar: true,
-    responsiveWidth: 1366,
-    adjustOnNavChange: false,
-    navigation: true,
-    anchors: ["home", "about", "portfolio", "contact"],
-    menu: "#myMenu",
-    autoScrolling: !isMobile,
-    fitToSection: !isMobile,
+  bgImg.onload = function () {
+    // Set the background image styles
+    aboutSection.style.backgroundImage = `url(${bgImg.src})`;
+    aboutSection.style.backgroundSize = "cover";
+    aboutSection.style.backgroundPosition = "center";
+    aboutSection.style.backgroundRepeat = "no-repeat";
   
-    afterLoad: function (origin, destination, direction) {
-      const index = destination.index;
+    // Apply dark overlay with box-shadow
+    aboutSection.style.boxShadow = "inset 0 0 0 2000px rgba(31, 32, 32, 0.63)";
   
-      // Always show down arrow on section load
-      $(".fa-chevron-down").css("opacity", "1");
-  
-      // Animate skillbars & slide-in cat image only once
-      if (index === 1 && !skillbarsAnimated) {
-        $(".skillbar").each(function () {
-          const percent = $(this).attr("data-percent");
-          $(this).find(".skillbar-bar").animate({ width: percent }, 1000);
-        });
-        skillbarsAnimated = true;
-  
-        $(".cat").addClass("slide-in");
-        catAnimated = true;
+    // Optional: add a class for transitions like fade-in
+    aboutSection.classList.add("loaded");
+
+    // Now initialize fullPage AFTER background image is loaded
+    initFullPage();
+  };
+
+  function initFullPage() {
+    const isMobile = window.innerWidth <= 768;
+
+    new fullpage("#fullpage", {
+      licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
+      scrollBar: true,
+      responsiveWidth: 1366,
+      adjustOnNavChange: false,
+      navigation: true,
+      anchors: ["home", "about", "portfolio", "contact"],
+      menu: "#myMenu",
+      autoScrolling: !isMobile,
+      fitToSection: !isMobile,
+
+      afterLoad: function (origin, destination, direction) {
+        const index = destination.index;
+
+        // Always show down arrow on section load
+        $(".fa-chevron-down").css("opacity", "1");
+
+        // Animate skillbars & slide-in cat image only once
+        if (index === 1 && !skillbarsAnimated) {
+          $(".skillbar").each(function () {
+            const percent = $(this).attr("data-percent");
+            $(this).find(".skillbar-bar").animate({ width: percent }, 1000);
+          });
+          skillbarsAnimated = true;
+
+          $(".cat").addClass("slide-in");
+          catAnimated = true;
+        }
       }
-    }
-  });
-  
+    });
+  }
 
   // Scroll down button
   $(document).on("click", "#moveDown", function () {
