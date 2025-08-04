@@ -730,6 +730,12 @@ p.holder {
     opacity: 1;
     transform: translateX(0);
   }
+
+  .fp-responsive .fp-section,
+.fp-responsive .fp-tableCell {
+  height: auto !important;
+}
+
   
 /* /////////////////////////////////////////// */
   /* Mobile nav styles - responsive design */
