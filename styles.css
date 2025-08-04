@@ -354,7 +354,7 @@ body {
   /* Skill bars */
   
   .container-skillbar {
-    width: 100%;
+    max-width: 96%;
     padding-top: 30px;
     padding-right: 2%;
     padding-left: 2%;
