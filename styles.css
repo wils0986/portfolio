@@ -268,7 +268,7 @@ p.holder {
   }
   
   .nav-links a {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 24px;
     line-height: 2.5;
     font-weight: lighter;
@@ -280,6 +280,11 @@ p.holder {
   .nav-links a:active {
     color: #E7759B;
     transition: all 0.2s ease-in-out;
+  }
+
+  .mobileResume {
+    position: relative;
+    top: 200px;
   }
   
   #fp-nav ul li .fp-tooltip {
@@ -325,11 +330,6 @@ p.holder {
   background-repeat: no-repeat !important;
   transition: none !important;           /* disable background transitions */
   will-change: transform;                /* improve rendering performance */
-}
-
-/* Optional: prevent fullPage transforms on about section (test this) */
-.aboutme.fp-section {
-  transform: none !important;
 }
 
 /* Prevent overflow issues */
@@ -656,6 +656,19 @@ p.holder {
     max-width: 25%;
     position: relative;
     top: 200px;
+    left: 15px;
+  }
+
+  a.resume {
+    color: #2c2c2c;
+    position: relative;
+    bottom: 25px;
+    left: 20px;
+  }
+
+  a.resume:hover {
+    color: #E7759B;
+    transition: all 0.2s ease-in-out;
   }
 
   /* Footer heart pulses on .submit click */
@@ -815,12 +828,6 @@ p.holder {
         z-index: 500;
       }
 
-      #mobileLogo {
-        width: 25%;
-        position: relative;
-        top: 200px;
-      }
-
       #logo {
         display: none;
       }
@@ -853,6 +860,11 @@ p.holder {
 
  ul.myMenu {
   padding: 25px 25px 0px 25px;
+ }
+
+ ul.myMenu li a:hover {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
  }
 
  .form-control {
@@ -909,6 +921,17 @@ p.holder {
   border: 1px solid rgba(185, 74, 72, 0.3);
   border-radius: 4px;
   width: 85%;
+ }
+
+ #mobileLogo {
+  max-width: 25%;
+  position: relative;
+  top: 200px;
+  left: 0px;
+}
+
+ a.resume {
+ display: none;
  }
 
 }
