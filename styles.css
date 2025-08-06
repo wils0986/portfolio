@@ -481,8 +481,8 @@ p.holder {
   
   .form-control {
     border: 2px solid rgba(0, 0, 0, 0.27);
-    width: 100%;
-    max-width: 100%;
+    max-width: 96%;
+    min-width: 96%;
     height: 3em;
     font-size: 16px;
     padding: 1em;
@@ -879,10 +879,6 @@ p.holder {
   transition: all 0.2s ease-in-out;
  }
 
- .form-control {
-  width: 80%;
-}
-
 .fp-controlArrow.fp-prev {
   display: none;
   border-width: 25px 25px 25px 0; 
@@ -913,6 +909,7 @@ p.holder {
  }
 
  .success {
+  display: inline-block;
   padding: 1em;
   margin-bottom: 0.75rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -920,10 +917,11 @@ p.holder {
   background-color: #dff0d8;
   border: 1px solid #d6e9c6;
   border-radius: 4px;
-  width: 96%;
+  max-width: 80%;
 }
 
 .error {
+  display: inline-block;
   padding: 1em;
   margin-bottom: 0.75rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
@@ -931,7 +929,7 @@ p.holder {
   background-color: #f2dede;
   border: 1px solid rgba(185, 74, 72, 0.3);
   border-radius: 4px;
-  width: 96%;
+  max-width: 80%;
  }
 
  #mobileLogo {
@@ -989,6 +987,7 @@ p.holder {
    flex-direction: column;
    box-sizing: border-box;
    max-width: 80%;
+   margin-top: 60px;
  }
 
  .content-slide .slide {
@@ -1028,12 +1027,12 @@ p.holder {
 
 .form-control {
   border: 2px solid rgba(0, 0, 0, 0.27);
-  max-width: 100%;
+  max-width: 80%;
+  min-width: 80%;
   height: 3em;
   font-size: 16px;
   padding: 1em;
   margin: 0.5em 0 2em 0;
-  width: 96%;
  }
 
  p.holder {
@@ -1041,7 +1040,6 @@ p.holder {
   min-height: 2em;
   visibility: hidden;
   color: #FFFFFF;
-  font-weight: 400;
   font-size: 1.15em;
   padding-left: 20px;
   padding-right: 20px;
@@ -1049,6 +1047,7 @@ p.holder {
 
 #holder span {
   white-space: wrap;
+  font-weight: 300;
 }
 
 .social-links a:active {
