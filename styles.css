@@ -321,18 +321,19 @@ p.holder {
   }
   
   /* Fix about section height and background behavior */
+
 .aboutme {
-  filter: hue-rotate(340deg);
-  
-  min-height: 100vh !important;         /* full viewport height */
+  filter: hue-rotate(340deg); /* Recolours image */
+  min-height: 100vh !important; /* Full viewport height */
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  transition: none !important;           /* disable background transitions */
-  will-change: transform;                /* improve rendering performance */
+  transition: none !important; /* Disable background transitions */
+  will-change: transform; /* Improve rendering performance */
 }
 
 /* Prevent overflow issues */
+
 #fullpage {
   overflow: visible !important;
 }
