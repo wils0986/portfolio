@@ -9,7 +9,7 @@
   padding: 8px 16px;
   z-index: 1000;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1rem;
   transition: top 0.3s ease;
   border-radius: 4px;
@@ -45,7 +45,8 @@ body {
     font-size: 3.75em;
     margin-bottom: 0;
     position: relative;
-    top: 15px;
+    top: 10px;
+    
   }
   
   /* Fade in Jenny Wilson */
@@ -98,7 +99,8 @@ body {
 
   #holder {
     white-space: nowrap;
-    font-size: 1.27em;
+    font-size: 1.1em;
+    font-weight: 100;
 }
 
 p.holder {
@@ -106,8 +108,7 @@ p.holder {
   min-height: 2em;
   visibility: hidden;
   color: #FFFFFF;
-  font-weight: 100;
-  font-size: 17.4px;
+  
 }
 
 /* Blinking cursor effect */
@@ -399,8 +400,6 @@ p.holder {
     position: absolute;
     top: 0;
     left: 0;
-    font-weight: bold;
-    font-size: 13px;
     color: #fff;
     background: #6adcfa;
     border-top-left-radius: 4px;
@@ -414,8 +413,7 @@ p.holder {
     height: 30px;
     line-height: 30px;
     font-family: 'Segoe UI', sans-serif;
-    font-weight: lighter;
-    font-size: 1.25em;
+    font-weight: 400;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
@@ -443,13 +441,15 @@ p.holder {
   .content {
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    width: 800px;
+    max-width: 80%;
   }
   
   .content-slide {
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    width: 800px;
+    max-width: 80%;
   }
   
   .content-slide img {
@@ -477,7 +477,6 @@ p.holder {
 
   .contact-form {
     padding: 0px 15px 0px 15px;
-    justify-content: center;
   }
   
   .form-control {
@@ -488,7 +487,8 @@ p.holder {
     font-size: 16px;
     padding: 1em;
     margin: 0.5em 0 2em 0;
-    font-weight: bold;
+    font-weight: 600;
+    width: 96%;
   }
 
   .hidden {
@@ -525,7 +525,7 @@ p.holder {
     background-color: #FFFFFF;
     text-decoration: none;
     font-family: 'Segoe UI', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
   }
   
   #submit:hover {
@@ -550,7 +550,6 @@ p.holder {
   
   .footer p {
     color: #FFFFFF;
-    font-weight: lighter;
     font-size: 16px;
     padding-top: 10px;
     
@@ -622,7 +621,7 @@ p.holder {
     background-color: #dff0d8;
     border: 1px solid #d6e9c6;
     border-radius: 4px;
-    width: 100%;
+    width: 96%;
   }
   
   .error {
@@ -692,7 +691,6 @@ p.holder {
     animation: heartBeat 0.8s ease 3; /* 3 repeats */
   }
   
-
 /* Plane flies on .submit click */
 
  #plane-wrapper {
@@ -707,7 +705,7 @@ p.holder {
     color: #2c2c2c;
     position: absolute;
     top: 80%;
-    left: 60%;
+    left: 30%;
     opacity: 0;
     transform: translate(-50%, -50%);
     transition: opacity 0.3s ease;
@@ -759,7 +757,7 @@ p.holder {
 
   .cat {
     opacity: 0;
-    width: 40%;
+    max-width: 40%;
     transform: translateX(-100%);
     transition: transform 1s ease, opacity 1s ease;
   }
@@ -782,51 +780,64 @@ p.holder {
 
 @media (max-width: 768px) {
 
-  .content {
-    max-width: 300px;
-  }
-
   h1 {
     font-size: 1.75em;
-    padding-bottom: 30px;
-    font-weight: 350;
+    padding-bottom: 10px;
+    font-weight: 400;
 }
 
   h2 {
     font-size: 24px;
-    font-weight: 350;
+    font-weight: 400;
     padding-left: 20px;
     padding-right: 20px;
   }
 
   p {
-      max-width: 65%;
-      margin: 0 auto;
       font-size: 1rem;
-  }
-
-  #holder span {
-      white-space: wrap;
-      font-size: .9em;
+      font-weight: 400;
   }
 
   .header-links {
     display: none;
   }
 
-    .fa-bars {
-      display: block !important;
-      cursor: pointer;
-      position: relative;
-      z-index: 1000;
-    }
+  .fa-bars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 9999;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    font-size: 2rem;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    transition: opacity 0.3s ease;
+  }
 
+  body.nav-open .fa-bars {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .fa-bars:active {
+    color: #2c2c2c;
+    background-color: #E7759B;
+  }
+  
     .nav-header {
         position: absolute;
         top: 0;
         width: 100%;
-        background-color: #FFFFFF;
-        z-index: 500;
+        background-color: none;
       }
 
       #logo {
@@ -863,7 +874,7 @@ p.holder {
   padding: 25px 25px 0px 25px;
  }
 
- ul.myMenu li a:hover {
+ ul.myMenu li a:active {
   color: #E7759B;
   transition: all 0.2s ease-in-out;
  }
@@ -873,33 +884,32 @@ p.holder {
 }
 
 .fp-controlArrow.fp-prev {
+  display: none;
   border-width: 25px 25px 25px 0; 
   left: 10px !important;
 }
 
 .fp-controlArrow.fp-next {
+  display: none;
   border-width: 25px 0 25px 25px; /* Keep size proportional */
   right: 10px !important;
  }
-
- .content-slide img {
-  width: 80%;
-}
 
 .fa-chevron-down {
  display: none;
  }
 
  .cat {
-  width: 60%;
+  max-width: 60%;
+  height: auto;
   padding-top: 20px;
  }
 
 .section {
   position: relative;
   z-index: 6000;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: visible !important;
+  height: auto !important;
  }
 
  .success {
@@ -910,7 +920,7 @@ p.holder {
   background-color: #dff0d8;
   border: 1px solid #d6e9c6;
   border-radius: 4px;
-  width: 85%;
+  width: 96%;
 }
 
 .error {
@@ -921,7 +931,7 @@ p.holder {
   background-color: #f2dede;
   border: 1px solid rgba(185, 74, 72, 0.3);
   border-radius: 4px;
-  width: 85%;
+  width: 96%;
  }
 
  #mobileLogo {
@@ -932,7 +942,130 @@ p.holder {
 }
 
  a.resume {
- display: none;
+  display: none;
  }
+
+ .content {
+  max-width: 80%;
+  margin: 0 auto;
+ }
+
+
+ .fp-scrollable .fp-slide:not(.fp-auto-height):not([data-percentage]) {
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+.fp-slide,
+.fp-tableCell {
+  height: auto !important;
+  min-height: 0 !important;
+  display: block !important; /* cancel vertical centering */
+  vertical-align: top !important;
+}
+
+ /* Disable fullPage.js horizontal styling */
+ .fp-slides,
+ .fp-slide {
+   transform: none !important;
+   left: 0 !important;
+   top: 0 !important;
+   width: 100% !important;
+   height: auto !important;
+   display: block !important;
+   float: none !important;
+   position: static !important;
+   opacity: 1 !important;
+ }
+
+ .fp-slidesContainer {
+   display: block !important;
+   width: 100% !important;
+   transform: none !important;
+ }
+
+ .content-slide {
+   display: flex;
+   flex-direction: column;
+   box-sizing: border-box;
+   max-width: 80%;
+ }
+
+ .content-slide .slide {
+   display: block !important;
+   width: 100% !important;
+   height: auto !important;
+   margin: 0 auto;
+   padding: 1rem 0;
+   padding-bottom: 2rem; /* reduce space after each project */
+ }
+
+ .content-slide h2,
+ .content-slide p {
+   text-align: center;
+   max-width: 100%;
+   margin: 0 auto;
+ }
+
+ .content-slide img {
+   display: block;
+   max-width: 90%;
+   height: auto;
+   margin: 0 auto;
+ }
+
+ .slide p {
+  padding-top: 20px;
+ }
+
+ html, body {
+   overflow-x: hidden;
+ }
+
+ .contact-form {
+  padding: 0px 15px 0px 15px;
+}
+
+.form-control {
+  border: 2px solid rgba(0, 0, 0, 0.27);
+  max-width: 100%;
+  height: 3em;
+  font-size: 16px;
+  padding: 1em;
+  margin: 0.5em 0 2em 0;
+  width: 96%;
+ }
+
+ p.holder {
+  /* Reserve enough height and keep it invisible initially */
+  min-height: 2em;
+  visibility: hidden;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.15em;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#holder span {
+  white-space: wrap;
+}
+
+.social-links a:active {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer {
+  height: 120px;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+
+.footer p {
+  background-color: #2c2c2c;
+  padding: 20px 50px 20px 50px;
+  margin-top: 0px;
+}
 
 }

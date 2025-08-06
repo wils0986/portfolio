@@ -45,18 +45,18 @@ $(document).ready(function () {
   function main() {
     $(".fa-bars").click(function () {
       $(".nav-screen").animate({ right: "0px" }, 200);
-      $("body").animate({ right: "285px" }, 200);
+      $("body").animate({ right: "285px" }, 200).addClass("nav-open"); // Add class
     });
-
+  
     $(".fa-times, .nav-links a").click(function () {
       $(".nav-screen").animate({ right: "-285px" }, 200);
-      $("body").animate({ right: "0px" }, 200);
+      $("body").animate({ right: "0px" }, 200).removeClass("nav-open"); // Remove class
     });
   }
 
   main(); // Run nav toggle setup
 
-  // PRELOAD background image for .aboutme BEFORE initializing fullPage
+  // Preload background image for .aboutme before initializing fullPage
   const aboutSection = document.querySelector(".aboutme");
   const bgImg = new Image();
   bgImg.src = "images/leaves-min.JPG";
@@ -80,7 +80,7 @@ bgImg.onload = function () {
 
   function initFullPage() {
     const isMobile = window.innerWidth <= 768;
-
+  
     new fullpage("#fullpage", {
       licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
       scrollBar: true,
@@ -91,13 +91,13 @@ bgImg.onload = function () {
       menu: "#myMenu",
       autoScrolling: !isMobile,
       fitToSection: !isMobile,
-
+  
       afterLoad: function (origin, destination, direction) {
         const index = destination.index;
-
+  
         // Always show down arrow on section load
         $(".fa-chevron-down").css("opacity", "1");
-
+  
         // Animate skillbars & slide-in cat image only once
         if (index === 1 && !skillbarsAnimated) {
           $(".skillbar").each(function () {
@@ -105,14 +105,22 @@ bgImg.onload = function () {
             $(this).find(".skillbar-bar").animate({ width: percent }, 1000);
           });
           skillbarsAnimated = true;
-
+  
           $(".cat").addClass("slide-in");
           catAnimated = true;
         }
       }
     });
+  
+    // Remove slide classes and styles on mobile to stop carousel
+    if (isMobile) {
+      document.querySelectorAll('.fp-slide, .fp-slides, .fp-slidesContainer').forEach(el => {
+        el.classList.remove('fp-slide', 'fp-slides', 'fp-slidesContainer');
+        el.removeAttribute('style');
+      });
+    }
   }
-
+  
   // Scroll down button
   $(document).on("click", "#moveDown", function () {
     fullpage_api.moveSectionDown();
