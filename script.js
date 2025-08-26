@@ -56,27 +56,31 @@ $(document).ready(function () {
 
   main(); // Run nav toggle setup
 
-  // Preload background image for .aboutme before initializing fullPage
-  const aboutSection = document.querySelector(".aboutme");
-  const bgImg = new Image();
-  bgImg.src = "images/leaves-min.JPG";
+ // Preload background image for .aboutme before initializing fullPage
+const aboutSection = document.querySelector(".aboutme");
+const bgImg = new Image();
+bgImg.src = "images/yoshi.JPG";
 
 bgImg.onload = function () {
-  // Set the background image styles
+  // Push content down so background starts below the header
+  aboutSection.style.paddingTop = "58px";
+
+  // Make background fit entirely without cropping
   aboutSection.style.backgroundImage = `url(${bgImg.src})`;
-  aboutSection.style.backgroundSize = "cover";
-  aboutSection.style.backgroundPosition = "center";
+  aboutSection.style.backgroundSize = "contain";
+  aboutSection.style.backgroundPosition = "center top";
   aboutSection.style.backgroundRepeat = "no-repeat";
 
-  // Apply dark overlay with box-shadow
-  aboutSection.style.boxShadow = "inset 0 0 0 2000px rgba(31, 32, 32, 0.63)";
+  // Optional: dark overlay
+  aboutSection.style.boxShadow = "inset 0 0 0 2000px rgba(31, 32, 32, 0.43)";
 
-  // Optional: add a class for transitions like fade-in
+  // Optional: fade-in effect
   aboutSection.classList.add("loaded");
 
-    // Now initialize fullPage AFTER background image is loaded
-    initFullPage();
-  };
+  // Now initialize fullPage AFTER background image is loaded
+  initFullPage();
+};
+
 
   function initFullPage() {
     const isMobile = window.innerWidth <= 768;
@@ -87,6 +91,7 @@ bgImg.onload = function () {
       responsiveWidth: 1366,
       adjustOnNavChange: false,
       navigation: true,
+      navigationTooltips: ["Home", "About", "Portfolio", "Contact"],
       anchors: ["home", "about", "portfolio", "contact"],
       menu: "#myMenu",
       autoScrolling: !isMobile,

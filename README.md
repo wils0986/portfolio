@@ -11,7 +11,6 @@ Accessibility is paramount, so I always make sure to implement semantic **HTML**
 - https://stackoverflow.com/questions
 - https://www.w3schools.com/
 - https://fontawesome.com/search
-- https://codepen.io/SquishyAndroid/pen/XjRPVV
 - https://webaim.org/resources/contrastchecker/
 - https://validator.w3.org/#validate_by_input
 - https://jigsaw.w3.org/css-validator/#validate_by_input
