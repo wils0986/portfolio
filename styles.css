@@ -1125,11 +1125,11 @@ p.holder {
   .opaque-bg {
     display: block;
     position: relative;
-    max-width: 400px;  /* never gets bigger than this */
-    width: 96%;       /* but shrinks on smaller screens */
-    text-align: right; /* align text inside */
+    max-width: 400px; 
+    width: 96%;       
+    text-align: right; 
     box-sizing: border-box;
-    padding: 95px 0px 5px 5px; /* your original padding */
+    padding: 65px 0px 5px 5px; 
   }
 }
 
