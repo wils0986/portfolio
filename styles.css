@@ -46,12 +46,15 @@ body {
     margin-bottom: 0;
     position: relative;
     top: 10px;
-    
   }
   
+ /* Paragraph text styling */
+
   p, .slide p {
     text-align: left;
   }
+
+  /* Footer text styling */
 
   .copyright {
     text-align: center;
