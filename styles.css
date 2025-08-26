@@ -350,7 +350,7 @@ p.holder {
   .fa-chevron-down {
     color: #E7759B;
     bottom: 10px;
-    margin-left: -30px;
+   
     cursor: pointer;
     position: absolute;
     opacity: 0;
@@ -797,6 +797,7 @@ p.holder {
       font-size: clamp(2.5rem, 5vw, 1.4em);
       padding-bottom: 10px;
       font-weight: lighter;
+      
     }
     
     p.holder {
@@ -809,8 +810,8 @@ p.holder {
     
     #holder {
       display: flex;
-      justify-content: flex-end; /* push to the right */
-      white-space: wrap;   /* prevents text from wrapping */
+      justify-content: flex-end; 
+      white-space: wrap;   
       font-weight: lighter;
       font-size: 22px;
     }
@@ -818,13 +819,18 @@ p.holder {
     .opaque-bg {
       display: block;
       position: relative;
-      max-width: 400px;  /* never gets bigger than this */
-      width: 100%;       /* but shrinks on smaller screens */
-      text-align: right; /* align text inside */
+      max-width: 400px; 
+      width: 100%;       
+      text-align: right; 
       box-sizing: border-box;
-      padding: 15px 5px 5px 5px; /* your original padding */
+      padding: 15px 5px 5px 5px; 
       float: right;
-    }
+     }
+
+.fa-chevron-down {
+  margin-left: 200px; /* Offsets float from parent */
+}
+
     }
 
     @media (max-width: 1000px)
@@ -841,13 +847,28 @@ p.holder {
       
 @media (max-width: 768px) {
 
+
+
   h1 {
-    font-size: clamp(1.7rem, 5vw, 1.4em);
-    padding-bottom: 10px;
-    margin-left: 20px;
     font-weight: 400;
-    white-space: wrap;
   }
+
+  .fp-table {
+   justify-content: flex-start;
+   
+  }
+
+  .opaque-bg {
+    display: block;
+    position: relative;
+    max-width: 400px; 
+    width: 96%;       
+    text-align: right; 
+    box-sizing: border-box;
+    padding-top: 65px; 
+    right: 1rem;
+  }
+
   
   #holder {
 
@@ -1124,27 +1145,5 @@ p.holder {
 
 }
 
-@media (max-width: 700px) {
- 
-  h1 {
-    font-weight: 400;
-  }
 
-  .fp-table {
-   justify-content: flex-start;
-   
-  }
-
-  .opaque-bg {
-    display: block;
-    position: relative;
-    max-width: 400px; 
-    width: 96%;       
-    text-align: right; 
-    box-sizing: border-box;
-    padding-top: 65px; 
-    right: 1rem;
-  }
-
-}
 
