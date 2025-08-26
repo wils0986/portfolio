@@ -49,6 +49,14 @@ body {
     
   }
   
+  p, .slide p {
+    text-align: left;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+
   /* Fade in Jenny Wilson */
 
   .main-text {
@@ -108,6 +116,7 @@ p.holder {
   min-height: 2em;
   visibility: hidden;
   color: #FFFFFF;
+  text-align: right;
 }
 
 /* Blinking cursor effect */
@@ -1071,6 +1080,7 @@ p.holder {
 
  .slide p {
   padding-top: 20px;
+  text-align: left;
  }
 
  html, body {
