@@ -467,6 +467,11 @@ p.holder {
   
   .content-slide img {
     width: 90%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .content-slide img:hover {
+    transform: scale(1.01);
   }
   
   .fp-controlArrow.fp-next {
