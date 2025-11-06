@@ -107,7 +107,7 @@ bgImg.onload = function () {
         if (index === 1 && !skillbarsAnimated) {
           $(".skillbar").each(function () {
             const percent = $(this).attr("data-percent");
-            $(this).find(".skillbar-bar").animate({ width: percent }, 1000);
+            $(this).find(".skillbar-bar").animate({ width: percent }, 50);
           });
           skillbarsAnimated = true;
   
