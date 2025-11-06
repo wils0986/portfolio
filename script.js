@@ -29,14 +29,14 @@ $(document).ready(function () {
     }
   })(jQuery);
 
-  // Wait 1.2 seconds before starting typing
-  setTimeout(() => {
-    // Make holder visible
-    $("p.holder").css("visibility", "visible");
+  // Delay before starting typing
+setTimeout(() => {
+  // Make holder visible
+  $("p.holder").css("visibility", "visible");
 
-    // Start typewriter effect
-    $("#holder").writeText("Multimedia Designer and Digital Communications Specialist", 150);
-  }, 2800);
+  // Start typewriter effect
+  $("#holder").writeText("Visual Designer and Communications Specialist", 130);
+}, 2500);
 
   // Initialize WOW.js
   new WOW().init();
