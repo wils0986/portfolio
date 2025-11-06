@@ -35,7 +35,7 @@ setTimeout(() => {
   $("p.holder").css("visibility", "visible");
 
   // Start typewriter effect
-  $("#holder").writeText("Visual Designer and Communications Specialist", 130);
+  $("#holder").writeText("Multimedia Designer and Communications Specialist", 130);
 }, 2500);
 
   // Initialize WOW.js
