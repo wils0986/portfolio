@@ -361,17 +361,6 @@ p.holder {
 #fullpage {
   overflow: visible !important;
 }
-
-  /* Bouncing arrow */
-  
-  .fa-chevron-down {
-    color: #E7759B;
-    bottom: 10px;
-   
-    cursor: pointer;
-    position: absolute;
-    opacity: 0;
-  }
   
   /* Scroll down indicator (bouncing) */
 
