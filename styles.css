@@ -120,6 +120,9 @@ p.holder {
   visibility: hidden;
   color: #FFFFFF;
   text-align: right;
+  position: relative;
+  border: none;
+
 }
 
 /* Blinking cursor effect */
@@ -151,6 +154,13 @@ p.holder {
     font-weight: lighter;
     color: #2c2c2c;
     line-height: 1.5em;
+    position: relative;
+    z-index: 12;
+    border-left: 3px solid #e7759b;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   
   .section {
@@ -619,7 +629,7 @@ p.holder {
     color: #FFFFFF;
     font-size: 16px;
     padding-top: 10px;
-    
+    border: none;
   }
   
   .social-links a {
