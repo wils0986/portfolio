@@ -71,8 +71,6 @@ bgImg.onload = function () {
   aboutSection.style.backgroundPosition = "center top";
   aboutSection.style.backgroundRepeat = "no-repeat";
 
-  // Optional: dark overlay
-  aboutSection.style.boxShadow = "inset 0 0 0 2000px rgba(31, 32, 32, 0.43)";
 
   // Optional: fade-in effect
   aboutSection.classList.add("loaded");
