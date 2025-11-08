@@ -361,7 +361,8 @@ p.holder {
 #fullpage {
   overflow: visible !important;
 }
-  
+
+
   /* Scroll down indicator (bouncing) */
 
   @keyframes bounce {
@@ -523,19 +524,9 @@ p.holder {
     left: 45px !important;
     border-radius: 4px;
   }
-  
-  #fp-nav ul li a span,
-  .fp-slidesNav ul li a span {
-    background: #2c2c2c !important;
-  }
 
-  #fp-nav ul li a span:hover,
-  .fp-slidesNav ul li a span:hover {
-    background: #e7759b !important;
-  }
-
-  #fp-nav ul li .fp-tooltip {
-    color: #e7759b !important;
+  #fp-nav ul li a {
+    display: none !important;
   }
   
   /* Input field styles */
