@@ -11,24 +11,30 @@ $(document).ready(function () {
       $.fn.writeText = function (content, speed = 100) {
         const elem = this;
         let current = 0;
-        elem.html('<span class="typed-text"></span><span class="cursor">|</span>');
+  
+        elem.html('<span class="typed-text"></span>');
         const textSpan = elem.find(".typed-text");
+  
         function type() {
           if (current < content.length) {
             textSpan.append(content[current++]);
             setTimeout(type, speed);
+          } else {
+            // Typing finished, add the cursor
+            textSpan.addClass('cursor');
           }
         }
         type();
       };
     }
   })(jQuery);
-
+  
   setTimeout(() => {
     $("p.holder").css("visibility", "visible");
     $("#holder").writeText("Multimedia Designer and Communications Specialist", 130);
   }, 2500);
-
+  
+  
   new WOW().init();
 
   // Nav toggle

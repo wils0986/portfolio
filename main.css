@@ -132,17 +132,24 @@ p.holder {
 }
 
 /* Blinking cursor effect */
-.cursor {
-    display: inline-block;
-    margin-left: 2px;
-    color: #FFFFFF;
-    animation: blink 1s step-start infinite;
-  }
-  
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-  }
+.typed-text {
+  display: inline;
+  color: #fff;
+  white-space: pre-wrap;
+  position: relative;
+}
+
+/* Cursor only shows if this class is added */
+.cursor::after {
+  content: "|";
+  animation: blink 2s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
 
   h2 {
     font-weight: lighter;
@@ -909,7 +916,6 @@ p.holder {
     right: 1rem;
   }
 
-  
   #holder {
     font-weight: normal;
     font-size: 18px;
