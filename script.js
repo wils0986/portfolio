@@ -2,6 +2,7 @@
 /* global $, jQuery, WOW, fullpage, fullpage_api */
 
 $(document).ready(function () {
+  initFullPage();
   let skillbarsAnimated = false;
   let catAnimated = false;
 
@@ -62,7 +63,7 @@ $(document).ready(function () {
     aboutSection.style.backgroundPosition = "center top";
     aboutSection.style.backgroundRepeat = "no-repeat";
     aboutSection.classList.add("loaded");
-    initFullPage();
+    
     checkAboutSection(); // trigger animation if hash is already #about on load
   };
 
@@ -121,13 +122,6 @@ $(document).ready(function () {
         }
       }
     });
-
-    if (isMobile) {
-      document.querySelectorAll('.fp-slide, .fp-slides, .fp-slidesContainer').forEach(el => {
-        el.classList.remove('fp-slide', 'fp-slides', 'fp-slidesContainer');
-        el.removeAttribute('style');
-      });
-    }
   }
 
   // --- Hash navigation handling ---
