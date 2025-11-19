@@ -5,7 +5,7 @@ $(document).ready(function () {
   let skillbarsAnimated = false;
   let catAnimated = false;
 
-  // Typing animation plugin
+  // Typing animation
   (function ($) {
     if (!$.fn.writeText) {
       $.fn.writeText = function (content, speed = 100) {
@@ -20,7 +20,6 @@ $(document).ready(function () {
             textSpan.append(content[current++]);
             setTimeout(type, speed);
           } else {
-            // Typing finished, add the cursor
             textSpan.addClass('cursor');
           }
         }
