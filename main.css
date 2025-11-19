@@ -91,7 +91,7 @@ body {
     animation-timing-function: ease-out;
     animation-name: slideInPushLeft;
     animation-duration: 1s;
-    animation-delay: 1.5s; /* starts after main-text fades in */
+    animation-delay: 1.5s;
   }
   
   /* Pink slash styling */
@@ -198,7 +198,7 @@ p.holder {
   position: fixed;
   background-color: var(--nav-bg);
   opacity: 1;
-  right: -285px; /* Start off behind the scenes */
+  right: -285px;
   width: 285px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -338,7 +338,7 @@ p.holder {
 }
 
 input:checked + .slider {
-  background-color: #E7759B; /* accent color */
+  background-color: #E7759B;
 }
 
 input:checked + .slider:before {
@@ -440,8 +440,8 @@ body.dark-mode {
   /* Fix about section height and background behavior */
 
 .aboutme {
-  filter: hue-rotate(340deg); /* Recolours image */
-  min-height: 100vh !important; /* Full viewport height */
+  filter: hue-rotate(340deg);
+  min-height: 100vh !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -562,7 +562,7 @@ body.dark-mode {
   }
 
   body.dark-mode #illustrator { 
-    background: #E7759B; /* darkest pink */
+    background: #E7759B;
   } 
   
   body.dark-mode #canva { 
@@ -598,9 +598,8 @@ body.dark-mode {
   }
   
   body.dark-mode #figma { 
-    background: #FED0F2; /* lightest pink */
+    background: #FED0F2;
   }
-  
   
   /* Portfolio section */
   
@@ -859,7 +858,7 @@ body.dark-mode {
   }
   
   .animate-heart {
-    animation: heartBeat 0.8s ease 3; /* 3 repeats */
+    animation: heartBeat 0.8s ease 4;
   }
   
 /* Plane flies on .submit click */
@@ -1312,6 +1311,4 @@ p.copyright {
   margin-right: 50px;
  }
 
-
 }
-
