@@ -1,169 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/JW.png" type="image/x-icon">
-        <link rel="preload" as="image" href="images/yoshi.JPG">
-        <!-- Animate.css and styles -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <!-- FullPage.js v4 CDN -->
-        <link rel="stylesheet" href="fullpage.css">
-        <script src="fullpage.js"></script>
-        <!-- Custom styles -->
-        <link rel="stylesheet" href="projects.css">
-        <title>Jenny Wilson Designs</title>
-      </head>
-<body>
-    <!-- Skip Link -->
-    <a href="#skills" class="skip-link">Skip to main content</a>
-  
- <!-- Header Navigation -->
-<div class="nav-header" role="navigation" aria-label="Main navigation">
-  <div class="nav-brand">
-      <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
-      <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank">Résumé</a>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="images/JW.png" type="image/x-icon">
+      <link rel="preload" as="image" href="images/yoshi.JPG">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+      <link rel="stylesheet" href="fullpage.css">
+      <script src="fullpage.js"></script>
+      <link rel="stylesheet" href="projects.css">
+      <title>Jenny Wilson Designs</title>
+  </head>
+  <body>
+      <a href="#skills" class="skip-link">Skip to main content</a>
+  <div class="nav-header" role="navigation" aria-label="Main navigation">
+    <div class="nav-brand">
+        <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
+        <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank">Résumé</a>
+    </div>
+    <div class="nav-darkmode">
+        <label class="switch" aria-label="Toggle dark mode">
+            <input type="checkbox" id="darkModeToggleHeader">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div class="header-links">
+        <ul class="myMenu">
+            <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
+            <li data-menuanchor="about"><a href="index.html#skills">About</a></li>
+            <li data-menuanchor="portfolio"><a href="index.html#projects">Portfolio</a></li>
+            <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </div>
   </div>
-
-  <!-- Dark Mode Toggle (Header) -->
-  <div class="nav-darkmode">
-      <label class="switch" aria-label="Toggle dark mode">
-          <input type="checkbox" id="darkModeToggleHeader">
-          <span class="slider round"></span>
-      </label>
+  <i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
+  <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
+    <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
+    <div class="nav-container">
+        <div class="nav-links">
+            <ul class="myMenu">
+                <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
+                <li data-menuanchor="about"><a href="index.html#skills">About</a></li>
+                <li data-menuanchor="portfolio"><a href="index.html#projects">Portfolio</a></li>
+                <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
+                <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="_blank">Résumé</a></li>
+            </ul>
+            <div class="nav-darkmode-mobile">
+                <label class="switch" aria-label="Toggle dark mode">
+                    <input type="checkbox" id="darkModeToggleSidebar">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <div class-logo>
+                <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
+            </div>
+        </div>
+    </div>
   </div>
-
-  <div class="header-links">
-      <ul class="myMenu">
-          <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
-          <li data-menuanchor="about"><a href="index.html#skills">About</a></li>
-          <li data-menuanchor="portfolio"><a href="index.html#projects">Portfolio</a></li>
-          <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
-      </ul>
-  </div>
-</div>
-
-<!-- Hamburger icon outside header -->
-<i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
-
-<!-- Sidebar Navigation -->
-<div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
-  <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
-  <div class="nav-container">
-      <div class="nav-links">
-          <ul class="myMenu">
-              <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
-              <li data-menuanchor="about"><a href="index.html#skills">About</a></li>
-              <li data-menuanchor="portfolio"><a href="index.html#projects">Portfolio</a></li>
-              <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
-              <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="_blank">Résumé</a></li>
-          </ul>
-
-          <!-- Dark Mode Toggle (Sidebar Mobile) -->
-          <div class="nav-darkmode-mobile">
-              <label class="switch" aria-label="Toggle dark mode">
-                  <input type="checkbox" id="darkModeToggleSidebar">
-                  <span class="slider round"></span>
-              </label>
-          </div>
-
-          <div class-logo>
-              <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
+  <div id="fullpage">
+      <div class="section" data-anchor="geo">
+          <div class="content">
+              <h1 class="projectH1">GEO.ca Website Redesign</h1>
+              <h3><em>Government of Canada - Natural Resources Canada</em></h3>
+              <p>
+                <span class="highlight">Timeline:</span> 2023 - 2025<br>
+                <span class="highlight">Role:</span> Graphic Designer, UX Consultant, and Communications Co-lead<br>
+                <span class="highlight">Tools:</span> Illustrator · Premiere Pro · XD · WordPress · GitHub · Slack · Trello
+              </p>
+              <h2 class="projectH2">Overview</h2>
+                  <p>Launched in 2021, GEO.ca is the definitive source for Canada's open geospatial information, serving geospatial experts, students, and the broader public. As part of the redesign team, I helped improve the site's navigation, visual design, and information architecture, ensuring that geospatial data and tools are easy to find and use. The project emphasized a mobile-first approach, accessibility, and a clear content hierarchy, informed through user research and stakeholder feedback.</p>
+              <h2 class="projectH2">Problem</h2>
+              <p>The previous GEO.ca website had a fragmented user experience, limited search functionality, and an inconsistent information hierarchy. Users struggled to efficiently find geospatial data, leading to frustration and reducing the use and impact of Canada's open geoscience resources.</p>
+              <a href="https://web.archive.org/web/20240811075651/https://geo.ca/home/" target="_blank">
+                  <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_old_mockup.png" alt="The previous GEO.ca homepage">
+              </a>
           </div>
       </div>
-  </div>
-</div>
-  
-<!-- Fullpage Sections -->
-<div id="fullpage">
-
-    <!-- GEO + Overview Section -->
-    <div class="section" data-anchor="geo">
-        <div class="content">
-            <h1 class="projectH1">GEO.ca Website Redesign</h1>
-            <h3><em>Government of Canada - Natural Resources Canada</em></h3>
-            <p>
-              <span class="highlight">Timeline:</span> 2023 - 2025<br>
-              <span class="highlight">Role:</span> Graphic Designer, UX Consultant, and Communications Co-lead<br>
-              <span class="highlight">Tools:</span> Illustrator · Premiere Pro · XD · WordPress · GitHub · Slack · Trello
-            </p>
-  
-            <h2 class="projectH2">Overview</h2>
-                <p>Launched in 2021, GEO.ca is the definitive source for Canada's open geospatial information, serving geospatial experts, students, and the broader public. As part of the redesign team, I helped improve the site's navigation, visual design, and information architecture, ensuring that geospatial data and tools are easy to find and use. The project emphasized a mobile-first approach, accessibility, and a clear content hierarchy, informed through user research and stakeholder feedback.</p>
-                  
-            <h2 class="projectH2">Problem</h2>
-            <p>The previous GEO.ca website had a fragmented user experience, limited search functionality, and an inconsistent information hierarchy. Users struggled to efficiently find geospatial data, leading to frustration and reducing the use and impact of Canada's open geoscience resources.</p>
-              
-            <a href="https://web.archive.org/web/20240811075651/https://geo.ca/home/" target="_blank">
-                <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_old_mockup.png" alt="The previous GEO.ca homepage">
-            </a>
-        </div>
-    </div>
-  
-    <!-- Process + Outcome + Reflection Section -->
-    <div class="section" data-anchor="process-outcome">
-        <div class="content">
-            <h2 class="projectH2">Process and Outcome</h2>
-            <p>
-              I collaborated with UX, content, and development teams to redesign GEO.ca into a more user-friendly and visually cohesive platform.
-            </p>
-            <ul>
-              <li><span class="highlight">Information Architecture:</span> Supported site audits and reorganized navigation to establish a clear content hierarchy, improving access to datasets and initiatives.</li>
-              <li><span class="highlight">User Testing:</span> Participated in A/B testing of interactive prototypes and evaluated semantic search functionality to refine usability.</li>
-              <li><span class="highlight">Visual Design:</span> Applied federal web content standards and contributed to a style guide to ensure visual consistency and clarity across the platform.</li>
-              <li><span class="highlight">Campaign Launch:</span> Planned and executed a strategic communications campaign for the site's public launch, creating promotional materials including newsletter features, social media posts, event collateral, and announcement articles.</li>
-            </ul>
-  
-            <p>The redesigned GEO.ca launched with:</p>
-            <ul>
-                <li>Improved navigation and data discoverability.</li>
-                <li>Consistent visual identity aligned with federal web content standards.</li>
-                <li>Enhanced accessibility and responsiveness across devices.</li>
-                <li>Increased visibility and engagement through coordinated launch materials.</li>
-
-            </ul>
-  
-            <a href="https://geo.ca/home/" target="_blank">
-                <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_redesign_mockup.png" alt="The redesigned GEO.ca homepage">
-            </a>
-  
-            <h2 class="projectH2">Reflection</h2>
-            <p>This project strengthened my skills in UX testing, mobile-first design, and multi-stakeholder collaboration. It highlighted the importance of clear information hierarchy, a consistent look and feel, and effective search functionality in improving user experience and engagement.</p>
-        </div>
-    </div>
-  
-    <!-- Project Navigation Buttons -->
-    <div class="project-navigation">
-      <a href="atlas.html" class="back-button">Previous Project</a>
-      <a href="permafrost.html" class="next-button">Next Project</a>
-    </div>
-  
-  </div> <!-- end of #fullpage -->
-  
-
- <!-- Begin section -->
- 
-    <div class="footer">
-      <div class="content">
-        <div class="social-links">
-          <span>
-            <a href="https://www.linkedin.com/in/jenny-wilson-sewell" target="_blank">
-              <i class="fa-brands fa-linkedin-in fa-lg"></i>
-            </a>
-          </span>
-          <p class="copyright">© 2025 Jenny Wilson Designs | Made with <span class="pink heart">❤</span> and HTML by Jenny</p>
-        </div>
+      <div class="section" data-anchor="process-outcome">
+          <div class="content">
+              <h2 class="projectH2">Process and Outcome</h2>
+              <p>I collaborated with UX, content, and development teams to redesign GEO.ca into a more user-friendly and visually cohesive platform.</p>
+              <ul>
+                <li><span class="highlight">Information Architecture:</span> Supported site audits and reorganized navigation to establish a clear content hierarchy, improving access to datasets and initiatives.</li>
+                <li><span class="highlight">User Testing:</span> Participated in A/B testing of interactive prototypes and evaluated semantic search functionality to refine usability.</li>
+                <li><span class="highlight">Visual Design:</span> Applied federal web content standards and contributed to a style guide to ensure visual consistency and clarity across the platform.</li>
+                <li><span class="highlight">Campaign Launch:</span> Planned and executed a strategic communications campaign for the site's public launch, creating promotional materials including newsletter features, social media posts, event collateral, and announcement articles.</li>
+              </ul>
+              <p>The redesigned GEO.ca launched with:</p>
+              <ul>
+                  <li>Improved navigation and data discoverability.</li>
+                  <li>Consistent visual identity aligned with federal web content standards.</li>
+                  <li>Enhanced accessibility and responsiveness across devices.</li>
+                  <li>Increased visibility and engagement through coordinated launch materials.</li>
+              </ul>
+              <a href="https://geo.ca/home/" target="_blank">
+                  <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_redesign_mockup.png" alt="The redesigned GEO.ca homepage">
+              </a>
+              <h2 class="projectH2">Reflection</h2>
+              <p>This project strengthened my skills in UX testing, mobile-first design, and multi-stakeholder collaboration. It highlighted the importance of clear information hierarchy, a consistent look and feel, and effective search functionality in improving user experience and engagement.</p>
+          </div>
+      </div>
+      <div class="project-navigation">
+        <a href="atlas.html" class="back-button">Previous Project</a>
+        <a href="permafrost.html" class="next-button">Next Project</a>
       </div>
     </div>
-    
-      <!-- End section -->
-
-     <!-- FullPage.js v4 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
-    <script src="script.js"></script>
+      <div class="footer">
+        <div class="content">
+          <div class="social-links">
+            <span>
+              <a href="https://www.linkedin.com/in/jenny-wilson-sewell" target="_blank">
+                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+              </a>
+            </span>
+            <p class="copyright">© 2025 Jenny Wilson Designs | Made with <span class="pink heart">❤</span> and HTML by Jenny</p>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
+      <script src="script.js"></script>
   </body>
 </html>

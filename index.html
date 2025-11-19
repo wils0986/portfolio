@@ -1,294 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/JW.png" type="image/x-icon">
-        <link rel="preload" as="image" href="images/yoshi.JPG">
-        <!-- Animate.css and styles -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <!-- FullPage.js v4 CDN -->
-        <link rel="stylesheet" href="fullpage.css">
-        <script src="fullpage.js"></script>
-        <!-- Custom styles -->
-        <link rel="stylesheet" href="main.css">
-        <title>Jenny Wilson Designs</title>
-      </head>
-<body>
-    <!-- Skip Link -->
-    <a href="#skills" class="skip-link">Skip to main content</a>
-  
-<!-- Header Navigation -->
-<div class="nav-header" role="navigation" aria-label="Main navigation">
-  <div class="nav-brand">
-    <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
-    <a href="images/jenny_portfilio_resume.pdf" class="resume" target="blank">Résumé</a>
-  </div>
-
-  <!-- Dark Mode Toggle (Header) -->
-  <div class="nav-darkmode">
-    <label class="switch" aria-label="Toggle dark mode">
-      <input type="checkbox" id="darkModeToggleHeader">
-      <span class="slider round"></span>
-    </label>
-  </div>
-
-  <div class="header-links">
-    <ul class="myMenu">
-      <li data-menuanchor="home"><a href="#">Home</a></li>
-      <li data-menuanchor="about"><a href="#skills">About</a></li>
-      <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
-      <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</div>
-
-<!-- Hamburger icon moved OUTSIDE nav-header -->
-<i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
-
-
-<!-- Sidebar Navigation -->
-<div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
-  <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
-  <div class="nav-container">
-    <div class="nav-links">
-      <ul class="myMenu">
-        <li data-menuanchor="home"><a href="#">Home</a></li>
-        <li data-menuanchor="about"><a href="#skills">About</a></li>
-        <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
-        <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-        <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="blank">Résumé</a></li>
-      </ul>
-
-      <!-- Dark Mode Toggle (Sidebar Mobile) -->
-      <div class="nav-darkmode-mobile">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/JW.png" type="image/x-icon">
+    <link rel="preload" as="image" href="images/yoshi.JPG">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="fullpage.css">
+    <script src="fullpage.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <title>Jenny Wilson Designs</title>
+  </head>
+  <body>
+      <a href="#skills" class="skip-link">Skip to main content</a>
+    <div class="nav-header" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand">
+        <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
+        <a href="images/jenny_portfilio_resume.pdf" class="resume" target="blank">Résumé</a>
+      </div>
+      <div class="nav-darkmode">
         <label class="switch" aria-label="Toggle dark mode">
-          <input type="checkbox" id="darkModeToggleSidebar">
+          <input type="checkbox" id="darkModeToggleHeader">
           <span class="slider round"></span>
         </label>
       </div>
-
-      <div class-logo>
-        <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
+      <div class="header-links">
+        <ul class="myMenu">
+          <li data-menuanchor="home"><a href="#">Home</a></li>
+          <li data-menuanchor="about"><a href="#skills">About</a></li>
+          <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+          <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </div>
-</div>
-
-  
-    <!-- End navbar slider -->
-  
-    <!-- Begin fullpage -->
-  
-    <div id="fullpage">
-  
-      <!-- Begin section -->
-  
-      <div class="section aboutme" data-anchor="aboutme">
-        <div class="aboutme-container">
-          <div class="opaque-bg animated fadeInDown">
-            <h1>
-              <span class="pink">|</span>&nbsp;
-              <span class="main-text">Jenny Wilson</span>&nbsp;
-              <span class="slide-part">Designs</span>
-            </h1>   
-            <p class="holder"><span id="holder"></span></p>
+    <i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
+    <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
+      <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
+      <div class="nav-container">
+        <div class="nav-links">
+          <ul class="myMenu">
+            <li data-menuanchor="home"><a href="#">Home</a></li>
+            <li data-menuanchor="about"><a href="#skills">About</a></li>
+            <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+            <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="blank">Résumé</a></li>
+          </ul>
+          <div class="nav-darkmode-mobile">
+            <label class="switch" aria-label="Toggle dark mode">
+              <input type="checkbox" id="darkModeToggleSidebar">
+              <span class="slider round"></span>
+            </label>
+          </div>
+          <div class-logo>
+            <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
           </div>
         </div>
       </div>
-      
-      <!-- End section -->
-  
-      <!-- Begin section -->
-  
-      <div class="section" data-anchor="skills">
-        <div class="content">
-          <h2>About Me</h2>
-          <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Jenny! I'm a Multimedia Designer and Communications Specialist in Ottawa, Ontario. I love creating digital experiences that are both visually appealing and intuitive, with a focus on user-centric design.</p>
-          <img src="images/designer_cat.png" class="cat" alt="Illustration of a cat happily working on a laptop">
-  
-          <div class=" wow fadeInUp container-skillbar" data-wow-delay="0s">
-            <div class="skillbar clearfix " data-percent="85%">
-              <div class="skillbar-title"><span>Adobe Illustrator</span></div>
-              <div class="skillbar-bar" id="illustrator"></div>
-              <div class="skill-bar-percent">85%</div>
-            </div> <!-- End Skill Bar -->
-
-            <div class="skillbar clearfix " data-percent="82%">
-                <div class="skillbar-title"><span>Canva</span></div>
-                <div class="skillbar-bar" id="canva"></div>
-                <div class="skill-bar-percent">82%</div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="79%">
-                <div class="skillbar-title"><span>Adobe Premiere Pro</span></div>
-                <div class="skillbar-bar" id="premiere"></div>
-                <div class="skill-bar-percent">79%</div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="77%">
-                <div class="skillbar-title"><span>HTML/CSS/JS</span></div>
-                <div class="skillbar-bar" id="wordpress"></div>
-                <div class="skill-bar-percent">77%</div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="75%">
-                <div class="skillbar-title"><span>WordPress</span></div>
-                <div class="skillbar-bar" id="html"></div>
-                <div class="skill-bar-percent">75%</div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="72%">
-                <div class="skillbar-title"><span>Microsoft Office</span></div>
-                <div class="skillbar-bar" id="microsoft"></div>
-                <div class="skill-bar-percent">72%</div>
-              </div> <!-- End Skill Bar -->
-  
-            <div class="skillbar clearfix " data-percent="67%">
-              <div class="skillbar-title"><span>Adobe Photoshop</span></div>
-              <div class="skillbar-bar" id="photoshop"></div>
-              <div class="skill-bar-percent">67%</div>
-            </div> <!-- End Skill Bar -->
-  
-              <div class="skillbar clearfix " data-percent="63%">
-                <div class="skillbar-title"><span>Adobe InDesign</span></div>
-                <div class="skillbar-bar" id="g4a"></div>
-                <div class="skill-bar-percent">63%</div>
-              </div> <!-- End Skill Bar -->
-    
-              <div class="skillbar clearfix " data-percent="58%">
-                <div class="skillbar-title"><span>Adobe XD</span></div>
-                <div class="skillbar-bar" id="indesign"></div>
-                <div class="skill-bar-percent">58%</div>
-              </div> <!-- End Skill Bar -->
-
-              <div class="skillbar clearfix " data-percent="55%">
-                <div class="skillbar-title"><span>Figma</span></div>
-                <div class="skillbar-bar" id="figma"></div>
-                <div class="skill-bar-percent">55%</div>
-              </div> <!-- End Skill Bar -->
-
+    </div>
+      <div id="fullpage">
+        <div class="section aboutme" data-anchor="aboutme">
+          <div class="aboutme-container">
+            <div class="opaque-bg animated fadeInDown">
+              <h1>
+                <span class="pink">|</span>&nbsp;
+                <span class="main-text">Jenny Wilson</span>&nbsp;
+                <span class="slide-part">Designs</span>
+              </h1>   
+              <p class="holder"><span id="holder"></span></p>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- End section -->
-  
-      <!-- Begin section -->
-  
-      <div class="section" data-anchor="projects">
-        <div class="content-slide">
-            <div class="slide">
-              <a href="atlas.html">
-                <h2>The Atlas of Canada Website Redesign</h2>
-                <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: UX and Visual Design</h3>
-                  <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/atlas_redesign_mockup.png" alt="The Atlas of Canada Homepage Mockups">
-                </a>
-                
-            </div>
-            <div class="slide">
-              <a href="geo.html" target="_blank">
-                <h2>GEO.ca Website Redesign</h2>
-                <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: UX and Visual Design</h3>
-                <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_redesign_mockup.png" alt="Geo.ca Homepage Mockups">
-              </a>
-            </div>
-            <div class="slide">
-              <a href="permafrost.html" target="_blank">
-                  <h2>GEO.ca Permafrost Community Development</h2>
-                  <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: Content Development and Web Management</h3>
-                  <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_permafrost_mockup.png" alt="Geo.ca Permafrost Mockups">
-                </a>
+        <div class="section" data-anchor="skills">
+          <div class="content">
+            <h2>About Me</h2>
+            <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Jenny! I'm a Multimedia Designer and Communications Specialist in Ottawa, Ontario. I love creating digital experiences that are both visually appealing and intuitive, with a focus on user-centric design.</p>
+            <img src="images/designer_cat.png" class="cat" alt="Illustration of a cat happily working on a laptop">
+            <div class=" wow fadeInUp container-skillbar" data-wow-delay="0s">
+              <div class="skillbar clearfix " data-percent="85%">
+                <div class="skillbar-title"><span>Adobe Illustrator</span></div>
+                <div class="skillbar-bar" id="illustrator"></div>
+                <div class="skill-bar-percent">85%</div>
               </div>
-          <div class="slide">
-            <a href="data.html" target="_blank">
-            <h2>GEO.ca GeoAI Data Series Launch Campaign</h2>
-            <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: Visual Design and Strategic Communications</h3>
-            <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geoai_mockup.png" alt="Geo.ca GeoAI Mockups">
-          </a>
-        </div>
-        <div class="slide">
-          <a href="strategy.html" target="_blank">
-            <h2>Collaborative Geospatial Data Strategy for Canada Engagement Callout</h2>
-            <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: UX Review and Strategic Communications</h3>
-            <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geospatial_data_strategy_mockup.png" alt="Let's Talk - Collaborative Geospatial Data Strategy for Canada Mockups">
-          </a>
-        </div>
-        </div>
-      </div>
-      <!-- End section -->
-  
-      <!-- Begin section -->
-  
-      <div class="section" data-anchor="contact">
-        <div class="content wow fadeInDown" data-wow-delay="0.2s">
-          <h2 class="contactH2">Contact Me</h2>
-          <p>Want to connect? I'd love to hear from you! Drop me a line and I'll get back to you.</p>
-          <br>
-          <div class="contact-form">
-            <div id="form-messages" aria-live="polite"></div>
-            <form id="ajax-contact" method="post" action="https://formspree.io/f/mjkoebay" data-toggle="validator">
-  
-              <!-- Honeypot field for spam prevention -->
-              <input type="text" name="_gotcha" style="display:none">
-            
-              <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
-                <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="name" data-error="Field can't be blank!" required>
-                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                <div class="help-block with-errors"></div>
-              </div>
-            
-              <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
-                <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="email" data-error="Field can't be blank!" required>
-                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                <div class="help-block with-errors"></div>
-              </div>
-            
-              <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
-                <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="Message" data-error="Minimum of 10 characters" required></textarea>
-                <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
-                <div class="help-block with-errors"></div>
-              </div>
-            
-              <!-- Your custom hidden field (optional for other logic, not used by Formspree) -->
-              <div class="hidden">
-                <input type="text" class="form-control" id="human" name="human" placeholder="">
-              </div>
-            
-              <div class="wow fadeInUp" data-wow-delay="1s">
-                <div class="plane-wrapper">
-                  <i class="fa-solid fa-paper-plane" id="paper-plane"></i>
+              <div class="skillbar clearfix " data-percent="82%">
+                  <div class="skillbar-title"><span>Canva</span></div>
+                  <div class="skillbar-bar" id="canva"></div>
+                  <div class="skill-bar-percent">82%</div>
                 </div>
-                <button type="submit" id="submit" name="submit" class="btn btn-lg">Send Message</button>
+                <div class="skillbar clearfix " data-percent="79%">
+                  <div class="skillbar-title"><span>Adobe Premiere Pro</span></div>
+                  <div class="skillbar-bar" id="premiere"></div>
+                  <div class="skill-bar-percent">79%</div>
+                </div>
+                <div class="skillbar clearfix " data-percent="77%">
+                  <div class="skillbar-title"><span>HTML/CSS/JS</span></div>
+                  <div class="skillbar-bar" id="wordpress"></div>
+                  <div class="skill-bar-percent">77%</div>
+                </div>
+                <div class="skillbar clearfix " data-percent="75%">
+                  <div class="skillbar-title"><span>WordPress</span></div>
+                  <div class="skillbar-bar" id="html"></div>
+                  <div class="skill-bar-percent">75%</div>
+                </div>
+                <div class="skillbar clearfix " data-percent="72%">
+                  <div class="skillbar-title"><span>Microsoft Office</span></div>
+                  <div class="skillbar-bar" id="microsoft"></div>
+                  <div class="skill-bar-percent">72%</div>
+                </div>
+              <div class="skillbar clearfix " data-percent="67%">
+                <div class="skillbar-title"><span>Adobe Photoshop</span></div>
+                <div class="skillbar-bar" id="photoshop"></div>
+                <div class="skill-bar-percent">67%</div>
               </div>
-            </form>
-            <br>
+                <div class="skillbar clearfix " data-percent="63%">
+                  <div class="skillbar-title"><span>Adobe InDesign</span></div>
+                  <div class="skillbar-bar" id="g4a"></div>
+                  <div class="skill-bar-percent">63%</div>
+                </div>
+                <div class="skillbar clearfix " data-percent="58%">
+                  <div class="skillbar-title"><span>Adobe XD</span></div>
+                  <div class="skillbar-bar" id="indesign"></div>
+                  <div class="skill-bar-percent">58%</div>
+                </div>
+                <div class="skillbar clearfix " data-percent="55%">
+                  <div class="skillbar-title"><span>Figma</span></div>
+                  <div class="skillbar-bar" id="figma"></div>
+                  <div class="skill-bar-percent">55%</div>
+                </div>
+            </div>
           </div>
         </div>
-      
-      <!-- End section -->
-  
-      <!-- Begin section -->
-  
-      <div class="footer">
-        <div class="social-links">
-          <span>
-            <a href="https://www.linkedin.com/in/jenny-wilson-sewell" target="_blank">
-              <i class="fa-brands fa-linkedin-in fa-lg"></i>
+        <div class="section" data-anchor="projects">
+          <div class="content-slide">
+              <div class="slide">
+                <a href="atlas.html">
+                  <h2>The Atlas of Canada Website Redesign</h2>
+                  <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: UX and Visual Design</h3>
+                    <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/atlas_redesign_mockup.png" alt="The Atlas of Canada Homepage Mockups">
+                  </a>
+              </div>
+              <div class="slide">
+                <a href="geo.html" target="_blank">
+                  <h2>GEO.ca Website Redesign</h2>
+                  <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: UX and Visual Design</h3>
+                  <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_redesign_mockup.png" alt="Geo.ca Homepage Mockups">
+                </a>
+              </div>
+              <div class="slide">
+                <a href="permafrost.html" target="_blank">
+                    <h2>GEO.ca Permafrost Community Development</h2>
+                    <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: Content Development and Web Management</h3>
+                    <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geo_permafrost_mockup.png" alt="Geo.ca Permafrost Mockups">
+                  </a>
+                </div>
+            <div class="slide">
+              <a href="data.html" target="_blank">
+              <h2>GEO.ca GeoAI Data Series Launch Campaign</h2>
+              <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: Visual Design and Strategic Communications</h3>
+              <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geoai_mockup.png" alt="Geo.ca GeoAI Mockups">
             </a>
-          </span>
-          <p class="copyright">© 2025 Jenny Wilson Designs | Made with <span class="pink heart">❤</span> and HTML by Jenny</p>
+          </div>
+          <div class="slide">
+            <a href="strategy.html" target="_blank">
+              <h2>Collaborative Geospatial Data Strategy for Canada Engagement Callout</h2>
+              <h3 class="wow fadeInDown" data-wow-delay="0.2s">Case Study: UX Review and Strategic Communications</h3>
+              <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/geospatial_data_strategy_mockup.png" alt="Let's Talk - Collaborative Geospatial Data Strategy for Canada Mockups">
+            </a>
+          </div>
+          </div>
+        </div>
+        <div class="section" data-anchor="contact">
+          <div class="content wow fadeInDown" data-wow-delay="0.2s">
+            <h2 class="contactH2">Contact Me</h2>
+            <p>Want to connect? I'd love to hear from you! Drop me a line and I'll get back to you.</p>
+            <br>
+            <div class="contact-form">
+              <div id="form-messages" aria-live="polite"></div>
+              <form id="ajax-contact" method="post" action="https://formspree.io/f/mjkoebay" data-toggle="validator">
+                <input type="text" name="_gotcha" style="display:none">
+              
+                <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="0.6s">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" autocomplete="name" data-error="Field can't be blank!" required>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback wow fadeInRight" data-wow-delay="0.8s">
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email" autocomplete="email" data-error="Field can't be blank!" required>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback wow fadeInLeft" data-wow-delay="1s">
+                  <textarea data-minlength="10" class="form-control" id="message" name="message" placeholder="Message" data-error="Minimum of 10 characters" required></textarea>
+                  <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="hidden">
+                  <input type="text" class="form-control" id="human" name="human" placeholder="">
+                </div>
+                <div class="wow fadeInUp" data-wow-delay="1s">
+                  <div class="plane-wrapper">
+                    <i class="fa-solid fa-paper-plane" id="paper-plane"></i>
+                  </div>
+                  <button type="submit" id="submit" name="submit" class="btn btn-lg">Send Message</button>
+                </div>
+              </form>
+              <br>
+            </div>
+          </div>
+        <div class="footer">
+          <div class="social-links">
+            <span>
+              <a href="https://www.linkedin.com/in/jenny-wilson-sewell" target="_blank">
+                <i class="fa-brands fa-linkedin-in fa-lg"></i>
+              </a>
+            </span>
+            <p class="copyright">© 2025 Jenny Wilson Designs | Made with <span class="pink heart">❤</span> and HTML by Jenny</p>
+          </div>
         </div>
       </div>
-    </div>
-      <!-- End section -->
-    </div>
-
-     <!-- FullPage.js v4 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
-    <script src="script.js"></script>
+      </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/fullpage.js@4.0.20/dist/fullpage.min.js"></script>
+      <script src="script.js"></script>
   </body>
 </html>

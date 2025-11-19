@@ -499,7 +499,7 @@ body.dark-mode {
     height: 30px;
     line-height: 30px;
     font-family: 'Segoe UI', sans-serif;
-    font-weight: 475;
+    font-weight: 500;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
@@ -684,8 +684,14 @@ body.dark-mode {
     margin-bottom: 5px;
     font-size: 18px;
     font-family: 'Segoe UI', sans-serif;
+    color: #010101;
   }
-  
+
+  #ajax-contact ::placeholder {
+    color: #2c2c2c;
+    opacity: 1;
+  }  
+
   #submit {
     outline: none;
     padding: 12px;
@@ -694,7 +700,7 @@ body.dark-mode {
     text-align: center;
     font-size: 1em;
     color: #E7759B;
-    background-color: #fdfdfd;
+    background-color: var(--bg-color);
     text-decoration: none;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 600;
@@ -703,7 +709,7 @@ body.dark-mode {
   
   #submit:hover {
     background-color: #E7759B;
-    color: #f7f7f7;
+    color: var(--bg-color);
     transition: all 0.3s ease-out;
   }
   
@@ -867,7 +873,7 @@ body.dark-mode {
 
  #paper-plane {
     font-size: 30px;
-    color: #2c2c2c;
+    color: #e7759b;
     position: absolute;
     top: 80%;
     left: 30%;
