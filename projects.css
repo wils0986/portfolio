@@ -252,7 +252,7 @@ input:checked + .slider:before {
 /* --- Position toggle in header --- */
 .nav-darkmode {
   position: absolute;
-  top: 18px; /* adjust based on logo height */
+  top: 18px; 
   left: 180px;
   transform: translateX(-50%);
   z-index: 5000;
@@ -301,7 +301,7 @@ body.dark-mode {
     }
     
     #mobileLogo {
-      max-width: 25%;
+      max-width: 20%;
       position: relative;
       top: 100px;
       left: 0px;
@@ -454,14 +454,16 @@ body.dark-mode {
   
     #logo {
       position: relative;
-      top: -5px;
+      top: -3px;
+      width: 45px;
     }
   
     a.resume {
+      color: var(--nav-text);
       position: relative;
-      bottom: 25px;
+      bottom: 20px;
       left: 10px;
-    }
+    }  
   
     a.resume:hover {
       color: #E7759B;
