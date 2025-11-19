@@ -193,7 +193,7 @@ body {
   
   .nav-links a {
     color: var(--nav-text, #FFFFFF);
-    font-size: 24px;
+    font-size: 20px;
     line-height: 2.5;
     font-weight: lighter;
     text-decoration: none;
