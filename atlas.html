@@ -25,7 +25,15 @@
         <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
         <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank">Résumé</a>
     </div>
-    <i class="fa-solid fa-bars fa-2xl" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
+
+    <!-- Dark Mode Toggle (Header) -->
+    <div class="nav-darkmode">
+        <label class="switch" aria-label="Toggle dark mode">
+            <input type="checkbox" id="darkModeToggleHeader">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
     <div class="header-links">
         <ul class="myMenu">
             <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
@@ -35,6 +43,9 @@
         </ul>
     </div>
 </div>
+
+<!-- Hamburger icon outside header -->
+<i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
 
 <!-- Sidebar Navigation -->
 <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
@@ -48,6 +59,15 @@
                 <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
                 <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="_blank">Résumé</a></li>
             </ul>
+
+            <!-- Dark Mode Toggle (Sidebar Mobile) -->
+            <div class="nav-darkmode-mobile">
+                <label class="switch" aria-label="Toggle dark mode">
+                    <input type="checkbox" id="darkModeToggleSidebar">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
             <div class-logo>
                 <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
             </div>

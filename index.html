@@ -20,40 +20,63 @@
     <!-- Skip Link -->
     <a href="#skills" class="skip-link">Skip to main content</a>
   
-    <!-- Header Navigation -->
-    <div class="nav-header" role="navigation" aria-label="Main navigation">
-      <div class="nav-brand">
-        <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
-        <a href="images/jenny_portfilio_resume.pdf" class="resume" target="blank">Résumé</a>
+<!-- Header Navigation -->
+<div class="nav-header" role="navigation" aria-label="Main navigation">
+  <div class="nav-brand">
+    <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
+    <a href="images/jenny_portfilio_resume.pdf" class="resume" target="blank">Résumé</a>
+  </div>
+
+  <!-- Dark Mode Toggle (Header) -->
+  <div class="nav-darkmode">
+    <label class="switch" aria-label="Toggle dark mode">
+      <input type="checkbox" id="darkModeToggleHeader">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <div class="header-links">
+    <ul class="myMenu">
+      <li data-menuanchor="home"><a href="#">Home</a></li>
+      <li data-menuanchor="about"><a href="#skills">About</a></li>
+      <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+      <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Hamburger icon moved OUTSIDE nav-header -->
+<i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
+
+
+<!-- Sidebar Navigation -->
+<div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
+  <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
+  <div class="nav-container">
+    <div class="nav-links">
+      <ul class="myMenu">
+        <li data-menuanchor="home"><a href="#">Home</a></li>
+        <li data-menuanchor="about"><a href="#skills">About</a></li>
+        <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
+        <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+        <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="blank">Résumé</a></li>
+      </ul>
+
+      <!-- Dark Mode Toggle (Sidebar Mobile) -->
+      <div class="nav-darkmode-mobile">
+        <label class="switch" aria-label="Toggle dark mode">
+          <input type="checkbox" id="darkModeToggleSidebar">
+          <span class="slider round"></span>
+        </label>
       </div>
-      <i class="fa-solid fa-bars fa-2xl" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
-      <div class="header-links">
-        <ul class="myMenu">
-          <li data-menuanchor="home"><a href="#">Home</a></li>
-          <li data-menuanchor="about"><a href="#skills">About</a></li>
-          <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
-          <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-        </ul>
+
+      <div class-logo>
+        <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
       </div>
     </div>
-  
-    <!-- Sidebar Navigation -->
-    <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
-      <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
-      <div class="nav-container">
-        <div class="nav-links">
-          <ul class="myMenu">
-            <li data-menuanchor="home"><a href="#">Home</a></li>
-            <li data-menuanchor="about"><a href="#skills">About</a></li>
-            <li data-menuanchor="portfolio"><a href="#projects">Portfolio</a></li>
-            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-            <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="blank">Résumé</a></li>
-          </ul>
-          <div class-logo><img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
+
   
     <!-- End navbar slider -->
   

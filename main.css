@@ -25,7 +25,10 @@
 /* General styles */
 
 body {
-    font-family: "Segoe UI", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Segoe UI", sans-serif;
   }
   
   ul {
@@ -34,6 +37,8 @@ body {
   
   a {
     text-decoration: none;
+    color: var(--link-color);
+    transition: color 0.3s ease;
   }
 
   h1 {
@@ -50,7 +55,6 @@ body {
   
   h3 {
     font-weight: lighter;
-    color: #2c2c2c;
     font-size: 1.6em;
   }
 
@@ -165,7 +169,6 @@ p.holder {
   p {
     font-size: 20px;
     font-weight: 350;
-    color: #2c2c2c;
     line-height: 1.5em;
     position: relative;
     z-index: 12;
@@ -188,129 +191,207 @@ p.holder {
     display: block;
   }
 
-  /* Nav Screen */
-  
-  .nav-screen {
-    height: 100%;
-    z-index: 500;
-    position: fixed;
-    background-color: #2c2c2c;
-    opacity: 1;
-    right: -285px; /* Start off behind the scenes */
-    position: fixed;
-    width: 285px;
-  }
-  
-  .nav-screen .active {
-    display: block;
-  }
-  
-  /* Nav header links */
-  
-  .nav-brand {
-    position: fixed;
-    left: 0;
-    z-index: 600;
-    padding: 10px;
-  }
-  
-  .nav-brand img {
-    width: 50px;
-  }
-  
-  .fa-bars {
-    display: none;
-    color: #2c2c2c;
-    float: right;
-    padding: 30px;
-    position: fixed;
-    right: 0;
-    z-index: 500;
-    cursor: pointer;
-  }
-
-  .fa-bars:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .fa-times {
-    color: #FFFFFF;
-    float: right;
-    padding: 20px;
-    right: 0;
-    z-index: 600;
-    cursor: pointer;
-  }
-
-  .fa-times:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
+/* Nav Screen */
+.nav-screen {
+  height: 100%;
+  z-index: 500;
+  position: fixed;
+  background-color: var(--nav-bg, #2c2c2c);
+  opacity: 1;
+  right: -285px; /* Start off behind the scenes */
+  width: 285px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-  
-  .header-links {
-    background-color: #FFFFFF;
-    position: fixed;
-    width: 100%;
-    z-index: 500;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .header-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .header-links li {
-    color: white;
-    padding: 15px;
-    font-size: 16px;
-  }
-  
-  .header-links a {
-    color: #2c2c2c;
-  }
-  
-  .header-links a:hover {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  /* Slide out nav menu styles */
-  
-  .nav-container {
-    padding-top: 10%;
-  }
-  
-  .nav-links {
-    width: 250px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .nav-links ul {
-    margin-top: 15%;
-    text-align: center;
-    padding-top: 10%;
-  }
-  
-  .nav-links a {
-    color: #FFFFFF;
-    font-size: 24px;
-    line-height: 2.5;
-    font-weight: lighter;
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .nav-links a:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-  }
+
+.nav-screen .active {
+  display: block;
+}
+
+/* Nav header links */
+.nav-brand {
+  position: fixed;
+  left: 0;
+  z-index: 600;
+  padding: 10px;
+}
+
+.nav-brand img {
+  width: 50px;
+}
+
+.fa-bars {
+  display: none;
+}
+
+.fa-times {
+  float: right;
+  padding: 20px;
+  right: 0;
+  z-index: 600;
+  cursor: pointer;
+}
+
+.fa-times:active {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
+}
+
+.header-links {
+  background-color: var(--nav-bg, #FFFFFF);
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  display: flex;
+  justify-content: flex-end;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-links li {
+  color: var(--nav-text, white);
+  padding: 15px;
+  font-size: 16px;
+}
+
+.header-links a {
+  color: var(--nav-text, #2c2c2c);
+  transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+/* Slide out nav menu styles */
+.nav-container {
+  padding-top: 10%;
+}
+
+.nav-links {
+  width: 250px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links ul {
+  margin-top: 15%;
+  text-align: center;
+  padding-top: 10%;
+}
+
+.nav-links a {
+  color: var(--nav-text, #FFFFFF);
+  font-size: 24px;
+  line-height: 2.5;
+  font-weight: lighter;
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links a:active {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
+}
+
+/* --- Dark Mode Toggle Switch --- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  z-index: 5000;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #E7759B; /* accent color */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* --- Position toggle in header --- */
+.nav-darkmode {
+  position: absolute;
+  top: 18px; /* adjust based on logo height */
+  left: 180px;
+  transform: translateX(-50%);
+  z-index: 5000;
+}
+
+/* --- Position toggle in sidebar --- */
+.nav-darkmode-mobile {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  position: relative;
+  top: 90px;
+}
+
+/* --- Dark Mode CSS Variables --- */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #2c2c2c;
+  --link-color: #2c2c2c;
+  --nav-bg: #ffffff;
+  --nav-text: #2c2c2c;
+}
+
+/* Navigation backgrounds */
+.nav-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; 
+  background-color: var(--nav-bg);
+  color: var(--nav-text);
+}
+
+
+/* --- Dark Mode Overrides --- */
+body.dark-mode {
+  --bg-color: #1f1f1f;
+  --text-color: #ffffff;
+  --link-color: #ffffff;
+  --nav-bg: #2c2c2c;
+  --nav-text: #ffffff;
+}
+
 
   .mobileResume {
     position: relative;
@@ -375,29 +456,6 @@ p.holder {
   overflow: visible !important;
 }
 
-
-  /* Scroll down indicator (bouncing) */
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-30px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-  
-  .bounce {
-    animation: bounce 2s infinite;
-  }
-  
   /* About section */
   
   /* Skill bars */
@@ -430,6 +488,10 @@ p.holder {
     font-size: 1.1em;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
+  }
+
+  body.dark-mode .skillbar-title {
+    color: #2c2c2c;
   }
   
   .skillbar-title span {
@@ -499,6 +561,47 @@ p.holder {
   #figma { 
     background: #626262; 
   }
+
+  body.dark-mode #illustrator { 
+    background: #E7759B; /* darkest pink */
+  } 
+  
+  body.dark-mode #canva { 
+    background: #ED85A5; 
+  }
+  
+  body.dark-mode #premiere { 
+    background: #F28EB0; 
+  }
+  
+  body.dark-mode #wordpress { 
+    background: #F695BA; 
+  }
+  
+  body.dark-mode #html { 
+    background: #F99EC5; 
+  }
+  
+  body.dark-mode #microsoft { 
+    background: #FCA6CF; 
+  }
+  
+  body.dark-mode #photoshop { 
+    background: #FEB0D9; 
+  }
+  
+  body.dark-mode #g4a { 
+    background: #FEB7E1; 
+  }
+  
+  body.dark-mode #indesign { 
+    background: #FEC0EB; 
+  }
+  
+  body.dark-mode #figma { 
+    background: #FED0F2; /* lightest pink */
+  }
+  
   
   /* Portfolio section */
   
@@ -592,7 +695,7 @@ p.holder {
     text-align: center;
     font-size: 1em;
     color: #E7759B;
-    background-color: #FFFFFF;
+    background-color: #fdfdfd;
     text-decoration: none;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 600;
@@ -721,7 +824,7 @@ p.holder {
   }
 
   a.resume {
-    color: #2c2c2c;
+    color: var(--nav-text);
     position: relative;
     bottom: 25px;
     left: 10px;
@@ -737,6 +840,7 @@ p.holder {
   .pink.heart {
     display: inline-block;
     transition: transform 0.3s ease;
+    color: #e7759b;
   }
   
   @keyframes heartBeat {
@@ -896,6 +1000,10 @@ p.holder {
       
 @media (max-width: 768px) {
 
+  .nav-darkmode {
+    display: none;
+  }
+
   h1 {
     font-weight: 400;
   }
@@ -930,7 +1038,6 @@ p.holder {
 
   h3 {
     font-weight: normal;
-    color: #2c2c2c;
     font-size: 1.1em;
   }
 
@@ -944,23 +1051,26 @@ p.holder {
   }
 
   .fa-bars {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10001; 
+    width: 55px;
+    height: 55px;
+    font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative;
-    z-index: 9999;
+    color: #2c2c2c;
     background-color: #FFFFFF;
     border-radius: 50%;
-    width: .03rem;
-    height: .03rem;
-    font-size: 2rem;
-    line-height: 1;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     transition: opacity 0.3s ease;
+  }
+
+  body.dark-mode .fa-bars {
+    color: #E7759B;
   }
 
   body.nav-open .fa-bars {
@@ -970,7 +1080,6 @@ p.holder {
   }
 
   .fa-bars:active {
-    color: #2c2c2c;
     background-color: #E7759B;
   }
   

@@ -12,10 +12,10 @@ $(document).ready(function () {
       $.fn.writeText = function (content, speed = 100) {
         const elem = this;
         let current = 0;
-  
+
         elem.html('<span class="typed-text"></span>');
         const textSpan = elem.find(".typed-text");
-  
+
         function type() {
           if (current < content.length) {
             textSpan.append(content[current++]);
@@ -28,13 +28,12 @@ $(document).ready(function () {
       };
     }
   })(jQuery);
-  
+
   setTimeout(() => {
     $("p.holder").css("visibility", "visible");
     $("#holder").writeText("Multimedia Designer and Communications Specialist", 130);
   }, 2500);
-  
-  
+
   new WOW().init();
 
   // Nav toggle
@@ -51,6 +50,34 @@ $(document).ready(function () {
   }
   main();
 
+  // --- Dark Mode Toggle ---
+  const headerToggle = document.getElementById('darkModeToggleHeader');
+  const sidebarToggle = document.getElementById('darkModeToggleSidebar');
+
+  function applyDarkMode(isDark) {
+    if (isDark) {
+      document.body.classList.add('dark-mode');
+      headerToggle.checked = true;
+      sidebarToggle.checked = true;
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      headerToggle.checked = false;
+      sidebarToggle.checked = false;
+      localStorage.setItem('theme', 'light');
+    }
+  }
+
+  // Load saved theme preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    applyDarkMode(true);
+  }
+
+  // Event listeners for toggles
+  headerToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
+  sidebarToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
+
   // Preload background image
   const aboutSection = document.querySelector(".aboutme");
   const bgImg = new Image();
@@ -63,7 +90,7 @@ $(document).ready(function () {
     aboutSection.style.backgroundPosition = "center top";
     aboutSection.style.backgroundRepeat = "no-repeat";
     aboutSection.classList.add("loaded");
-    
+
     checkAboutSection(); // trigger animation if hash is already #about on load
   };
 
@@ -180,4 +207,31 @@ $(document).ready(function () {
     void heart.offsetWidth;
     heart.classList.add("animate-heart");
   });
+});
+
+
+// --- Disable fullpage autoscroll on project pages ---
+document.addEventListener("DOMContentLoaded", function () {
+  const path = window.location.pathname;
+
+  const isProjectPage =
+    path.endsWith("atlas.html") ||
+    path.endsWith("geo.html") ||
+    path.endsWith("permafrost.html") ||
+    path.endsWith("data.html") ||
+    path.endsWith("strategy.html");
+
+  if (isProjectPage) {
+    // Wait until fullpage_api exists, then disable autoscrolling
+    const interval = setInterval(() => {
+      if (window.fullpage_api) {
+        try {
+          fullpage_api.setAutoScrolling(false);
+          clearInterval(interval);
+        } catch (e) {
+          // keep trying until ready
+        }
+      }
+    }, 80);
+  }
 });
