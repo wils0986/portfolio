@@ -101,7 +101,7 @@ $(document).ready(function () {
     new fullpage("#fullpage", {
       licenseKey: "5N17I-P8UU6-KQ9ZH-EZJ08-UJLLN",
       scrollBar: true,
-      responsiveWidth: 1366,
+      responsiveWidth: 768,
       navigation: true,
       navigationTooltips: ["Home", "About", "Portfolio", "Contact"],
       anchors: ["home", "about", "portfolio", "contact",],
