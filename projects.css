@@ -5,7 +5,7 @@
     top: -40px; /* Hide above viewport */
     left: 0;
     background: #2c2c2c;
-    color: #FFFFFF;
+    color: #f7f7f7;
     padding: 8px 16px;
     z-index: 1000;
     text-decoration: none;
@@ -17,7 +17,7 @@
   
   .skip-link:focus {
     top: 10px;
-    outline: 2px solid #FFFFFF;
+    outline: 2px solid #f7f7f7;
     outline-offset: 2px;
     box-shadow: 0 0 8px rgba(255,255,255,0.7);
   }
@@ -192,7 +192,7 @@ body {
   }
   
   .nav-links a {
-    color: var(--nav-text, #FFFFFF);
+    color: var(--nav-text);
     font-size: 20px;
     line-height: 2.5;
     font-weight: lighter;
@@ -236,7 +236,7 @@ body {
   width: 20px;
   left: 2px;
   bottom: 2px;
-  background-color: white;
+  background-color: #f7f7f7;
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -259,7 +259,7 @@ input:checked + .slider:before {
 }
 
 /* --- Position toggle in sidebar --- */
-.nav-darkmode-mobile {
+.nav-dark-mode-mobile {
   display: flex;
   justify-content: center;
   margin: 20px 0;
@@ -269,21 +269,22 @@ input:checked + .slider:before {
 
 /* --- Dark Mode CSS Variables --- */
 :root {
-  --bg-color: #fefefe
+  --bg-color: #f5f5f5;
   --text-color: #2c2c2c;
   --link-color: #2c2c2c;
-  --nav-bg: #f3f3f3;;
+  --nav-bg: #f0f0f0;
   --nav-text: #2c2c2c;
 }
 
 /* --- Dark Mode Overrides --- */
 body.dark-mode {
-  --bg-color: #1c1c1c;
-  --text-color: #f3f3f3;
-  --link-color: #f3f3f3;
+  --bg-color: #010101;
+  --text-color: #f5f5f5;
+  --link-color: #f5f5f5;
   --nav-bg: #2c2c2c;
-  --nav-text: #f3f3f3;
+  --nav-text: #f5f5f5;
 }
+
 
 /* Navigation backgrounds */
 .nav-header {
@@ -319,7 +320,7 @@ body.dark-mode {
       margin-top: 5px;
       width: 0;
       height: 2px;
-      background-color: #FFFFFF;
+      background-color: #f7f7f7;
       content: "";
       opacity: 0;
       transition: width 0.6s, opacity 0.8s;
@@ -609,7 +610,7 @@ body.dark-mode {
         /* Reserve enough height and keep it invisible initially */
         min-height: 2em;
         visibility: hidden;
-        color: #FFFFFF;
+        color: #f7f7f7;
         margin-left: 80px;
       }
       
@@ -714,7 +715,7 @@ body.dark-mode {
       justify-content: center;
       cursor: pointer;
       color: #2c2c2c;
-      background-color: #FFFFFF;
+      background-color: #f7f7f7;
       border-radius: 50%;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
       transition: opacity 0.3s ease;

@@ -210,7 +210,7 @@ $(document).ready(function () {
 });
 
 
-// --- Disable fullpage autoscroll on project pages ---
+// --- Disable fullpage autoscroll on desktop project pages ---
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
 
