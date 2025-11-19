@@ -98,7 +98,7 @@ body {
       height: 100%;
       z-index: 500;
       position: fixed;
-      background-color: var(--nav-bg, #2c2c2c);
+      background-color: var(--nav-bg);
       opacity: 1;
       right: -285px; /* Start off behind the scenes */
       width: 285px;
@@ -110,7 +110,7 @@ body {
     }
     
     /* Nav header links */
-    
+
     .nav-brand {
       position: fixed;
       left: 0;
@@ -141,7 +141,7 @@ body {
   }
     
   .header-links {
-    background-color: var(--nav-bg, #FFFFFF);
+    background-color: var(--bg-color);
     position: fixed;
     width: 100%;
     z-index: 500;
@@ -157,7 +157,7 @@ body {
   }
   
   .header-links li {
-    color: var(--nav-text, white);
+    color: var(--nav-text);
     padding: 15px;
     font-size: 16px;
   }
@@ -269,11 +269,20 @@ input:checked + .slider:before {
 
 /* --- Dark Mode CSS Variables --- */
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #fefefe
   --text-color: #2c2c2c;
   --link-color: #2c2c2c;
-  --nav-bg: #ffffff;
+  --nav-bg: #f3f3f3;;
   --nav-text: #2c2c2c;
+}
+
+/* --- Dark Mode Overrides --- */
+body.dark-mode {
+  --bg-color: #1c1c1c;
+  --text-color: #f3f3f3;
+  --link-color: #f3f3f3;
+  --nav-bg: #2c2c2c;
+  --nav-text: #f3f3f3;
 }
 
 /* Navigation backgrounds */
@@ -283,20 +292,8 @@ input:checked + .slider:before {
   left: 0;
   width: 100%;
   z-index: 1000; 
-  background-color: var(--nav-bg);
   color: var(--nav-text);
 }
-
-
-/* --- Dark Mode Overrides --- */
-body.dark-mode {
-  --bg-color: #1f1f1f;
-  --text-color: #ffffff;
-  --link-color: #ffffff;
-  --nav-bg: #2c2c2c;
-  --nav-text: #ffffff;
-}
-
   
     .mobileResume {
       position: relative;
@@ -366,14 +363,14 @@ body.dark-mode {
     }
     
     .footer p {
-      color: #FFFFFF;
+      color: #f3f3f3;
       font-size: 16px;
       padding-top: 10px;
       border: none;
     }
     
     .social-links a {
-      color: #FFFFFF;
+      color: #f3f3f3;
       padding: 0px 5px 0px 5px;
     }
     
@@ -637,6 +634,11 @@ body.dark-mode {
 
         
   @media (max-width: 768px) {
+
+    .nav-darkmode {
+      display: none;
+    }
+  
   
     .projectH1 {
         font-size: 2.2rem;
@@ -924,6 +926,10 @@ body.dark-mode {
     margin: 0.5em 0 2em 0;
    }
   
+   .social-links {
+    padding-top: 10px;
+   }
+
   .social-links a:active {
     color: #E7759B;
     transition: all 0.2s ease-in-out;
@@ -940,7 +946,7 @@ body.dark-mode {
     padding: 20px;
     margin-top: 0px;
     font-size: 14px;
-  }
+    }
 
   .project-navigation {
     flex-direction: column; 

@@ -942,7 +942,7 @@ body.dark-mode {
 
 
 /* /////////////////////////////////////////// */
-  /* Mobile nav styles - responsive design */
+  /* Responsive Design */
 
 
   @media (max-width: 1480px) {
@@ -1301,6 +1301,13 @@ body.dark-mode {
   margin-top: 0px;
   font-size: 14px;
 }
+
+
+p.copyright {
+  margin-left: 50px;
+  margin-right: 50px;
+ }
+
 
 }
 
