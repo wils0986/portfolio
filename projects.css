@@ -56,6 +56,11 @@ body {
       text-align: center;
     }
 
+    .pink {
+      color: #E7759B;
+      margin: 0 0.1em;
+    }
+
     h2 {
       font-weight: lighter;
       color: #E7759B;
@@ -161,7 +166,7 @@ body {
     transition: all 0.2s ease-in-out;
     text-decoration: none;
   }
-  
+
   /* Slide out nav menu styles */
   .nav-container {
     padding-top: 10%;
