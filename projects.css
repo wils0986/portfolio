@@ -157,13 +157,7 @@ body {
     font-size: 16px;
   }
   
-  .header-links a {
-    color: var(--nav-text, #2c2c2c);
-    transition: color 0.3s ease;
-  }
-  
   .header-links a:hover {
-    color: #E7759B;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
   }
@@ -309,23 +303,33 @@ body.dark-mode {
     
     /* Expanding border effect */
     
-    .header-links a::after {
-      display: block;
-      margin: 0 auto;
-      margin-top: 5px;
-      width: 0;
-      height: 2px;
-      background-color: #f7f7f7;
-      content: "";
-      opacity: 0;
-      transition: width 0.6s, opacity 0.8s;
-    }
-    
-    .header-links a:hover::after,
-    .header-links a:focus::after {
-      opacity: 1;
-      width: 100%;
-    }
+.header-links a::after,
+a.resume::after {
+    display: block;
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 0;
+    height: 2px;
+    background-color: #e7759b;
+    content: "";
+    opacity: 0;
+    transition: width 0.6s, opacity 0.8s;
+}
+
+/* Hover and focus effect */
+.header-links a:hover::after,
+.header-links a:focus::after,
+a.resume:hover::after,
+a.resume:focus::after {
+    width: 100%;
+    opacity: 1;
+}
+
+a.resume {
+  display: inline-block; /* matches nav links */
+  position: relative;    /* good for pseudo-element positioning */
+}
+
     
   /* Prevent overflow issues */
   
@@ -458,11 +462,6 @@ body.dark-mode {
       bottom: 20px;
       left: 10px;
     }  
-  
-    a.resume:hover {
-      color: #E7759B;
-      transition: all 0.2s ease-in-out;
-    }
   
     /* Footer heart pulses on .submit click */
   

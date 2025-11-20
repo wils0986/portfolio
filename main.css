@@ -264,7 +264,6 @@ p.holder {
 }
 
 .header-links a:hover {
-  color: #E7759B;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 }
@@ -355,7 +354,7 @@ input:checked + .slider:before {
 }
 
 /* --- Position toggle in sidebar --- */
-.nav-darkmode-mobile {
+.nav-dark-mode-mobile {
   display: flex;
   justify-content: center;
   margin: 20px 0;
@@ -410,24 +409,33 @@ body.dark-mode {
   
   /* Expanding border effect */
   
-  .header-links a::after {
+.header-links a::after,
+a.resume::after {
     display: block;
     margin: 0 auto;
     margin-top: 5px;
     width: 0;
     height: 2px;
-    background-color: #f7f7f7;
+    background-color: #e7759b;
     content: "";
     opacity: 0;
     transition: width 0.6s, opacity 0.8s;
-  }
-  
-  .header-links a:hover::after,
-  .header-links a:focus::after {
-    opacity: 1;
+}
+
+/* Hover and focus effect */
+.header-links a:hover::after,
+.header-links a:focus::after,
+a.resume:hover::after,
+a.resume:focus::after {
     width: 100%;
-  }
-  
+    opacity: 1;
+}
+
+a.resume {
+  display: inline-block; /* matches nav links */
+  position: relative;    /* good for pseudo-element positioning */
+}
+
   /* Main header section */
   
   .opaque-bg {
@@ -595,8 +603,6 @@ body.dark-mode {
   body.dark-mode #figma { 
     background: #F7A1C7; 
   } 
-  
-  
   
   /* Portfolio section */
   
@@ -838,11 +844,6 @@ body.dark-mode {
     position: relative;
     bottom: 20px;
     left: 10px;
-  }
-
-  a.resume:hover {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
   }
 
   /* Footer heart pulses on .submit click */
