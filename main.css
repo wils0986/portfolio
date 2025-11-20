@@ -483,14 +483,10 @@ body.dark-mode {
     position: absolute;
     top: 0;
     left: 0;
-    color: #f7f7f7;
+    color: var(--bg-color);
     font-size: 1.1em;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-  }
-
-  body.dark-mode .skillbar-title {
-    color: #080808;
   }
   
   .skillbar-title span {
@@ -560,46 +556,47 @@ body.dark-mode {
   #figma { 
     background: #626262; 
   }
-
   body.dark-mode #illustrator { 
-    background: #E7759B;
+    background: #E7759B; 
   } 
   
   body.dark-mode #canva { 
-    background: #ED85A5; 
-  }
+    background: #E97AA0; 
+  } 
   
   body.dark-mode #premiere { 
-    background: #F28EB0; 
-  }
+    background: #EB7FA5; 
+  } 
   
   body.dark-mode #wordpress { 
-    background: #F695BA; 
-  }
+    background: #ED84AA; 
+  } 
   
   body.dark-mode #html { 
-    background: #F99EC5; 
-  }
+    background: #EF89AE; 
+  } 
   
   body.dark-mode #microsoft { 
-    background: #FCA6CF; 
-  }
+    background: #F08EB3; 
+  } 
   
   body.dark-mode #photoshop { 
-    background: #FEB0D9; 
-  }
+    background: #F292B8; 
+  } 
   
   body.dark-mode #g4a { 
-    background: #FEB7E1; 
-  }
+    background: #F497BD; 
+  } 
   
   body.dark-mode #indesign { 
-    background: #fcb7e7; 
-  }
+    background: #F69CC2; 
+  } 
   
   body.dark-mode #figma { 
-    background: #fcc3ed;
-  }
+    background: #F7A1C7; 
+  } 
+  
+  
   
   /* Portfolio section */
   

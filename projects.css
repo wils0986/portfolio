@@ -92,7 +92,6 @@ body {
     /* Nav Screen */
     .nav-screen {
       height: 100%;
-      z-index: 500;
       position: fixed;
       background-color: var(--nav-bg);
       opacity: 1;

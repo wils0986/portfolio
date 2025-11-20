@@ -144,7 +144,7 @@ $(document).ready(function () {
 
       afterLoad: function (origin, destination) {
         const index = destination.index;
-        if (index === 1) { // About section
+        if (index === 1) {
           triggerAboutAnimations();
         }
       }
@@ -208,19 +208,28 @@ $(document).ready(function () {
     heart.classList.add("animate-heart");
   });
 
-  // --- Collapse mobile nav on resize from mobile to desktop ---
-  $(window).on("resize", function () {
-    const isDesktop = window.innerWidth > 768;
+  // Collapse mobile nav on desktop
+function collapseNavOnDesktop() {
+  if (window.innerWidth > 768) {
+    $(".nav-screen").css({
+      right: "-285px",
+      transition: "right 0.2s"
+    });
+    $("body").removeClass("nav-open");
+  }
+}
 
-    if (isDesktop && $("body").hasClass("nav-open")) {
-      $(".nav-screen").animate({ right: "-285px" }, 200);
-      $("body").animate({ right: "0px" }, 200).removeClass("nav-open");
-    }
-  });
+// Run on resize
+$(window).on("resize", collapseNavOnDesktop);
+
+// Run on page load
+collapseNavOnDesktop();
+
 
 }); // END document.ready
 
-// --- Disable fullpage autoscroll on desktop project pages ---
+
+/* --- Disable fullpage autoscroll on desktop project pages --- */
 document.addEventListener("DOMContentLoaded", function () {
   const path = window.location.pathname;
 
@@ -232,7 +241,6 @@ document.addEventListener("DOMContentLoaded", function () {
     path.endsWith("strategy.html");
 
   if (isProjectPage) {
-    // Wait until fullpage_api exists, then disable autoscrolling
     const interval = setInterval(() => {
       if (window.fullpage_api) {
         try {
