@@ -132,7 +132,7 @@ $(document).ready(function () {
       responsiveWidth: 768,
       navigation: true,
       navigationTooltips: ["Home", "About", "Portfolio", "Contact"],
-      anchors: ["home", "about", "portfolio", "contact",],
+      anchors: ["home", "about", "portfolio", "contact"],
       menu: "#myMenu",
 
       autoScrolling: true,
@@ -207,8 +207,18 @@ $(document).ready(function () {
     void heart.offsetWidth;
     heart.classList.add("animate-heart");
   });
-});
 
+  // --- Collapse mobile nav on resize from mobile to desktop ---
+  $(window).on("resize", function () {
+    const isDesktop = window.innerWidth > 768;
+
+    if (isDesktop && $("body").hasClass("nav-open")) {
+      $(".nav-screen").animate({ right: "-285px" }, 200);
+      $("body").animate({ right: "0px" }, 200).removeClass("nav-open");
+    }
+  });
+
+}); // END document.ready
 
 // --- Disable fullpage autoscroll on desktop project pages ---
 document.addEventListener("DOMContentLoaded", function () {
@@ -228,9 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
         try {
           fullpage_api.setAutoScrolling(false);
           clearInterval(interval);
-        } catch (e) {
-          // keep trying until ready
-        }
+        } catch (e) {}
       }
     }, 80);
   }
