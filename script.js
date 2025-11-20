@@ -202,13 +202,26 @@ if (savedTheme === 'light') {
     }
   });
 
-  // Heart pulse
-  document.querySelector(".btn-lg").addEventListener("click", () => {
-    const heart = document.querySelector(".pink.heart");
-    heart.classList.remove("animate-heart");
-    void heart.offsetWidth;
-    heart.classList.add("animate-heart");
-  });
+// Heart pulse function
+function triggerHeartPulse() {
+  const heart = document.querySelector(".pink.heart");
+  if (!heart) return; // skip if heart doesn't exist
+  heart.classList.remove("animate-heart");
+  void heart.offsetWidth; // forces reflow
+  heart.classList.add("animate-heart");
+}
+
+// Pulse on button click
+const btn = document.querySelector(".btn-lg");
+if (btn) {
+  btn.addEventListener("click", triggerHeartPulse);
+}
+
+// Pulse on heart hover
+const heart = document.querySelector(".pink.heart");
+if (heart) {
+  heart.addEventListener("mouseenter", triggerHeartPulse);
+}
 
   // Collapse mobile nav on desktop
 function collapseNavOnDesktop() {
