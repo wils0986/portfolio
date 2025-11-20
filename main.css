@@ -1248,17 +1248,17 @@ a.resume {
    width: 100% !important;
    height: auto !important;
    margin: 0 auto;
-   padding-top: 50px;
-   padding-bottom: 50px;
+   padding-top: 55px;
+   padding-bottom: 55px;
  }
 
  .slide::after {
   content: "";
   display: block;
-  width: 60%;            /* line width */
-  height: 1px;           /* thickness */
+  width: 60%;           
+  height: 1px;           
   background-color: var(--text-color); 
-  margin: 20px auto 0;    /* vertical spacing + center */
+  margin: 10px auto 0;   
 }
 
 
