@@ -70,9 +70,11 @@ $(document).ready(function () {
 
   // Load saved theme preference
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
-    applyDarkMode(true);
-  }
+if (savedTheme === 'light') {
+  applyDarkMode(false);
+} else {
+  applyDarkMode(true); // default dark
+}
 
   // Event listeners for toggles
   headerToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
@@ -213,7 +215,7 @@ function collapseNavOnDesktop() {
   if (window.innerWidth > 768) {
     $(".nav-screen").css({
       right: "-285px",
-      transition: "right 0.2s"
+      transition: "right 0.1s"
     });
     $("body").removeClass("nav-open");
   }
