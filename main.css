@@ -660,6 +660,7 @@ body.dark-mode {
     margin: 0.5em 0 2em 0;
     font-weight: 600;
     width: 96%;
+    background-color: var(--nav-bg);
   }
 
   .hidden {
@@ -670,11 +671,13 @@ body.dark-mode {
     min-height: 10em;
     font-family: 'Segoe UI', sans-serif;
     border-radius: 4px;
+    background-color: var(--nav-bg);
   }
 
   input {
     font-family: 'Segoe UI', sans-serif;
     border-radius: 4px;
+    
   }
   
   label {
@@ -683,11 +686,16 @@ body.dark-mode {
     margin-bottom: 5px;
     font-size: 18px;
     font-family: 'Segoe UI', sans-serif;
-    color: #010101;
+    color: var(--bg-color);
   }
 
+  #ajax-contact input,
+#ajax-contact textarea {
+  color: var(--text-color);
+}
+
   #ajax-contact ::placeholder {
-    color: #2c2c2c;
+    color: var(--text-color);
     opacity: 1;
   }  
 
@@ -1025,7 +1033,7 @@ body.dark-mode {
     width: 96%;       
     text-align: right; 
     box-sizing: border-box;
-    padding-top: 65px; 
+    padding-top: 45px; 
     right: 1rem;
   }
 
