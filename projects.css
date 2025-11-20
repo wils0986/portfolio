@@ -191,7 +191,7 @@ body {
     color: var(--nav-text);
     font-size: 20px;
     line-height: 2.5;
-    font-weight: lighter;
+    font-weight: normal;
     text-decoration: none;
     margin-left: auto;
     margin-right: auto;
@@ -232,7 +232,7 @@ body {
   width: 20px;
   left: 2px;
   bottom: 2px;
-  background-color: #f7f7f7;
+  background-color: var(--bg-color);
   transition: 0.4s;
   border-radius: 50%;
 }
@@ -668,7 +668,6 @@ body.dark-mode {
     }
     
     #holder {
-  
       font-size: 18px;
     }
   
@@ -686,7 +685,7 @@ body.dark-mode {
 
     p {
         font-size: 1rem;
-        font-weight: 400;
+        font-weight: normal;
     }
   
     .header-links {
