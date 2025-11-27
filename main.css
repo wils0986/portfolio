@@ -98,7 +98,7 @@ body {
     animation-delay: 1.5s;
   }
   
-  /* Pink slash styling */
+  /* Pink line styling */
 
   .pink {
     color: #E7759B;
@@ -983,6 +983,8 @@ a.resume {
       white-space: wrap;   
       font-weight: lighter;
       font-size: 22px;
+      position: relative;
+      left: -10px;
     }
     
     .aboutme-container {
@@ -1010,6 +1012,8 @@ a.resume {
 
       #holder {
         font-size: 20px;
+        position: relative;
+        left: -10px;
       }
     
     }
@@ -1045,6 +1049,7 @@ a.resume {
     font-size: 16px;
     position: relative;
     left: -10px;
+    letter-spacing: .15em;
   }
 
   h2 {
