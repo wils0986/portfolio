@@ -31,7 +31,7 @@ $(document).ready(function () {
 
   setTimeout(() => {
     $("p.holder").css("visibility", "visible");
-    $("#holder").writeText("Multimedia Designer and Communications Specialist", 130);
+    $("#holder").writeText("Digital Experience Designer", 130);
   }, 2500);
 
   new WOW().init();

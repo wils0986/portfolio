@@ -24,6 +24,10 @@
 
 /* General styles */
 
+html, body {
+  height: 100%;
+}
+
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -120,8 +124,9 @@ body {
 
   #holder {
     white-space: nowrap;
-    font-size: 1.28em;
+    font-size: 1.5em;
     font-weight: 100;
+    letter-spacing: .24em;
 }
 
 p.holder {
@@ -132,7 +137,7 @@ p.holder {
   text-align: right;
   position: relative;
   border: none;
-  left: 30px;
+  left: 44px;
 }
 
 /* Blinking cursor effect */
@@ -449,7 +454,7 @@ a.resume {
 
 .aboutme {
   filter: hue-rotate(340deg);
-  min-height: 100vh !important;
+  height: 100% !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
