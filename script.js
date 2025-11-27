@@ -81,7 +81,7 @@ if (savedTheme === 'light') {
   sidebarToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
 
   // Preload background image
-  const aboutSection = document.querySelector(".aboutme");
+  const aboutSection = document.querySelector(".home");
   const bgImg = new Image();
   bgImg.src = "images/yoshi.JPG";
 
@@ -136,14 +136,12 @@ if (savedTheme === 'light') {
       navigationTooltips: ["Home", "About", "Portfolio", "Contact"],
       anchors: ["home", "about", "portfolio", "contact"],
       menu: "#myMenu",
-
       autoScrolling: true,
       fitToSection: false,
       recordHistory: false,
       controlArrows: true,
       scrollHorizontally: false,
       scrollOverflow: false,
-
       afterLoad: function (origin, destination) {
         const index = destination.index;
         if (index === 1) {
@@ -159,7 +157,7 @@ if (savedTheme === 'light') {
   });
 
   $(window).on("scroll", function () {
-    const aboutTop = $(".aboutme").offset().top;
+    const aboutTop = $(".home").offset().top;
     const scrollTop = $(window).scrollTop();
     const windowHeight = $(window).height();
 
@@ -266,3 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 80);
   }
 });
+
+
+
+
