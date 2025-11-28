@@ -80,21 +80,35 @@ if (savedTheme === 'light') {
   headerToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
   sidebarToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
 
-  // Preload background image
-  const aboutSection = document.querySelector(".home");
-  const bgImg = new Image();
-  bgImg.src = "images/yoshi.JPG";
+// Preload background image securely with Base64
+const aboutSection = document.querySelector(".home");
 
-  bgImg.onload = function () {
-    aboutSection.style.paddingTop = "58px";
-    aboutSection.style.backgroundImage = `url(${bgImg.src})`;
-    aboutSection.style.backgroundSize = "contain";
-    aboutSection.style.backgroundPosition = "center top";
-    aboutSection.style.backgroundRepeat = "no-repeat";
-    aboutSection.classList.add("loaded");
+fetch("images/yoshi.JPG")
+  .then((response) => response.blob())
+  .then((blob) => {
+    const reader = new FileReader();
 
-    checkAboutSection(); // trigger animation if hash is already #about on load
-  };
+    reader.onloadend = function () {
+      const bgImgBase64 = reader.result; // this is a data URL
+
+      aboutSection.style.paddingTop = "58px";
+      aboutSection.style.backgroundImage = `url(${bgImgBase64})`;
+      aboutSection.style.backgroundSize = "contain";
+      aboutSection.style.backgroundPosition = "center top";
+      aboutSection.style.backgroundRepeat = "no-repeat";
+      aboutSection.classList.add("loaded");
+
+      checkAboutSection(); // trigger animation if hash is already #about on load
+    };
+
+    reader.readAsDataURL(blob); // convert blob to Base64
+  });
+
+// Disable right-click, drag, and touch hold
+["contextmenu", "dragstart", "selectstart", "mousedown", "touchstart"].forEach((evt) => {
+  aboutSection.addEventListener(evt, (e) => e.preventDefault());
+});
+
 
   // --- About section animation helpers ---
   function triggerAboutAnimations() {
