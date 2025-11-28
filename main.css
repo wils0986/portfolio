@@ -1348,11 +1348,17 @@ p.copyright {
 
 /* Media query for very large screens (2560px and up) */
 @media (min-width: 2560px) {
+  .section {
+    display: flex;
+    justify-content: center;  /* horizontally center everything inside */
+    align-items: center;      /* vertically center if needed */
+  }
+
   .content,
   .content-slide {
-    width: clamp(50rem, 35vw, 80rem); /* flexible width scaling with viewport */
+    width: clamp(55rem, 45vw, 70rem); /* flexible width scaling with viewport */
     max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0; /* reset auto because flex is centering it */
+    margin-right: 0;
   }
 }
