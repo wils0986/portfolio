@@ -2,24 +2,24 @@
 
 .skip-link {
   position: absolute;
-  top: -40px; /* Hide above viewport */
+  top: -2.5rem; /* Hide above viewport */
   left: 0;
   background: #2c2c2c;
   color: #f7f7f7;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   z-index: 1000;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
   transition: top 0.3s ease;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 
 .skip-link:focus {
-  top: 10px;
-  outline: 2px solid #f7f7f7;
-  outline-offset: 2px;
-  box-shadow: 0 0 8px rgba(255,255,255,0.7);
+  top: 0.625rem;
+  outline: 0.125rem solid #f7f7f7;
+  outline-offset: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(255,255,255,0.7);
 }
 
 /* General styles */
@@ -54,7 +54,7 @@ body {
     font-size: 3.75em;
     margin-bottom: 0;
     position: relative;
-    top: 10px;
+    top: 0.625rem;
   }
   
   h3 {
@@ -90,7 +90,7 @@ body {
   .slide-part {
     display: inline-flex;
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(1.25rem);
     animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     animation-name: slideInPushLeft;
@@ -137,7 +137,7 @@ p.holder {
   text-align: right;
   position: relative;
   border: none;
-  left: 44px;
+  left: 2.75rem;
 }
 
 /* Blinking cursor effect */
@@ -172,16 +172,16 @@ p.holder {
   }
  
   p {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 350;
     line-height: 1.5em;
     position: relative;
     z-index: 12;
-    border-left: 3px solid #e7759b;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    border-left: 0.1875rem solid #e7759b;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
   }
   
   .section {
@@ -203,8 +203,8 @@ p.holder {
   position: fixed;
   background-color: var(--nav-bg);
   opacity: 1;
-  right: -285px;
-  width: 285px;
+  right: -17.8125rem;
+  width: 17.8125rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -217,11 +217,11 @@ p.holder {
   position: fixed;
   left: 0;
   z-index: 600;
-  padding: 10px;
+  padding: 0.625rem;
 }
 
 .nav-brand img {
-  width: 50px;
+  width: 3.125rem;
 }
 
 .fa-bars {
@@ -230,7 +230,7 @@ p.holder {
 
 .fa-times {
   float: right;
-  padding: 20px;
+  padding: 1.25rem;
   right: 0;
   z-index: 600;
   cursor: pointer;
@@ -259,8 +259,8 @@ p.holder {
 
 .header-links li {
   color: var(--nav-text);
-  padding: 15px;
-  font-size: 16px;
+  padding: 0.9375rem;
+  font-size: 1rem;
 }
 
 .header-links a {
@@ -279,7 +279,7 @@ p.holder {
 }
 
 .nav-links {
-  width: 250px;
+  width: 15.625rem;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -293,7 +293,7 @@ p.holder {
 
 .nav-links a {
   color: var(--nav-text);
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 2.5;
   font-weight: normal;
   text-decoration: none;
@@ -311,8 +311,8 @@ p.holder {
 .switch {
   position: relative;
   display: inline-block;
-  width: 50px;
-  height: 24px;
+  width: 3.125rem;
+  height: 1.5rem;
   z-index: 5000;
 }
 
@@ -326,16 +326,16 @@ p.holder {
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: #ccc;
   transition: 0.4s;
-  border-radius: 24px;
+  border-radius: 1.5rem;
 }
 
 .slider:before {
   position: absolute;
   content: "";
-  height: 20px;
-  width: 20px;
-  left: 2px;
-  bottom: 2px;
+  height: 1.25rem;
+  width: 1.25rem;
+  left: 0.125rem;
+  bottom: 0.125rem;
   background-color: var(--bg-color);
   transition: 0.4s;
   border-radius: 50%;
@@ -346,14 +346,14 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(1.625rem);
 }
 
 /* --- Position toggle in header --- */
 .nav-darkmode {
   position: absolute;
-  top: 18px; 
-  left: 180px;
+  top: 1.125rem;
+  left: 11.25rem;
   transform: translateX(-50%);
   z-index: 5000;
 }
@@ -362,9 +362,9 @@ input:checked + .slider:before {
 .nav-dark-mode-mobile {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 1.25rem 0;
   position: relative;
-  top: 90px;
+  top: 5.625rem;
 }
 
 /* --- Dark Mode CSS Variables --- */
@@ -398,14 +398,14 @@ body.dark-mode {
 
   .mobileResume {
     position: relative;
-    top: 100px;
+    top: 6.25rem;
   }
   
   #mobileLogo {
     max-width: 20%;
     position: relative;
-    top: 100px;
-    left: 0px;
+    top: 6.25rem;
+    left: 0rem;
   }
 
   #fp-nav ul li .fp-tooltip {
@@ -417,9 +417,9 @@ body.dark-mode {
 a.resume::after {
     display: block;
     margin: 0 auto;
-    margin-top: 5px;
+    margin-top: 0.3125rem;
     width: 0;
-    height: 1.25px;
+    height: 0.078125rem;
     background-color: #e7759b;
     content: "";
     opacity: 0;
@@ -440,7 +440,7 @@ a.resume {
   /* Main header section */
   
   .opaque-bg {
-    padding: 15px 25px 5px 5px;
+    padding: 0.9375rem 1.5625rem 0.3125rem 0.3125rem;
     text-align: right;
     position: relative;
     right: 8%;
@@ -466,11 +466,9 @@ a.resume {
 
   /* About section */
   
-  /* Skill bars */
-  
   .container-skillbar {
     max-width: 96%;
-    padding-top: 30px;
+    padding-top: 1.875rem;
     padding-right: 2%;
     padding-left: 2%;
     height: auto;
@@ -480,10 +478,10 @@ a.resume {
   .skillbar {
     position: relative;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
     background: #efefef;
-    height: 30px;
-    border-radius: 4px;
+    height: 1.875rem;
+    border-radius: 0.25rem;
     transition: 0.4s linear;
     transition-property: width, background-color;
   }
@@ -494,37 +492,40 @@ a.resume {
     left: 0;
     color: var(--bg-color);
     font-size: 1.1em;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
   }
   
   .skillbar-title span {
     display: block;
-    padding: 0 20px;
-    height: 30px;
-    line-height: 30px;
+    padding: 0 1.25rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 500;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
   }
   
   .skillbar-bar {
-    height: 30px;
-    width: 0px;
+    height: 1.875rem;
+    width: 0rem;
     transition: width 2.5s ease;
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
   
   .skill-bar-percent {
     position: absolute;
-    right: 10px;
+    right: 0.625rem;
     top: 0;
-    font-size: 11px;
-    height: 30px;
-    line-height: 30px;
+    font-size: 0.6875rem;
+    height: 1.875rem;
+    line-height: 1.875rem;
     color: rgba(0, 0, 0, 0.5);
   }
+
+
+  /* Skillbar gradient */
 
   #illustrator { 
     background: #2C2C2C; 
@@ -610,14 +611,14 @@ a.resume {
   .content {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 50rem;
     max-width: 80%;
   }
   
   .content-slide {
     margin-left: auto;
     margin-right: auto;
-    width: 800px;
+    width: 50rem;
     max-width: 80%;
   }
   
@@ -632,16 +633,16 @@ a.resume {
   
   .fp-controlArrow.fp-next {
     border-color: transparent transparent transparent #E7759B !important;
-    right: 45px !important;
-    border-radius: 4px;
-    border-width: 25px;
+    right: 2.8125rem !important;
+    border-radius: 0.25rem;
+    border-width: 1.5625rem;
   }
   
   .fp-controlArrow.fp-prev {
     border-color: transparent #E7759B transparent transparent !important;
-    left: 45px !important;
-    border-radius: 4px;
-    border-width: 25px;
+    left: 2.8125rem !important;
+    border-radius: 0.25rem;
+    border-width: 1.5625rem;
   }
 
   #fp-nav ul li a {
@@ -651,15 +652,15 @@ a.resume {
   /* Input field styles */
 
   .contact-form {
-    padding: 0px 15px 0px 15px;
+    padding: 0rem 0.9375rem 0rem 0.9375rem;
   }
   
   .form-control {
-    border: 2px solid rgba(0, 0, 0, 0.27);
+    border: 0.125rem solid rgba(0, 0, 0, 0.27);
     max-width: 96%;
     min-width: 96%;
     height: 3em;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 1em;
     margin: 0.5em 0 2em 0;
     font-weight: 600;
@@ -674,21 +675,21 @@ a.resume {
   textarea {
     min-height: 10em;
     font-family: 'Segoe UI', sans-serif;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     background-color: var(--nav-bg);
   }
 
   input {
     font-family: 'Segoe UI', sans-serif;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     
   }
   
   label {
     display: inline-block;
     max-width: 100%;
-    margin-bottom: 5px;
-    font-size: 18px;
+    margin-bottom: 0.3125rem;
+    font-size: 1.125rem;
     font-family: 'Segoe UI', sans-serif;
     color: var(--bg-color);
   }
@@ -705,9 +706,9 @@ a.resume {
 
   #submit {
     outline: none;
-    padding: 12px;
-    border-radius: 4px;
-    border: 2px solid #E7759B;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #E7759B;
     text-align: center;
     font-size: 1em;
     color: #E7759B;
@@ -728,9 +729,9 @@ a.resume {
   
   .footer {
     background-color: #2c2c2c;
-    height: 100px;
-    padding-top: 10px;
-    margin-top: 20px;
+    height: 6.25rem;
+    padding-top: 0.625rem;
+    margin-top: 1.25rem;
   }
 
   .fp-section:last-child {
@@ -740,14 +741,14 @@ a.resume {
   
   .footer p {
     color: #f7f7f7;
-    font-size: 16px;
-    padding-top: 0px;
+    font-size: 1rem;
+    padding-top: 0rem;
     border: none;
   }
   
   .social-links a {
     color: #f7f7f7;
-    padding: 0px 5px 0px 5px;
+    padding: 0rem 0.3125rem 0rem 0.3125rem;
   }
   
   .social-links a:hover {
@@ -764,14 +765,14 @@ a.resume {
     padding: 25%;
     background-color: #2c2c2c;
     text-align: center;
-    font-size: 10px;
+    font-size: 0.625rem;
     z-index: 1000;
   }
   
   .spinner > div {
     background-color: #E7759B;
     height: 100%;
-    width: 6px;
+    width: 0.375rem;
     display: inline-block;
     animation: sk-stretchdelay 1.2s infinite ease-in-out;
   }
@@ -806,22 +807,22 @@ a.resume {
   .success {
     padding: 1em;
     margin-bottom: 0.75rem;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.5);
     color: #468847;
     background-color: #dff0d8;
-    border: 1px solid #d6e9c6;
-    border-radius: 4px;
+    border: 0.0625rem solid #d6e9c6;
+    border-radius: 0.25rem;
     width: 96%;
   }
   
   .error {
     padding: 1em;
     margin-bottom: 0.75rem;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.5);
     color: #b94a48;
     background-color: #f2dede;
-    border: 1px solid rgba(185, 74, 72, 0.3);
-    border-radius: 4px;
+    border: 0.0625rem solid rgba(185, 74, 72, 0.3);
+    border-radius: 0.25rem;
     width: 100%;
   }
 
@@ -830,21 +831,21 @@ a.resume {
   }
 
   .fa-linkedin-in {
-    padding-top: 30px;
-    padding-bottom: 0px;
+    padding-top: 1.875rem;
+    padding-bottom: 0rem;
   }
 
   #logo {
     position: relative;
-    top: -3px;
-    width: 45px;
+    top: -0.1875rem;
+    width: 2.8125rem;
   }
 
   a.resume {
     color: var(--nav-text);
     position: relative;
-    bottom: 20px;
-    left: 10px;
+    bottom: 1.25rem;
+    left: 0.625rem
   }
 
   /* Footer heart pulses on .submit click */
@@ -874,11 +875,11 @@ a.resume {
   position: relative;
   overflow: hidden;
   width: 100%; 
-  height: 100px; 
+  height: 6.25rem; 
 }
 
  #paper-plane {
-    font-size: 30px;
+    font-size: 1.875rem;
     color: #e7759b;
     position: absolute;
     top: 80%;
@@ -960,7 +961,7 @@ a.resume {
 
     h1 {
       font-size: clamp(2.5rem, 5vw, 1.4em);
-      padding-bottom: 10px;
+      padding-bottom: 0.625rem;
       font-weight: lighter;
       
     }
@@ -970,7 +971,7 @@ a.resume {
       min-height: 2em;
       visibility: hidden;
       color: #f7f7f7;
-      margin-left: 80px;
+      margin-left: 5rem;
     }
     
     #holder {
@@ -978,9 +979,9 @@ a.resume {
       justify-content: flex-end; 
       white-space: wrap;   
       font-weight: lighter;
-      font-size: 22px;
+      font-size: 1.375rem;
       position: relative;
-      left: -10px;
+      left: -0.625rem;
     }
     
     .home-container {
@@ -988,28 +989,27 @@ a.resume {
       justify-content: flex-end;
       width: 100%;
       box-sizing: border-box;
-      padding: 5px;
+      padding: 0.3125rem;
     }
     
     .opaque-bg {
-      max-width: 400px;
+      max-width: 25rem;
       width: 100%;
       text-align: right;
       box-sizing: border-box;
-      padding: 15px 5px 5px 5px;
+      padding: 0.9375rem 0.3125rem 0.3125rem 0.3125rem;
     }
     }
 
-    @media (max-width: 1000px)
-    {
+    @media (max-width: 1000px) {
       h1 {
         font-size: clamp(2rem, 5vw, 1.4em);
       }
 
       #holder {
-        font-size: 20px;
+        font-size: 1.25rem;
         position: relative;
-        left: -10px;
+        left: -0.625rem;
       }
     
     }
@@ -1032,27 +1032,27 @@ a.resume {
   .opaque-bg {
     display: block;
     position: relative;
-    max-width: 400px; 
+    max-width: 25rem; 
     width: 96%;       
     text-align: right; 
     box-sizing: border-box;
-    padding-top: 25px; 
+    padding-top: 1.5625rem; 
     right: 1rem;
   }
 
   #holder {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1rem;
     position: relative;
-    left: -10px;
+    left: -0.625rem;
     letter-spacing: .15em;
   }
 
   h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   h3 {
@@ -1074,8 +1074,8 @@ a.resume {
     top: 1rem;
     right: 1rem;
     z-index: 10001; 
-    width: 55px;
-    height: 55px;
+    width: 3.4375rem;
+    height: 3.4375rem;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -1084,7 +1084,7 @@ a.resume {
     color: #2c2c2c;
     background-color: #f7f7f7;
     border-radius: 50%;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.15);
     transition: opacity 0.3s ease;
   }
 
@@ -1127,10 +1127,10 @@ a.resume {
     .nav-screen {
       display: block;
       position: fixed;
-      right: -285px;
+      right: -17.8125rem;
       top: 0;
       height: 100%;
-      width: 285px;
+      width: 17.8125rem;
       z-index: 1500;
     }
   
@@ -1140,7 +1140,7 @@ a.resume {
  }
 
  ul.myMenu {
-  padding: 25px 25px 0px 25px;
+  padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
  }
 
  ul.myMenu li a:active {
@@ -1150,14 +1150,14 @@ a.resume {
 
 .fp-controlArrow.fp-prev {
   display: none;
-  border-width: 25px 25px 25px 0; 
-  left: 10px !important;
+  border-width: 1.5625rem 1.5625rem 1.5625rem 0rem; 
+  left: 0.625rem !important;
 }
 
 .fp-controlArrow.fp-next {
   display: none;
-  border-width: 25px 0 25px 25px;
-  right: 10px !important;
+  border-width: 1.5625rem 0rem 1.5625rem 1.5625rem;
+  right: 0.625rem !important;
  }
 
 .fa-chevron-down {
@@ -1167,7 +1167,7 @@ a.resume {
  .cat {
   max-width: 60%;
   height: auto;
-  padding-top: 10px;
+  padding-top: 0.625rem;
  }
 
 .section {
@@ -1181,11 +1181,11 @@ a.resume {
   display: inline-block;
   padding: 1em;
   margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.5);
   color: #468847;
   background-color: #dff0d8;
-  border: 1px solid #d6e9c6;
-  border-radius: 4px;
+  border: 0.0625rem solid #d6e9c6;
+  border-radius: 0.25rem;
   max-width: 90%;
 }
 
@@ -1193,11 +1193,11 @@ a.resume {
   display: inline-block;
   padding: 1em;
   margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0.0625rem 0 rgba(255, 255, 255, 0.5);
   color: #b94a48;
   background-color: #f2dede;
-  border: 1px solid rgba(185, 74, 72, 0.3);
-  border-radius: 4px;
+  border: 0.0625rem solid rgba(185, 74, 72, 0.3);
+  border-radius: 0.25rem;
   max-width: 90%;
  }
 
@@ -1256,17 +1256,17 @@ a.resume {
    width: 100% !important;
    height: auto !important;
    margin: 0 auto;
-   padding-top: 55px;
-   padding-bottom: 55px;
+   padding-top: 3.4375rem;
+   padding-bottom: 3.4375rem;
  }
 
  .slide::after {
   content: "";
   display: block;
   width: 80%;           
-  height: 1px;           
+  height: 0.0625rem;           
   background-color: var(--text-color); 
-  margin: 10px auto 0;   
+  margin: 0.625rem auto 0;   
 }
 
 
@@ -1289,7 +1289,7 @@ a.resume {
  }
 
  .slide p {
-  padding-top: 20px;
+  padding-top: 1.25rem;
   text-align: left;
  }
 
@@ -1298,15 +1298,15 @@ a.resume {
  }
 
  .contact-form {
-  padding: 0px 15px 0px 15px;
+  padding: 0rem 0.9375rem 0rem 0.9375rem;
 }
 
 .form-control {
-  border: 2px solid rgba(0, 0, 0, 0.27);
+  border: 0.125rem solid rgba(0, 0, 0, 0.27);
   max-width: 90%;
   min-width: 90%;
   height: 3em;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 1em;
   margin: 0.5em 0 2em 0;
  }
@@ -1318,21 +1318,21 @@ a.resume {
 }
 
 .footer {
-  height: 130px;
-  padding-top: 10px;
-  margin-top: 20px;
+  height: 8.125rem;
+  padding-top: 0.625rem;
+  margin-top: 1.25rem;
 }
 
 .footer p {
   background-color: #2c2c2c;
-  padding: 20px;
-  margin-top: 0px;
-  font-size: 14px;
+  padding: 1.25rem;
+  margin-top: 0rem;
+  font-size: 0.875rem;
 }
 
 p.copyright {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 3.125rem;
+  margin-right: 3.125rem;
  }
 
 }
