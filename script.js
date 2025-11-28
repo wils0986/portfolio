@@ -266,5 +266,73 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+ // Styling for ultra-wide/4K screens
 
+function applyUltraWideStyles() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
 
+  const sections = document.querySelectorAll('.section');
+  const contact = document.querySelector('[data-anchor="contact"]');
+  const contents = document.querySelectorAll('.content, .content-slide');
+
+  // Helper functions for dynamic font scaling
+  const scaleHeading = w => Math.min(Math.max(2 + (w / 1920) * 1, 2), 4); // rem
+  const scaleParagraph = w => Math.min(Math.max(1 + (w / 1920) * 0.25, 1), 2); // rem
+
+  if (width >= 2560) {
+    // General sections
+    sections.forEach(sec => {
+      sec.style.display = 'flex';
+      sec.style.flexDirection = 'column';
+      sec.style.justifyContent = 'center';
+      sec.style.alignItems = 'center';
+      sec.style.minHeight = `${height}px`; // full viewport height
+      sec.style.padding = '3rem';
+      sec.style.boxSizing = 'border-box';
+      sec.style.textAlign = 'center';
+    });
+
+    // Content widths and centering
+    contents.forEach(cont => {
+      cont.style.width = 'clamp(55rem, 45vw, 70rem)';
+      cont.style.margin = '0 auto';
+      cont.style.textAlign = 'center';
+    });
+
+    // Dynamic font sizing
+    document.querySelectorAll('.section h2, [data-anchor="contact"] h2')
+      .forEach(h => h.style.fontSize = `${scaleHeading(width)}rem`);
+
+    document.querySelectorAll('.section p, [data-anchor="contact"] p')
+      .forEach(p => p.style.fontSize = `${scaleParagraph(width)}rem`);
+
+    // Contact section dynamic height
+    if (contact) {
+      contact.style.display = 'flex';
+      contact.style.flexDirection = 'column';
+      contact.style.justifyContent = 'center';
+      contact.style.alignItems = 'center';
+      contact.style.padding = '3rem 5rem';
+
+      const contentHeight = contact.scrollHeight;
+      const availableHeight = height;
+      const finalHeight = Math.max(contentHeight + 60, availableHeight * 0.75);
+      contact.style.minHeight = `${finalHeight}px`;
+    }
+
+  } else {
+    // Reset styles if smaller screen
+    sections.forEach(sec => sec.removeAttribute('style'));
+    if (contact) contact.removeAttribute('style');
+    contents.forEach(cont => cont.removeAttribute('style'));
+    document.querySelectorAll('.section h2, [data-anchor="contact"] h2').forEach(h => h.removeAttribute('style'));
+    document.querySelectorAll('.section p, [data-anchor="contact"] p').forEach(p => p.removeAttribute('style'));
+  }
+}
+
+// Apply on load
+window.addEventListener('load', applyUltraWideStyles);
+
+// Apply on resize
+window.addEventListener('resize', applyUltraWideStyles);

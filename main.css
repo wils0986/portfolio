@@ -1346,46 +1346,5 @@ p.copyright {
   }
 }
 
-/* Media query for very large screens (2560px and up) */
-@media (min-width: 2560px) {
 
-  /* General section adjustments */
-  .section,
-  [data-anchor="contact"] {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;    /* vertical centering */
-    align-items: center;        /* horizontal centering */
-    min-height: 100vh;          /* fill full viewport height */
-    padding: 3rem;              /* extra spacing for wide screens */
-    box-sizing: border-box;
-    text-align: center;         /* fallback for text inside sections */
-  }
-
-  /* Content containers */
-  .content,
-  .content-slide {
-    width: clamp(55rem, 45vw, 70rem); /* scales with viewport, keeps max width */
-    margin: 0 auto;                    /* center horizontally */
-    text-align: center;                /* center text inside */
-  }
-
-  /* Contact section specific tweaks */
-  [data-anchor="contact"] {
-    min-height: 75vh;                  /* slightly shorter for contact */
-    padding: 3rem 5rem;                /* extra padding for wide screens */
-  }
-
-  /* Responsive text for all sections */
-  .section h2,
-  [data-anchor="contact"] h2 {
-    font-size: clamp(2rem, 2.5vw, 3rem);  /* responsive headings */
-  }
-
-  .section p,
-  [data-anchor="contact"] p {
-    font-size: clamp(1rem, 1.5vw, 1.25rem); /* responsive paragraph text */
-  }
-
-}
 
