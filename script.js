@@ -80,29 +80,24 @@ if (savedTheme === 'light') {
   headerToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
   sidebarToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
 
-// Preload background image securely with Base64
+// Preload background image securely with shorter Blob URL
 const aboutSection = document.querySelector(".home");
 
 fetch("images/yoshi.JPG")
   .then((response) => response.blob())
   .then((blob) => {
-    const reader = new FileReader();
+    const bgImgURL = URL.createObjectURL(blob); // shorter than Base64
 
-    reader.onloadend = function () {
-      const bgImgBase64 = reader.result; // this is a data URL
+    aboutSection.style.paddingTop = "58px";
+    aboutSection.style.backgroundImage = `url(${bgImgURL})`;
+    aboutSection.style.backgroundSize = "contain";
+    aboutSection.style.backgroundPosition = "center top";
+    aboutSection.style.backgroundRepeat = "no-repeat";
+    aboutSection.classList.add("loaded");
 
-      aboutSection.style.paddingTop = "58px";
-      aboutSection.style.backgroundImage = `url(${bgImgBase64})`;
-      aboutSection.style.backgroundSize = "contain";
-      aboutSection.style.backgroundPosition = "center top";
-      aboutSection.style.backgroundRepeat = "no-repeat";
-      aboutSection.classList.add("loaded");
-
-      checkAboutSection(); // trigger animation if hash is already #about on load
-    };
-
-    reader.readAsDataURL(blob); // convert blob to Base64
+    checkAboutSection(); // trigger animation if hash is already #about on load
   });
+
 
 // Disable right-click, drag, and touch hold
 ["contextmenu", "dragstart", "selectstart", "mousedown", "touchstart"].forEach((evt) => {
