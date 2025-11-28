@@ -80,7 +80,7 @@ body {
       line-height: 1.5em;
       position: relative;
       z-index: 12;
-      border-left: 0.1.875rem solid #e7759b;
+      border-left: 1.5px solid #e7759b;
       padding-left: 1.25rem;
       padding-right: 1.25rem;
       margin-left: 0.625rem;
