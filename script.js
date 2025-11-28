@@ -50,35 +50,37 @@ $(document).ready(function () {
   }
   main();
 
-  // --- Dark Mode Toggle ---
-  const headerToggle = document.getElementById('darkModeToggleHeader');
-  const sidebarToggle = document.getElementById('darkModeToggleSidebar');
+ // --- Dark/Light Mode Toggle ---
+const headerToggle = document.getElementById('lightModeToggleHeader');
+const sidebarToggle = document.getElementById('lightModeToggleSidebar');
 
-  function applyDarkMode(isDark) {
-    if (isDark) {
-      document.body.classList.add('dark-mode');
-      headerToggle.checked = true;
-      sidebarToggle.checked = true;
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.body.classList.remove('dark-mode');
-      headerToggle.checked = false;
-      sidebarToggle.checked = false;
-      localStorage.setItem('theme', 'light');
-    }
+function applyLightMode(isLight) {
+  if (isLight) {
+    document.body.classList.add('light-mode');
+    headerToggle.checked = true;
+    sidebarToggle.checked = true;
+    localStorage.setItem('theme', 'light');
+  } else {
+    document.body.classList.remove('light-mode');
+    headerToggle.checked = false;
+    sidebarToggle.checked = false;
+    localStorage.setItem('theme', 'dark');
   }
-
-  // Load saved theme preference
-  const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-  applyDarkMode(false);
-} else {
-  applyDarkMode(true); // default dark
 }
 
-  // Event listeners for toggles
-  headerToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
-  sidebarToggle.addEventListener('change', (e) => applyDarkMode(e.target.checked));
+// Load saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  applyLightMode(true);
+} else {
+  applyLightMode(false); // default is dark
+}
+
+// Event listeners for toggles
+headerToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
+sidebarToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
+
+
 
 // Preload background image securely with shorter Blob URL
 const aboutSection = document.querySelector(".home");

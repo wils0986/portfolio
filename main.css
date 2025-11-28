@@ -324,7 +324,7 @@ p.holder {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
+  background-color: #e7759b;
   transition: 0.4s;
   border-radius: 1.5rem;
 }
@@ -350,7 +350,7 @@ input:checked + .slider:before {
 }
 
 /* --- Position toggle in header --- */
-.nav-darkmode {
+.nav-lightmode {
   position: absolute;
   top: 1.125rem;
   left: 11.25rem;
@@ -359,7 +359,7 @@ input:checked + .slider:before {
 }
 
 /* --- Position toggle in sidebar --- */
-.nav-dark-mode-mobile {
+.nav-light-mode-mobile {
   display: flex;
   justify-content: center;
   margin: 1.25rem 0;
@@ -369,20 +369,21 @@ input:checked + .slider:before {
 
 /* --- Dark Mode CSS Variables --- */
 :root {
-  --bg-color: #f5f5f5;
-  --text-color: #2c2c2c;
-  --link-color: #2c2c2c;
-  --nav-bg: #f0f0f0;
-  --nav-text: #2c2c2c;
-}
-
-/* --- Dark Mode Overrides --- */
-body.dark-mode {
+  /* Default: Dark Mode */
   --bg-color: #010101;
   --text-color: #f5f5f5;
   --link-color: #f5f5f5;
   --nav-bg: #2c2c2c;
   --nav-text: #f5f5f5;
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  --bg-color: #f5f5f5;
+  --text-color: #2c2c2c;
+  --link-color: #2c2c2c;
+  --nav-bg: #f0f0f0;
+  --nav-text: #2c2c2c;
 }
 
 /* Navigation backgrounds */
@@ -394,6 +395,7 @@ body.dark-mode {
   z-index: 1000; 
   background-color: var(--nav-bg);
   color: var(--nav-text);
+  transition: background-color 0.3s, color 0.3s;
 }
 
   .mobileResume {
@@ -525,86 +527,89 @@ a.resume {
   }
 
 
-  /* Skillbar gradient */
+  /* Skillbar gradient - Default Dark Mode */
 
-  #illustrator { 
-    background: #2C2C2C; 
-  } 
-  
-  #canva { 
-    background: #323232; 
-  }
-  
-  #premiere { 
-    background: #383838; 
-  }
-  
-  #wordpress { 
-    background: #3E3E3E; 
-  }
-  
-  #html { 
-    background: #444444; 
-  }
-  
-  #microsoft { 
-    background: #4A4A4A; 
-  }
-  
-  #photoshop { 
-    background: #505050; 
-  }
-  
-  #g4a { 
-    background: #565656; 
-  }
-  
-  #indesign { 
-    background: #5C5C5C; 
-  }
-  
-  #figma { 
-    background: #626262; 
-  }
-  body.dark-mode #illustrator { 
-    background: #E7759B; 
-  } 
-  
-  body.dark-mode #canva { 
-    background: #E97AA0; 
-  } 
-  
-  body.dark-mode #premiere { 
-    background: #EB7FA5; 
-  } 
-  
-  body.dark-mode #wordpress { 
-    background: #ED84AA; 
-  } 
-  
-  body.dark-mode #html { 
-    background: #EF89AE; 
-  } 
-  
-  body.dark-mode #microsoft { 
-    background: #F08EB3; 
-  } 
-  
-  body.dark-mode #photoshop { 
-    background: #F292B8; 
-  } 
-  
-  body.dark-mode #g4a { 
-    background: #F497BD; 
-  } 
-  
-  body.dark-mode #indesign { 
-    background: #F69CC2; 
-  } 
-  
-  body.dark-mode #figma { 
-    background: #F7A1C7; 
-  } 
+#illustrator { 
+  background: #E7759B; 
+} 
+
+#canva { 
+  background: #E97AA0; 
+}
+
+#premiere { 
+  background: #EB7FA5; 
+}
+
+#wordpress { 
+  background: #ED84AA; 
+}
+
+#html { 
+  background: #EF89AE; 
+}
+
+#microsoft { 
+  background: #F08EB3; 
+}
+
+#photoshop { 
+  background: #F292B8; 
+}
+
+#g4a { 
+  background: #F497BD; 
+}
+
+#indesign { 
+  background: #F69CC2; 
+}
+
+#figma { 
+  background: #F7A1C7; 
+}
+
+/* Light Mode Overrides */
+body.light-mode #illustrator { 
+  background: #2C2C2C; 
+} 
+
+body.light-mode #canva { 
+  background: #323232; 
+}
+
+body.light-mode #premiere { 
+  background: #383838; 
+}
+
+body.light-mode #wordpress { 
+  background: #3E3E3E; 
+}
+
+body.light-mode #html { 
+  background: #444444; 
+}
+
+body.light-mode #microsoft { 
+  background: #4A4A4A; 
+}
+
+body.light-mode #photoshop { 
+  background: #505050; 
+}
+
+body.light-mode #g4a { 
+  background: #565656; 
+}
+
+body.light-mode #indesign { 
+  background: #5C5C5C; 
+}
+
+body.light-mode #figma { 
+  background: #626262; 
+}
+
   
   /* Portfolio section */
   
@@ -1016,7 +1021,7 @@ a.resume {
       
 @media (max-width: 768px) {
 
-  .nav-darkmode {
+  .nav-lightmode {
     display: none;
   }
 
@@ -1088,8 +1093,8 @@ a.resume {
     transition: opacity 0.3s ease;
   }
 
-  body.dark-mode .fa-bars {
-    color: #E7759B;
+  body.light-mode .fa-bars {
+    color: #2c2c2c;
   }
 
   body.nav-open .fa-bars {

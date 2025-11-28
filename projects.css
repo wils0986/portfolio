@@ -202,7 +202,8 @@ body {
   }
 
 
-  /* --- Dark Mode Toggle Switch --- */
+ /* --- Dark Mode Toggle Switch --- */
+
 .switch {
   position: relative;
   display: inline-block;
@@ -219,7 +220,7 @@ body {
   position: absolute;
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: #ccc;
+  background-color: #e7759b;
   transition: 0.4s;
   border-radius: 1.5rem;
 }
@@ -245,16 +246,16 @@ input:checked + .slider:before {
 }
 
 /* --- Position toggle in header --- */
-.nav-darkmode {
+.nav-lightmode {
   position: absolute;
-  top: 1.125rem; 
+  top: 1.125rem;
   left: 11.25rem;
   transform: translateX(-50%);
   z-index: 5000;
 }
 
 /* --- Position toggle in sidebar --- */
-.nav-dark-mode-mobile {
+.nav-light-mode-mobile {
   display: flex;
   justify-content: center;
   margin: 1.25rem 0;
@@ -264,20 +265,21 @@ input:checked + .slider:before {
 
 /* --- Dark Mode CSS Variables --- */
 :root {
-  --bg-color: #f5f5f5;
-  --text-color: #2c2c2c;
-  --link-color: #2c2c2c;
-  --nav-bg: #f0f0f0;
-  --nav-text: #2c2c2c;
-}
-
-/* --- Dark Mode Overrides --- */
-body.dark-mode {
+  /* Default: Dark Mode */
   --bg-color: #010101;
   --text-color: #f5f5f5;
   --link-color: #f5f5f5;
   --nav-bg: #2c2c2c;
   --nav-text: #f5f5f5;
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+  --bg-color: #f5f5f5;
+  --text-color: #2c2c2c;
+  --link-color: #2c2c2c;
+  --nav-bg: #f0f0f0;
+  --nav-text: #2c2c2c;
 }
 
 
@@ -602,7 +604,7 @@ body.dark-mode {
 
   @media (max-width: 768px) {
 
-    .nav-darkmode {
+    .nav-lightmode {
       display: none;
     }
   
@@ -666,8 +668,8 @@ body.dark-mode {
       transition: opacity 0.3s ease;
     }
   
-    body.dark-mode .fa-bars {
-      color: #E7759B;
+    body.light-mode .fa-bars {
+      color: #2c2c2c;
     }
   
     body.nav-open .fa-bars {
