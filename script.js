@@ -50,35 +50,39 @@ $(document).ready(function () {
   }
   main();
 
- // --- Dark/Light Mode Toggle ---
+// --- Dark/Light Mode Toggle ---
+// Get toggle inputs
 const headerToggle = document.getElementById('lightModeToggleHeader');
 const sidebarToggle = document.getElementById('lightModeToggleSidebar');
 
+// Apply theme immediately
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+  document.documentElement.classList.add('light-mode');
+  headerToggle.checked = true;
+  sidebarToggle.checked = true;
+} else {
+  document.documentElement.classList.remove('light-mode'); // default dark
+  headerToggle.checked = false;
+  sidebarToggle.checked = false;
+}
+
+// Function to toggle theme
 function applyLightMode(isLight) {
   if (isLight) {
-    document.body.classList.add('light-mode');
-    headerToggle.checked = true;
-    sidebarToggle.checked = true;
+    document.documentElement.classList.add('light-mode');
     localStorage.setItem('theme', 'light');
   } else {
-    document.body.classList.remove('light-mode');
-    headerToggle.checked = false;
-    sidebarToggle.checked = false;
+    document.documentElement.classList.remove('light-mode');
     localStorage.setItem('theme', 'dark');
   }
 }
 
-// Load saved theme preference
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'light') {
-  applyLightMode(true);
-} else {
-  applyLightMode(false); // default is dark
-}
-
-// Event listeners for toggles
+// Attach event listeners
 headerToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
 sidebarToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
+
+
 
 
 

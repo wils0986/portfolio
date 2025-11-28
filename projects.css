@@ -35,6 +35,11 @@ body {
   font-family: "Segoe UI", sans-serif;
   }
   
+  nav {
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+  }
+
   ul {
     list-style-type: none;
   }
@@ -274,7 +279,7 @@ input:checked + .slider:before {
 }
 
 /* Light Mode Overrides */
-body.light-mode {
+html.light-mode {
   --bg-color: #f5f5f5;
   --text-color: #2c2c2c;
   --link-color: #2c2c2c;
