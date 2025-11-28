@@ -1337,15 +1337,6 @@ p.copyright {
 
 }
 
-/* Base styling (all screens) */
-.content,
-.content-slide {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50rem;      /* default width for smaller screens */
-  max-width: 80%;     /* never exceed viewport */
-}
-
 /* Large screens (1920px and up) */
 @media screen and (min-width: 1920px) {
   .content,
@@ -1355,26 +1346,46 @@ p.copyright {
   }
 }
 
-/* Very large screens (2560px and up) */
-@media screen and (min-width: 2560px) {
+/* Media query for very large screens (2560px and up) */
+@media (min-width: 2560px) {
+
+  /* General section adjustments */
+  .section,
+  [data-anchor="contact"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    /* vertical centering */
+    align-items: center;        /* horizontal centering */
+    min-height: 100vh;          /* fill full viewport height */
+    padding: 3rem;              /* extra spacing for wide screens */
+    box-sizing: border-box;
+    text-align: center;         /* fallback for text inside sections */
+  }
+
+  /* Content containers */
   .content,
   .content-slide {
-    width: clamp(55rem, 45vw, 70rem); /* min 55rem, scales with viewport, max 70rem */
-    max-width: 90%;                   /* safeguard */
-    margin-left: auto;                 /* keep centered */
-    margin-right: auto;
-    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+    width: clamp(55rem, 45vw, 70rem); /* scales with viewport, keeps max width */
+    margin: 0 auto;                    /* center horizontally */
+    text-align: center;                /* center text inside */
   }
 
-  .content h2,
-  .content-slide h2 {
-    font-size: clamp(2.25rem, 3vw, 3.5rem);
+  /* Contact section specific tweaks */
+  [data-anchor="contact"] {
+    min-height: 75vh;                  /* slightly shorter for contact */
+    padding: 3rem 5rem;                /* extra padding for wide screens */
   }
+
+  /* Responsive text for all sections */
+  .section h2,
+  [data-anchor="contact"] h2 {
+    font-size: clamp(2rem, 2.5vw, 3rem);  /* responsive headings */
+  }
+
+  .section p,
+  [data-anchor="contact"] p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem); /* responsive paragraph text */
+  }
+
 }
 
-/* Optional: for multiple children in a section */
-.section.flex-center {
-  display: flex;
-  justify-content: center;  /* horizontal centering of multiple items */
-  align-items: center;      /* vertical centering if needed */
-}
