@@ -1337,11 +1337,22 @@ p.copyright {
 
 }
 
-/* Responsive tweak for very wide/high-res screens (e.g., 4K) */
+/* Responsive tweak for wide screens */
 @media screen and (min-width: 1920px) {
   .content,
   .content-slide {
-    width: 60rem;         
+    width: 55rem;         
     max-width: 90%;       
+  }
+}
+
+/* Media query for very large screens (2560px and up) */
+@media (min-width: 2560px) {
+  .content,
+  .content-slide {
+    width: clamp(50rem, 35vw, 80rem); /* flexible width scaling with viewport */
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
