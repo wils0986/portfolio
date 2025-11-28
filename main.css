@@ -1337,28 +1337,44 @@ p.copyright {
 
 }
 
-/* Responsive tweak for wide screens */
+/* Base styling (all screens) */
+.content,
+.content-slide {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50rem;      /* default width for smaller screens */
+  max-width: 80%;     /* never exceed viewport */
+}
+
+/* Large screens (1920px and up) */
 @media screen and (min-width: 1920px) {
   .content,
   .content-slide {
-    width: 55rem;         
-    max-width: 90%;       
+    width: 55rem;     /* slightly wider */
+    max-width: 90%;   /* allow a little more width */
   }
 }
 
-/* Media query for very large screens (2560px and up) */
-@media (min-width: 2560px) {
-  .section {
-    display: flex;
-    justify-content: center;  /* horizontally center everything inside */
-    align-items: center;      /* vertically center if needed */
-  }
-
+/* Very large screens (2560px and up) */
+@media screen and (min-width: 2560px) {
   .content,
   .content-slide {
-    width: clamp(55rem, 45vw, 70rem); /* flexible width scaling with viewport */
-    max-width: 90%;
-    margin-left: 0; /* reset auto because flex is centering it */
-    margin-right: 0;
+    width: clamp(55rem, 45vw, 70rem); /* min 55rem, scales with viewport, max 70rem */
+    max-width: 90%;                   /* safeguard */
+    margin-left: auto;                 /* keep centered */
+    margin-right: auto;
+    font-size: clamp(1.125rem, 1.5vw, 1.5rem);
   }
+
+  .content h2,
+  .content-slide h2 {
+    font-size: clamp(2.25rem, 3vw, 3.5rem);
+  }
+}
+
+/* Optional: for multiple children in a section */
+.section.flex-center {
+  display: flex;
+  justify-content: center;  /* horizontal centering of multiple items */
+  align-items: center;      /* vertical centering if needed */
 }
