@@ -1336,3 +1336,12 @@ p.copyright {
  }
 
 }
+
+/* Responsive tweak for very wide/high-res screens (e.g., 4K) */
+@media screen and (min-width: 2560px) {
+  .content,
+  .content-slide {
+    width: 60rem;         
+    max-width: 90%;       
+  }
+}
