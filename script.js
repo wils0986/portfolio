@@ -83,9 +83,6 @@ headerToggle.addEventListener('change', (e) => applyLightMode(e.target.checked))
 sidebarToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
 
 
-
-
-
 // Preload background image securely with shorter Blob URL
 const aboutSection = document.querySelector(".home");
 
@@ -103,13 +100,6 @@ fetch("images/yoshi.JPG")
 
     checkAboutSection(); // trigger animation if hash is already #about on load
   });
-
-
-// Disable right-click, drag, and touch hold
-["contextmenu", "dragstart", "selectstart", "mousedown", "touchstart"].forEach((evt) => {
-  aboutSection.addEventListener(evt, (e) => e.preventDefault());
-});
-
 
   // --- About section animation helpers ---
   function triggerAboutAnimations() {
