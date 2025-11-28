@@ -1026,6 +1026,10 @@ body.light-mode #figma {
       
 @media (max-width: 768px) {
 
+  body {
+    overflow-x: hidden !important;
+  }
+
   .nav-lightmode {
     display: none;
   }

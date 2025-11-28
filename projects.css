@@ -764,10 +764,6 @@ html.light-mode {
     right: 0;
    }
   
-   .social-links {
-    padding-top: 0.625rem;
-   }
-
   .social-links a:active {
     color: #E7759B;
     transition: all 0.2s ease-in-out;
