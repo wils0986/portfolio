@@ -83,15 +83,15 @@ headerToggle.addEventListener('change', (e) => applyLightMode(e.target.checked))
 sidebarToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
 
 
-// Preload background image securely with shorter Blob URL
+// Preload background image with Blob URL
 const aboutSection = document.querySelector(".home");
 
 fetch("images/yoshi.JPG")
   .then((response) => response.blob())
   .then((blob) => {
-    const bgImgURL = URL.createObjectURL(blob); // shorter than Base64
+    const bgImgURL = URL.createObjectURL(blob); 
 
-    aboutSection.style.paddingTop = "58px";
+    aboutSection.style.marginTop = "28px";
     aboutSection.style.backgroundImage = `url(${bgImgURL})`;
     aboutSection.style.backgroundSize = "contain";
     aboutSection.style.backgroundPosition = "center top";
