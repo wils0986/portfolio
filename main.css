@@ -1355,7 +1355,7 @@ p.copyright {
 @media screen and (min-width: 1920px) {
   .content,
   .content-slide {
-    width: 50rem;     /* slightly wider */
+    width: 45rem;     /* slightly wider */
     max-width: 90%;   /* allow a little more width */
   }
 }
