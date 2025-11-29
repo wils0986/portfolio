@@ -16,7 +16,7 @@
 }
 
 .skip-link:focus {
-  top: 0.625rem;
+  top: 2.625rem;
   outline: 0.125rem solid #f7f7f7;
   outline-offset: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(255,255,255,0.7);
