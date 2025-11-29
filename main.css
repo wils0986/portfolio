@@ -2,7 +2,7 @@
 
 .skip-link {
   position: absolute;
-  top: -2.5rem; /* Hide above viewport */
+  top: -4rem; /* Hide above viewport */
   left: 0;
   background: #2c2c2c;
   color: #f7f7f7;
@@ -476,10 +476,10 @@ a.resume {
   /* About section */
   
   .container-skillbar {
-    max-width: 96%;
+    max-width: 100%;
     padding-top: 1.875rem;
-    padding-right: 2%;
-    padding-left: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
     height: auto;
     overflow: hidden;
   }
@@ -1054,7 +1054,7 @@ body.light-mode #figma {
     width: 96%;       
     text-align: right; 
     box-sizing: border-box;
-    padding-top: 1.5625rem; 
+    padding-top: 6rem; 
     right: 1rem;
   }
 
@@ -1134,6 +1134,7 @@ body.light-mode #figma {
   .section.home {
     position: relative;
     z-index: 400;
+    top: -2rem;
   }
     
     .header-links ul{
@@ -1224,6 +1225,7 @@ body.light-mode #figma {
  }
 
  .content {
+  padding-top: 4rem;
   max-width: 80%;
   margin: 0 auto;
  }
