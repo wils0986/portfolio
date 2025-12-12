@@ -91,7 +91,7 @@ fetch("images/yoshi.JPG")
   .then((blob) => {
     const bgImgURL = URL.createObjectURL(blob); 
 
-    aboutSection.style.marginTop = "28px";
+    aboutSection.style.marginTop = "35px";
     aboutSection.style.backgroundImage = `url(${bgImgURL})`;
     aboutSection.style.backgroundSize = "contain";
     aboutSection.style.backgroundPosition = "center top";
