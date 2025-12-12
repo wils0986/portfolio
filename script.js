@@ -141,7 +141,7 @@ fetch("images/yoshi.JPG")
       navigationTooltips: ["Home", "About", "Portfolio", "Contact"],
       anchors: ["home", "about", "portfolio", "contact"],
       menu: "#myMenu",
-      autoScrolling: true,
+      autoScrolling: false,
       fitToSection: false,
       recordHistory: false,
       controlArrows: true,

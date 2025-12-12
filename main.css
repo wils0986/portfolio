@@ -185,7 +185,6 @@ p.holder {
   
 .section {
   text-align: center;
-  position: relative;
 }
 
 .hide {
@@ -447,7 +446,7 @@ a.resume {
   right: 8%;
 }
   
-  /* Fix about section height and background behavior */
+  /* Fix Home section height and background behavior */
 
 .home {
   filter: hue-rotate(340deg);
@@ -467,7 +466,7 @@ a.resume {
 }
 
 /* About section */
-  
+
 .container-skillbar {
   max-width: 100%;
   padding-top: 1.875rem;
@@ -617,7 +616,6 @@ body.light-mode #figma {
   width: 50rem;
   max-width: 80%;
   position: relative;
-  padding-bottom: 1.5rem;
 }
 
 .content-slide {
@@ -657,7 +655,7 @@ body.light-mode #figma {
 /* Input field styles */
 
 .contact-form {
-  padding: 0rem 0.9375rem 0rem 0.9375rem;
+  padding: 0rem 0.9375rem 2rem 0.9375rem;
 }
 
 .form-control {
@@ -734,9 +732,8 @@ color: var(--text-color);
 
 .footer {
   background-color: #2c2c2c;
-  height: 6.25rem;
+  height: 4rem;
   padding-top: 0.625rem;
-  margin-top: 1.25rem;
 }
 
 .fp-section:last-child {
@@ -747,7 +744,6 @@ color: var(--text-color);
 .footer p {
   color: #f7f7f7;
   font-size: 1rem;
-  padding-top: 0rem;
   border: none;
 }
 
