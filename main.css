@@ -491,7 +491,7 @@ a.resume {
   position: absolute;
   top: 0;
   left: 0;
-  color: var(--bg-color);
+  color: #2c2c2c;
   font-size: 1.1em;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
