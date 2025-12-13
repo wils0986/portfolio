@@ -2,7 +2,7 @@
 
 .skip-link {
   position: absolute;
-  top: -4rem; /* Hide above viewport */
+  top: -6rem; /* Hide above viewport */
   left: 0;
   background: #2c2c2c;
   color: #f7f7f7;
@@ -974,7 +974,7 @@ a.resume {
     position: relative;
     left: -0.625rem;
   }
-  
+
   .home-container {
     display: flex;
     justify-content: flex-end;
@@ -989,6 +989,7 @@ a.resume {
     text-align: right;
     box-sizing: border-box;
     padding: 0.9375rem 0.3125rem 0.3125rem 0.3125rem;
+   
   }
 }
 
@@ -1005,6 +1006,17 @@ a.resume {
 }
 
 @media (max-width: 768px) {
+  
+  .skip-link {
+    position: absolute;
+    top: -6rem; /* Hide above viewport */
+  }
+  
+  .skip-link:focus {
+    top: 0.625rem;
+  }
+  
+  
   body {
     overflow-x: hidden !important;
   }
@@ -1107,7 +1119,7 @@ a.resume {
   .section.home {
     position: relative;
     z-index: 400;
-    top: -2rem;
+    top: -2.2rem;
   }
   
   .header-links ul{
