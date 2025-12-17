@@ -1072,17 +1072,16 @@ a.resume {
     text-align: right; 
     box-sizing: border-box; 
     right: 1rem;
-    bottom: 20rem;
+    bottom: 18rem;
   }
 
 p.holder {
   margin: 0;
-  left: 2rem;
+  left: 1.5rem;
 }
 
   #holder {
     font-weight: normal;
-    
     position: relative;
     letter-spacing: .15em;
   }
@@ -1092,9 +1091,9 @@ p.holder {
     font-size: 1.2rem;
   }
 
-
   h1 {
     font-weight: 350;
+    font-size: 2rem;
   }
 
   h2 {
@@ -1120,8 +1119,8 @@ p.holder {
 
   .fa-bars {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 1.5rem;
+    right: 1.5rem;
     z-index: 10001; 
     width: 3.4375rem;
     height: 3.4375rem;
