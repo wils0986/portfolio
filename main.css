@@ -453,7 +453,7 @@ a.resume {
 
   /* Main header section */
 
-#fullpage, .section, .home {
+#wrapper, .section, .home {
   width: 100%;
   min-height: 100vh; 
   margin: 0;
@@ -782,7 +782,6 @@ color: var(--text-color);
   gap: 0.5rem;
 }        
 
-
 .footer p {
   margin: 0;               
   color: #f7f7f7;
@@ -1071,19 +1070,20 @@ a.resume {
     text-align: right; 
     box-sizing: border-box; 
     right: 1rem;
-    bottom: 16rem;
+    bottom: 17rem;
   }
 
   #holder {
     font-weight: normal;
     position: relative;
     letter-spacing: .15em;
+    left: 1rem;
   }
 
   .typed-text {
     white-space: nowrap;
     font-size: 1.09rem;
-   
+    
   }
 
   h1 {
@@ -1337,7 +1337,7 @@ a.resume {
     padding: 0;
   }
 
- #fullpage {
+ #wrapper {
   position: relative;
   bottom: 2rem;
  }
