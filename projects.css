@@ -526,10 +526,10 @@ html.light-mode {
   }
 
   .content img {
-    width: 100%;
+    padding: 1.25rem 0rem 1.25rem 0rem;
+    display: block;             
+    max-width: 100%;
     transition: transform 0.3s ease-in-out;
-    padding: 1.25rem;
-    margin: 0 auto;
   }
 
   .content img:hover {
@@ -611,199 +611,181 @@ html.light-mode {
   /* /////////////////////////////////////////// */
     /* Responsive Design */
   
-    @media (max-width: 1480px) {
-  
-      h1 {
-        font-size: 2rem;
-        padding-bottom: 0.625rem;
-      }
-    }
+@media (max-width: 1480px) {
 
-  @media (max-width: 768px) {
-
-    .nav-lightmode {
-      display: none;
-    }
-  
-    .projectH1 {
-        font-size: 2rem;
-        font-weight: 350;
-        margin: 0;
-        padding-top: 5rem;
-      }
-    
-      .projectH2 {
-        font-size: 1.6rem;
-      }
-    
-      .section p,
-      .section ul li {
-        font-size: 1rem;
-      }
-
-    .fp-table {
-     justify-content: flex-start;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-      font-weight: 400;
-      padding-left: 1.25rem;
-      padding-right: 1.25rem;
-    }
-  
-    h3 {
-        font-weight: lighter;
-        font-size: 1.2em;
-    }
-
-    p {
-        font-size: 1rem;
-        font-weight: normal;
-    }
-  
-    .header-links {
-      display: none;
-    }
-  
-    .fa-bars {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 10001; 
-      width: 3.4375rem;
-      height: 3.4375rem;
-      font-size: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      color: #2c2c2c;
-      background-color: #f7f7f7;
-      border-radius: 50%;
-      box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.15);
-      transition: opacity 0.3s ease;
-    }
-  
-    body.light-mode .fa-bars {
-      color: #2c2c2c;
-    }
-  
-    body.nav-open .fa-bars {
-      display: none;
-      opacity: 0;
-      pointer-events: none;
-    }
-  
-    .fa-bars:active {
-      background-color: #E7759B;
-    }
-    
-      .nav-header {
-          position: absolute;
-          top: 0;
-          width: 100%;
-          background-color: none;
-        }
-  
-        #logo {
-          display: none;
-        }
-      
-      .header-links ul{
-        display: none;
-      }
-  
-  /* Side nav */
-  
-  .nav-screen {
-    display: block;
-    position: fixed;
-    right: -17.8125rem;
-    top: 0;
-    height: 100%;
-    width: 17.8125rem;
-    z-index: 1500;
+  h1 {
+    font-size: 2rem;
+    padding-bottom: 0.625rem;
   }
+}
 
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-   }
-  
-   ul.myMenu {
-    padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
-   }
-  
-  
-   ul.myMenu li a:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-   }
-  
-  .section {
-    position: relative;
-    z-index: 6000;
-    overflow: visible !important;
-    height: auto !important;
-    padding: 0rem 1.25rem 1.25rem 1.25rem;
-   }
-  
-   a.resume {
+@media (max-width: 768px) {
+
+  .nav-lightmode {
     display: none;
-   }
-  
-   .content {
-    max-width: 80%;
-    margin: 0 auto;
-   }
-  
-   .fp-scrollable .fp-slide:not(.fp-auto-height):not([data-percentage]) {
-    height: auto !important;
-    min-height: 0 !important;
-  }
-  
-  .fp-slide,
-  .fp-tableCell {
-    height: auto !important;
-    min-height: 0 !important;
-    display: block !important; 
-    vertical-align: top !important;
-  }
- 
-   body {
-    position: relative; 
-    right: 0;
-   }
-  
-  .social-links a:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .footer {
-    height: 8.125rem;
-    padding-top: 0.625rem;
-    margin-top: 1.25rem;
-  }
-  
-  .footer p {
-    background-color: #2c2c2c;
-    padding: 1.25rem;
-    margin-top: 0rem;
-    font-size: 0.875rem;
   }
 
-  .project-navigation {
-    flex-direction: column; 
+  .projectH1 {
+      font-size: 2rem;
+      font-weight: 350;
+      margin: 0;
+      padding-top: 5rem;
+    }
+  
+    .projectH2 {
+      font-size: 1.6rem;
+    }
+  
+    .section p,
+    .section ul li {
+      font-size: 1rem;
+    }
+
+  .fp-table {
+    justify-content: flex-start;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  h3 {
+      font-weight: lighter;
+      font-size: 1.2em;
+  }
+
+  p {
+      font-size: 1rem;
+      font-weight: normal;
+  }
+
+  .header-links {
+    display: none;
+  }
+
+  .fa-bars {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10001; 
+    width: 3.4375rem;
+    height: 3.4375rem;
+    font-size: 2rem;
+    display: flex;
     align-items: center;
-    padding-bottom: 1.25rem;
-    margin: 0.625rem;
+    justify-content: center;
+    cursor: pointer;
+    color: #2c2c2c;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    box-shadow: 0 0.125rem 0.375rem rgba(0,0,0,0.15);
+    transition: opacity 0.3s ease;
   }
 
-  .project-navigation a {
-    margin: 0; 
-    width: 100%; 
+  body.light-mode .fa-bars {
+    color: #2c2c2c;
   }
 
+  body.nav-open .fa-bars {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
   }
+
+  .fa-bars:active {
+    background-color: #E7759B;
+  }
+  
+  .nav-header {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-color: none;
+    }
+
+    #logo {
+      display: none;
+    }
+  
+  .header-links ul{
+    display: none;
+  }
+
+/* Side nav */
+
+.nav-screen {
+  display: block;
+  position: fixed;
+  right: -17.8125rem;
+  top: 0;
+  height: 100%;
+  width: 17.8125rem;
+  z-index: 1500;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+  ul.myMenu {
+  padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
+  }
+
+
+  ul.myMenu li a:active {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
+  }
+
+.section {
+  position: relative;
+  z-index: 6000;
+  overflow: visible !important;
+  height: auto !important;
+  padding: 0rem 1.25rem 1.25rem 1.25rem;
+  }
+
+  a.resume {
+  display: none;
+  }
+
+  .content {
+  max-width: 100%;
+  margin: 0 auto;
+  }
+
+  body {
+  position: relative; 
+  right: 0;
+  }
+
+.footer {
+  height: 8.125rem;
+  padding-top: 0.625rem;
+  margin-top: 1.25rem;
+}
+
+.footer p {
+  background-color: #2c2c2c;
+  padding: 1.25rem;
+  margin-top: 0rem;
+  font-size: 0.875rem;
+}
+
+.project-navigation {
+  flex-direction: column; 
+  align-items: center;
+  padding-bottom: 1.25rem;
+  margin: 0.625rem;
+}
+
+.project-navigation a {
+  margin: 0; 
+  width: 100%; 
+}
+
+}

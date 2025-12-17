@@ -245,7 +245,7 @@ $(document).ready(function () {
 
     // Slight delay so layout recalculates
     setTimeout(() => {
-      const offset = -50; // tweak to visually center
+      const offset = -20;
       const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }, 30);
