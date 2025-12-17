@@ -1072,12 +1072,12 @@ a.resume {
     text-align: right; 
     box-sizing: border-box; 
     right: 1rem;
-    bottom: 18rem;
+    bottom: 16rem;
   }
 
 p.holder {
   margin: 0;
-  left: 1.5rem;
+  left: 1.3rem;
 }
 
   #holder {
@@ -1119,8 +1119,8 @@ p.holder {
 
   .fa-bars {
     position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 1rem;
+    right: 1rem;
     z-index: 10001; 
     width: 3.4375rem;
     height: 3.4375rem;
