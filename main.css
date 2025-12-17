@@ -1081,8 +1081,8 @@ a.resume {
   }
 
   .typed-text {
-    white-space: pre-wrap;
-    font-size: 1rem;
+    white-space: nowrap;
+    font-size: 1.09rem;
    
   }
 
