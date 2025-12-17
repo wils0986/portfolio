@@ -1051,7 +1051,6 @@ a.resume {
     top: 0.625rem;
   }
   
-  
   body {
     overflow-x: hidden !important;
   }
@@ -1075,11 +1074,6 @@ a.resume {
     bottom: 16rem;
   }
 
-p.holder {
-  margin: 0;
-  left: 1.3rem;
-}
-
   #holder {
     font-weight: normal;
     position: relative;
@@ -1089,6 +1083,7 @@ p.holder {
   .typed-text {
     white-space: pre-wrap;
     font-size: 1.2rem;
+    left: 3.5rem;
   }
 
   h1 {
@@ -1165,6 +1160,10 @@ p.holder {
     z-index: 400;
     top: -2.2rem;
   }
+
+  .home {
+    min-height: 100vh;
+  } 
   
   .header-links ul{
     display: none;
@@ -1247,34 +1246,6 @@ p.holder {
   .content {
     max-width: 80%;
     margin: 0 auto;
-  }
-
-  .fp-slide,
-  .fp-tableCell {
-    height: auto !important;
-    min-height: 0 !important;
-    display: block !important; 
-    vertical-align: top !important;
-  }
-
-  /* Disable fullPage.js horizontal styling */
-  .fp-slides,
-  .fp-slide {
-    transform: none !important;
-    left: 0 !important;
-    top: 0 !important;
-    width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    float: none !important;
-    position: static !important;
-    opacity: 1 !important;
-  }
-
-  .fp-slidesContainer {
-    display: block !important;
-    width: 100% !important;
-    transform: none !important;
   }
 
   .content-slide {
