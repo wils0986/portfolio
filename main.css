@@ -1196,18 +1196,6 @@ p.holder {
     transition: all 0.2s ease-in-out;
   }
 
-  .fp-controlArrow.fp-prev {
-    display: none;
-    border-width: 1.5625rem 1.5625rem 1.5625rem 0rem; 
-    left: 0.625rem !important;
-  }
-
-  .fp-controlArrow.fp-next {
-    display: none;
-    border-width: 1.5625rem 0rem 1.5625rem 1.5625rem;
-    right: 0.625rem !important;
-  }
-
   .fa-chevron-down {
   display: none;
   }
@@ -1216,6 +1204,10 @@ p.holder {
     max-width: 60%;
     height: auto;
     padding-top: 0.625rem;
+  }
+
+  .container-skillbar {
+    max-width: 80%;
   }
 
   .section {
@@ -1340,12 +1332,12 @@ p.holder {
 
   .contact-form {
     padding: 0rem 0.9375rem 0rem 0.9375rem;
+    min-width: 80%;
+    max-width: 90%;
   }
 
   .form-control {
     border: 0.125rem solid rgba(0, 0, 0, 0.27);
-    max-width: 90%;
-    min-width: 90%;
     height: 3em;
     font-size: 1rem;
     padding: 1em;
