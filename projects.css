@@ -2,7 +2,7 @@
 
 .skip-link {
   position: absolute;
-  top: -2.5rem; /* Hide above viewport */
+  top: -6rem; /* Hide above viewport */
   left: 0;
   background: #2c2c2c;
   color: #f7f7f7;
@@ -16,7 +16,7 @@
 }
 
 .skip-link:focus {
-  top: 0.625rem;
+  top: 5rem;
   outline: 0.125rem solid #f7f7f7;
   outline-offset: 0.5rem;
   box-shadow: 0 0 0.5rem rgba(255,255,255,0.7);
@@ -140,7 +140,6 @@ body {
       cursor: pointer;
     }
     
-  
     .fa-times:active {
       color: #E7759B;
       transition: all 0.2s ease-in-out;
@@ -166,6 +165,11 @@ body {
     color: var(--nav-text);
     padding: 0.9375rem;
     font-size: 1rem;
+  }
+  
+  .header-links a {
+    color: var(--nav-text, #2c2c2c);
+    transition: color 0.3s ease;
   }
   
   .header-links a:hover {
@@ -515,7 +519,7 @@ html.light-mode {
   }
 
   .content img {
-    width: 90%;
+    width: 100%;
     transition: transform 0.3s ease-in-out;
     padding: 1.25rem;
     margin: 0 auto;
@@ -572,8 +576,8 @@ html.light-mode {
     justify-content: space-between;
     margin-top: 1.875rem;
     margin-bottom: 2.5rem;
-    flex-wrap: wrap; /* allows buttons to wrap on small screens */
-    gap: 1rem; /* space between buttons on wrap */
+    flex-wrap: wrap; 
+    gap: 1rem;
   }
   
   .project-navigation a {
@@ -586,10 +590,10 @@ html.light-mode {
     border: 0.125rem solid #e7759b;
     border-radius: 0.25rem;
     transition: background-color 0.3s, color 0.3s;
-    flex: 1 1 auto; /* buttons take available space */
-    text-align: center; /* centers text if they stretch */
-    min-width: 7.5rem; /* ensures buttons aren’t too small */
-    max-width: 12.5rem; /* optional, for bigger screens */
+    flex: 1 1 auto; 
+    text-align: center; 
+    min-width: 7.5rem;
+    max-width: 12.5rem; 
   }
   
   .project-navigation a:hover {

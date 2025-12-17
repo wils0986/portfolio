@@ -8,59 +8,57 @@
         <link rel="preload" as="image" href="images/yoshi.JPG">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <link rel="stylesheet" href="fullpage.css">
         <link rel="stylesheet" href="projects.css">
         <title>Jenny Wilson Designs</title>
     </head>
     <body>
         <a href="#about" class="skip-link">Skip to main content</a>
-        <div class="nav-header" role="navigation" aria-label="Main navigation">
-            <div class="nav-brand">
-                <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
-                <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank">Résumé</a>
-            </div>
-            <div class="nav-lightmode">
-                <label class="switch" aria-label="Toggle light mode">
-                    <input type="checkbox" id="lightModeToggleHeader">
-                    <span class="slider round"></span>
-                </label>
-            </div>
-            <div class="header-links">
-                <ul class="myMenu">
-                    <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
-                    <li data-menuanchor="about"><a href="index.html#about">About</a></li>
-                    <li data-menuanchor="portfolio"><a href="index.html#portfolio">Portfolio</a></li>
-                    <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
-        <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
-            <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
-            <div class="nav-container">
-                <div class="nav-links">
-                    <ul class="myMenu">
-                        <li data-menuanchor="home"><a href="index.html#home">Home</a></li>
-                        <li data-menuanchor="about"><a href="index.html#about">About</a></li>
-                        <li data-menuanchor="portfolio"><a href="index.html#portfolio">Portfolio</a></li>
-                        <li data-menuanchor="contact"><a href="index.html#contact">Contact</a></li>
-                        <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="_blank">Résumé</a></li>
-                    </ul>
-                    <div class="nav-lightmode-mobile">
-                        <label class="switch" aria-label="Toggle light mode">
-                            <input type="checkbox" id="lightModeToggleSidebar">
-                            <span class="slider round"></span>
-                        </label>
-                    </div>
-
-                    <div class-logo>
-                        <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="nav-header" role="navigation" aria-label="Main navigation">
+      <div class="nav-brand">
+          <img src="images/JW_logo.svg" id="logo" alt="The letters 'J' and 'W' coloured with pink">
+          <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank">Résumé</a>
+      </div>
+      <div class="nav-lightmode">
+          <label class="switch" aria-label="Toggle light mode">
+              <input type="checkbox" id="lightModeToggleHeader">
+              <span class="slider round"></span>
+          </label>
+      </div>
+      <div class="header-links">
+          <ul class="myMenu">
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#portfolio">Portfolio</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+      </div>
+    </div>
+    <i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
+    <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
+      <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
+      <div class="nav-container">
+          <div class="nav-links">
+              <ul class="myMenu">
+                  <li><a href="index.html#home">Home</a></li>
+                  <li><a href="index.html#about">About</a></li>
+                  <li><a href="index.html#portfolio">Portfolio</a></li>
+                  <li><a href="index.html#contact">Contact</a></li>
+                  <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="_blank">Résumé</a></li>
+              </ul>
+              <div class="nav-lightmode-mobile">
+                  <label class="switch" aria-label="Toggle light mode">
+                      <input type="checkbox" id="lightModeToggleSidebar">
+                      <span class="slider round"></span>
+                  </label>
+              </div>
+              <div class-logo>
+                  <img src="images/JW_logo.svg" id="mobileLogo" alt="Initials 'J' and 'W' coloured pink">
+              </div>
+          </div>
+      </div>
+    </div>
         <div id="fullpage">
-        <div class="section" data-anchor="atlas">
+        <div class="section" id="atlas">
             <div class="content">
                 <h1 class="projectH1">The Atlas of Canada Website Redesign</h1>
                 <h3><em>Government of Canada - Natural Resources Canada</em></h3>
@@ -72,11 +70,11 @@
                 <h2 class="projectH2">Problem</h2>
                 <p>The previous Atlas website had an outdated layout, limited accessibility compliance, and lacked visual identity. Users struggled to find information efficiently, and the site no longer met evolving federal identity and accessibility standards.</p>
                 <a href="https://webarchiveweb.wayback.bac-lac.canada.ca/web/20231130132453/https://natural-resources.canada.ca/maps-tools-and-publications/maps/atlas-canada/10784" target="_blank">
-                    <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/atlas_old_mockup.png" alt="The Atlas of Canada Homepage Mockups">
+                    <img src="images/atlas_old_mockup.png" alt="The Atlas of Canada Homepage Mockups">
                 </a>
             </div>
         </div>
-        <div class="section" data-anchor="process-outcome">
+        <div class="section" id="process-outcome">
             <div class="content">
                 <h2 class="projectH2">Process and Outcome</h2>
                 <p>I collaborated with UX, content, and development teams to enhance the Atlas's structure, presentation, and launch strategy.</p>
@@ -93,7 +91,7 @@
                     <li>Increased visibility and engagement through coordinated launch materials</li>
                 </ul>
                 <a href="https://natural-resources.canada.ca/maps-tools-publications/maps/atlas-canada/" target="_blank">
-                    <img class="wow fadeInUp" data-wow-delay="0.2s" src="images/atlas_redesign_mockup.png" alt="The Atlas of Canada Homepage Mockups">
+                    <img src="images/atlas_redesign_mockup.png" alt="The Atlas of Canada Homepage Mockups">
                 </a>
                 <h2 class="projectH2">Reflection</h2>
                 <p>This project strengthened my ability to collaborate across multi-disciplinary teams and design for both users and stakeholders. It also taught me how design can modernize legacy products while preserving their historical character.</p>
@@ -118,7 +116,6 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.24/fullpage.min.js"></script>
         <script src="script.js"></script>
     </body>
 </html>
