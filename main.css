@@ -955,7 +955,7 @@ a.resume {
   }
 
   .opaque-bg {
-    display: none;
+    display: block;
     position: relative;
     width: 90%;       
     text-align: right; 
