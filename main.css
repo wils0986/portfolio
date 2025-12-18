@@ -1170,9 +1170,13 @@ a.resume {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    width: 100%;
     max-width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
     padding-top: 3rem;
     bottom: 3rem;
+    overflow-x: hidden;
   }
 
   .content-slide .slide {
