@@ -488,7 +488,7 @@ a.resume {
 /* About section */
 
 .container-skillbar {
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column; 
@@ -1186,7 +1186,7 @@ div#about.section {
   }
 
   .content {
-    max-width: 90%;
+    max-width: 98%;
     margin: 0 auto;
   }
 
@@ -1245,8 +1245,7 @@ div#about.section {
 
   .contact-form {
     padding: 0rem 0.9375rem 0rem 0.9375rem;
-    min-width: 80%;
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .form-control {
@@ -1255,6 +1254,7 @@ div#about.section {
     font-size: 1rem;
     padding: 1em;
     margin: 0.5em 0 2em 0;
+    max-width: 80%;
   }
 
   .social-links {
