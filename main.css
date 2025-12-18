@@ -565,6 +565,9 @@ a.resume {
   max-width: 70%;
   display: inline-block; 
   text-align: center;   
+  position: relative;
+  padding-top: 0rem;
+  bottom: 4rem;
 }
 
 .content-slide img {
@@ -582,7 +585,7 @@ a.resume {
 [data-anchor="portfolio"] .prev,
 [data-anchor="portfolio"] .next {
   position: absolute;
-  top: 50%;
+  top: 45%;
   background-color: var(--bg-color);
   color: (var(--text-color));
   font-weight: 600;
@@ -1189,6 +1192,8 @@ div#about.section {
     flex-direction: column;
     box-sizing: border-box;
     max-width: 80%;
+    padding-top: 3rem;
+    bottom: 3rem;
   }
 
   .content-slide .slide {
