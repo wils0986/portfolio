@@ -84,10 +84,9 @@ p {
   position: relative;
   z-index: 12;
   border-left: 2px solid #e7759b;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
+  padding: 0rem 1.25rem 0rem 1.25rem;
   margin: 0 auto;
-  max-width: 70%;
+  max-width: 80%;
   text-align: left;
 }
 
@@ -489,165 +488,94 @@ a.resume {
 /* About section */
 
 .container-skillbar {
-  max-width: 70%;
-  padding-top: 1.875rem;
+  max-width: 80%;
   margin: 0 auto;
-  height: auto;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column; 
+  gap: 2rem;
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+.skillbar-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .skillbar {
-  position: relative;
-  display: block;
-  margin-bottom: 0.9375rem;
-  background: #efefef;
-  height: 1.875rem;
-  border-radius: 0.25rem;
-  transition: 0.4s linear;
-  transition-property: width, background-color;
+  display: flex;
+  flex-direction: column;
 }
 
 .skillbar-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #2c2c2c;
-  font-size: 1.1em;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
-}
-
-.skillbar-title span {
-  display: block;
-  padding: 0 1.25rem;
-  height: 1.875rem;
-  line-height: 1.875rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 450;
   font-family: 'Segoe UI', sans-serif;
-  font-weight: 500;
-  border-top-left-radius: 0.25rem;
-  border-bottom-left-radius: 0.25rem;
+  text-align: left;
 }
 
 .skillbar-bar {
-  height: 1.875rem;
-  width: 0rem;
-  transition: width 2.5s ease;
+  height: 1.5rem;
+  width: 0;
+  background: #efefef;
   border-radius: 0.25rem;
+  transition: width 2.5s ease;
 }
 
 .skill-bar-percent {
-  position: absolute;
-  right: 0.625rem;
-  top: 0;
-  font-size: 0.6875rem;
-  height: 1.875rem;
-  line-height: 1.875rem;
-  color: rgba(0, 0, 0, 0.5);
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  color: rgba(0,0,0,0.5);
+  text-align: right;
 }
 
-/* Skillbar gradient */
+/* Desktop: side-by-side columns */
+@media (min-width: 768px) {
+  .container-skillbar {
+    flex-direction: row;
+    gap: 2.5rem;
+    width: 80%;
+  }
 
-#illustrator { 
-  background: #E7759B; 
-} 
+  .skillbar-column {
+    flex: 1;
+  }
 
-#canva { 
-  background: #E97AA0; 
-}
+  .skillbar-bar {
+    height: 1.75rem;
+    width: 100%;
+    background: #E7759B;
+    border-radius: 0.25rem;
+    transition: width 2.5s ease;
+  }
 
-#premiere { 
-  background: #EB7FA5; 
-}
+  .skillbar-title {
+    font-size: 1.1rem;
+  }
 
-#wordpress { 
-  background: #ED84AA; 
-}
-
-#html { 
-  background: #EF89AE; 
-}
-
-#microsoft { 
-  background: #F08EB3; 
-}
-
-#photoshop { 
-  background: #F292B8; 
-}
-
-#g4a { 
-  background: #F497BD; 
-}
-
-#indesign { 
-  background: #F69CC2; 
-}
-
-#figma { 
-  background: #F7A1C7; 
-}
-
-/* Light Mode Overrides */
-body.light-mode #illustrator { 
-  background: #2C2C2C; 
-} 
-
-body.light-mode #canva { 
-  background: #323232; 
-}
-
-body.light-mode #premiere { 
-  background: #383838; 
-}
-
-body.light-mode #wordpress { 
-  background: #3E3E3E; 
-}
-
-body.light-mode #html { 
-  background: #444444; 
-}
-
-body.light-mode #microsoft { 
-  background: #4A4A4A; 
-}
-
-body.light-mode #photoshop { 
-  background: #505050; 
-}
-
-body.light-mode #g4a { 
-  background: #565656; 
-}
-
-body.light-mode #indesign { 
-  background: #5C5C5C; 
-}
-
-body.light-mode #figma { 
-  background: #626262; 
 }
 
 /* Portfolio section */
 
 .content {
   margin: 0 auto;
-  max-width: 60%;
+  max-width: 74%;
   position: relative;
   text-align: center; 
 }
 
 .content-slide {
   margin: 0 auto;      
-  max-width: 80%;
+  max-width: 70%;
   display: inline-block; 
   text-align: center;   
 }
 
 .content-slide img {
-  display: block;       
+  display: block;  
+  max-width: 70%;     
   margin: 0 auto;       
-  max-width: 60%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -696,7 +624,7 @@ body.light-mode #figma {
 /* Input field styles */
 
 .contact-form {
-  max-width: 74%;
+  max-width: 80%;
   margin: 0 auto;
 }
 
@@ -979,6 +907,7 @@ a.resume {
   max-width: 25%;
   transform: translateX(-100%);
   transition: transform 1s ease, opacity 1s ease;
+  padding-top: 1rem;
 }
 
 .cat.slide-in {
@@ -1085,6 +1014,10 @@ a.resume {
     
   }
 
+div#about.section {
+  padding-top: 2rem;
+}
+
   h1 {
     font-weight: 350;
     font-size: 2rem;
@@ -1105,6 +1038,7 @@ a.resume {
   p {
       font-size: 1rem;
       font-weight: normal;
+      text-align: left;
   }
 
   .header-links {
@@ -1201,11 +1135,20 @@ a.resume {
   .cat {
     max-width: 60%;
     height: auto;
-    padding-top: 0.625rem;
+    padding: 2rem 0rem 0rem 0rem;
   }
 
   .container-skillbar {
-    max-width: 80%;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .skillbar-bar {
+    height: 1.2rem;
+    width: 0;
+    background-color: #E7759B;
+    border-radius: 0.25rem;
+    transition: width 2.5s ease;
   }
 
   .section {
@@ -1243,7 +1186,7 @@ a.resume {
   }
 
   .content {
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
   }
 
