@@ -537,7 +537,7 @@ a.resume {
   text-align: center;   
   position: relative;
   padding-top: 0rem;
-  bottom: 4rem;
+  
 }
 
 .content-slide img {
@@ -555,11 +555,10 @@ a.resume {
 [data-anchor="portfolio"] .prev,
 [data-anchor="portfolio"] .next {
   position: absolute;
-  top: 45%;
+  top: 50%;
   background-color: var(--bg-color);
   color: (var(--text-color));
   font-weight: 600;
-  padding: 0.5rem 1rem;
   margin-left: 6.25rem;
   margin-right: 6.25rem;
   border: 0.125rem solid #e7759b;

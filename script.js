@@ -260,11 +260,25 @@ $(document).ready(function () {
 
     // Slight delay so layout recalculates
     setTimeout(() => {
-      const offset = 30;
+      const offset = 60;
       const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
       window.scrollTo({ top, behavior: 'smooth' });
     }, 30);
   });
+
+  // Desktop nav portfolio link
+$('.header-links a[href="#portfolio"]').on('click', function(e) {
+  e.preventDefault();
+  const target = document.querySelector('#portfolio');
+  if (!target) return;
+
+  // Slight delay so layout recalculates
+  setTimeout(() => {
+    const offset = 10; // bigger offset for desktop
+    const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  }, 30);
+});
 });
 
 // Portfolio Carousel
