@@ -159,7 +159,7 @@ p.holder {
   text-align: right;
   position: relative;
   border: none;
-  right: 2.2rem;
+  right: 0.4rem;
   padding-top: 1rem;
 }
 
@@ -929,7 +929,7 @@ a.resume {
     min-height: 2em;
     visibility: hidden;
     color: #f7f7f7;
-    margin-left: 5rem;
+    margin-left: 0rem;
   }
   
   #holder {
