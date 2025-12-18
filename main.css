@@ -957,12 +957,12 @@ a.resume {
   .opaque-bg {
     display: block;
     position: relative;
-    max-width: 25rem; 
-    width: 96%;       
+    width: 90%;       
     text-align: right; 
     box-sizing: border-box; 
-    left: 1rem;
+    left: 0rem;
     bottom: 17rem;
+    padding-right: 0;
   }
 
   #holder {
@@ -974,7 +974,7 @@ a.resume {
   .typed-text {
     white-space: nowrap;
     font-size: 1.09rem;
-    left: 2.1rem;
+    left: 2.3rem;
   }
 
   div#about.section {
