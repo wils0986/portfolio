@@ -971,10 +971,18 @@ a.resume {
     letter-spacing: .15em;
   }
 
+  p.holder {
+    min-height: 2em;
+    visibility: hidden;
+    color: #f7f7f7;
+    margin: 0;
+    padding: 1rem 0rem 0rem 0rem;
+  }
+  
   .typed-text {
     white-space: nowrap;
-    font-size: 1.09rem;
-    left: 2.3rem;
+    font-size: 1.05rem;
+    left: 3.4rem;
   }
 
   div#about.section {
