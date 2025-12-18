@@ -624,7 +624,7 @@ a.resume {
 /* Input field styles */
 
 .contact-form {
-  max-width: 80%;
+  max-width: 85%;
   margin: 0 auto;
 }
 
@@ -1211,7 +1211,7 @@ div#about.section {
     display: block;
     width: 80%;           
     height: 0.0625rem;           
-    background-color: var(--text-color); 
+    background-color: #E7759B; 
     margin: 0.625rem auto 0;   
   }
 
@@ -1245,7 +1245,7 @@ div#about.section {
 
   .contact-form {
     padding: 0rem 0.9375rem 0rem 0.9375rem;
-    max-width: 80%;
+    max-width: 85%;
   }
 
   .form-control {
