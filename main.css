@@ -1174,8 +1174,7 @@ a.resume {
     max-width: 80vw;
     margin: 0 auto;
     box-sizing: border-box;
-    padding-top: 3rem;
-    bottom: 3rem;
+    padding-top: 6rem;
     overflow-x: hidden;
   }
 
@@ -1188,8 +1187,7 @@ a.resume {
     width: 100% !important;
     height: auto !important;
     margin: 0 auto;
-    padding-top: 3.4375rem;
-    padding-bottom: 3.4375rem;
+    padding-top: 6rem;
     box-sizing: border-box;
   }
 
