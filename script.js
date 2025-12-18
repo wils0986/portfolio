@@ -201,7 +201,21 @@ $(document).ready(function () {
         const target = document.querySelector(href);
         if (target) {
           let blockValue = 'start';
-          if (href === '#about' || href === '#portfolio') blockValue = 'center';
+          if (href === '#about') {
+            if (window.innerWidth <= 768) {
+              const yOffset = -10;
+              const y =
+                target.getBoundingClientRect().top +
+                window.pageYOffset +
+                yOffset;
+          
+              window.scrollTo({ top: y, behavior: 'smooth' });
+              return;
+            } else {
+              blockValue = 'center';
+            }
+          }
+          
           if (href === '#contact') blockValue = 'end';
           target.scrollIntoView({ behavior: 'smooth', block: blockValue });
         }
@@ -210,6 +224,7 @@ $(document).ready(function () {
           $('body').removeClass('nav-open');
         }
       } 
+
       // Cross-page link to homepage anchor
       else if (href.includes('index.html#')) {
         const url = new URL(href, window.location.origin);

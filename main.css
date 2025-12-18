@@ -497,7 +497,6 @@ a.resume {
 .skillbar-column {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .skillbar {
@@ -900,7 +899,7 @@ a.resume {
 .cat {
   display: block;
   opacity: 0;
-  max-width: 25%;
+  max-width: 20%;
   transform: translateX(-100%);
   transition: transform 1s ease, opacity 1s ease;
   padding-top: 1rem;
@@ -1128,7 +1127,7 @@ div#about.section {
   }
 
   .cat {
-    max-width: 60%;
+    max-width: 50%;
     height: auto;
     padding: 2rem 0rem 0rem 0rem;
   }
