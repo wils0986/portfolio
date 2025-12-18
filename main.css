@@ -889,9 +889,10 @@ a.resume {
 /* Responsive styling */
 @media (max-width: 1480px) {
   h1 {
-    font-size: clamp(2.25rem, 5vw, 1.4em);
+    font-size: 2.55rem;
     padding-bottom: 0.625rem;
     font-weight: lighter;
+    right: 2.5rem;
   }
   
   p.holder {
@@ -928,8 +929,8 @@ a.resume {
   }
 
   .typed-text {
-    left: 4rem;
-    white-space: pre-wrap;
+    left: 3.75rem;
+    white-space: nowrap;
     font-size: 1.25rem;
   }
 }
@@ -960,7 +961,7 @@ a.resume {
     width: 96%;       
     text-align: right; 
     box-sizing: border-box; 
-    right: 1.5rem;
+    left: 1rem;
     bottom: 17rem;
   }
 
@@ -968,12 +969,12 @@ a.resume {
     font-weight: normal;
     position: relative;
     letter-spacing: .15em;
-    left: 0.5rem;
   }
 
   .typed-text {
     white-space: nowrap;
     font-size: 1.09rem;
+    left: 2.1rem;
   }
 
   div#about.section {
