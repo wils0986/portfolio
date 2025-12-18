@@ -66,7 +66,7 @@ h1 {
 
 h2 {
   font-weight: lighter;
-  color: #E7759B;
+  color: var(--text-color);
   font-size: 2.75em;
   text-align: center;
 }
@@ -661,7 +661,7 @@ body.light-mode #figma {
   position: absolute;
   top: 50%;
   background-color: var(--bg-color);
-  color: #e7759b;
+  color: (var(--text-color));
   font-weight: 600;
   padding: 0.5rem 1rem;
   margin-left: 6.25rem;
@@ -678,7 +678,6 @@ body.light-mode #figma {
 [data-anchor="portfolio"] .prev:hover,
 [data-anchor="portfolio"] .next:hover {
   background-color: #E7759B;
-  color: var(--bg-color);
 }
 
 /* Position left/right */
@@ -759,7 +758,7 @@ color: var(--text-color);
   border: 0.125rem solid #E7759B;
   text-align: center;
   font-size: 1em;
-  color: #E7759B;
+  color: var(--text-color);
   background-color: var(--bg-color);
   text-decoration: none;
   font-family: 'Segoe UI', sans-serif;

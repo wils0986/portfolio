@@ -74,7 +74,7 @@ body {
 
     h2 {
       font-weight: lighter;
-      color: #E7759B;
+      color: var(--text-color);
       font-size: 2.75em;
     }
   
@@ -540,16 +540,9 @@ html.light-mode {
   .projectH1 {
     font-size: 3.25rem;
     font-weight: lighter;
-    color: #e7759b;
+    color: var(--text-color);
     margin-bottom: 1rem;
     padding-top: 2.5rem;
-  }
-  
-  .projectH2 {
-    font-size: 2rem;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    color: var(--text-color);
   }
   
   /* Paragraphs */
@@ -562,7 +555,7 @@ html.light-mode {
   /* Highlighted text */
   .highlight {
     font-weight: 600;
-    color: #E7759B;
+    color: var(--text-color);
   }
   
   /* Lists */
@@ -589,7 +582,7 @@ html.light-mode {
   
   .project-navigation a {
     text-decoration: none;
-    color: #e7759b;
+    color: var(--text-color);
     font-weight: 600;
     padding: 0.5rem 1rem;
     margin-left: 6.25rem;
@@ -605,7 +598,6 @@ html.light-mode {
   
   .project-navigation a:hover {
     background-color: #e7759b;
-    color: var(--bg-color);
   }
 
   /* /////////////////////////////////////////// */
@@ -734,7 +726,6 @@ html.light-mode {
   ul.myMenu {
   padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
   }
-
 
   ul.myMenu li a:active {
   color: #E7759B;
