@@ -488,7 +488,7 @@ a.resume {
 /* About section */
 
 .container-skillbar {
-  max-width: 85%;
+  max-width: 82%;
   margin: 0 auto;
   display: flex;
   flex-direction: column; 
@@ -624,7 +624,7 @@ a.resume {
 /* Input field styles */
 
 .contact-form {
-  max-width: 85%;
+  max-width: 82%;
   margin: 0 auto;
 }
 
@@ -1245,7 +1245,7 @@ div#about.section {
 
   .contact-form {
     padding: 0rem 0.9375rem 0rem 0.9375rem;
-    max-width: 85%;
+    max-width: 82%;
   }
 
   .form-control {
