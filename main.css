@@ -997,7 +997,7 @@ a.resume {
     width: 96%;       
     text-align: right; 
     box-sizing: border-box; 
-    right: 1rem;
+    right: 1.5rem;
     bottom: 17rem;
   }
 
@@ -1005,13 +1005,12 @@ a.resume {
     font-weight: normal;
     position: relative;
     letter-spacing: .15em;
-    left: 1rem;
+    left: 0.4rem;
   }
 
   .typed-text {
     white-space: nowrap;
     font-size: 1.09rem;
-    
   }
 
 div#about.section {
