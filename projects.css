@@ -54,6 +54,11 @@ body {
     transition: color 0.3s ease;
   }
 
+  .project-img {
+    display: flex;
+    justify-content: center;
+  }
+  
     h3 {
         font-weight: lighter;
         font-size: 1.35em;
@@ -528,7 +533,7 @@ html.light-mode {
   .content img {
     padding: 1.25rem 0rem 1.25rem 0rem;
     display: block;             
-    max-width: 100%;
+    max-width: 98%;
     transition: transform 0.3s ease-in-out;
   }
 

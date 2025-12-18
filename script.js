@@ -97,7 +97,7 @@ $(document).ready(function () {
       skillbarsAnimated = true;
       catAnimated = true;
     }
-  }
+  }  
 
   function resetAboutAnimations() {
     skillbarsAnimated = false;

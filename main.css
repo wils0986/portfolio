@@ -69,6 +69,8 @@ h2 {
   color: var(--text-color);
   font-size: 2.75em;
   text-align: center;
+  position: relative;
+  z-index: 9999;
 }
 
 h3 {
@@ -484,53 +486,64 @@ a.resume {
 }
 
 /* About section */
-
 .container-skillbar {
-  max-width: 82%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column; 
-  gap: 2rem;
-  padding: 2rem 0rem 2rem 0rem;
+  gap: 1rem;
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
 .skillbar-column {
   display: flex;
   flex-direction: column;
+  gap: 0.75rem;
 }
 
 .skillbar {
-  display: flex;
-  flex-direction: column;
-}
-
-.skillbar-title {
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: 450;
-  text-align: left;
+  position: relative; 
+  display: block; 
+  margin-bottom: 0rem; 
+  background: #e6e6e6; 
+  height: 1.25rem; 
+  border-radius: 0.25rem; 
+  overflow: hidden;
 }
 
 .skillbar-bar {
-  height: 100%;
-  width: 0;
-  background-color: #e7759b;
+  height: 100%; 
+  width: 0; 
+  background-color: #e7759b; 
   border-radius: 0.25rem;
   transition: width 2.5s ease;
+  position: relative;
+}
+
+.skillbar-title {
+  text-align: left;
+  color: var(--text-color);
+  position: relative;
+  top: 0.5rem;
 }
 
 .skill-bar-percent {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  color: var(--text-color);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  line-height: 1.2rem;
+  padding: 0 1rem;
+  right: -0.5rem;
   text-align: right;
+  color: #2c2c2c;
+  font-size: 0.85rem;
 }
 
 /* Desktop: side-by-side columns */
 @media (min-width: 768px) {
   .container-skillbar {
     flex-direction: row;
-    gap: 2.5rem;
+    gap: 4rem;
     width: 80%;
   }
 
@@ -538,21 +551,17 @@ a.resume {
     flex: 1;
   }
 
-  .skillbar-bar {
-    height: 1.75rem;
-    width: 100%;
-    background: #E7759B;
-    border-radius: 0.25rem;
-    transition: width 2.5s ease;
+  .skillbar {
+    height: 1.875rem;
   }
 
-  .skillbar-title {
-    font-size: 1.1rem;
+  .skill-bar-percent {
+    line-height: 1.875;
+    font-size: 1rem;
   }
 }
 
 /* Portfolio section */
-
 .content {
   margin: 0 auto;
   max-width: 74%;
@@ -572,7 +581,7 @@ a.resume {
 
 .content-slide img {
   display: block;  
-  max-width: 70%;     
+  max-width: 65%;     
   margin: 0 auto;       
   transition: transform 0.3s ease-in-out;
 }
@@ -624,6 +633,7 @@ a.resume {
 .contact-form {
   max-width: 82%;
   margin: 0 auto;
+  box-sizing:border-box;
 }
 
 .form-control {
@@ -905,13 +915,16 @@ a.resume {
   max-width: 20%;
   transform: translateX(-100%);
   transition: transform 1s ease, opacity 1s ease;
-  padding-top: 1rem;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
 .cat.slide-in {
   opacity: 1;
   transform: translateX(0);
   margin: 0 auto;
+  width: 100%;
+  max-width: 23%;
+  min-width: 15.625rem;
 }
 
 /* ///////////////////////////////////// */
@@ -1025,6 +1038,7 @@ div#about.section {
     font-weight: 400;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+    z-index: 0;
   }
 
   h3 {
@@ -1130,22 +1144,16 @@ div#about.section {
   }
 
   .cat {
-    max-width: 50%;
     height: auto;
     padding: 2rem 0rem 0rem 0rem;
   }
 
-  .container-skillbar {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  .skillbar-bar {
-    height: 1.2rem;
-    width: 0;
-    background-color: #E7759B;
-    border-radius: 0.25rem;
-    transition: width 2.5s ease;
+  .cat.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+    margin: 0 auto;
+    width: 100%;
+    min-width: 50%;
   }
 
   .section {
@@ -1243,28 +1251,21 @@ div#about.section {
   }
 
   .contact-form {
-    padding: 0rem 0.9375rem 0rem 0.9375rem;
-    max-width: 85%;
+    padding: 0 0.9375rem;
+    max-width: 90%;
+    margin: 0 auto; /* center the form */
   }
-
+  
   .form-control {
+    width: 100%;
+    box-sizing: border-box;
     border: 0.125rem solid rgba(0, 0, 0, 0.27);
     height: 3em;
     font-size: 1rem;
     padding: 1em;
     margin: 0.5em 0 2em 0;
-    max-width: 80%;
   }
-
-  .social-links {
-    background-color: #2c2c2c;
-  }
-
-  .social-links a:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-  }
-
+  
   .footer p {
     background-color: #2c2c2c;
     padding: 1.25rem;
