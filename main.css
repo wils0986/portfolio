@@ -1,8 +1,7 @@
-/* Root styling */
-
+/* Skip link */
 .skip-link {
   position: absolute;
-  top: -6rem; /* Hide above viewport */
+  top: -6rem;
   left: 0;
   background: #2c2c2c;
   color: #f7f7f7;
@@ -22,6 +21,7 @@
   box-shadow: 0 0 0.5rem rgba(255,255,255,0.7);
 }
 
+/* General styles */
 html, body {
   width: 100%;
   height: 100%;
@@ -99,7 +99,6 @@ p {
 }
 
 /* Fade in Jenny Wilson */
-
 .main-text {
   opacity: 0;
   animation-name: fadeIn;
@@ -110,7 +109,6 @@ p {
 }
 
 /* Slide in slash + Designs */
-
 .slide-part {
   display: inline-flex;
   opacity: 0;
@@ -123,14 +121,12 @@ p {
 }
 
 /* Pink line styling */
-
 .pink {
   color: #E7759B;
   margin: 0 0.1em;
 }
   
 /* Keyframes */
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -145,7 +141,6 @@ p {
 }
   
 /* Typewriter styling */
-
 #holder {
   white-space: nowrap;
   font-size: 1.5em;
@@ -154,7 +149,6 @@ p {
 }
 
 p.holder {
-  /* Reserve enough height and keep it invisible initially */
   min-height: 2em;
   visibility: hidden;
   color: #f7f7f7;
@@ -172,7 +166,6 @@ p.holder {
   position: relative;
 }
 
-/* Cursor only shows if this class is added */
 .cursor::after {
   content: "|";
   animation: blink 2s step-start infinite;
@@ -183,7 +176,7 @@ p.holder {
   25%, 75% { opacity: 0; }
 }
   
-/* Add offset for sections */
+/* Offset for sections */
 .home, #about, #portfolio, #contact {
   scroll-margin-top: 100px; 
   scroll-margin-bottom: 100px;
@@ -320,8 +313,7 @@ p.holder {
   transition: all 0.2s ease-in-out;
 }
 
-/* Dark/Light Mode Toggle Switch */
-
+/* Dark/Light Mode */
 .switch {
   position: relative;
   display: inline-block;
@@ -381,9 +373,8 @@ input:checked + .slider:before {
   top: 5.625rem;
 }
 
-/* Dark Mode CSS Variables */
+/* Dark Mode colours*/
 :root {
-  /* Default: Dark Mode */
   --bg-color: #010101;
   --text-color: #f5f5f5;
   --link-color: #f5f5f5;
@@ -391,7 +382,7 @@ input:checked + .slider:before {
   --nav-text: #f5f5f5;
 }
 
-/* Light Mode Overrides */
+/* Light Mode colours */
 html.light-mode {
   --bg-color: #f5f5f5;
   --text-color: #2c2c2c;
@@ -400,7 +391,6 @@ html.light-mode {
   --nav-text: #2c2c2c;
 }
 
-/* Navigation backgrounds */
 .nav-header {
   position: fixed;
   top: 0;
@@ -421,10 +411,6 @@ html.light-mode {
   position: relative;
   top: 6.25rem;
   left: 0rem;
-}
-
-#fp-nav ul li .fp-tooltip {
-  color: #2c2c2c !important;
 }
 
  /* Expanding border effect */
@@ -452,7 +438,7 @@ a.resume {
   position: relative;    
 }
 
-  /* Main header section */
+/* Main header section */
 #wrapper, .section, .home {
   width: 100%;
   min-height: 100vh; 
@@ -488,17 +474,19 @@ a.resume {
 /* About section */
 .container-skillbar {
   display: flex;
-  flex-direction: column; 
-  gap: 1rem;
+  flex-direction: row;
+  gap: 4rem;
   max-width: 85%;
   margin: 0 auto;
   padding: 2rem 0;
+  width: 80%;
 }
 
 .skillbar-column {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  flex: 1;
 }
 
 .skillbar {
@@ -506,7 +494,7 @@ a.resume {
   display: block; 
   margin-bottom: 0rem; 
   background: #e6e6e6; 
-  height: 1.25rem; 
+  height: 1.875rem; 
   border-radius: 0.25rem; 
   overflow: hidden;
 }
@@ -531,34 +519,12 @@ a.resume {
   position: absolute;
   top: 0;
   height: 100%;
-  line-height: 1.2rem;
+  line-height: 1.875rem;
   padding: 0 1rem;
   right: -0.5rem;
   text-align: right;
   color: #2c2c2c;
-  font-size: 0.85rem;
-}
-
-/* Desktop: side-by-side columns */
-@media (min-width: 768px) {
-  .container-skillbar {
-    flex-direction: row;
-    gap: 4rem;
-    width: 80%;
-  }
-
-  .skillbar-column {
-    flex: 1;
-  }
-
-  .skillbar {
-    height: 1.875rem;
-  }
-
-  .skill-bar-percent {
-    line-height: 1.875;
-    font-size: 1rem;
-  }
+  font-size: 1rem;
 }
 
 /* Portfolio section */
@@ -610,12 +576,12 @@ a.resume {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Portfolio buttons */
 [data-anchor="portfolio"] .prev:hover,
 [data-anchor="portfolio"] .next:hover {
   background-color: #E7759B;
 }
 
-/* Position left/right */
 [data-anchor="portfolio"] .prev {
   left: 4rem;
 }
@@ -624,12 +590,7 @@ a.resume {
   right: 4rem;
 }
 
-#fp-nav ul li a {
-  display: none !important;
-}
-
 /* Input field styles */
-
 .contact-form {
   max-width: 82%;
   margin: 0 auto;
@@ -735,7 +696,6 @@ color: var(--text-color);
 }
 
 /* Loading screen animation */
-
 .spinner {
   position: fixed;
   width: 100%;
@@ -827,7 +787,6 @@ a.resume {
 }
 
 /* Footer heart pulses on .submit click */
-
 .pink.heart {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -848,7 +807,6 @@ a.resume {
 }
 
 /* Plane flies on .submit click */
-
 #plane-wrapper {
   position: relative;
   overflow: hidden;
@@ -909,6 +867,7 @@ a.resume {
   }
 }
 
+/* Cat image styling */
 .cat {
   display: block;
   opacity: 0;
@@ -927,8 +886,7 @@ a.resume {
   min-width: 15.625rem;
 }
 
-/* ///////////////////////////////////// */
-/* Media queries for responsive styling */
+/* Responsive styling */
 @media (max-width: 1480px) {
   h1 {
     font-size: clamp(2.25rem, 5vw, 1.4em);
@@ -950,7 +908,6 @@ a.resume {
     font-weight: lighter;
     font-size: 1.375rem;
     position: relative;
-    
   }
 
   .home-container {
@@ -977,28 +934,23 @@ a.resume {
   }
 }
 
-
-@media (max-width: 768px) {
-  
+/* Mobile styling */
+  @media (max-width: 768px) {
   .skip-link {
     position: absolute;
-    top: -6rem; /* Hide above viewport */
+    top: -6rem; 
   }
-  
+
   .skip-link:focus {
     top: 0.625rem;
   }
-  
+    
   body {
     overflow-x: hidden !important;
   }
 
   .nav-lightmode {
     display: none;
-  }
-
-  .fp-table {
-   justify-content: flex-start;
   }
 
   .opaque-bg {
@@ -1024,9 +976,9 @@ a.resume {
     font-size: 1.09rem;
   }
 
-div#about.section {
-  padding-top: 2rem;
-}
+  div#about.section {
+    padding-top: 2rem;
+  }
 
   h1 {
     font-weight: 350;
@@ -1047,9 +999,9 @@ div#about.section {
   }
 
   p {
-      font-size: 1rem;
-      font-weight: normal;
-      text-align: left;
+    font-size: 1rem;
+    font-weight: normal;
+    text-align: left;
   }
 
   .header-links {
@@ -1108,13 +1060,12 @@ div#about.section {
   .home {
     min-height: 100vh;
   } 
-  
+
   .header-links ul{
     display: none;
   }
 
-/* Side nav */
-
+  /* Side nav */
   .nav-screen {
     display: block;
     position: fixed;
@@ -1139,10 +1090,6 @@ div#about.section {
     transition: all 0.2s ease-in-out;
   }
 
-  .fa-chevron-down {
-  display: none;
-  }
-
   .cat {
     height: auto;
     padding: 2rem 0rem 0rem 0rem;
@@ -1154,6 +1101,21 @@ div#about.section {
     margin: 0 auto;
     width: 100%;
     min-width: 50%;
+  }
+
+  .container-skillbar {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .skillbar {
+    height: 1.25rem;
+  }
+
+  .skill-bar-percent {
+    line-height: 1.2rem;
+    font-size: 0.85rem;
   }
 
   .section {
@@ -1253,9 +1215,9 @@ div#about.section {
   .contact-form {
     padding: 0 0.9375rem;
     max-width: 90%;
-    margin: 0 auto; /* center the form */
+    margin: 0 auto;
   }
-  
+
   .form-control {
     width: 100%;
     box-sizing: border-box;
@@ -1265,7 +1227,7 @@ div#about.section {
     padding: 1em;
     margin: 0.5em 0 2em 0;
   }
-  
+
   .footer p {
     background-color: #2c2c2c;
     padding: 1.25rem;
@@ -1279,9 +1241,8 @@ div#about.section {
     padding: 0;
   }
 
- #wrapper {
-  position: relative;
-  bottom: 2rem;
- }
-  
+  #wrapper {
+    position: relative;
+    bottom: 2rem;
+  }
 }
