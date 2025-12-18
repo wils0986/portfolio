@@ -946,12 +946,16 @@ a.resume {
     top: 0.625rem;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
   .nav-lightmode {
     display: none;
   }
 
   .opaque-bg {
-    display: block;
+    display: none;
     position: relative;
     width: 90%;       
     text-align: right; 
