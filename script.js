@@ -71,7 +71,7 @@ $(document).ready(function () {
   sidebarToggle?.addEventListener("change", e => applyLightMode(e.target.checked));
 
   /* ======================
-     Background image preload
+     Background image preload (Blob)
   ====================== */
   const aboutSection = document.querySelector(".home");
   if (aboutSection) {
@@ -169,49 +169,52 @@ $(document).ready(function () {
   document.querySelector(".pink.heart")?.addEventListener("mouseenter", pulseHeart);
 
   /* ======================
-     Anchor system
+     Anchor scroll system
   ====================== */
   function scrollToAnchor(hash) {
-    if (!hash) return;
-  
     const target = document.querySelector(hash);
     if (!target) return;
-  
-    const docHeight = document.documentElement.scrollHeight;
-    const winHeight = window.innerHeight;
-    let top;
-  
-    // Special handling for contact section
+
+    // Contact should always show footer
     if (hash === "#contact") {
-      // Scroll so footer is fully visible
-      top = docHeight - winHeight;
-    } else {
-      // Normal anchor scroll with optional offsets
-      const offsets = {
-        "#about": window.innerWidth <= 768 ? -30 : 0,
-        "#portfolio": window.innerWidth <= 768 ? 40 : 20,
-      };
-      top = target.getBoundingClientRect().top + window.pageYOffset + (offsets[hash] || 0);
+      const bottom =
+        document.documentElement.scrollHeight - window.innerHeight;
+      window.scrollTo({ top: bottom, behavior: "smooth" });
+      return;
     }
-  
+
+    const isMobile = window.innerWidth <= 768;
+
+    const offsets = {
+      "#about": isMobile ? -30 : 0,
+      "#portfolio": isMobile ? 40 : 20
+    };
+
+    const offset = offsets[hash] ?? 0;
+
+    const top =
+      target.getBoundingClientRect().top +
+      window.pageYOffset +
+      offset;
+
     window.scrollTo({ top, behavior: "smooth" });
-  }    
+  }
 
   document.querySelectorAll(".myMenu a, .header-links a").forEach(link => {
     link.addEventListener("click", e => {
       const href = link.getAttribute("href");
       if (!href || !href.includes("#")) return;
 
-      e.preventDefault();
-
       const [path, hash] = href.split("#");
       const targetHash = `#${hash}`;
 
-      if (!path || path === "" || window.location.pathname.endsWith(path)) {
+      if (!path || window.location.pathname.endsWith(path)) {
+        e.preventDefault();
         scrollToAnchor(targetHash);
-      } else {
-        sessionStorage.setItem("pendingAnchor", targetHash);
-        window.location.href = path;
+      } else if (path.includes("index.html")) {
+        e.preventDefault();
+        sessionStorage.setItem("scrollTarget", targetHash);
+        window.location.href = "index.html";
       }
 
       if ($("body").hasClass("nav-open")) {
@@ -221,10 +224,20 @@ $(document).ready(function () {
     });
   });
 
-  const pendingAnchor = sessionStorage.getItem("pendingAnchor");
-  if (pendingAnchor) {
-    sessionStorage.removeItem("pendingAnchor");
-    setTimeout(() => scrollToAnchor(pendingAnchor), 100);
+  /* ======================
+     ✅ FIX: cross-page anchor timing
+  ====================== */
+  const storedTarget = sessionStorage.getItem("scrollTarget");
+  if (storedTarget) {
+    sessionStorage.removeItem("scrollTarget");
+
+    window.addEventListener("load", () => {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          scrollToAnchor(storedTarget);
+        });
+      });
+    });
   }
 });
 
@@ -280,8 +293,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     section.append(prev, next);
 
-    prev.onclick = () => showSlide(index = (index - 1 + slides.length) % slides.length);
-    next.onclick = () => showSlide(index = (index + 1) % slides.length);
+    prev.onclick = () =>
+      showSlide(index = (index - 1 + slides.length) % slides.length);
+    next.onclick = () =>
+      showSlide(index = (index + 1) % slides.length);
   }
 
   window.addEventListener("resize", setup);
