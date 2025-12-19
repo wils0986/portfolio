@@ -2,9 +2,9 @@ $(document).ready(function () {
   let skillbarsAnimated = false;
   let catAnimated = false;
 
-  /* ===============================
+  /* ======================
      Typing animation
-  =============================== */
+  ====================== */
   (function ($) {
     if (!$.fn.writeText) {
       $.fn.writeText = function (content, speed = 100) {
@@ -18,7 +18,7 @@ $(document).ready(function () {
             textSpan.append(content[current++]);
             setTimeout(type, speed);
           } else {
-            textSpan.addClass('cursor');
+            textSpan.addClass("cursor");
           }
         }
         type();
@@ -33,9 +33,9 @@ $(document).ready(function () {
 
   new WOW().init();
 
-  /* ===============================
+  /* ======================
      Nav toggle
-  =============================== */
+  ====================== */
   function main() {
     $(".fa-bars").click(function () {
       $(".nav-screen").animate({ right: "0px" }, 200);
@@ -49,58 +49,48 @@ $(document).ready(function () {
   }
   main();
 
-  /* ===============================
-     Dark / Light mode
-  =============================== */
-  const headerToggle = document.getElementById('lightModeToggleHeader');
-  const sidebarToggle = document.getElementById('lightModeToggleSidebar');
+  /* ======================
+     Dark / Light Mode
+  ====================== */
+  const headerToggle = document.getElementById("lightModeToggleHeader");
+  const sidebarToggle = document.getElementById("lightModeToggleSidebar");
 
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    document.documentElement.classList.add('light-mode');
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light-mode");
     headerToggle.checked = true;
     sidebarToggle.checked = true;
-  } else {
-    document.documentElement.classList.remove('light-mode');
-    headerToggle.checked = false;
-    sidebarToggle.checked = false;
   }
 
   function applyLightMode(isLight) {
-    if (isLight) {
-      document.documentElement.classList.add('light-mode');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.remove('light-mode');
-      localStorage.setItem('theme', 'dark');
-    }
+    document.documentElement.classList.toggle("light-mode", isLight);
+    localStorage.setItem("theme", isLight ? "light" : "dark");
   }
 
-  headerToggle?.addEventListener('change', e => applyLightMode(e.target.checked));
-  sidebarToggle?.addEventListener('change', e => applyLightMode(e.target.checked));
+  headerToggle?.addEventListener("change", e => applyLightMode(e.target.checked));
+  sidebarToggle?.addEventListener("change", e => applyLightMode(e.target.checked));
 
-  /* ===============================
+  /* ======================
      Background image preload (Blob)
-  =============================== */
+  ====================== */
   const aboutSection = document.querySelector(".home");
   if (aboutSection) {
     const img = new Image();
     img.src = "images/yoshi.JPG";
     img.onload = () => {
       fetch("images/yoshi.JPG")
-        .then(res => res.blob())
+        .then(r => r.blob())
         .then(blob => {
-          const bgImgURL = URL.createObjectURL(blob);
-          aboutSection.style.backgroundImage = `url(${bgImgURL})`;
+          aboutSection.style.backgroundImage = `url(${URL.createObjectURL(blob)})`;
           aboutSection.classList.add("loaded");
           checkAboutSection();
         });
     };
   }
 
-  /* ===============================
-     About section animations
-  =============================== */
+  /* ======================
+     About animations
+  ====================== */
   function triggerAboutAnimations() {
     if (!skillbarsAnimated) {
       $(".skillbar").each(function () {
@@ -127,56 +117,73 @@ $(document).ready(function () {
     }
   }
 
-  $(window).on("hashchange", checkAboutSection);
-
   $(window).on("scroll", function () {
-    const aboutTop = $(".home").offset()?.top || 0;
+    const aboutTop = $(".home").offset()?.top;
+    if (!aboutTop) return;
+
     if ($(window).scrollTop() + $(window).height() >= aboutTop + 100) {
       triggerAboutAnimations();
     }
   });
 
-  /* ===============================
+  /* ======================
      AJAX contact form
-  =============================== */
-  const form = $("#ajax-contact");
-  const formMessages = $("#form-messages");
-
-  form.submit(function (e) {
+  ====================== */
+  $("#ajax-contact").submit(function (e) {
     e.preventDefault();
     $.ajax({
       type: "POST",
-      url: form.attr("action"),
-      data: form.serialize(),
+      url: this.action,
+      data: $(this).serialize(),
       headers: { Accept: "application/json" }
     })
       .done(res => {
-        formMessages.removeClass("error").addClass("success")
-          .text(res.message || "Thanks! Your message has been sent.");
-        form[0].reset();
+        $("#form-messages").removeClass("error").addClass("success").text(res.message || "Thanks!");
+        $("#name, #email, #message").val("");
       })
       .fail(err => {
-        formMessages.removeClass("success").addClass("error")
-          .text("Oops! Something went wrong.");
+        $("#form-messages").removeClass("success").addClass("error").text("Something went wrong.");
         console.error(err);
       });
   });
 
-  /* ===============================
-     Anchor scroll helper (FIX)
-  =============================== */
-  function scrollToAnchorWithOffset(hash) {
+  /* ======================
+     ❤️ Heart + plane animations
+  ====================== */
+  document.querySelector("#submit")?.addEventListener("click", () => {
+    const plane = document.querySelector("#paper-plane");
+    plane?.classList.remove("fly");
+    void plane?.offsetWidth;
+    plane?.classList.add("fly");
+  });
+
+  function pulseHeart() {
+    const heart = document.querySelector(".pink.heart");
+    if (!heart) return;
+    heart.classList.remove("animate-heart");
+    void heart.offsetWidth;
+    heart.classList.add("animate-heart");
+  }
+
+  document.querySelector(".btn-lg")?.addEventListener("click", pulseHeart);
+  document.querySelector(".pink.heart")?.addEventListener("mouseenter", pulseHeart);
+
+  /* ======================
+     Anchor scroll system 
+  ====================== */
+  function scrollToAnchor(hash) {
     const target = document.querySelector(hash);
     if (!target) return;
 
-    let offset = 0;
+    const isMobile = window.innerWidth <= 768;
 
-    if (hash === "#portfolio") {
-      offset = window.innerWidth <= 768 ? 30 : 10;
-    }
-    if (hash === "#about") {
-      offset = window.innerWidth <= 768 ? -10 : 0;
-    }
+    const offsets = {
+      "#about": isMobile ? -30 : 0,
+      "#portfolio": isMobile ? 40 : 20,
+      "#contact": isMobile ? 50 : 60
+    };
+
+    const offset = offsets[hash] ?? 0;
 
     const top =
       target.getBoundingClientRect().top +
@@ -186,62 +193,40 @@ $(document).ready(function () {
     window.scrollTo({ top, behavior: "smooth" });
   }
 
-  /* ===============================
-     Nav link handling (index + projects)
-  =============================== */
-  document.querySelectorAll('.myMenu a, .header-links a').forEach(link => {
-    link.addEventListener('click', e => {
-      const href = link.getAttribute('href');
-      if (!href || !href.includes('#')) return;
+  document.querySelectorAll(".myMenu a, .header-links a").forEach(link => {
+    link.addEventListener("click", e => {
+      const href = link.getAttribute("href");
+      if (!href || !href.includes("#")) return;
 
-      const [path, hash] = href.split('#');
+      const [path, hash] = href.split("#");
       const targetHash = `#${hash}`;
 
-      // Same page
       if (!path || window.location.pathname.endsWith(path)) {
         e.preventDefault();
-        scrollToAnchorWithOffset(targetHash);
-      }
-
-      // Cross-page (project → index)
-      else if (path.includes('index.html')) {
+        scrollToAnchor(targetHash);
+      } else if (path.includes("index.html")) {
         e.preventDefault();
-        sessionStorage.setItem('scrollTarget', targetHash);
-        window.location.href = 'index.html';
+        sessionStorage.setItem("scrollTarget", targetHash);
+        window.location.href = "index.html";
       }
 
-      if ($('body').hasClass('nav-open')) {
-        $('.nav-screen').animate({ right: '-285px' }, 200);
-        $('body').removeClass('nav-open');
+      if ($("body").hasClass("nav-open")) {
+        $(".nav-screen").animate({ right: "-285px" }, 200);
+        $("body").removeClass("nav-open");
       }
     });
   });
 
-  /* ===============================
-     Apply stored anchor after load
-  =============================== */
-  const storedTarget = sessionStorage.getItem('scrollTarget');
+  const storedTarget = sessionStorage.getItem("scrollTarget");
   if (storedTarget) {
-    sessionStorage.removeItem('scrollTarget');
-    setTimeout(() => scrollToAnchorWithOffset(storedTarget), 100);
+    sessionStorage.removeItem("scrollTarget");
+    setTimeout(() => scrollToAnchor(storedTarget), 100);
   }
-
-  /* ===============================
-     Collapse mobile nav on desktop
-  =============================== */
-  function collapseNavOnDesktop() {
-    if (window.innerWidth > 768) {
-      $(".nav-screen").css({ right: "-285px" });
-      $("body").removeClass("nav-open");
-    }
-  }
-  $(window).on("resize", collapseNavOnDesktop);
-  collapseNavOnDesktop();
 });
 
-/* ===============================
+/* ======================
    Portfolio carousel
-=============================== */
+====================== */
 document.addEventListener("DOMContentLoaded", () => {
   const section = document.querySelector('[data-anchor="portfolio"]');
   if (!section) return;
@@ -254,21 +239,29 @@ document.addEventListener("DOMContentLoaded", () => {
     return window.innerWidth >= 764;
   }
 
+  function showSlide(i) {
+    wrapper.scrollTo({
+      left: slides[0].offsetWidth * i,
+      behavior: "smooth"
+    });
+  }
+
   function setup() {
     if (!isDesktop()) {
       wrapper.style.display = "block";
       wrapper.style.overflow = "visible";
+      slides.forEach(s => {
+        s.style.display = "block";
+        s.style.width = "auto";
+        s.style.margin = "0 auto";
+      });
       return;
     }
 
     wrapper.style.display = "flex";
     wrapper.style.overflow = "hidden";
-    slides.forEach(s => s.style.flex = "0 0 100%");
-    show(index);
-  }
-
-  function show(i) {
-    wrapper.scrollTo({ left: i * slides[0].offsetWidth, behavior: "smooth" });
+    slides.forEach(s => (s.style.flex = "0 0 100%"));
+    showSlide(index);
   }
 
   function arrows() {
@@ -283,8 +276,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     section.append(prev, next);
 
-    prev.onclick = () => show(index = (index - 1 + slides.length) % slides.length);
-    next.onclick = () => show(index = (index + 1) % slides.length);
+    prev.onclick = () => showSlide(index = (index - 1 + slides.length) % slides.length);
+    next.onclick = () => showSlide(index = (index + 1) % slides.length);
   }
 
   window.addEventListener("resize", setup);
