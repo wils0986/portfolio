@@ -195,7 +195,7 @@ $(document).ready(function () {
     }
   
     window.scrollTo({ top, behavior: "smooth" });
-  }  
+  }    
 
   document.querySelectorAll(".myMenu a, .header-links a").forEach(link => {
     link.addEventListener("click", e => {
