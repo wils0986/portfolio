@@ -156,7 +156,7 @@ p.holder {
   position: relative;
   border: none;
   right: 0.4rem;
-  padding-top: 1rem;
+  padding-top: 1.25rem;
 }
 
 /* Blinking cursor effect */
@@ -998,7 +998,7 @@ a.resume {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 400;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1123,7 +1123,7 @@ a.resume {
   }
 
   .skillbar {
-    height: 1.25rem; /* smaller bar height on mobile */
+    height: 1.25rem;
   }
 
   .skill-bar-percent {
