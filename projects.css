@@ -485,6 +485,12 @@ a.resume {
   transform: scale(1.01);
 }
 
+/* Offset for sections */
+.home, #about, #portfolio, #contact {
+  scroll-margin-top: 100px; 
+  scroll-margin-bottom: 100px;
+}
+
 .projectH1 {
   font-size: 3.25rem;
   font-weight: lighter;

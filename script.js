@@ -2,7 +2,9 @@ $(document).ready(function () {
   let skillbarsAnimated = false;
   let catAnimated = false;
 
-  // Typing animation
+  /* ===============================
+     Typing animation
+  =============================== */
   (function ($) {
     if (!$.fn.writeText) {
       $.fn.writeText = function (content, speed = 100) {
@@ -31,7 +33,9 @@ $(document).ready(function () {
 
   new WOW().init();
 
-  // Nav toggle
+  /* ===============================
+     Nav toggle
+  =============================== */
   function main() {
     $(".fa-bars").click(function () {
       $(".nav-screen").animate({ right: "0px" }, 200);
@@ -45,7 +49,9 @@ $(document).ready(function () {
   }
   main();
 
-  // Dark/Light Mode Toggle
+  /* ===============================
+     Dark / Light mode
+  =============================== */
   const headerToggle = document.getElementById('lightModeToggleHeader');
   const sidebarToggle = document.getElementById('lightModeToggleSidebar');
 
@@ -55,7 +61,7 @@ $(document).ready(function () {
     headerToggle.checked = true;
     sidebarToggle.checked = true;
   } else {
-    document.documentElement.classList.remove('light-mode'); // default dark
+    document.documentElement.classList.remove('light-mode');
     headerToggle.checked = false;
     sidebarToggle.checked = false;
   }
@@ -70,33 +76,31 @@ $(document).ready(function () {
     }
   }
 
-  headerToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
-  sidebarToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
+  headerToggle?.addEventListener('change', e => applyLightMode(e.target.checked));
+  sidebarToggle?.addEventListener('change', e => applyLightMode(e.target.checked));
 
-  // // Preload background image with Blob URL
-// JS: preload image as Blob and hide URL
-const aboutSection = document.querySelector(".home");
+  /* ===============================
+     Background image preload (Blob)
+  =============================== */
+  const aboutSection = document.querySelector(".home");
+  if (aboutSection) {
+    const img = new Image();
+    img.src = "images/yoshi.JPG";
+    img.onload = () => {
+      fetch("images/yoshi.JPG")
+        .then(res => res.blob())
+        .then(blob => {
+          const bgImgURL = URL.createObjectURL(blob);
+          aboutSection.style.backgroundImage = `url(${bgImgURL})`;
+          aboutSection.classList.add("loaded");
+          checkAboutSection();
+        });
+    };
+  }
 
-// Optional: create a temporary <img> to preload the image
-const img = new Image();
-img.src = "images/yoshi.JPG";
-img.onload = () => {
-  // Once loaded, fetch as Blob
-  fetch("images/yoshi.JPG")
-    .then(response => response.blob())
-    .then(blob => {
-      const bgImgURL = URL.createObjectURL(blob);
-      aboutSection.style.backgroundImage = `url(${bgImgURL})`;
-      aboutSection.classList.add("loaded");
-
-      // Run any animations or checks
-      checkAboutSection();
-    });
-};
-
-
-
-  // About section animation helpers
+  /* ===============================
+     About section animations
+  =============================== */
   function triggerAboutAnimations() {
     if (!skillbarsAnimated) {
       $(".skillbar").each(function () {
@@ -107,7 +111,7 @@ img.onload = () => {
       skillbarsAnimated = true;
       catAnimated = true;
     }
-  }  
+  }
 
   function resetAboutAnimations() {
     skillbarsAnimated = false;
@@ -117,252 +121,173 @@ img.onload = () => {
   }
 
   function checkAboutSection() {
-    const hash = window.location.hash.substring(1);
-    if (hash === "about") {
+    if (window.location.hash === "#about") {
       resetAboutAnimations();
       triggerAboutAnimations();
     }
   }
 
-  $(window).on("hashchange", function () {
-    checkAboutSection();
-  });
+  $(window).on("hashchange", checkAboutSection);
 
   $(window).on("scroll", function () {
-    const aboutTop = $(".home").offset().top;
-    const scrollTop = $(window).scrollTop();
-    const windowHeight = $(window).height();
-
-    if (scrollTop + windowHeight >= aboutTop + 100) {
+    const aboutTop = $(".home").offset()?.top || 0;
+    if ($(window).scrollTop() + $(window).height() >= aboutTop + 100) {
       triggerAboutAnimations();
     }
   });
 
-  // AJAX form
+  /* ===============================
+     AJAX contact form
+  =============================== */
   const form = $("#ajax-contact");
   const formMessages = $("#form-messages");
 
   form.submit(function (e) {
     e.preventDefault();
-    const formData = form.serialize();
     $.ajax({
       type: "POST",
       url: form.attr("action"),
-      data: formData,
-      headers: { 'Accept': 'application/json' }
+      data: form.serialize(),
+      headers: { Accept: "application/json" }
     })
-      .done(function (response) {
-        formMessages.removeClass("error").addClass("success").text(response.message || "Thanks! Your message has been sent.");
-        $("#name, #email, #message").val("");
+      .done(res => {
+        formMessages.removeClass("error").addClass("success")
+          .text(res.message || "Thanks! Your message has been sent.");
+        form[0].reset();
       })
-      .fail(function (data) {
-        formMessages.removeClass("success").addClass("error");
-        formMessages.text(data.responseText || "Oops! An error occurred and your message could not be sent.");
-        console.error(data);
+      .fail(err => {
+        formMessages.removeClass("success").addClass("error")
+          .text("Oops! Something went wrong.");
+        console.error(err);
       });
   });
 
-  // Paper plane animation
-  document.querySelector("#submit")?.addEventListener("click", () => {
-    const plane = document.querySelector("#paper-plane");
-    if (plane) {
-      plane.classList.remove("fly");
-      void plane.offsetWidth;
-      plane.classList.add("fly");
-    }
-  });
+  /* ===============================
+     Anchor scroll helper (FIX)
+  =============================== */
+  function scrollToAnchorWithOffset(hash) {
+    const target = document.querySelector(hash);
+    if (!target) return;
 
-  // Heart pulse function
-  function triggerHeartPulse() {
-    const heart = document.querySelector(".pink.heart");
-    if (!heart) return;
-    heart.classList.remove("animate-heart");
-    void heart.offsetWidth;
-    heart.classList.add("animate-heart");
+    let offset = 0;
+
+    if (hash === "#portfolio") {
+      offset = window.innerWidth <= 768 ? 30 : 10;
+    }
+    if (hash === "#about") {
+      offset = window.innerWidth <= 768 ? -10 : 0;
+    }
+
+    const top =
+      target.getBoundingClientRect().top +
+      window.pageYOffset +
+      offset;
+
+    window.scrollTo({ top, behavior: "smooth" });
   }
 
-  const btn = document.querySelector(".btn-lg");
-  if (btn) btn.addEventListener("click", triggerHeartPulse);
+  /* ===============================
+     Nav link handling (index + projects)
+  =============================== */
+  document.querySelectorAll('.myMenu a, .header-links a').forEach(link => {
+    link.addEventListener('click', e => {
+      const href = link.getAttribute('href');
+      if (!href || !href.includes('#')) return;
 
-  const heart = document.querySelector(".pink.heart");
-  if (heart) heart.addEventListener("mouseenter", triggerHeartPulse);
+      const [path, hash] = href.split('#');
+      const targetHash = `#${hash}`;
 
-  // Collapse mobile nav on desktop
+      // Same page
+      if (!path || window.location.pathname.endsWith(path)) {
+        e.preventDefault();
+        scrollToAnchorWithOffset(targetHash);
+      }
+
+      // Cross-page (project → index)
+      else if (path.includes('index.html')) {
+        e.preventDefault();
+        sessionStorage.setItem('scrollTarget', targetHash);
+        window.location.href = 'index.html';
+      }
+
+      if ($('body').hasClass('nav-open')) {
+        $('.nav-screen').animate({ right: '-285px' }, 200);
+        $('body').removeClass('nav-open');
+      }
+    });
+  });
+
+  /* ===============================
+     Apply stored anchor after load
+  =============================== */
+  const storedTarget = sessionStorage.getItem('scrollTarget');
+  if (storedTarget) {
+    sessionStorage.removeItem('scrollTarget');
+    setTimeout(() => scrollToAnchorWithOffset(storedTarget), 100);
+  }
+
+  /* ===============================
+     Collapse mobile nav on desktop
+  =============================== */
   function collapseNavOnDesktop() {
     if (window.innerWidth > 768) {
-      $(".nav-screen").css({
-        right: "-285px",
-        transition: "right 0.1s"
-      });
+      $(".nav-screen").css({ right: "-285px" });
       $("body").removeClass("nav-open");
     }
   }
   $(window).on("resize", collapseNavOnDesktop);
   collapseNavOnDesktop();
-
-  // Smooth scroll for all nav links (desktop + mobile) including cross-page links
-  document.querySelectorAll('.myMenu a').forEach(link => {
-    link.addEventListener('click', e => {
-      const href = link.getAttribute('href');
-
-      // Same-page anchor
-      if (href.startsWith('#')) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          let blockValue = 'start';
-          if (href === '#about') {
-            if (window.innerWidth <= 768) {
-              const yOffset = -10;
-              const y =
-                target.getBoundingClientRect().top +
-                window.pageYOffset +
-                yOffset;
-          
-              window.scrollTo({ top: y, behavior: 'smooth' });
-              return;
-            } else {
-              blockValue = 'center';
-            }
-          }
-          
-          if (href === '#contact') blockValue = 'end';
-          target.scrollIntoView({ behavior: 'smooth', block: blockValue });
-        }
-        if ($('body').hasClass('nav-open')) {
-          $('.nav-screen').animate({ right: '-285px' }, 200);
-          $('body').removeClass('nav-open');
-        }
-      } 
-
-      // Cross-page link to homepage anchor
-      else if (href.includes('index.html#')) {
-        const url = new URL(href, window.location.origin);
-        if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
-          e.preventDefault();
-          const target = document.querySelector(url.hash);
-          if (target) {
-            let blockValue = 'start';
-            if (url.hash === '#about' || url.hash === '#portfolio') blockValue = 'center';
-            if (url.hash === '#contact') blockValue = 'end';
-            target.scrollIntoView({ behavior: 'smooth', block: blockValue });
-            if ($('body').hasClass('nav-open')) {
-              $('.nav-screen').animate({ right: '-285px' }, 200);
-              $('body').removeClass('nav-open');
-            }
-          }
-        }
-      }
-    });
-  });
-
-  // Mobile nav special offset for portfolio
-  $('.nav-screen .myMenu a[href="#portfolio"]').on('click', function(e) {
-    e.preventDefault();
-    const target = document.querySelector('#portfolio');
-    if (!target) return;
-
-    // Close mobile nav first
-    if ($('body').hasClass('nav-open')) {
-      $('.nav-screen').animate({ right: '-285px' }, 200);
-      $('body').removeClass('nav-open');
-    }
-
-    // Slight delay so layout recalculates
-    setTimeout(() => {
-      const offset = 30;
-      const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }, 30);
-  });
-
-  // Desktop nav portfolio link
-$('.header-links a[href="#portfolio"]').on('click', function(e) {
-  e.preventDefault();
-  const target = document.querySelector('#portfolio');
-  if (!target) return;
-
-  // Slight delay so layout recalculates
-  setTimeout(() => {
-    const offset = 10; // bigger offset for desktop
-    const top = target.getBoundingClientRect().top + window.pageYOffset + offset;
-    window.scrollTo({ top, behavior: 'smooth' });
-  }, 30);
-});
 });
 
-// Portfolio Carousel
+/* ===============================
+   Portfolio carousel
+=============================== */
 document.addEventListener("DOMContentLoaded", () => {
-  const portfolioSection = document.querySelector('[data-anchor="portfolio"]');
-  if (!portfolioSection) return; 
+  const section = document.querySelector('[data-anchor="portfolio"]');
+  if (!section) return;
 
-  const slidesWrapper = portfolioSection.querySelector(".content-slide");
-  const slides = slidesWrapper.querySelectorAll(".slide");
-  let currentIndex = 0;
+  const wrapper = section.querySelector(".content-slide");
+  const slides = wrapper.querySelectorAll(".slide");
+  let index = 0;
 
   function isDesktop() {
     return window.innerWidth >= 764;
   }
 
-  function setupCarousel() {
+  function setup() {
     if (!isDesktop()) {
-      slidesWrapper.style.display = "block";
-      slidesWrapper.style.overflow = "visible";
-      slides.forEach(slide => {
-        slide.style.display = "block";
-        slide.style.width = "auto";
-        slide.style.margin = "0 auto";
-      });
+      wrapper.style.display = "block";
+      wrapper.style.overflow = "visible";
       return;
     }
 
-    slidesWrapper.style.display = "flex";
-    slidesWrapper.style.flexDirection = "row";
-    slidesWrapper.style.overflow = "hidden";
-    slidesWrapper.style.width = "100%";
-
-    slides.forEach(slide => {
-      slide.style.flex = "0 0 100%";
-      slide.style.maxWidth = "100%";
-      slide.style.margin = "0";
-    });
-
-    showSlide(currentIndex);
+    wrapper.style.display = "flex";
+    wrapper.style.overflow = "hidden";
+    slides.forEach(s => s.style.flex = "0 0 100%");
+    show(index);
   }
 
-  function showSlide(index) {
-    const slideWidth = slides[0].offsetWidth;
-    slidesWrapper.scrollTo({ left: index * slideWidth, behavior: "smooth" });
+  function show(i) {
+    wrapper.scrollTo({ left: i * slides[0].offsetWidth, behavior: "smooth" });
   }
 
-  function createArrows() {
-    if (portfolioSection.querySelector(".prev")) return;
+  function arrows() {
+    if (section.querySelector(".prev")) return;
 
-    const prevBtn = document.createElement("button");
-    prevBtn.className = "prev";
-    prevBtn.textContent = "<";
+    const prev = document.createElement("button");
+    const next = document.createElement("button");
+    prev.className = "prev";
+    next.className = "next";
+    prev.textContent = "<";
+    next.textContent = ">";
 
-    const nextBtn = document.createElement("button");
-    nextBtn.className = "next";
-    nextBtn.textContent = ">";
+    section.append(prev, next);
 
-    portfolioSection.style.position = "relative";
-    portfolioSection.appendChild(prevBtn);
-    portfolioSection.appendChild(nextBtn);
-
-    prevBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-      showSlide(currentIndex);
-    });
-
-    nextBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-    });
+    prev.onclick = () => show(index = (index - 1 + slides.length) % slides.length);
+    next.onclick = () => show(index = (index + 1) % slides.length);
   }
 
-  window.addEventListener("resize", setupCarousel);
-
-  setupCarousel();
-  createArrows();
+  window.addEventListener("resize", setup);
+  setup();
+  arrows();
 });
