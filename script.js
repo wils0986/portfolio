@@ -169,38 +169,33 @@ $(document).ready(function () {
   document.querySelector(".pink.heart")?.addEventListener("mouseenter", pulseHeart);
 
   /* ======================
-     CONSISTENT anchor system
+     Anchor system
   ====================== */
   function scrollToAnchor(hash) {
-    if (hash === "#contact") {
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          window.scrollTo({
-            top: document.documentElement.scrollHeight,
-            behavior: "smooth"
-          });
-        });
-      });
-      return;
-    }
-    
-
+    if (!hash) return;
+  
     const target = document.querySelector(hash);
     if (!target) return;
-
-    const isMobile = window.innerWidth <= 768;
-    const offsets = {
-      "#about": isMobile ? -20 : -10,
-      "#portfolio": isMobile ? 40 : -20
-    };
-
-    const top =
-      target.getBoundingClientRect().top +
-      window.pageYOffset +
-      (offsets[hash] ?? 0);
-
+  
+    const docHeight = document.documentElement.scrollHeight;
+    const winHeight = window.innerHeight;
+    let top;
+  
+    // Special handling for contact section
+    if (hash === "#contact") {
+      // Scroll so footer is fully visible
+      top = docHeight - winHeight;
+    } else {
+      // Normal anchor scroll with optional offsets
+      const offsets = {
+        "#about": window.innerWidth <= 768 ? -30 : 0,
+        "#portfolio": window.innerWidth <= 768 ? 40 : 20,
+      };
+      top = target.getBoundingClientRect().top + window.pageYOffset + (offsets[hash] || 0);
+    }
+  
     window.scrollTo({ top, behavior: "smooth" });
-  }
+  }  
 
   document.querySelectorAll(".myMenu a, .header-links a").forEach(link => {
     link.addEventListener("click", e => {
