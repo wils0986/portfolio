@@ -226,6 +226,33 @@ $(document).ready(function () {
     sessionStorage.removeItem("pendingAnchor");
     setTimeout(() => scrollToAnchor(pendingAnchor), 100);
   }
+
+/* ======================
+   CONTACT anchor fix (project → index)
+====================== */
+(function fixContactFromProjects() {
+  const storedAnchor = sessionStorage.getItem("pendingAnchor");
+
+  if (storedAnchor === "#contact") {
+    sessionStorage.removeItem("pendingAnchor");
+
+    // Wait for full layout, images, fonts, WOW, etc.
+    window.addEventListener("load", () => {
+      // Extra delay ensures final document height is correct
+      setTimeout(() => {
+        const bottom =
+          document.documentElement.scrollHeight - window.innerHeight;
+
+        window.scrollTo({
+          top: bottom,
+          behavior: "smooth"
+        });
+      }, 150);
+    });
+  }
+})();
+
+
 });
 
 /* ======================
