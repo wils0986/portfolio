@@ -71,7 +71,7 @@ $(document).ready(function () {
   sidebarToggle?.addEventListener("change", e => applyLightMode(e.target.checked));
 
   /* ======================
-     Background image preload (Blob)
+     Background image preload
   ====================== */
   const aboutSection = document.querySelector(".home");
   if (aboutSection) {
@@ -169,26 +169,30 @@ $(document).ready(function () {
   document.querySelector(".pink.heart")?.addEventListener("mouseenter", pulseHeart);
 
   /* ======================
-     Anchor scroll system 
+     CONSISTENT anchor system
   ====================== */
   function scrollToAnchor(hash) {
+    if (hash === "#contact") {
+      window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+      });
+      return;
+    }
+
     const target = document.querySelector(hash);
     if (!target) return;
 
     const isMobile = window.innerWidth <= 768;
-
     const offsets = {
-      "#about": isMobile ? -30 : 0,
-      "#portfolio": isMobile ? 40 : 20,
-      "#contact": isMobile ? 200 : 60
+      "#about": isMobile ? -20 : -10,
+      "#portfolio": isMobile ? 40 : -20
     };
-
-    const offset = offsets[hash] ?? 0;
 
     const top =
       target.getBoundingClientRect().top +
       window.pageYOffset +
-      offset;
+      (offsets[hash] ?? 0);
 
     window.scrollTo({ top, behavior: "smooth" });
   }
@@ -198,16 +202,16 @@ $(document).ready(function () {
       const href = link.getAttribute("href");
       if (!href || !href.includes("#")) return;
 
+      e.preventDefault();
+
       const [path, hash] = href.split("#");
       const targetHash = `#${hash}`;
 
-      if (!path || window.location.pathname.endsWith(path)) {
-        e.preventDefault();
+      if (!path || path === "" || window.location.pathname.endsWith(path)) {
         scrollToAnchor(targetHash);
-      } else if (path.includes("index.html")) {
-        e.preventDefault();
-        sessionStorage.setItem("scrollTarget", targetHash);
-        window.location.href = "index.html";
+      } else {
+        sessionStorage.setItem("pendingAnchor", targetHash);
+        window.location.href = path;
       }
 
       if ($("body").hasClass("nav-open")) {
@@ -217,10 +221,10 @@ $(document).ready(function () {
     });
   });
 
-  const storedTarget = sessionStorage.getItem("scrollTarget");
-  if (storedTarget) {
-    sessionStorage.removeItem("scrollTarget");
-    setTimeout(() => scrollToAnchor(storedTarget), 100);
+  const pendingAnchor = sessionStorage.getItem("pendingAnchor");
+  if (pendingAnchor) {
+    sessionStorage.removeItem("pendingAnchor");
+    setTimeout(() => scrollToAnchor(pendingAnchor), 100);
   }
 });
 
