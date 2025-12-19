@@ -73,18 +73,28 @@ $(document).ready(function () {
   headerToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
   sidebarToggle.addEventListener('change', (e) => applyLightMode(e.target.checked));
 
-  // Preload background image with Blob URL
-  const aboutSection = document.querySelector(".home");
+  // // Preload background image with Blob URL
+// JS: preload image as Blob and hide URL
+const aboutSection = document.querySelector(".home");
+
+// Optional: create a temporary <img> to preload the image
+const img = new Image();
+img.src = "images/yoshi.JPG";
+img.onload = () => {
+  // Once loaded, fetch as Blob
   fetch("images/yoshi.JPG")
-    .then((response) => response.blob())
-    .then((blob) => {
-      const bgImgURL = URL.createObjectURL(blob); 
+    .then(response => response.blob())
+    .then(blob => {
+      const bgImgURL = URL.createObjectURL(blob);
       aboutSection.style.backgroundImage = `url(${bgImgURL})`;
-      aboutSection.style.backgroundRepeat = "no-repeat";
       aboutSection.classList.add("loaded");
 
-      checkAboutSection(); 
+      // Run any animations or checks
+      checkAboutSection();
     });
+};
+
+
 
   // About section animation helpers
   function triggerAboutAnimations() {

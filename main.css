@@ -449,14 +449,21 @@ a.resume {
 
 /* Home section background */
 .home {
-  background-size: cover !important; 
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
+  background-color: #000;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   filter: hue-rotate(340deg);
   position: relative;
   top: 2rem;
+  transition: opacity 0.5s ease;
+  opacity: 0;
 }
-  
+
+.home.loaded {
+  opacity: 1;
+}
+
 .home-container {
   display: flex;
   justify-content: flex-end;
@@ -1128,8 +1135,8 @@ a.resume {
 
   .section {
     position: relative;
-    overflow: visible !important;
-    height: auto !important;
+    overflow: visible;
+    height: auto;
   }
 
   .success {
@@ -1181,9 +1188,9 @@ a.resume {
   }  
 
   .content-slide .slide {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
+    display: block;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     padding-top: 6rem;
     box-sizing: border-box;
