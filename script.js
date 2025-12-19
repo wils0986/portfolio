@@ -180,7 +180,7 @@ $(document).ready(function () {
     const offsets = {
       "#about": isMobile ? -30 : 0,
       "#portfolio": isMobile ? 40 : 20,
-      "#contact": isMobile ? 70 : 60
+      "#contact": isMobile ? 100 : 60
     };
 
     const offset = offsets[hash] ?? 0;
