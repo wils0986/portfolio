@@ -450,6 +450,7 @@ a.resume {
 /* Home section background */
 .home {
   min-height: 100vh; 
+  display: flex;
   background-color: #000;
   background-size: cover;
   background-position: center center;
@@ -1070,6 +1071,7 @@ a.resume {
 
   .home {
     min-height: 100vh;
+    display: flex;
   } 
 
   .header-links ul{
