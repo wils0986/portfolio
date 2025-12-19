@@ -173,12 +173,17 @@ $(document).ready(function () {
   ====================== */
   function scrollToAnchor(hash) {
     if (hash === "#contact") {
-      window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth"
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          window.scrollTo({
+            top: document.documentElement.scrollHeight,
+            behavior: "smooth"
+          });
+        });
       });
       return;
     }
+    
 
     const target = document.querySelector(hash);
     if (!target) return;
