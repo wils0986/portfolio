@@ -79,11 +79,6 @@ h2 {
   font-size: 2.75em;
 }
 
-.contactH2 {
-  position: relative;
-  z-index: 1000;
-}
-
 p {
   font-size: 1.25rem;
   font-weight: 350;
@@ -215,7 +210,6 @@ p {
   transition: all 0.2s ease-in-out;
 }
 
- /* Dark Mode */
 .switch {
   position: relative;
   display: inline-block;

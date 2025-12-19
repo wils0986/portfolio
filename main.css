@@ -1235,6 +1235,10 @@ a.resume {
     display: none;
   }
 
+  #contact {
+    top: 4rem;
+  }
+
   .contact-form {
     padding: 0 0.9375rem;
     max-width: 90%;
