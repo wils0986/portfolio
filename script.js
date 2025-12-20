@@ -148,7 +148,7 @@ $(document).ready(function () {
   });
 
   /* ======================
-     ❤️ Heart + plane animations
+     Heart + plane animations
   ====================== */
   document.querySelector("#submit")?.addEventListener("click", () => {
     const plane = document.querySelector("#paper-plane");
@@ -188,6 +188,7 @@ $(document).ready(function () {
     } else {
       // Normal anchor scroll with optional offsets
       const offsets = {
+        "#home": window.innerWidth <= 768 ? 0 : -40,
         "#about": window.innerWidth <= 768 ? -30 : 0,
         "#portfolio": window.innerWidth <= 768 ? 40 : 20,
       };
