@@ -985,6 +985,10 @@ a.resume {
     top: 0.625rem;
   }
 
+  * {
+    scrollbar-width: none;
+  }
+
   body {
     overflow-x: hidden;
   }
