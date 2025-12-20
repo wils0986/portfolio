@@ -71,12 +71,14 @@ h2 {
   text-align: center;
   position: relative;
   z-index: 9999;
+  line-height: normal;
 }
 
 h3 {
   font-weight: lighter;
   font-size: 1.6em;
   text-align: center;
+  line-height: normal;
 }
 
 p {
@@ -208,8 +210,9 @@ p.holder {
   height: 100%;
   z-index: 500;
   position: fixed;
-  background-color: var(--nav-bg);
+  background-color: var(--bg-color);
   opacity: 1;
+  border-left: solid 0.15rem var(--nav-bg);
   right: -17.8125rem;
   width: 17.8125rem;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -273,16 +276,60 @@ p.holder {
 .header-links a {
   color: var(--nav-text, #2c2c2c);
   transition: color 0.3s ease;
+  position: relative;
 }
 
-.header-links a:hover {
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
+/* anchor parent */
+.myMenu > li {
+  position: relative;
+  text-align: center;
+}
+
+/* hide dropdown by default */
+.myMenu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  background: var(--bg-color);
+  padding: 0.75rem 0;
+  z-index: 1000;
+  border: solid 0.12rem var(--nav-bg);
+  border-top: none;
+}
+
+/* show only on hover */
+.myMenu > li:hover > .dropdown {
+  display: block;
+  width: 10rem;
+}
+
+/* dropdown items */
+.dropdown li {
+  list-style: none;
 }
 
 /* Slide out nav menu styles */
 .nav-container {
   padding-top: 10%;
+}
+
+/* Base link */
+a {
+  display: inline-block;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  border-left: 0.15rem solid transparent;
+  overflow: hidden;
+  line-height: 1em;
+}
+
+a:hover {
+  border-left-color: #e7759b;
+  transition: border-color 0.5s ease;
 }
 
 .nav-links {
@@ -413,26 +460,6 @@ html.light-mode {
   left: 0rem;
 }
 
- /* Expanding border effect */
-.header-links a::after,
-a.resume::after {
-  display: block;
-  margin: 0 auto;
-  margin-top: 0.3125rem;
-  width: 0;
-  height: 0.1rem;
-  background-color: #e7759b;
-  content: "";
-  opacity: 0;
-  transition: width 0.6s, opacity 0.8s ease-in-out;
-}
-
-.header-links a:hover::after,
-a.resume:hover::after {
-  width: 100%;
-  opacity: 1;
-}
-
 a.resume {
   display: inline-block; 
   position: relative;    
@@ -545,18 +572,22 @@ a.resume {
   display: inline-block; 
   text-align: center;   
   position: relative;
-  padding-top: 0rem;
+  padding-top: 6rem;
 }
 
 .content-slide img {
   display: block;  
-  max-width: 65%;     
+  max-width: 85%;     
   margin: 0 auto;       
   transition: transform 0.3s ease-in-out;
 }
 
 .content-slide img:hover {
   transform: scale(1.01);
+}
+
+.content-slide a {
+  border: none;
 }
 
 /* Portfolio carousel arrows */
@@ -596,7 +627,7 @@ a.resume {
 .contact-form {
   max-width: 82%;
   margin: 0 auto;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .form-control {
@@ -696,6 +727,11 @@ color: var(--text-color);
   color: #E7759B;
   transition: all 0.2s ease-in-out;
 }
+
+.footer a::before, .content-slide a::before {
+  content: none; 
+}
+
 
 /* Loading screen animation */
 .spinner {
@@ -1003,11 +1039,13 @@ a.resume {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
     z-index: 0;
+    line-height: normal;
   }
 
   h3 {
     font-weight: normal;
     font-size: 1.1em;
+    line-height: normal;
   }
 
   p {
