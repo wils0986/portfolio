@@ -732,7 +732,6 @@ color: var(--text-color);
   content: none; 
 }
 
-
 /* Loading screen animation */
 .spinner {
   position: fixed;
@@ -1053,6 +1052,10 @@ a.resume {
     font-weight: normal;
     text-align: left;
   }
+
+  a:hover {
+    border: none;
+ }
 
   .header-links {
     display: none;

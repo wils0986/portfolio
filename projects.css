@@ -46,10 +46,57 @@ ul {
   list-style-type: none;
 }
 
+/* anchor parent */
+.myMenu > li {
+  position: relative;
+  text-align: center;
+}
+
+/* hide dropdown by default */
+.myMenu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -1rem;
+  background: var(--bg-color);
+  padding: 0.75rem 0;
+  z-index: 1000;
+  border: solid 0.12rem var(--nav-bg);
+  border-top: none;
+}
+
+/* show only on hover */
+.myMenu > li:hover > .dropdown {
+  display: block;
+  width: 10rem;
+}
+
+/* dropdown items */
+.dropdown li {
+  list-style: none;
+}
+
+/* Slide out nav menu styles */
+.nav-container {
+  padding-top: 10%;
+}
+
+/* Base link */
 a {
+  display: inline-block;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   text-decoration: none;
-  color: var(--link-color);
-  transition: color 0.3s ease;
+  color: inherit;
+  border-left: 0.15rem solid transparent;
+  overflow: hidden;
+  line-height: 1em;
+}
+
+a:hover {
+  border-left-color: #e7759b;
+  transition: border-color 0.5s ease;
 }
 
 .project-img {
@@ -101,10 +148,13 @@ p {
   display: block;
 }
 
+/* Nav Screen */
 .nav-screen {
   height: 100%;
+  z-index: 500;
   position: fixed;
-  background-color: var(--nav-bg);
+  background-color: var(--bg-color);
+  border-left: solid 0.15rem var(--nav-bg);
   opacity: 1;
   right: -17.8125rem;
   width: 17.8125rem;
@@ -116,7 +166,6 @@ p {
 }
 
 /* Nav header links */
-
 .nav-brand {
   position: fixed;
   left: 0;
@@ -175,6 +224,13 @@ p {
 .header-links a:hover {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
+}
+
+/* Remove old ::after underline for all header links and project dropdown links */
+.header-links a::after,
+.header-links .myMenu li ul li a::after,
+a.resume::after, .footer a::before {
+    content: none;
 }
 
 /* Slide out nav menu styles */
@@ -292,11 +348,6 @@ html.light-mode {
   width: 100%;
   z-index: 1000; 
   color: var(--nav-text);
-}
-  
-.mobileResume {
-  position: relative;
-  top: 6.25rem;
 }
 
 #mobileLogo {
@@ -431,8 +482,9 @@ a.resume {
   a.resume {
     color: var(--nav-text);
     position: relative;
-    bottom: 1.25rem;
-    left: 0.625rem;
+    display: inline-block;   
+    bottom: 0.75rem;
+    left: 0.5rem;
   }  
 
   /* Footer heart pulses on .submit click */
@@ -483,6 +535,10 @@ a.resume {
 
 .content img:hover {
   transform: scale(1.01);
+}
+
+a.project-img {
+  border: none;
 }
 
 /* Offset for sections */
@@ -651,7 +707,9 @@ a.resume {
     top: 0;
     height: 100%;
     width: 17.8125rem;
+    border-left: solid 0.15rem var(--nav-bg);
     z-index: 1500;
+    box-sizing: border-box;
   }
 
   .nav-links {
@@ -671,8 +729,8 @@ a.resume {
   .section {
     position: relative;
     z-index: 6000;
-    overflow: visible !important;
-    height: auto !important;
+    overflow: visible;
+    height: auto;
     padding: 0rem 1.25rem 1.25rem 1.25rem;
     }
 
@@ -715,4 +773,8 @@ a.resume {
     margin: 0; 
     width: 100%; 
   }
+
+  a:hover {
+    border: none;
+ }
 }
