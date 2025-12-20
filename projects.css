@@ -22,6 +22,10 @@
 }
   
 /* General styles */
+* {
+  scrollbar-color: #E7759B var(--bg-color);
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -599,6 +603,10 @@ a.project-img {
 
 /* Mobile styling */
 @media (max-width: 768px) {
+  * {
+    scrollbar-width: none;
+  }
+  
   .nav-lightmode {
     display: none;
   }

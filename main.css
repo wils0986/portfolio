@@ -22,9 +22,7 @@
 }
 
 /* General styles */
-
 * {
-  scrollbar-width: thin;
   scrollbar-color: #E7759B var(--bg-color);
 }
 
@@ -984,6 +982,10 @@ a.resume {
 
   .skip-link:focus {
     top: 0.625rem;
+  }
+
+  * {
+    scrollbar-width: none;
   }
 
   body {
