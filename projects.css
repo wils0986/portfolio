@@ -50,6 +50,12 @@ ul {
 .myMenu > li {
   position: relative;
   text-align: center;
+  margin: 0rem;
+}
+
+.myMenu > li:hover > a {
+  border-left-color: #e7759b;
+  transition: border-color 0.5s ease;
 }
 
 /* hide dropdown by default */
@@ -57,7 +63,7 @@ ul {
   display: none;
   position: absolute;
   top: 100%;
-  left: -1rem;
+  left: -1.75rem;
   background: var(--bg-color);
   padding: 0.75rem 0;
   z-index: 1000;
@@ -159,6 +165,7 @@ p {
   right: -17.8125rem;
   width: 17.8125rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
 }
   
 .nav-screen .active {
@@ -224,13 +231,6 @@ p {
 .header-links a:hover {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-}
-
-/* Remove old ::after underline for all header links and project dropdown links */
-.header-links a::after,
-.header-links .myMenu li ul li a::after,
-a.resume::after, .footer a::before {
-    content: none;
 }
 
 /* Slide out nav menu styles */
@@ -358,20 +358,6 @@ html.light-mode {
 .mobileResume {
   position: relative;
   top: 6.25rem;
-}
-
-/* Expanding border effect */
-.header-links a::after,
-a.resume::after {
-  display: block;
-  margin: 0 auto;
-  margin-top: 0.3125rem;
-  width: 0;
-  height: 0.078125rem;
-  background-color: #e7759b;
-  content: "";
-  opacity: 0;
-  transition: width 0.6s, opacity 0.8s ease-in-out;
 }
 
 .header-links a:hover::after,
@@ -726,14 +712,19 @@ a.project-img {
     flex-direction: column;
   }
 
-    ul.myMenu {
-    padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
-    }
+  .myMenu a {
+    border: none;
+    box-sizing: border-box;
+  }
 
-    ul.myMenu li a:active {
-    color: #E7759B;
-    transition: all 0.2s ease-in-out;
-    }
+  ul.myMenu {
+  padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
+  }
+
+  ul.myMenu li a:active {
+  color: #E7759B;
+  transition: all 0.2s ease-in-out;
+  }
 
   .section {
     position: relative;

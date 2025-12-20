@@ -22,6 +22,12 @@
 }
 
 /* General styles */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #E7759B var(--bg-color);
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -216,6 +222,7 @@ p.holder {
   right: -17.8125rem;
   width: 17.8125rem;
   transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .nav-screen .active {
@@ -1130,6 +1137,7 @@ a.resume {
     height: 100%;
     width: 17.8125rem;
     z-index: 1500;
+    box-sizing: border-box;
   }
 
   .nav-links {
