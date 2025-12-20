@@ -269,7 +269,6 @@ p.holder {
 
 .header-links li {
   color: var(--nav-text);
-  padding: 0.9375rem;
   font-size: 1rem;
 }
 
@@ -277,12 +276,19 @@ p.holder {
   color: var(--nav-text, #2c2c2c);
   transition: color 0.3s ease;
   position: relative;
+  margin: 0.9375rem;
 }
 
 /* anchor parent */
 .myMenu > li {
   position: relative;
   text-align: center;
+  margin: 0rem;
+}
+
+.myMenu > li:hover > a {
+  border-left-color: #e7759b;
+  transition: border-color 0.5s ease;
 }
 
 /* hide dropdown by default */
@@ -321,15 +327,8 @@ a {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   text-decoration: none;
-  color: inherit;
   border-left: 0.15rem solid transparent;
-  overflow: hidden;
   line-height: 1em;
-}
-
-a:hover {
-  border-left-color: #e7759b;
-  transition: border-color 0.5s ease;
 }
 
 .nav-links {
@@ -1137,6 +1136,11 @@ a.resume {
     display: flex;
     flex-direction: column;
   }
+
+  .myMenu a {
+    border: none;
+    box-sizing: border-box;
+  }  
 
   ul.myMenu {
     padding: 1.5625rem 1.5625rem 0rem 1.5625rem;
