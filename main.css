@@ -22,24 +22,9 @@
 }
 
 /* General styles */
-body {
-  overflow-y: auto;
-  scrollbar-width: thin;             /* Firefox */
+
+* {
   scrollbar-color: #E7759B var(--bg-color);
-}
-
-/* WebKit scrollbar for Chrome/Safari/Edge */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #E7759B;
-  border-radius: 8px;
 }
 
 html, body {
@@ -998,10 +983,6 @@ a.resume {
 
   .skip-link:focus {
     top: 0.625rem;
-  }
-
-  * {
-    scrollbar-width: none;
   }
 
   body {
