@@ -22,10 +22,6 @@
 }
   
 /* General styles */
-* {
-  scrollbar-color: #E7759B var(--bg-color);
-}
-
 html, body {
   width: 100%;
   height: 100%;
@@ -181,7 +177,7 @@ p {
   position: fixed;
   left: 0;
   z-index: 600;
-  padding: 0.625rem;
+  padding: 0.3rem 0.625rem 0.625rem 0.625rem;
 }
 
 .nav-brand img {
@@ -313,7 +309,7 @@ input:checked + .slider:before {
 
 .nav-lightmode {
   position: absolute;
-  top: 1.125rem;
+  top: 0.79rem;
   left: 11.25rem;
   transform: translateX(-50%);
   z-index: 5000;
@@ -368,11 +364,6 @@ html.light-mode {
 a.resume:hover::after {
     width: 100%;
     opacity: 1;
-}
-
-a.resume {
-  display: inline-block; 
-  position: relative;    
 }
 
 /* Footer styles */
@@ -475,10 +466,10 @@ a.resume {
   a.resume {
     color: var(--nav-text);
     position: relative;
-    display: inline-block;   
-    bottom: 0.75rem;
-    left: 0.5rem;
-  }  
+    bottom: 1.1rem;
+    left: 0.625rem;
+    display: inline-block; 
+}
 
   /* Footer heart pulses on .submit click */
 .pink.heart {
@@ -603,10 +594,6 @@ a.project-img {
 
 /* Mobile styling */
 @media (max-width: 768px) {
-  * {
-    scrollbar-width: none;
-  }
-  
   .nav-lightmode {
     display: none;
   }
