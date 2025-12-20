@@ -315,12 +315,10 @@ input:checked + .slider:before {
   z-index: 5000;
 }
 
-.nav-light-mode-mobile {
-  display: flex;
-  justify-content: center;
-  margin: 1.25rem 0;
+.nav-lightmode-mobile {
   position: relative;
-  top: 5.625rem;
+  bottom: 2rem;
+  left: 1rem;
 }
 
 /* Dark Mode colours */
@@ -355,6 +353,11 @@ html.light-mode {
   position: relative;
   top: 6.25rem;
   left: 0rem;
+}
+
+.mobileResume {
+  position: relative;
+  top: 6.25rem;
 }
 
 /* Expanding border effect */
@@ -649,6 +652,12 @@ a.project-img {
 
   .header-links {
     display: none;
+  }
+
+  .nav-lightmode-mobile {
+    position: relative;
+    bottom: 2rem;
+    left: 0rem;
   }
 
   .fa-bars {

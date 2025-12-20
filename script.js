@@ -148,7 +148,7 @@ $(document).ready(function () {
   });
 
   /* ======================
-     ❤️ Heart + plane animations
+     Heart + plane animations
   ====================== */
   document.querySelector("#submit")?.addEventListener("click", () => {
     const plane = document.querySelector("#paper-plane");
@@ -181,14 +181,11 @@ $(document).ready(function () {
     const winHeight = window.innerHeight;
     let top;
   
-    // Special handling for contact section
     if (hash === "#contact") {
-      // Scroll so footer is fully visible
       top = docHeight - winHeight;
     } else {
-      // Normal anchor scroll with optional offsets
       const offsets = {
-        "#home": window.innerWidth <= 768 ? -0 : -10,
+        "#home": window.innerWidth <= 768 ? -0 : -30,
         "#about": window.innerWidth <= 768 ? -30 : 0,
         "#portfolio": window.innerWidth <= 768 ? 40 : -50,
       };
