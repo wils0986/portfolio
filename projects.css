@@ -513,7 +513,6 @@ a.resume:hover::after {
 .content img {
   padding: 1.25rem 0rem 1.25rem 0rem;
   display: block;             
-  max-width: 98%;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -772,4 +771,14 @@ a.project-img {
   a:hover {
     border: none;
  }
+
+ .content img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+}
+
+.content img:hover {
+    transform: none;
+}
 }

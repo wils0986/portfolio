@@ -569,8 +569,7 @@ html.light-mode {
 }
 
 .content-slide img {
-  display: block;  
-  max-width: 85%;     
+  display: block;      
   margin: 0 auto;       
   transition: transform 0.3s ease-in-out;
 }
