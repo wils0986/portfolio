@@ -555,14 +555,6 @@ a.project-img {
   scroll-margin-bottom: 100px;
 }
 
-.projectH1 {
-  font-size: 3.25rem;
-  font-weight: lighter;
-  color: var(--text-color);
-  margin-bottom: 1rem;
-  padding-top: 2.5rem;
-}
-
 .section p {
   line-height: 1.8;
   margin-bottom: 1.25rem;
