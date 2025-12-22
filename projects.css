@@ -760,8 +760,11 @@ a.project-img {
     overflow: visible;
     height: auto;
     margin: 0 auto;
-    padding: 0rem 1.25rem 1.25rem 1.25rem;
-    width: 90%;
+    padding: 0;
+    }
+
+    .content{
+      max-width: 100%;
     }
 
     a.resume {
@@ -817,5 +820,10 @@ a.project-img {
 
 .content img:hover {
     transform: none;
+}
+
+#wrapper {
+  width: 96%;
+  margin: 0 auto;
 }
 }
