@@ -77,7 +77,7 @@ h2 {
 
 h3 {
   font-weight: lighter;
-  font-size: 1.6em;
+  font-size: 2em;
   text-align: center;
   line-height: normal;
 }
@@ -403,7 +403,7 @@ input:checked + .slider:before {
 .nav-lightmode {
   position: absolute;
   top: 0.79rem;
-  left: 11.25rem;
+  left: 11.5rem;
   transform: translateX(-50%);
   z-index: 5000;
 }
@@ -674,6 +674,7 @@ color: var(--text-color);
   margin: 0 auto;
   outline: none;
   padding: 0.75rem;
+  margin-bottom: 2rem;
   border-radius: 0.25rem;
   border: 0.125rem solid #E7759B;
   text-align: center;

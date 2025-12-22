@@ -109,11 +109,6 @@ a:hover {
   display: flex;
   justify-content: center;
 }
-
-h3 {
-  font-weight: lighter;
-  font-size: 1.35em;
-}
   
 .copyright {
   text-align: center;
@@ -126,10 +121,39 @@ h3 {
   margin: 0 0.1em;
 }
 
+h1 {
+  font-weight: lighter;
+  color: #f7f7f7;
+  font-size: 3em;
+  position: relative;
+  margin: 4rem 0 0 0;
+  border-left: 2px solid #e7759b;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  right: 1.3rem;
+}
+
 h2 {
   font-weight: lighter;
   color: var(--text-color);
   font-size: 2.75em;
+  text-align: left;
+  position: relative;
+  z-index: 9999;
+  line-height: normal;
+  margin: 2rem 0 2rem 0;
+}
+
+h3 {
+  font-weight: lighter;
+  font-size: 2em;
+  text-align: left;
+  line-height: normal;
+}
+
+h4 {
+  font-weight: lighter;
+  font-size: 1.35em;
 }
 
 p {
@@ -310,7 +334,7 @@ input:checked + .slider:before {
 .nav-lightmode {
   position: absolute;
   top: 0.79rem;
-  left: 11.25rem;
+  left: 11.5rem;
   transform: translateX(-50%);
   z-index: 5000;
 }
@@ -490,7 +514,7 @@ a.resume:hover::after {
 .animate-heart {
   animation: heartBeat 0.8s ease 4;
 }
-  
+
 .section {
   display: flex;
   justify-content: center;
@@ -505,7 +529,7 @@ a.resume:hover::after {
 }
 
 .section .content {
-  max-width: 56.25rem;
+  max-width: 74rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -576,7 +600,7 @@ a.project-img {
   text-decoration: none;
   color: var(--text-color);
   font-weight: 600;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   margin-left: 6.25rem;
   margin-right: 6.25rem;
   margin-bottom: 4rem;
@@ -602,9 +626,15 @@ a.project-img {
     right: 2.5rem;
   }
 
-  .projectH2 {
+  h2 {
     font-size: 2rem;
   }
+
+  .section {
+    width: 90%;
+    margin: 0 auto;
+    }
+
 }
 
 /* Mobile styling */
@@ -613,33 +643,28 @@ a.project-img {
     display: none;
   }
 
-  .projectH1 {
-      font-size: 2rem;
-      font-weight: 350;
-      margin: 0;
-      padding-top: 5rem;
-    }
-  
-    .projectH2 {
-      font-size: 1.6rem;
-    }
+h1 {
+  font-weight: 350;
+  font-size: 2rem;
+}
+
+  h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    z-index: 0;
+    line-height: normal;
+  }
+
+  h3 {
+    font-weight: normal;
+    font-size: 1.1em;
+    line-height: normal;
+  }
   
     .section p,
     .section ul li {
       font-size: 1rem;
     }
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  h3 {
-      font-weight: 400;
-      font-size: 1.2em;
-  }
 
   p {
       font-size: 1rem;
@@ -741,7 +766,9 @@ a.project-img {
     z-index: 6000;
     overflow: visible;
     height: auto;
+    margin: 0 auto;
     padding: 0rem 1.25rem 1.25rem 1.25rem;
+    width: 90%;
     }
 
     a.resume {
@@ -774,14 +801,15 @@ a.project-img {
   .project-navigation {
     flex-direction: column; 
     align-items: center;
-    padding-bottom: 1.25rem;
+    padding: 0.75rem;
     margin: 0.625rem;
-    margin-bottom: 02rem;
+    margin-bottom: 2rem;
   }
 
   .project-navigation a {
     margin: 0; 
     width: 100%; 
+    font-size: 1em;
   }
 
   a:hover {
@@ -790,7 +818,7 @@ a.project-img {
 
  .content img {
   display: block;
-  max-width: 80%;
+  max-width: 90%;
   height: auto;
 }
 
