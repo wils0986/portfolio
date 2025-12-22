@@ -618,7 +618,7 @@ a.project-img {
 
 /* Responsive styling */
 @media (max-width: 1480px) {
-  .projectH1 {
+  h1 {
     font-size: 2.55rem;
     padding-bottom: 0.625rem;
     font-weight: lighter;
@@ -633,7 +633,6 @@ a.project-img {
     width: 90%;
     margin: 0 auto;
     }
-
 }
 
 /* Mobile styling */
@@ -642,14 +641,17 @@ a.project-img {
     display: none;
   }
 
-h1 {
-  font-weight: 350;
-  font-size: 2rem;
-}
+  h1 {
+    font-weight: 350;
+    font-size: 2rem;
+    right: 1rem;
+  }
 
   h2 {
     font-size: 1.6rem;
     font-weight: 400;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
     z-index: 0;
     line-height: normal;
   }
