@@ -558,7 +558,7 @@ html.light-mode {
 
 .content-slide {
   margin: 0 auto;      
-  max-width: 70%;
+  
   display: inline-block; 
   text-align: center;   
   position: relative;
@@ -569,6 +569,7 @@ html.light-mode {
   display: block;      
   margin: 0 auto;       
   transition: transform 0.3s ease-in-out;
+  max-width: 100%;
 }
 
 .content-slide img:hover {
@@ -921,7 +922,11 @@ a.resume {
     font-weight: lighter;
     right: 2.5rem;
   }
-  
+
+  h2 {
+    font-size: 2rem;
+  }
+
   p.holder {
     min-height: 2em;
     visibility: hidden;

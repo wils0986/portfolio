@@ -513,7 +513,9 @@ a.resume:hover::after {
 .content img {
   padding: 1.25rem 0rem 1.25rem 0rem;
   display: block;             
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;     
+  margin: 0 auto;       
+  max-width: 100%;
 }
 
 .content img:hover {
@@ -589,6 +591,20 @@ a.project-img {
 
 .project-navigation a:hover {
   background-color: #e7759b;
+}
+
+/* Responsive styling */
+@media (max-width: 1480px) {
+  .projectH1 {
+    font-size: 2.55rem;
+    padding-bottom: 0.625rem;
+    font-weight: lighter;
+    right: 2.5rem;
+  }
+
+  .projectH2 {
+    font-size: 2rem;
+  }
 }
 
 /* Mobile styling */
