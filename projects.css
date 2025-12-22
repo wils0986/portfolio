@@ -636,7 +636,7 @@ a.project-img {
   h1 {
     font-weight: 350;
     font-size: 2rem;
-    right: 1rem;
+    right: 0.5rem;
   }
 
   h2 {
@@ -823,7 +823,7 @@ a.project-img {
 }
 
 #wrapper {
-  width: 96%;
+  width: 100%;
   margin: 0 auto;
 }
 }
