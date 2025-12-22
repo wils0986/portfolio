@@ -36,18 +36,26 @@ $(document).ready(function () {
   /* ======================
      Nav toggle
   ====================== */
-  function main() {
-    $(".fa-bars").click(function () {
-      $(".nav-screen").animate({ right: "0px" }, 200);
-      $("body").animate({ right: "285px" }, 200).addClass("nav-open");
-    });
+function main() {
+  const closeNav = () => {
+    $(".nav-screen").animate({ right: "-285px" }, 200);
+    $("body").animate({ right: "0px" }, 200).removeClass("nav-open");
+  };
 
-    $(".fa-times, .nav-links a").click(function () {
-      $(".nav-screen").animate({ right: "-285px" }, 200);
-      $("body").animate({ right: "0px" }, 200).removeClass("nav-open");
-    });
-  }
-  main();
+  $(".fa-bars").click(function () {
+    $(".nav-screen").animate({ right: "0px" }, 200);
+    $("body").animate({ right: "285px" }, 200).addClass("nav-open");
+  });
+
+  $(".fa-times, .nav-links a").click(closeNav);
+
+  $(window).resize(function () {
+    if ($(window).width() > 768 && $("body").hasClass("nav-open")) {
+      closeNav();
+    }
+  });
+}
+main();
 
   /* ======================
      Dark / Light Mode
@@ -181,12 +189,9 @@ $(document).ready(function () {
     const winHeight = window.innerHeight;
     let top;
   
-    // Special handling for contact section
     if (hash === "#contact") {
-      // Scroll so footer is fully visible
       top = docHeight - winHeight;
     } else {
-      // Normal anchor scroll with optional offsets
       const offsets = {
         "#home": window.innerWidth <= 768 ? 0 : -40,
         "#about": window.innerWidth <= 768 ? -30 : 0,
