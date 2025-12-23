@@ -92,6 +92,18 @@ a {
   transition: color 0.3s ease;
 }
 
+.portfolio-toggle {
+  background-color: transparent;
+  border: none;
+  color: var(--text-color);
+  border-left: 0.15rem solid transparent;
+  line-height: 1em;
+  font-size: 1rem; 
+  font-family: "Segoe UI", sans-serif;
+  margin: 0.9375rem;
+  cursor: pointer;
+}
+
 /* Main header section */
 #wrapper, .section, .home {
   width: 100%;
@@ -182,19 +194,6 @@ a.resume {
   display: none;
 }
 
-.fa-times {
-  float: right;
-  padding: 1.25rem;
-  right: 0;
-  z-index: 600;
-  cursor: pointer;
-}
-
-.fa-times:active {
-  color: #E7759B;
-  transition: all 0.2s ease-in-out;
-}
-
 .header-links {
   background-color: var(--bg-color);
   position: fixed;
@@ -217,7 +216,7 @@ a.resume {
 }
 
 .header-links a {
-  color: var(--nav-text, #2c2c2c);
+  color: var(--nav-text);
   transition: color 0.3s ease;
   position: relative;
   margin: 0.9375rem;
@@ -229,7 +228,8 @@ a.resume {
   margin: 0rem;
 }
 
-.myMenu > li:hover > a {
+.myMenu > li:hover > a,
+.myMenu > li:hover > .portfolio-toggle {
   border-left-color: #e7759b;
   transition: border-color 0.5s ease;
 }
@@ -838,6 +838,13 @@ color: var(--text-color);
   animation: heartBeat 0.8s ease 4;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 /* //////////////////////////////////
 Tablet styling */
 @media (max-width: 1480px) {
@@ -949,6 +956,11 @@ Mobile styling */
     bottom: 2rem;
   }
 
+  main {
+    position: relative;
+    top: -3rem;
+  }
+
   .section {
     position: relative;
     overflow: visible;
@@ -984,10 +996,6 @@ Mobile styling */
     transition: opacity 0.3s ease;
   }
 
-  .fa-bars:active {
-    background-color: #E7759B;
-  }
-
   body.light-mode .fa-bars {
     color: #2c2c2c;
   }
@@ -998,11 +1006,26 @@ Mobile styling */
     pointer-events: none;
   }
 
+  .close-menu {
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    float: right;
+    font-size: 1rem;
+    padding: 1.25rem;
+    cursor: pointer;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
   .nav-header {
     position: absolute;
     top: 0;
     width: 100%;
     background-color: none;
+    display: none;
   }
 
   #logo {
@@ -1012,11 +1035,7 @@ Mobile styling */
   a.resume {
     display: none;
   }
-
-  .header-links ul{
-    display: none;
-  }
-
+  
   .nav-screen {
     display: block;
     position: fixed;
@@ -1062,12 +1081,12 @@ Mobile styling */
   .section.home {
     position: relative;
     z-index: 400;
-    top: -2.2rem;
   }
 
   .home {
     min-height: 100vh;
     display: flex;
+    top: 1.75rem;
   } 
   
   .opaque-bg {

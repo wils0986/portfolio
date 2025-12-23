@@ -36,27 +36,98 @@ $(document).ready(function () {
   /* ======================
      Nav toggle
   ====================== */
-function main() {
-  const closeNav = () => {
-    $(".nav-screen").animate({ right: "-285px" }, 200);
-    $("body").animate({ right: "0px" }, 200).removeClass("nav-open");
-  };
-
-  $(".fa-bars").click(function () {
-    $(".nav-screen").animate({ right: "0px" }, 200);
-    $("body").animate({ right: "285px" }, 200).addClass("nav-open");
-  });
-
-  $(".fa-times, .nav-links a").click(closeNav);
-
-  $(window).resize(function () {
-    if ($(window).width() > 768 && $("body").hasClass("nav-open")) {
-      closeNav();
+  function main() {
+    const hamburger = document.getElementById("hamburger");
+    const navScreen = document.getElementById("mobile-navigation");
+    const closeMenuBtn = document.querySelector(".close-menu");
+    const portfolioToggle = document.querySelector(".portfolio-toggle");
+    const portfolioDropdown = document.querySelector(".portfolio-item .dropdown");
+    const openNav = () => {
+      $(".nav-screen").animate({ right: "0px" }, 200);
+      $("body").animate({ right: "285px" }, 200).addClass("nav-open");
+  
+      hamburger.setAttribute("aria-expanded", "true");
+      navScreen.hidden = false;
+  
+      setTimeout(() => closeMenuBtn.focus(), 200);
+  
+      trapFocus(navScreen);
+    };
+  
+    const closeNav = () => {
+      $(".nav-screen").animate({ right: "-285px" }, 200);
+      $("body").animate({ right: "0px" }, 200).removeClass("nav-open");
+  
+      hamburger.setAttribute("aria-expanded", "false");
+      navScreen.hidden = true;
+    };
+  
+    const trapFocus = (container) => {
+      const focusableEls = container.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      );
+      const firstEl = focusableEls[0];
+      const lastEl = focusableEls[focusableEls.length - 1];
+  
+      container.addEventListener("keydown", function(e) {
+        if (e.key === "Tab") {
+          if (e.shiftKey) {
+            if (document.activeElement === firstEl) {
+              e.preventDefault();
+              lastEl.focus();
+            }
+          } else {
+            if (document.activeElement === lastEl) {
+              e.preventDefault();
+              firstEl.focus();
+            }
+          }
+        }
+        if (e.key === "Escape") closeNav();
+      });
+    };
+  
+    if (portfolioToggle && portfolioDropdown) {
+      portfolioToggle.addEventListener("click", e => {
+        e.preventDefault();
+        const expanded = portfolioToggle.getAttribute("aria-expanded") === "true";
+        portfolioToggle.setAttribute("aria-expanded", String(!expanded));
+        portfolioDropdown.classList.toggle("open", !expanded);
+      });
+  
+      portfolioDropdown.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          portfolioToggle.setAttribute("aria-expanded", "false");
+          portfolioDropdown.classList.remove("open");
+        });
+      });
     }
-  });
-}
-main();
+  
+    hamburger.addEventListener("click", openNav);
 
+    if (closeMenuBtn) {
+      closeMenuBtn.addEventListener("click", closeNav);
+    }
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        if ($("body").hasClass("nav-open")) closeNav();
+        if (portfolioToggle && portfolioDropdown) {
+          portfolioToggle.setAttribute("aria-expanded", "false");
+          portfolioDropdown.classList.remove("open");
+        }
+      }
+    });
+
+    $(window).on("resize", () => {
+      if ($(window).width() > 768 && $("body").hasClass("nav-open")) {
+        closeNav();
+      }
+    });
+  }
+  
+  main();
+  
   /* ======================
      Dark / Light Mode
   ====================== */
@@ -154,6 +225,13 @@ main();
         console.error(err);
       });
   });
+
+  document.querySelectorAll(".auto-grow").forEach(textarea => {
+    textarea.addEventListener("input", () => {
+      textarea.style.height = "auto";
+      textarea.style.height = textarea.scrollHeight + "px";
+    });
+  });  
 
   /* ======================
      Heart + plane animations
