@@ -243,18 +243,14 @@ p {
 
 .header-links li {
   color: var(--nav-text);
-  padding: 0.9375rem;
   font-size: 1rem;
 }
 
 .header-links a {
   color: var(--nav-text, #2c2c2c);
   transition: color 0.3s ease;
-}
-
-.header-links a:hover {
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
+  position: relative;
+  margin: 0.9375rem;
 }
 
 /* Slide out nav menu styles */
