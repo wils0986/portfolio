@@ -123,7 +123,7 @@ a:hover {
 
 h1 {
   font-weight: lighter;
-  color: #f7f7f7;
+  color: var(--text-color);
   font-size: 3em;
   position: relative;
   margin: 6rem 0 3rem 0;
@@ -159,7 +159,7 @@ h4 {
 p {
   font-size: 1.25rem;
   font-weight: 350;
-  color: #2c2c2c;
+  color: var(--text-color);
   line-height: 1.5em;
   position: relative;
   z-index: 12;
