@@ -223,7 +223,6 @@ a.resume {
   margin: 0.9375rem;
 }
 
-/* anchor parent */
 .myMenu > li {
   position: relative;
   text-align: center;
@@ -235,7 +234,6 @@ a.resume {
   transition: border-color 0.5s ease;
 }
 
-/* hide dropdown by default */
 .myMenu .dropdown {
   display: none;
   position: absolute;
@@ -248,18 +246,15 @@ a.resume {
   border-top: none;
 }
 
-/* show only on hover */
 .myMenu > li:hover > .dropdown {
   display: block;
   width: 10rem;
 }
 
-/* dropdown items */
 .dropdown li {
   list-style: none;
 }
 
-/* Slide out nav menu styles */
 .nav-container {
   padding-top: 10%;
 }
@@ -314,7 +309,7 @@ a.resume {
   left: 0rem;
 }
 
-/* Dark Mode colours*/
+/* Dark/Light mode */
 :root {
   --bg-color: #010101;
   --text-color: #f5f5f5;
@@ -323,7 +318,6 @@ a.resume {
   --nav-text: #f5f5f5;
 }
 
-/* Light Mode colours */
 html.light-mode {
   --bg-color: #f5f5f5;
   --text-color: #2c2c2c;
@@ -332,7 +326,6 @@ html.light-mode {
   --nav-text: #2c2c2c;
 }
 
-/* Dark/Light mode toggle */
 .switch {
   position: relative;
   display: inline-block;
@@ -374,7 +367,6 @@ input:checked + .slider:before {
   transform: translateX(1.625rem);
 }
 
-/* Position toggle in header */
 .nav-lightmode {
   position: absolute;
   top: 0.79rem;
@@ -422,8 +414,7 @@ input:checked + .slider:before {
   right: 10rem;
   width: 98%;
 }
-  
-/* Typewriter styling */
+
 p.holder {
   position: relative;
   min-height: 2em;
@@ -445,7 +436,6 @@ p.holder {
   letter-spacing: .24em;
 }
 
-/* Fade in Jenny Wilson */
 .main-text {
   opacity: 0;
   animation-name: fadeIn;
@@ -455,7 +445,6 @@ p.holder {
   animation-delay: 0.5s;
 }
 
-/* Slide in slash + Designs */
 .slide-part {
   display: inline-flex;
   opacity: 0;
@@ -467,13 +456,11 @@ p.holder {
   animation-delay: 1.5s;
 }
 
-/* Pink line styling */
 .pink {
   color: #E7759B;
   margin: 0 0.1em;
 }
-  
-/* Keyframes */
+
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -591,7 +578,6 @@ p.holder {
   border: none;
 }
 
-/* Carousel arrows */
 [data-anchor="portfolio"] .prev,
 [data-anchor="portfolio"] .next {
   position: absolute;
@@ -610,7 +596,6 @@ p.holder {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Buttons */
 [data-anchor="portfolio"] .prev:hover,
 [data-anchor="portfolio"] .next:hover {
   background-color: #E7759B;
@@ -624,7 +609,6 @@ p.holder {
   right: 4rem;
 }
 
-/* Contact section */
 .contact-form {
   max-width: 82%;
   margin: 0 auto;
@@ -669,9 +653,16 @@ label {
   color: var(--bg-color);
 }
 
-#ajax-contact input,
-#ajax-contact textarea {
+#ajax-contact input {
 color: var(--text-color);
+}
+
+#ajax-contact textarea {
+  color: var(--text-color);
+  resize: vertical;
+  max-height: 18.75rem;
+  min-height: 10rem;
+  overflow: auto;
 }
 
 #ajax-contact ::placeholder {
@@ -725,7 +716,6 @@ color: var(--text-color);
   width: 100%;
 }
 
-/* Plane flies on .submit click */
 #plane-wrapper {
   position: relative;
   overflow: hidden;
@@ -745,8 +735,7 @@ color: var(--text-color);
   pointer-events: none;
   z-index: 100;
 }
-  
- /* Keyframe animation flying */
+
 @keyframes flyAway {
   0% {
     transform: translate(0%, -50%);
@@ -830,7 +819,6 @@ color: var(--text-color);
   line-height: 1;
 }
 
-/* Heart pulses on .submit click */
 .pink.heart {
   display: inline-block;
   transition: transform 0.3s ease;
@@ -909,6 +897,7 @@ Tablet styling */
 /* //////////////////////////////////
 Mobile styling */
   @media (max-width: 768px) {
+  /* Skip link */
   .skip-link {
     position: absolute;
     top: -6rem; 
@@ -918,6 +907,7 @@ Mobile styling */
     top: 0.625rem;
   }
 
+/* General styles */
   body {
     overflow-x: hidden;
   }
@@ -1027,7 +1017,6 @@ Mobile styling */
     display: none;
   }
 
-  /* Side nav */
   .nav-screen {
     display: block;
     position: fixed;
@@ -1114,7 +1103,7 @@ Mobile styling */
   }
 
 /* About section */
-  div#about.section {
+  #about.section {
     padding-top: 2rem;
   }
 
@@ -1233,6 +1222,10 @@ Mobile styling */
     margin: 0.5em 0 2em 0;
   }
 
+  #submit {
+    margin-bottom: 0;
+  }
+
   .success {
     display: inline-block;
     padding: 1em;
@@ -1255,10 +1248,6 @@ Mobile styling */
     border: 0.0625rem solid rgba(185, 74, 72, 0.3);
     border-radius: 0.25rem;
     max-width: 90%;
-  }
-
-  #submit {
-    margin-bottom: 0;
   }
 
 /* Footer */
