@@ -1258,6 +1258,10 @@ Mobile styling */
   }
 
 /* Footer */
+  .footer {
+    padding: 0 0 0.5rem 0;
+  }
+
   .footer p {
     background-color: #2c2c2c;
     padding: 1.25rem;
