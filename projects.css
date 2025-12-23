@@ -386,7 +386,7 @@ a.resume:hover::after {
     opacity: 1;
 }
 
-/* Footer styles */
+/* Footer */
 .footer {
   background-color: #2c2c2c;
   display: flex;
@@ -400,6 +400,7 @@ a.resume:hover::after {
   margin: 0;               
   color: #f7f7f7;
   font-size: 1rem;
+  right: 0rem;
 }
 
 .footer a {
@@ -411,6 +412,21 @@ a.resume:hover::after {
 .footer a:hover {
   color: #E7759B;
   transition: all 0.2s ease-in-out;
+}
+
+.footer a::before {
+  content: none; 
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 0.5rem;
+  border: none;
+}
+
+.fa-linkedin-in {
+  padding-top: 1rem;
+  padding-bottom: 0rem;
 }
 
 .project-navigation {
@@ -475,6 +491,8 @@ a.resume:hover::after {
   .fa-linkedin-in {
     padding-top: 1rem;
     padding-bottom: 0rem;
+    display: block;
+    line-height: 1;
   }
 
   #logo {

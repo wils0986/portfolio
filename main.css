@@ -164,6 +164,20 @@ ul {
   width: 3.125rem;
 }
 
+#logo {
+  position: relative;
+  top: -0.1875rem;
+  width: 2.8125rem;
+}
+
+a.resume {
+  color: var(--nav-text);
+  position: relative;
+  display: inline-block;
+  bottom: 1.25rem;
+  left: 0.625rem
+}
+
 .fa-bars {
   display: none;
 }
@@ -785,6 +799,7 @@ color: var(--text-color);
   margin: 0;               
   color: #f7f7f7;
   font-size: 1rem;
+  right: 0rem;
 }
 
 .footer a {
@@ -802,29 +817,17 @@ color: var(--text-color);
   content: none; 
 }
 
-.fa-linkedin-in {
-  padding-top: 1rem;
-  padding-bottom: 0rem;
-}
-
-#logo {
-  position: relative;
-  top: -0.1875rem;
-  width: 2.8125rem;
-}
-
-a.resume {
-  color: var(--nav-text);
-  position: relative;
-  display: inline-block;
-  bottom: 1.25rem;
-  left: 0.625rem
-}
-
 .copyright {
   text-align: center;
   margin-top: 0.5rem;
   border: none;
+}
+
+.fa-linkedin-in {
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+  display: block;
+  line-height: 1;
 }
 
 /* Heart pulses on .submit click */
