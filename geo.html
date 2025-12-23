@@ -12,60 +12,71 @@
       <title>Jenny Wilson Designs | Portfolio 2</title>
   </head>
   <body>
-      <a href="#about" class="skip-link">Skip to main content</a>
-  <div class="nav-header" role="navigation" aria-label="Main navigation">
-    <div class="nav-brand">
-        <img src="images/JW_logo.svg" id="logo" alt="">
-        <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank">Résumé</a>
-    </div>
-    <div class="nav-lightmode">
-        <label class="switch" aria-label="Toggle light mode">
-            <input type="checkbox" id="lightModeToggleHeader">
-            <span class="slider round"></span>
-        </label>
-    </div>
-    <div class="header-links">
-        <ul class="myMenu">
+    <!-- Skip link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Desktop navigation -->
+    <header role="banner" class="desktop-nav">
+      <nav class="nav-header" role="navigation" aria-label="Main navigation">
+        <div class="nav-brand">
+          <img src="images/JW_logo.svg" id="logo" alt="">
+          <a href="images/jenny_portfilio_resume.pdf" class="resume" target="_blank" rel="noopener" aria-label="Open résumé in a new tab">Résumé</a>
+        </div>
+        <div class="nav-lightmode">
+          <label class="switch" aria-label="Toggle light mode">
+            <input type="checkbox" id="lightModeToggleHeader" role="switch" aria-checked="false">
+            <span class="slider round" aria-hidden="true"></span>
+          </label>
+        </div>
+        <div class="header-links">
+          <ul class="myMenu">
             <li><a href="index.html#home">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li class="portfolio-item">
-              <a href="index.html#portfolio">Portfolio</a>
+              <a href="index.html#portfolio" class="portfolio-toggle" aria-haspopup="true" aria-expanded="false">Portfolio</a>
               <ul class="myMenu dropdown">
-                <li><a href="atlas.html">Case Study 1</a></li>
-                <li><a href="geo.html">Case Study 2</a></li>
-                <li><a href="permafrost.html">Case Study 3</a></li>
-                <li><a href="data.html">Case Study 4</a></li>
-                <li><a href="strategy.html">Case Study 5</a></li>
+                <li><a href="atlas.html" target="_blank" rel="noopener" aria-label="Open Case Study 1 in a new tab">Case Study 1</a></li>
+                <li><a href="geo.html" target="_blank" rel="noopener" aria-label="Open Case Study 2 in a new tab">Case Study 2</a></li>
+                <li><a href="permafrost.html" target="_blank" rel="noopener" aria-label="Open Case Study 3 in a new tab">Case Study 3</a></li>
+                <li><a href="data.html" target="_blank" rel="noopener" aria-label="Open Case Study 4 in a new tab">Case Study 4</a></li>
+                <li><a href="strategy.html" target="_blank" rel="noopener" aria-label="Open Case Study 5 in a new tab">Case Study 5</a></li>
               </ul>
-            </li>
+            </li>            
             <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </div>
-  </div>
-  <i class="fa-solid fa-bars fa-2xl" id="hamburger" role="button" aria-label="Open menu" aria-expanded="false" tabindex="0"></i>
-  <div class="nav-screen" role="navigation" aria-label="Sidebar navigation">
-    <i class="fa fa-times fa-2x" role="button" aria-label="Close menu" tabindex="0"></i>
-    <div class="nav-container">
-        <div class="nav-links">
+          </ul>
+        </div>
+      </nav>
+    </header>
+      <!-- Mobile navigation -->
+    <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-navigation">
+      <i class="fa-solid fa-bars fa-2xl" aria-hidden="true"></i></button>
+    <nav id="mobile-navigation" class="nav-screen" aria-label="Sidebar navigation"
+    hidden>
+      <button class="close-menu" aria-label="Close menu">
+        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+      </button>
+        <div class="nav-container">
+          <div class="nav-links">
             <ul class="myMenu">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#portfolio">Portfolio</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
-                <li class="mobileResume"><a href="images/jenny_portfilio_resume.pdf" target="_blank">Résumé</a></li>
+              <li><a href="index.html#home">Home</a></li>
+              <li><a href="index.html#about">About</a></li>
+              <li><a href="index.html#portfolio">Portfolio</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+              <li class="mobileResume">
+                <a href="images/jenny_portfilio_resume.pdf" target="_blank" rel="noopener" aria-label="Open resume in a new tab">Résumé</a>
+              </li>
             </ul>
             <div class="nav-lightmode-mobile">
-                <label class="switch" aria-label="Toggle light mode">
-                    <input type="checkbox" id="lightModeToggleSidebar">
-                    <span class="slider round"></span>
-                </label>
+              <label class="switch" aria-label="Toggle light mode">
+                <input type="checkbox" id="lightModeToggleSidebar" role="switch" aria-checked="false">
+                <span class="slider round" aria-hidden="true"></span>
+              </label>
             </div>
-            <div class-logo>
-                <img src="images/JW_logo.svg" id="mobileLogo" alt="">
+            <div class="logo">
+              <img src="images/JW_logo.svg" id="mobileLogo" alt="">
             </div>
+          </div>
         </div>
-    </div>
-  </div>
+      </nav>
   <div id="wrapper">
       <div class="section" id="geo">
           <div class="content">

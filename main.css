@@ -977,6 +977,10 @@ Mobile styling */
     display: none;
   }
 
+  .hamburger {
+    all: unset;
+  }
+
   .fa-bars {
     position: fixed;
     top: 1rem;
