@@ -1257,6 +1257,10 @@ Mobile styling */
     max-width: 90%;
   }
 
+  #submit {
+    margin-bottom: 0;
+  }
+
 /* Footer */
   .footer {
     padding: 0 0 0.5rem 0;
